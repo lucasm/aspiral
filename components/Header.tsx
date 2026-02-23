@@ -2,27 +2,13 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { useLocale } from '@/lib/i18n'
-
-// locales
-import en from '@/locales/en'
-import pt_BR from '@/locales/pt-BR'
-import pt_PT from '@/locales/pt-PT'
+import { useTranslations } from 'next-intl'
 import { IconMemeh } from '@/components/Icons'
 import { Button, Space } from '@mantine/core'
 
-const localesMap = {
-  en,
-  'pt-BR': pt_BR,
-  'pt-PT': pt_PT,
-}
-
-type LocaleKey = keyof typeof localesMap
-
 export default function Header() {
   const [isActive, setActive] = useState<boolean>(false)
-  const locale = useLocale() as LocaleKey
-  const t = localesMap[locale]
+  const t = useTranslations()
 
   function handleToggle() {
     setActive(!isActive)
@@ -43,47 +29,47 @@ export default function Header() {
         <ul>
           <li>
             <a href="#news" onClick={handleToggle}>
-              {t.news}
+              {t('news')}
             </a>
           </li>
           <li>
             <a href="#biz" onClick={handleToggle}>
-              {t.biz}
+              {t('biz')}
             </a>
           </li>
           <li>
             <a href="#tech" onClick={handleToggle}>
-              {t.tech}
+              {t('tech')}
             </a>
           </li>
           <li>
             <a href="#sport" onClick={handleToggle}>
-              {t.sport}
+              {t('sport')}
             </a>
           </li>
           <li>
             <a href="#cult" onClick={handleToggle}>
-              {t.cult}
+              {t('cult')}
             </a>
           </li>
           <li>
             <a href="#geek" onClick={handleToggle}>
-              {t.geek}
+              {t('geek')}
             </a>
           </li>
           <li>
             <a href="#sci" onClick={handleToggle}>
-              {t.sci}
+              {t('sci')}
             </a>
           </li>
           <li>
             <a href="#check" onClick={handleToggle}>
-              {t.check}
+              {t('check')}
             </a>
           </li>
           <li>
             <a href="#dscvr" onClick={handleToggle}>
-              {t.dscvr}
+              {t('dscvr')}
             </a>
           </li>
         </ul>
@@ -91,7 +77,7 @@ export default function Header() {
         <Space h="xl" />
 
         <Button size="lg" component="a" href="https://github.com/sponsors/lucasm" target="_blank" rel="noopener noreferrer">
-          ♥&#160;&#160;{t.donate}
+          ♥&#160;&#160;{t('donate')}
         </Button>
       </nav>
 
