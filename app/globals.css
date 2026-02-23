@@ -1,3 +1,5 @@
+@import '@mantine/core/styles.css';
+
 :root {
   font-size: 16px;
   --radius: 8px;
@@ -216,27 +218,6 @@ header nav a {
 header nav a:hover,
 header nav a:focus {
   background: #eee;
-}
-
-header nav .button {
-  position: relative;
-  float: none;
-  width: auto;
-  margin: 2.5rem 0 0;
-  line-height: 0;
-  padding: 1.5rem;
-  font-size: 1.25rem;
-  color: var(--color-white);
-  background: var(--color-black);
-  border: none;
-  border-radius: var(--radius);
-  cursor: pointer;
-}
-header nav .button:hover,
-header nav .button:focus {
-  background: var(--color-white);
-  color: var(--color-black);
-  box-shadow: var(--shadow);
 }
 
 section {
@@ -546,7 +527,7 @@ section .container {
   position: absolute;
   right: 0;
   left: 0;
-  top: -6rem;
+  top: -6.25rem;
   color: rgb(255 255 255 / 5%);
   font-size: 12vw;
   letter-spacing: -1vw;
@@ -590,7 +571,7 @@ section .container {
 
   .feedSection h2 {
     right: -12vw;
-    top: -12vw;
+    top: -14vw;
     left: unset;
     font-size: 16vw;
   }

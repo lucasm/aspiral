@@ -4,6 +4,7 @@ import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SetLanguage from '@/components/SetLanguage'
+import MantineWrapper from '@/components/MantineWrapper'
 import { getLocaleFromParams } from '@/lib/locale-utils'
 import type { Locale } from '@/lib/locale-utils'
 
@@ -114,7 +115,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
   const { lang } = await params
 
   return (
-    <>
+    <MantineWrapper>
       <SetLanguage />
       <Header />
       <main>{children}</main>
@@ -150,6 +151,6 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
           `,
         }}
       />
-    </>
+    </MantineWrapper>
   )
 }

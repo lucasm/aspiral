@@ -9,6 +9,7 @@ import en from '@/locales/en'
 import pt_BR from '@/locales/pt-BR'
 import pt_PT from '@/locales/pt-PT'
 import { IconMemeh } from '@/components/Icons'
+import { Button, Space } from '@mantine/core'
 
 const localesMap = {
   en,
@@ -30,7 +31,7 @@ export default function Header() {
   return (
     <header suppressHydrationWarning>
       <Link href="/" id="logo" aria-label="homepage">
-        <IconMemeh/>
+        <IconMemeh />
         Memeh
       </Link>
 
@@ -87,9 +88,11 @@ export default function Header() {
           </li>
         </ul>
 
-        <a href="https://github.com/sponsors/lucasm" target="_blank" rel="external noopener noreferrer" className="button">
+        <Space h="xl" />
+
+        <Button size="lg" component="a" href="https://github.com/sponsors/lucasm" target="_blank" rel="noopener noreferrer">
           ♥&#160;&#160;{t.donate}
-        </a>
+        </Button>
       </nav>
 
       <div onClick={handleToggle} className={isActive ? 'layer layer-active' : 'layer'}></div>

@@ -1,91 +1,52 @@
 {
-  "name": "Memeh - Trusted news and memes",
+  "name": "Memeh",
   "short_name": "Memeh",
-  "description": "Breaking news headlines from trusted journalism. Be critical. Fight against misinformation.",
-  "start_url": "/",
-  "id": "/",
-  "scope": "/",
-  "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "lang": "en-US",
-  "dir": "ltr",
-  "categories": ["news"],
-  "prefer_related_applications": false,
-  "shortcuts": [
-    {
-      "name": "Today's news",
-      "short_name": "News",
-      "description": "Breaking news headlines from trusted sources",
-      "url": "/?shortcut=news",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    }
-  ],
+  "description": "Memeh is a news reader with trusted journalism without algorithms.",
+  "author": "Lucas Maués",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icon-192x192.png",
+      "src": "icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "/icon-192x192-maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icon-512x512.png",
+      "src": "icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "/icon-512x512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icon-1024x1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icon-1024x1024-maskable.png",
+      "src": "maskable-icon.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
+  "id": "/?utm_source=pwa",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "categories": ["news"],
   "screenshots": [
     {
-      "src": "/share.png",
-      "sizes": "540x720",
+      "src": "share.png",
+      "sizes": "1200x630",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Memeh news feed"
-    },
-    {
-      "src": "/share.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Memeh news feed wide"
+      "form_factor": "wide"
     }
-  ]
+  ],
+  "preferred_color_scheme": "dark"
 }

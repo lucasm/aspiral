@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
+import { Select } from '@mantine/core'
 import { useLocale } from '@/lib/i18n'
 import en from '@/locales/en'
 import ptBR from '@/locales/pt-BR'
@@ -14,14 +15,21 @@ const localesData: Record<LocaleKey, any> = {
   'pt-PT': ptPT,
 }
 
+const data = [
+  { value: 'en', label: 'International' },
+  { value: 'pt-BR', label: 'Brasil' },
+  { value: 'pt-PT', label: 'Portugal' },
+]
+
 export default function SelectLocale() {
   const router = useRouter()
   const pathname = usePathname()
   const currentLocale = useLocale() as LocaleKey
   const currentLocaleData = localesData[currentLocale]
 
-  function changeLanguage(e: React.ChangeEvent<HTMLSelectElement>) {
-    const newLocale = e.target.value as LocaleKey
+  function changeLanguage(value: string | null) {
+    if (!value) return
+    const newLocale = value as LocaleKey
     const segments = pathname.split('/')
     // segments[0] is empty string before first /
     // segments[1] is current locale
@@ -32,13 +40,33 @@ export default function SelectLocale() {
   }
 
   return (
-    <form>
-      <label>{currentLocaleData.edition}</label>
-      <select onChange={changeLanguage} value={currentLocale}>
-        <option value="en">International</option>
-        <option value="pt-BR">Brasil</option>
-        <option value="pt-PT">Portugal</option>
-      </select>
-    </form>
+    <div
+      style={{
+        margin: '0 auto',
+        maxWidth: '16rem',
+      }}>
+      <Select
+        label={currentLocaleData.edition}
+        labelProps={{
+          style: {
+            fontWeight: 700,
+            fontSize: '1rem',
+          },
+        }}
+        wrapperProps={{
+          style: {
+            display: 'flex',
+            gap: '1rem',
+            alignItems: 'center',
+            verticalAlign: 'middle',
+          },
+        }}
+        data={data}
+        value={currentLocale}
+        onChange={changeLanguage}
+        allowDeselect={false}
+        size="lg"
+      />
+    </div>
   )
 }

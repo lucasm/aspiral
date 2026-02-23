@@ -1,6 +1,14 @@
 import type { Metadata, Viewport } from 'next'
 import { ReactNode } from 'react'
+import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
+
+const font = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font',
+  display: 'swap',
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -16,6 +24,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://memeh.app'),
   title: {
     default: 'Memeh — Trusted news and memes',
     template: '%s | Memeh',
@@ -56,17 +65,10 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'Memeh',
   },
-  formatDetection: {
-    telephone: false,
-    email: false,
-    address: false,
-  },
   category: 'news',
   abstract: 'Trusted news without algorithms. Headlines, fact-checkers, and opinions from reliable journalism.',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    alternateLocale: ['pt_BR', 'pt_PT'],
     images: [
       {
         url: `/share.png`,
@@ -81,9 +83,6 @@ export const metadata: Metadata = {
     creator: '@lucasmezs',
     images: [`/share.png`],
   },
-  verification: {
-    google: undefined,
-  },
 }
 
 interface RootLayoutProps {
@@ -92,46 +91,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <head>
-        {/* DNS Prefetch for external resources */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-
-        {/* Preconnect to fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* Font stylesheet */}
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-
-        {/* Resource hints for performance */}
-        <link rel="prefetch" href="/share.png" as="image" />
-        <link rel="preload" href="/share.png" as="image" type="image/png" />
-
-        {/* Social sharing meta tags */}
-        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://memeh.app'}/share.png`} />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Memeh news feed - breaking news and memes" />
-        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://memeh.app'}/share.png`} />
-        <meta name="twitter:image:alt" content="Memeh news feed - breaking news and memes" />
-
-        {/* Web app metadata */}
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Memeh" />
-
-        {/* Additional SEO and web standards */}
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
-
-        {/* Canonical */}
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL || 'https://memeh.app'} />
-      </head>
+    <html suppressHydrationWarning lang="en" className={font.className}>
       <body>{children}</body>
     </html>
   )
