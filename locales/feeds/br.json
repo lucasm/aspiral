@@ -26,16 +26,12 @@
       "url": "https://www.poder360.com.br/feed/"
     },
     {
+      "name": "Agência Pública",
+      "url": "https://apublica.org/category/portugues/feed/"
+    },
+    {
       "name": "Nexo Jornal",
       "url": "https://www.nexojornal.com.br/rss.xml"
-    },
-    {
-      "name": "Veja",
-      "url": "https://veja.abril.com.br/feed/"
-    },
-    {
-      "name": "CartaCapital",
-      "url": "https://www.cartacapital.com.br/feed/"
     },
     {
       "name": "UOL",
@@ -44,7 +40,11 @@
     },
     {
       "name": "O Globo",
-      "url": "https://pox.globo.com/rss/oglobo/"
+      "url": "https://pox.globo.com/rss/oglobo/politica"
+    },
+    {
+      "name": "Veja",
+      "url": "https://veja.abril.com.br/feed/"
     },
     {
       "name": "Jacobin",
@@ -55,12 +55,12 @@
       "url": "https://www.intercept.com.br/feed/"
     },
     {
-      "name": "Revista Fórum",
-      "url": "https://revistaforum.com.br/feed"
+      "name": "CartaCapital",
+      "url": "https://www.cartacapital.com.br/feed/"
     },
     {
-      "name": "Agência Pública",
-      "url": "https://apublica.org/category/portugues/feed/"
+      "name": "Revista Fórum",
+      "url": "https://revistaforum.com.br/feed"
     },
     {
       "name": "Le Monde Diplomatique",
@@ -73,6 +73,18 @@
     {
       "name": "Metrópoles",
       "url": "https://www.metropoles.com/feed"
+    },
+    {
+      "name": "Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/rss.xml"
+    },
+    {
+      "name": "revista piauí",
+      "url": "https://piaui.folha.uol.com.br/feed/"
+    },
+    {
+      "name": "The Conversation",
+      "url": "https://theconversation.com/articles.atom?language=pt"
     }
   ],
   "check": [
@@ -87,6 +99,18 @@
     {
       "name": "Fato ou Fake",
       "url": "https://pox.globo.com/rss/g1/fato-ou-fake/"
+    },
+    {
+      "name": "Estadão Verifica",
+      "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/estadao-verifica/?body=%7B%22layout%22:%22google-news%22%7D"
+    },
+    {
+      "name": "Boatos.org",
+      "url": "https://www.boatos.org/feed/"
+    },
+    {
+      "name": "E-farsas",
+      "url": "https://www.e-farsas.com/feed/"
     }
   ],
   "tech": [
@@ -201,16 +225,32 @@
     {
       "name": "EInvestidor",
       "url": "https://einvestidor.estadao.com.br/feed/"
+    },
+    {
+      "name": "Pipeline Valor",
+      "url": "https://pox.globo.com/rss/pipelinevalor/"
+    },
+    {
+      "name": "B9",
+      "url": "https://www.b9.com.br/feed/"
     }
   ],
   "sport": [
+    {
+      "name": "Trivela",
+      "url": "https://trivela.com.br/feed/"
+    },
     {
       "name": "ge",
       "url": "https://pox.globo.com/rss/ge/"
     },
     {
+      "name": "CazéTV",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
+    },
+    {
       "name": "Lance",
-      "url": "hhttps://news.google.com/rss/search?q=when:1d+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+      "url": "https://news.google.com/rss/search?q=when:1d+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "TNT Sports",
@@ -231,10 +271,6 @@
     {
       "name": "90min",
       "url": "https://www.90min.com/pt-BR/posts.rss"
-    },
-    {
-      "name": "CazéTV",
-      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
     }
   ],
   "cult": [
@@ -304,11 +340,11 @@
     },
     {
       "name": "Revista Galileu",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:revistagalileu.globo.com&hl=pt-BR&gl=BR"
+      "url": "https://revistagalileu.globo.com/rss/galileu"
     },
     {
       "name": "Mega Curioso",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:megacurioso.com.br"
+      "url": "https://strapi.megacurioso.com.br/api/feed/4"
     },
     {
       "name": "VivaBem",

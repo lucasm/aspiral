@@ -97,13 +97,13 @@ async function getByCategory(country: string, category: string): Promise<FeedRes
     for (let i = 0; i < ids.length; i++) {
       const feedItems: Array<{ title: string; link: string }> = []
 
-      for (let j = 0; j < theFeed[i].items.length; j++) {
-        const originalTitle = theFeed[i].items[j].title
+      for (const item of theFeed[i].items) {
+        const originalTitle = item.title
         const cleanedTitle = applyFilter(originalTitle, filterRegex)
 
         feedItems.push({
           title: cleanedTitle,
-          link: theFeed[i].items[j].link + '?utm_source=memeh_app',
+          link: item.link,
         })
       }
 
@@ -174,7 +174,7 @@ async function getByName(country: string, category: string, name: string): Promi
         const cleanedTitle = applyFilter(item.title, filterRegex)
         result.push({
           title: cleanedTitle,
-          link: item.link + '?utm_source=memeh_app',
+          link: item.link,
         })
       }
     })
