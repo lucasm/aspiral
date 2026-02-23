@@ -56,10 +56,7 @@ function parseFilterString(filterStr: string): RegExp | null {
 /**
  * Get all feeds by category
  */
-async function getByCategory(
-  country: string,
-  category: string
-): Promise<FeedResponse[]> {
+async function getByCategory(country: string, category: string): Promise<FeedResponse[]> {
   try {
     // Dynamically import the feed file for the country
     const feedCountry = (await import(`@/locales/feeds/${country}.json`)).default as IFeedConfig
@@ -90,7 +87,7 @@ async function getByCategory(
     feeds.forEach((item) => {
       theFeed.push({
         title: item.title,
-        items: item.items.slice(0, 3),
+        items: item.items.slice(0, 4),
       })
     })
 
@@ -132,11 +129,7 @@ async function getByCategory(
 /**
  * Get feed by specific name
  */
-async function getByName(
-  country: string,
-  category: string,
-  name: string
-): Promise<FeedResponse[]> {
+async function getByName(country: string, category: string, name: string): Promise<FeedResponse[]> {
   try {
     // Dynamically import the feed file for the country
     const feedCountry = (await import(`@/locales/feeds/${country}.json`)).default as IFeedConfig
@@ -176,7 +169,7 @@ async function getByName(
     const feed = await parser.parseURL(feedUrl)
 
     const result: FeedResponse[] = []
-    feed.items.slice(0, 3).forEach((item) => {
+    feed.items.slice(0, 4).forEach((item) => {
       if (item.title && item.link) {
         const cleanedTitle = applyFilter(item.title, filterRegex)
         result.push({

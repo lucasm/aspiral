@@ -79,11 +79,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-.page {
-  position: relative;
-  height: 100%;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -395,6 +390,8 @@ article blockquote {
 }
 .page {
   margin-top: 2rem;
+  position: relative;
+  height: 100%;
 }
 .page h1 {
   max-width: 780px;
@@ -609,7 +606,7 @@ section .container {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
   header nav a {
     font-size: 1.75vw;
   }

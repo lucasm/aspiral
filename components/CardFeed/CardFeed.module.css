@@ -4,15 +4,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  gap: 1rem;
 }
 .feed div {
+  padding: 2rem;
   position: relative;
-  float: left;
+  display: flex;
+  flex-direction: column;
   height: auto;
   width: 100%;
   max-width: 100%;
-  margin: 0 0 1rem;
-  padding: 2rem;
   text-align: left;
   background: var(--color-translucent);
   box-sizing: border-box;
@@ -20,17 +21,16 @@
   border-radius: 2rem;
   overflow: hidden;
 }
-
 .feed figure {
-  position: relative;
-  float: left;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem;
+  background-color: transparent;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: auto 2.4rem;
   width: 100%;
   height: 2.4rem;
-  background-color: transparent;
-  background-position: 0 center;
-  background-size: auto 2.4rem;
-  background-repeat: no-repeat;
+  position: relative;
+  /* filter: invert(1); */
 }
 .feed h3 {
   float: left;
@@ -44,16 +44,20 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .feed li {
-  margin: 2rem 0 0;
+  width: 100%;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.2;
   padding: 0;
   filter: grayscale(100%);
 }
-.feed div li:nth-child(1) {
+.feed div li:first-of-type {
   font-size: 6vw;
 }
 .feed a {
@@ -63,140 +67,87 @@
 .feed a:focus {
   color: var(--color-black) !important;
 }
-.feed ul li:nth-child(2) a {
+.feed ul li:nth-child(2) a,
+.feed ul li:nth-child(4) a {
   color: rgb(255 255 255 / 50%);
 }
 
-/* First Top Featured */
+/* First Top */
 .feed div:first-child {
-  margin: 1% 1% 5%;
-  padding: 0 0 4rem;
-  text-align: center;
-  background-position: center 2rem;
-  background-color: transparent;
+  background: transparent;
+  border-radius: 0;
+  padding-top: 0;
 }
-.feed div:first-child figure {
-  float: none;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-}
-
-.feed div:first-child li:first-child {
-  margin: 2.5rem 0 0;
-}
-.feed div:first-child li {
-  margin: 4rem 0 0;
+.feed div:first-child ul {
+  flex-wrap: wrap;
+  flex-direction: unset;
 }
 .feed div:first-child li:nth-child(1) {
   font-size: 8vw;
 }
-.feed div:first-child li:nth-child(2),
-.feed div:first-child li:nth-child(3) {
-  font-size: 5vw;
-  width: 40%;
-  float: left;
-}
-.feed div:first-child li:nth-child(2),
-.feed div:first-child li:nth-child(3) {
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-  .feed figure {
-    margin: -0.5rem 0 2rem 0;
+  .feed {
+    padding: 1.5rem;
   }
-  .feed div {
-    max-width: 97%;
-    margin: 1.5%;
-  }
+
   .feed div li {
     font-size: 2vw;
   }
 
-  /* First Top Featured */
-  .feed div:first-child li:nth-child(1) {
+  .feed div li:first-of-type {
+    font-size: 2.75vw;
+  }
+
+  /* First Top */
+  .feed div:first-child li:first-of-type {
     font-size: 5vw;
-  }
-  .feed div:first-child li:nth-child(2),
-  .feed div:first-child li:nth-child(3) {
-    font-size: 3vw;
-  }
-
-  /* Second Duos */
-  .feed div:nth-child(2) li:nth-child(1),
-  .feed div:nth-child(3) li:nth-child(1),
-  .feed div:nth-child(7) li:nth-child(1),
-  .feed div:nth-child(8) li:nth-child(1),
-  .feed div:nth-child(12) li:nth-child(1),
-  .feed div:nth-child(13) li:nth-child(1) {
-    font-size: 2.25vw;
-  }
-
-  /* Third Minis */
-  .feed div:nth-child(4) li:nth-child(1),
-  .feed div:nth-child(5) li:nth-child(1),
-  .feed div:nth-child(6) li:nth-child(1),
-  .feed div:nth-child(9) li:nth-child(1),
-  .feed div:nth-child(10) li:nth-child(1),
-  .feed div:nth-child(11) li:nth-child(1),
-  .feed div:nth-child(14) li:nth-child(1),
-  .feed div:nth-child(15) li:nth-child(1),
-  .feed div:nth-child(16) li:nth-child(1) {
-    font-size: 1.75rem;
   }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1280px) {
-  .feed figure {
-    margin-top: -1rem;
+@media only screen and (min-width: 1200px) {
+  .feed {
+    gap: 2rem;
   }
   .feed div {
-    padding: 4rem;
+    padding: 3.5rem;
+  }
+  .feed ul {
+    gap: 2rem;
   }
   .feed div li {
     font-size: 1.5rem;
   }
-
-  /* First Top Featured */
-  .feed div:first-child {
-    margin: 1% 1% 5%;
-    padding: 2rem 7vw;
-    background-position: center 3.5rem;
+  .feed div li:first-of-type {
+    font-size: 2.25vw;
   }
-  .feed div:first-child li:nth-child(1) {
-    font-size: 3.75vw;
+
+  /* First Top */
+  .feed div:first-child ul {
+    gap: 3rem;
+  }
+  .feed div:first-child li:first-of-type {
+    font-size: 3.5vw;
   }
   .feed div:first-child li:nth-child(2),
-  .feed div:first-child li:nth-child(3) {
+  .feed div:first-child li:nth-child(3),
+  .feed div:first-child li:nth-child(4) {
     font-size: 1.75vw;
+    width: calc(33.333% - 2rem);
   }
 
-  /* Duos */
-  .feed div:nth-child(2),
-  .feed div:nth-child(3),
-  .feed div:nth-child(7),
-  .feed div:nth-child(8),
-  .feed div:nth-child(12),
-  .feed div:nth-child(13) {
-    max-width: 47%;
+  /* Two Cards in sequence */
+  .feed div:nth-child(5n + 2),
+  .feed div:nth-child(5n + 3) {
+    max-width: calc(50% - 1rem);
   }
 
-  /* Minis */
-  .feed div:nth-child(4),
-  .feed div:nth-child(5),
-  .feed div:nth-child(6),
-  .feed div:nth-child(9),
-  .feed div:nth-child(10),
-  .feed div:nth-child(11),
-  .feed div:nth-child(14),
-  .feed div:nth-child(15),
-  .feed div:nth-child(16) {
-    max-width: 30.333%;
+  /* Three Cards in sequence */
+  .feed div:nth-child(5n + 4),
+  .feed div:nth-child(5n + 5),
+  .feed div:nth-child(5n + 6) {
+    width: calc(33.333% - 1.35rem);
   }
 }

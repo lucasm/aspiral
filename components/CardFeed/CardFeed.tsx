@@ -2,7 +2,8 @@
 
 import styles from './CardFeed.module.css'
 import CardFeedFetch from '../CardFeedFetch'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
+import { normalizeId } from '@/utils/normalizeId'
 
 type Props = {
   readonly country: string
@@ -14,42 +15,34 @@ interface IFeedFile {
   url: string
 }
 
-// normalize name as ID (to match with path of SVG filenames)
-function normalizeId(string: string): string {
-  return string
-    .toLowerCase()
-    .replace('í', 'i')
-    .replace('ã', 'a')
-    .replace('á', 'a')
-    .replace('ê', 'e')
-    .replace('ú', 'u')
-    .replace('ó', 'o')
-    .replaceAll(' ', '-')
-}
+// Cache global para feeds carregados
+const feedCache = new Map<string, IFeedFile[]>()
 
 export default function Card(props: Readonly<Props>) {
-  // load file with rss feeds before generate cards
-  const feed = require('../../locales/feeds/' + props.country + '.json')
+  // Memoizar o carregamento do arquivo para evitar recálculos
+  const feedData = useMemo(() => {
+    const cacheKey = props.country
+    if (!feedCache.has(cacheKey)) {
+      feedCache.set(cacheKey, require('../../locales/feeds/' + props.country + '.json'))
+    }
+    return feedCache.get(cacheKey) || {}
+  }, [props.country])
 
   // random
   const [feeds, setFeeds] = useState<IFeedFile[]>([])
 
-//   console.log('LAYOUT CARD MOUNTED', props.category)
+  //   console.log('LAYOUT CARD MOUNTED', props.category)
 
   useEffect(() => {
     // random disabled
     // .sort(() => Math.random() - 0.5)
-    setFeeds(feed[props.category])
-  }, [feed, feeds, props.category])
+    setFeeds(feedData[props.category] || [])
+  }, [feedData, props.category])
 
   return (
     <div className={styles.feed}>
       {feeds.map((item, index) => (
-        <div
-          key={props.country + item.name}
-          id={normalizeId(item.name)}
-
-        >
+        <div key={props.country + item.name} id={normalizeId(item.name)}>
           <figure
             style={{
               backgroundImage: 'url(/images/logos/' + normalizeId(item.name) + '.svg)',

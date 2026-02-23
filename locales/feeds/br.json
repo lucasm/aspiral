@@ -10,21 +10,24 @@
       "video": "https://www.youtube.com/feeds/videos.xml?channel_id=UCthbIFAxbXTTQEC7EcQvP1Q"
     },
     {
-      "name": "UOL",
-      "url": "https://news.google.com/rss/search?q=when:72h+allinurl:noticias.uol.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-      "video": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVFbXI6Gu8U2f9Gjtxw4A-Q"
-    },
-    {
       "name": "CNN",
       "url": "https://www.cnnbrasil.com.br/feed"
     },
     {
+      "name": "Folha",
+      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:folha.uol.com.br&hl=pt-BR&gl=BR"
+    },
+    {
       "name": "Estadão",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:estadao.com.br/politica&hl=pt-BR&gl=BR"
+      "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/politica/?body=%7B%22layout%22:%22google-news%22%7D"
     },
     {
       "name": "Poder360",
       "url": "https://www.poder360.com.br/feed/"
+    },
+    {
+      "name": "Nexo Jornal",
+      "url": "https://www.nexojornal.com.br/rss.xml"
     },
     {
       "name": "Veja",
@@ -35,36 +38,41 @@
       "url": "https://www.cartacapital.com.br/feed/"
     },
     {
-      "name": "Folha",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:folha.uol.com.br&hl=pt-BR&gl=BR"
+      "name": "UOL",
+      "url": "https://news.google.com/rss/search?q=when:3d+allinurl:noticias.uol.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "video": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVFbXI6Gu8U2f9Gjtxw4A-Q"
     },
     {
       "name": "O Globo",
       "url": "https://pox.globo.com/rss/oglobo/"
     },
     {
-      "name": "Nexo Jornal",
-      "url": "https://www.nexojornal.com.br/rss.xml"
+      "name": "Jacobin",
+      "url": "https://jacobin.com.br/feed/"
+    },
+    {
+      "name": "Intercept Brasil",
+      "url": "https://www.intercept.com.br/feed/"
     },
     {
       "name": "Revista Fórum",
       "url": "https://revistaforum.com.br/feed"
     },
     {
-      "name": "The Intercept",
-      "url": "https://www.intercept.com.br/feed/"
-    },
-    {
       "name": "Agência Pública",
       "url": "https://apublica.org/category/portugues/feed/"
     },
     {
-      "name": "Jacobin Brasil",
-      "url": "https://jacobin.com.br/feed/"
-    },
-    {
       "name": "Le Monde Diplomatique",
       "url": "https://diplomatique.org.br/feed/"
+    },
+    {
+      "name": "SBT News",
+      "url": "https://sbtnews.sbt.com.br/rss.xml"
+    },
+    {
+      "name": "Metrópoles",
+      "url": "https://www.metropoles.com/feed"
     }
   ],
   "check": [
@@ -85,6 +93,10 @@
     {
       "name": "Tecnoblog",
       "url": "https://tecnoblog.net/feed/"
+    },
+    {
+      "name": "IT Forum",
+      "url": "https://itforum.com.br/feed"
     },
     {
       "name": "Canaltech",
@@ -110,10 +122,7 @@
       "name": "Manual do Usuario",
       "url": "https://manualdousuario.net/feed/"
     },
-    {
-      "name": "IT Forum",
-      "url": "https://itforum.com.br/feed"
-    },
+
     {
       "name": "Uol Tilt",
       "url": "https://news.google.com/rss/search?q=when:72h+allinurl:uol.com.br/tilt&hl=pt-BR&gl=BR"
@@ -161,6 +170,10 @@
       "url": "https://neofeed.com.br/feed/"
     },
     {
+      "name": "InvestNews",
+      "url": "https://investnews.com.br/feed/"
+    },
+    {
       "name": "Money Times",
       "url": "https://www.moneytimes.com.br/feed/"
     },
@@ -168,18 +181,7 @@
       "name": "Seu Dinheiro",
       "url": "https://www.seudinheiro.com/feed/"
     },
-    {
-      "name": "InvestNews",
-      "url": "https://investnews.com.br/feed/"
-    },
-    {
-      "name": "EInvestidor",
-      "url": "https://einvestidor.estadao.com.br/feed/"
-    },
-    {
-      "name": "Times Brasil",
-      "url": "https://timesbrasil.com.br/feed/"
-    },
+
     {
       "name": "Startups",
       "url": "https://startups.com.br/feed/"
@@ -187,6 +189,18 @@
     {
       "name": "Startupi",
       "url": "https://startupi.com.br/feed/"
+    },
+    {
+      "name": "Times Brasil",
+      "url": "https://timesbrasil.com.br/feed/"
+    },
+    {
+      "name": "Época Negócios",
+      "url": "https://epocanegocios.globo.com/rss/epocanegocios"
+    },
+    {
+      "name": "EInvestidor",
+      "url": "https://einvestidor.estadao.com.br/feed/"
     }
   ],
   "sport": [
@@ -196,7 +210,7 @@
     },
     {
       "name": "Lance",
-      "url": "https://www.lance.com.br/rss/"
+      "url": "hhttps://news.google.com/rss/search?q=when:1d+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "TNT Sports",
@@ -210,10 +224,17 @@
       "name": "Gazeta Esportiva",
       "url": "https://www.gazetaesportiva.com/feed/"
     },
-
+    {
+      "name": "No Ataque",
+      "url": "https://noataque.com.br/feed"
+    },
     {
       "name": "90min",
       "url": "https://www.90min.com/pt-BR/posts.rss"
+    },
+    {
+      "name": "CazéTV",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
     }
   ],
   "cult": [
@@ -231,23 +252,23 @@
     },
     {
       "name": "Rolling Stone",
-      "url": "https://news.google.com/rss/search?q=when:72h+allinurl:rollingstone.uol.com.br&hl=pt-BR&gl=BR"
+      "url": "https://news.google.com/rss/search?q=when:48h+allinurl:rollingstone.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "TMDQA",
-      "url": "https://www.tenhomaisdiscosqueamigos.com/feed/"
+      "url": "https://feeds.feedburner.com/tmdqafeed"
     },
     {
       "name": "Tracklist",
       "url": "https://tracklist.com.br/feed"
     },
     {
-      "name": "Jovem Nerd",
-      "url": "https://news.google.com/rss/search?q=when:24h+jovemnerd.com.br&hl=pt-BR&gl=BR"
-    },
-    {
       "name": "IGN",
       "url": "https://br.ign.com/feed.xml"
+    },
+    {
+      "name": "Jovem Nerd",
+      "url": "https://news.google.com/rss/search?q=when:14d+jovemnerd.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     }
   ],
   "geek": [
@@ -256,7 +277,7 @@
       "url": "https://pox.globo.com/rss/gshow/"
     },
     {
-      "name": "Uol Splash",
+      "name": "UOL Splash",
       "url": "https://news.google.com/rss/search?q=when:24h+allinurl:uol.com.br/splash&hl=pt-BR&gl=BR"
     },
     {
@@ -325,6 +346,6 @@
     }
   ],
   "filter": {
-    "keywords": "/ - Exame Notícias| - Folha de S.Paulo| - CNN Brasil| - O Globo| - Globo| - UOL Confere| - UOL Notícias| - uol.com.br| - Estadão| - Bloomberg Brasil| - Bloomberg Línea Brasil| - Omelete| - AdoroCinema| - Rolling Stone Brasil| - VivaBem| - Tilt| - Mega Curioso| - Revista Galileu| - NerdBunker| - purepeople.com.br| - OFuxico/"
+    "keywords": "/ - Exame Notícias| - Folha de S.Paulo| - CNN Brasil| - O Globo| - Globo| - globoesporte.com| - UOL Notícias| - uol.com.br| - UOL| - Estadão| - Bloomberg Brasil| - Bloomberg Línea Brasil| - Omelete| - AdoroCinema| - Rolling Stone Brasil| - Tenho Mais Discos Que Amigos|- Jovem Nerd| - VivaBem| - Tilt| - Mega Curioso| - Revista Galileu| - NerdBunker| - purepeople.com.br| - OFuxico/"
   }
 }

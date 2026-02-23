@@ -1,6 +1,6 @@
 export default {
-  title: 'Memeh — Notícias confiáveis e humor',
-  description: 'Leitor de notícias para o sentido crítico. Manchetes, verificadores de factos e opiniões do jornalismo de confiança.',
+  title: 'Memeh — Notícias confiáveis sem algoritmos',
+  description: 'Notícias de última hora do jornalismo fidedigno. Sem algoritmos. Seja crítico. Lute contra a desinformação.',
   legal: 'Todos os direitos reservados a fontes de notícias e marcas registadas.',
   about: 'Acerca',
   privacy: 'Privacidade',

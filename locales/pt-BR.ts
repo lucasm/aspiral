@@ -1,6 +1,6 @@
 export default {
-  title: 'Memeh — Notícias confiáveis com humor',
-  description: 'Manchetes de notícias de última hora do jornalismo confiável. Seja crítico. Lute contra a desinformação.',
+  title: 'Memeh — Notícias confiáveis sem algoritmos',
+  description: 'Notícias de última hora do jornalismo confiável. Sem algoritmos. Seja crítico. Lute contra a desinformação.',
   legal: 'Todos os direitos reservados às fontes de notícias e marcas registradas.',
   about: 'Sobre',
   privacy: 'Privacidade, Termos e Cookies',
@@ -15,7 +15,7 @@ export default {
   check: 'Checagem',
   tech: 'Tech',
   biz: 'Economia',
-  sport: 'Esporte',
+  sport: 'Esportes',
   cult: 'Cultura',
   geek: 'Fofoca',
   sci: 'Ciência',

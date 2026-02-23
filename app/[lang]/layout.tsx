@@ -34,42 +34,74 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
     'pt-PT': 'pt-PT',
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://memeh.app'
+  const canonicalUrl = `${baseUrl}/${locale === 'en' ? '' : locale}`
+
   return {
     title: t.title,
     description: t.description,
-    keywords: ['news', 'headlines', 'feeds', 'rss', 'memeh', 'journalism', 'fact-checking'],
-    authors: [{ name: 'Lucas Menezes', url: 'https://lucasm.dev?utm_source=memeh_app' }],
-    creator: 'Lucas Menezes',
+    keywords: ['news', 'headlines', 'feeds', 'rss', 'memeh', 'journalism', 'fact-checking', 'news aggregator'],
+    authors: [{ name: 'Memeh', url: baseUrl }],
+    creator: 'Memeh Team',
+    publisher: 'Memeh',
     applicationName: 'Memeh',
+    abstract: t.description,
+    icons: {
+      icon: [{ url: '/favicon.ico' }, { url: '/icon.svg', type: 'image/svg+xml' }],
+      shortcut: '/favicon.ico',
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    },
     appleWebApp: {
       capable: true,
-      statusBarStyle: 'black-translucent',
+      statusBarStyle: 'default',
       title: 'Memeh',
-      startupImage: '/images/icon-192x192.png',
+    },
+    formatDetection: {
+      telephone: false,
+      email: false,
+      address: false,
+    },
+    alternates: {
+      languages: {
+        en: `${baseUrl}/`,
+        'pt-BR': `${baseUrl}/pt-BR`,
+        'pt-PT': `${baseUrl}/pt-PT`,
+      },
+      canonical: canonicalUrl,
     },
     manifest: '/manifest.json',
     openGraph: {
       type: 'website',
       locale: langMap[locale],
-      url: `https://memeh.app/${locale}`,
+      alternateLocale: ['en', 'pt-BR', 'pt-PT'].filter((l) => l !== langMap[locale]),
+      url: canonicalUrl,
       siteName: 'Memeh',
       title: t.title,
       description: t.description,
       images: [
         {
-          url: 'https://memeh.app/images/memeh-share.png',
+          url: `${baseUrl}/share.png`,
           width: 1200,
           height: 630,
-          alt: 'Memeh',
+          alt: 'Memeh news feed - trusted news and memes',
+          type: 'image/png',
+          secureUrl: `${baseUrl}/share.png`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
+      site: '@memeh_news',
+      creator: '@memeh_news',
       title: t.title,
       description: t.description,
-      images: ['https://memeh.app/images/memeh-share.png'],
-      creator: '@lucasm',
+
+      images: [`${baseUrl}/share.png`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
     },
   }
 }
@@ -121,4 +153,3 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
     </>
   )
 }
-
