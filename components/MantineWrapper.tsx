@@ -10,6 +10,8 @@ const theme = createTheme({
   },
   autoContrast: true,
   defaultRadius: 'md', // 8px — igual ao --radius do globals.css
+  fontFamily: 'var(--font), sans-serif',
+  fontFamilyMonospace: 'var(--font), monospace',
 })
 
 export default function MantineWrapper({ children }: { children: React.ReactNode }) {

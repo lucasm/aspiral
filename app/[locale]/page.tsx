@@ -5,7 +5,7 @@ export default async function HomePage() {
   const t = await getTranslations()
 
   return (
-    <div className="PageLayout">
+    <div className="PageLayout" id="home">
       <section id="news">
         <div className="feedSection">
           <h2>{t('news')}</h2>

@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header suppressHydrationWarning>
-      <Link href="/" id="logo" aria-label="homepage">
+      <Link href={`/${t('language')}/#home`} id="logo" aria-label="Home">
         <IconAspiral />
         Aspiral
       </Link>

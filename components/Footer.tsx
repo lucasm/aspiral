@@ -11,9 +11,8 @@ export default function Footer() {
   return (
     <footer suppressHydrationWarning>
       <div className="container">
-        <Link href="/" aria-label="homepage" className="logo">
+        <Link href="/" aria-label="Aspiral" className="logo">
           <IconAspiral />
-          Aspiral
         </Link>
 
         <p>{t('title')}</p>
