@@ -3,6 +3,9 @@ import Parser from 'rss-parser'
 
 const parser = new Parser()
 
+// Feeds são cacheados por 5 minutos. Após o 1º request, retornam instantaneamente do cache.
+const CACHE_OPTS = { next: { revalidate: 300 } }
+
 /**
  * Retenta uma função async até `retries` vezes com backoff exponencial.
  * Cada tentativa aguarda o dobro do tempo da anterior (ex: 300ms → 600ms → 1200ms).
@@ -27,13 +30,31 @@ async function withRetry<T>(fn: () => Promise<T>, retries = 2, delayMs = 300): P
  * faz fallback via allorigins.win antes de desistir.
  */
 async function parseURLWithEncoding(url: string): ReturnType<typeof parser.parseURL> {
-  let response = await fetch(url)
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 5000)
+
+  let response: Response
+  try {
+    response = await fetch(url, { signal: controller.signal, ...CACHE_OPTS })
+  } catch (err) {
+    clearTimeout(timeoutId)
+    throw new Error(`Timeout ou falha de rede em: ${url}`)
+  }
+  clearTimeout(timeoutId)
 
   // 403 em produção = bloqueio por IP de datacenter. Proxy usa IPs diferentes.
   if (response.status === 403) {
     console.warn(`[feed] 403 em ${url} — usando proxy allorigins`)
-    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
-    response = await fetch(proxyUrl)
+    const proxyController = new AbortController()
+    const proxyTimeoutId = setTimeout(() => proxyController.abort(), 4000)
+    try {
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+      response = await fetch(proxyUrl, { signal: proxyController.signal, ...CACHE_OPTS })
+    } catch {
+      clearTimeout(proxyTimeoutId)
+      throw new Error(`Proxy timeout para: ${url}`)
+    }
+    clearTimeout(proxyTimeoutId)
     if (!response.ok) {
       console.error(`[feed] proxy também falhou para ${url} — status ${response.status}`)
     }

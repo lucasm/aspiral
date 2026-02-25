@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 import Loader from './Loader/Loader'
 
 type Props = {
@@ -10,27 +10,18 @@ type Props = {
 export default function CardFeedFetch(props: Readonly<Props>) {
   const [data, setData] = useState<any>([])
   const [loading, setLoading] = useState<boolean>(true)
+  const [retryCount, setRetryCount] = useState(0)
 
-  // Rastrear a requisição em aberto para cancelar se necessário
   const abortControllerRef = useRef<AbortController | null>(null)
-  // Flag para saber se já iniciamos uma requisição
-  const requestStartedRef = useRef<boolean>(false)
 
-  useEffect(() => {
-    // Se já iniciamos uma requisição, não inicia novamente
-    if (requestStartedRef.current) {
-      return
-    }
-
-    // Cancelar requisição anterior se houver
+  const fetchFeed = useCallback(() => {
     if (abortControllerRef.current) {
       abortControllerRef.current.abort()
     }
 
-    // Criar novo AbortController para esta requisição
     const abortController = new AbortController()
     abortControllerRef.current = abortController
-    requestStartedRef.current = true
+    setLoading(true)
 
     const url = `/api/feed?country=${props.country}&category=${props.category}&name=${props.name}`
 
@@ -42,44 +33,56 @@ export default function CardFeedFetch(props: Readonly<Props>) {
         return response.json()
       })
       .then((responseJson) => {
-        // Verificar se a requisição não foi cancelada
         if (!abortController.signal.aborted) {
-          console.log('GET', props.name, responseJson)
           setData(responseJson)
           setLoading(false)
         }
       })
       .catch((error) => {
-        // Ignorar erros de requisição cancelada
-        if (error.name === 'AbortError') {
-          return
-        }
+        if (error.name === 'AbortError') return
         console.log('GET ERROR', error)
         setLoading(false)
         setData([
           {
             title: 'Ooopss!',
-            link: 'mailto:feedback@aspiral.app?subject=Feedback&body=Error%20in%20frontend%20of%20' + props.name,
+            link: null,
           },
         ])
+        // Retry automático único após 3s
+        if (retryCount === 0) {
+          setTimeout(() => setRetryCount((c) => c + 1), 3000)
+        }
       })
 
-    // Cleanup: cancelar requisição ao desmontar ou quando deps mudarem
     return () => {
       abortController.abort()
-      requestStartedRef.current = false
     }
-  }, [props.category, props.country, props.name])
+  }, [props.category, props.country, props.name, retryCount])
+
+  useEffect(() => {
+    const cleanup = fetchFeed()
+    return cleanup
+  }, [fetchFeed])
 
   return (
     <ul>
-      {data.map((item) => (
-        <li key={item.title + item.link}>
-          <a href={item.link} target="_blank" rel="external noopener noreferrer">
-            {item.title}
-          </a>
-        </li>
-      ))}
+      {data.map((item) =>
+        item.link === null ? (
+          <li key="error">
+            <button
+              onClick={() => setRetryCount((c) => c + 1)}
+              style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}>
+              {item.title}
+            </button>
+          </li>
+        ) : (
+          <li key={item.title + item.link}>
+            <a href={item.link} target="_blank" rel="external noopener noreferrer">
+              {item.title}
+            </a>
+          </li>
+        )
+      )}
       {loading && <Loader />}
     </ul>
   )
