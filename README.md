@@ -23,50 +23,11 @@ Aspiral is a breaking news headlines application powered by trusted journalism s
 
 - **Trusted** — Renowned journalism sources focused on liberty of expression, democracy, human rights and critical sense.
 
-- **Internationalized** — Editions available by country (English, Portuguese BR, Portuguese PT).
-
-- **Accessible** — Free access journalism, fast on slow internet connections and high contrast support.
-
 - **Fact check** — Features fact-checking by international recognized agencies.
 
-- **Modern Stack** — Built with Next.js 16, React 19, and TypeScript.
+- **Internationalized** — Editions available by country (English, Portuguese BR, Portuguese PT).
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 16 with App Router
-- **React**: 19.x
-- **Language**: TypeScript 5.3
-- **Styling**: CSS Modules
-- **Feed Parsing**: RSS Parser
-- **i18n**: Locale-based using browser language and localStorage
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Production Build
-
-```bash
-npm run build
-npm start
-```
+- **Accessibility** — Free access journalism, fast on slow internet connections and high contrast support.
 
 ## 📁 Project Structure
 
@@ -96,7 +57,7 @@ aspiral/
 └── tsconfig.json       # TypeScript configuration with path aliases
 ```
 
-## 🧡 Contribute
+## ❤️ Contribute
 
 [Become a sponsor](https://github.com/sponsors/lucasm) to help maintain active development and get benefits as early Beta access!
 
@@ -108,4 +69,4 @@ Developers, feel free to open a new issue or send pull requests for bug fixes an
 
 ## 📜 Legal
 
-Made by [Lucas Menezes](https://lucasm.dev/?utm_source=aspiral_repo). All rights reserved to external news sources and trademarks.
+Made by [Lucas Maués](https://lucasm.dev/?utm_source=aspiral). All rights reserved to external news sources and trademarks.

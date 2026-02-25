@@ -35,7 +35,7 @@
     },
     {
       "name": "UOL",
-      "url": "https://news.google.com/rss/search?q=when:3d+allinurl:noticias.uol.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "url": "https://www.uol.com.br/vueland/api/?loadComponent=XmlFeedRss",
       "video": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVFbXI6Gu8U2f9Gjtxw4A-Q"
     },
     {
@@ -347,7 +347,7 @@
       "url": "https://strapi.megacurioso.com.br/api/feed/4"
     },
     {
-      "name": "VivaBem",
+      "name": "UOL VivaBem",
       "url": "https://news.google.com/rss/search?q=when:24h+allinurl:uol.com.br/vivabem&hl=pt-BR&gl=BR"
     },
     {
@@ -370,7 +370,7 @@
   "dscvr": [
     {
       "name": "Sensacionalista",
-      "url": "https://news.google.com/rss/search?q=when:72h+oglobo.globo.com/blogs/humor/sensacionalista&hl=pt-BR&gl=BR"
+      "url": "https://pox.globo.com/rss/oglobo/blogs/humor/sensacionalista/"
     },
     {
       "name": "Reddit",
@@ -382,6 +382,6 @@
     }
   ],
   "filter": {
-    "keywords": "/ - Exame Notícias| - Folha de S.Paulo| - CNN Brasil| - O Globo| - Globo| - globoesporte.com| - UOL Notícias| - uol.com.br| - UOL| - Estadão| - Bloomberg Brasil| - Bloomberg Línea Brasil| - Omelete| - AdoroCinema| - Rolling Stone Brasil| - Tenho Mais Discos Que Amigos|- Jovem Nerd| - VivaBem| - Tilt| - Mega Curioso| - Revista Galileu| - NerdBunker| - purepeople.com.br| - OFuxico/"
+    "keywords": "/ - Exame Notícias| - Folha de S.Paulo| - CNN Brasil| - O Globo| - Globo| - globoesporte.com| - Estadão| - Bloomberg Brasil| - Bloomberg Línea Brasil| - Omelete| - AdoroCinema| - Rolling Stone Brasil| - Tenho Mais Discos Que Amigos|- Jovem Nerd| - VivaBem| - Tilt| - Mega Curioso| - Revista Galileu| - NerdBunker| - purepeople.com.br| - OFuxico/"
   }
 }

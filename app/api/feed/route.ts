@@ -3,6 +3,20 @@ import Parser from 'rss-parser'
 
 const parser = new Parser()
 
+/**
+ * Retenta uma função async até `retries` vezes com backoff exponencial.
+ * Cada tentativa aguarda o dobro do tempo da anterior (ex: 300ms → 600ms → 1200ms).
+ */
+async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 300): Promise<T> {
+  try {
+    return await fn()
+  } catch (err) {
+    if (retries <= 0) throw err
+    await new Promise((resolve) => setTimeout(resolve, delayMs))
+    return withRetry(fn, retries - 1, delayMs * 2)
+  }
+}
+
 interface IFeedFile {
   name: string
   url: string
@@ -30,7 +44,8 @@ interface FeedResponse {
 /**
  * Remove filtered keywords from title
  */
-function applyFilter(title: string, filterRegex: RegExp | null): string {
+function applyFilter(title: string | undefined, filterRegex: RegExp | null): string {
+  if (!title) return ''
   if (!filterRegex) return title
   return title.replace(filterRegex, '').trim()
 }
@@ -76,11 +91,11 @@ async function getByCategory(country: string, category: string): Promise<FeedRes
     const ids: string[] = []
     const theFeed: Array<{ title: string | undefined; items: any[] }> = []
 
-    // Parse all RSS feeds in parallel
+    // Parse all RSS feeds in parallel, cada um com retry independente
     const feeds = await Promise.all(
       feedArray.map((item: IFeedFile) => {
         ids.push(item.name)
-        return parser.parseURL(item.url)
+        return withRetry(() => parser.parseURL(item.url))
       })
     )
 
@@ -98,7 +113,7 @@ async function getByCategory(country: string, category: string): Promise<FeedRes
       const feedItems: Array<{ title: string; link: string }> = []
 
       for (const item of theFeed[i].items) {
-        const originalTitle = item.title
+        const originalTitle = item.title || item.contentSnippet || item.content
         const cleanedTitle = applyFilter(originalTitle, filterRegex)
 
         feedItems.push({
@@ -165,13 +180,14 @@ async function getByName(country: string, category: string, name: string): Promi
     const filterConfig = feedCountry.filter as FeedFilter | undefined
     const filterRegex = filterConfig?.keywords ? parseFilterString(filterConfig.keywords) : null
 
-    // Parse the feed
-    const feed = await parser.parseURL(feedUrl)
+    // Parse the feed (com retry automático)
+    const feed = await withRetry(() => parser.parseURL(feedUrl))
 
     const result: FeedResponse[] = []
     feed.items.slice(0, 4).forEach((item) => {
-      if (item.title && item.link) {
-        const cleanedTitle = applyFilter(item.title, filterRegex)
+      const rawTitle = item.title || item.contentSnippet || item.content
+      if (rawTitle && item.link) {
+        const cleanedTitle = applyFilter(rawTitle, filterRegex)
         result.push({
           title: cleanedTitle,
           link: item.link,
