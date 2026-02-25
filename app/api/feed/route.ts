@@ -3,9 +3,12 @@ import Parser from 'rss-parser'
 
 const parser = new Parser()
 
+// Vercel Hobby: 10s max. Deixa margem para overhead + fallback proxy.
+export const maxDuration = 10
+
 const UA_BROWSER = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36'
 
-const FETCH_TIMEOUT_MS = 8000
+const FETCH_TIMEOUT_MS = 4000
 
 function fetchWithTimeout(url: string, init?: RequestInit): Promise<Response> {
   const controller = new AbortController()
@@ -14,9 +17,10 @@ function fetchWithTimeout(url: string, init?: RequestInit): Promise<Response> {
 }
 
 /**
- * Faz o fetch do feed com timeout de 8s.
+ * Faz o fetch do feed com timeout de 4s.
  * Em caso de 403 (bloqueio por IP de datacenter),
  * faz fallback via allorigins.win que usa IPs diferentes.
+ * Pior caso: 4s (direto) + 4s (proxy) = 8s < 10s (limite Vercel Hobby).
  */
 async function fetchFeed(url: string): Promise<{ buffer: ArrayBuffer; contentType: string }> {
   const headers = { 'User-Agent': UA_BROWSER }
