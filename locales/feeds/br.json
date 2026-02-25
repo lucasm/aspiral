@@ -15,7 +15,7 @@
     },
     {
       "name": "Folha",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:folha.uol.com.br&hl=pt-BR&gl=BR"
+      "url": "https://feeds.folha.uol.com.br/poder/rss091.xml"
     },
     {
       "name": "Estadão",
@@ -148,8 +148,8 @@
     },
 
     {
-      "name": "Uol Tilt",
-      "url": "https://news.google.com/rss/search?q=when:72h+allinurl:uol.com.br/tilt&hl=pt-BR&gl=BR"
+      "name": "UOL Tilt",
+      "url": "https://rss.uol.com.br/feed/tecnologia.xml"
     },
     {
       "name": "TudoCelular",
@@ -250,7 +250,7 @@
     },
     {
       "name": "Lance",
-      "url": "https://news.google.com/rss/search?q=when:1d+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+      "url": "https://news.google.com/rss/search?q=when:48h+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "TNT Sports",
@@ -276,11 +276,11 @@
   "cult": [
     {
       "name": "Omelete",
-      "url": "https://news.google.com/rss/search?q=when:72h+allinurl:omelete.com.br&hl=pt-BR&gl=BR"
+      "url": "https://news.google.com/rss/search?q=when:48h+allinurl:omelete.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "AdoroCinema",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:adorocinema.com&hl=pt-BR&gl=BR"
+      "url": "https://news.google.com/rss/search?q=when:48h+allinurl:adorocinema.com&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "PAPELPOP",
@@ -314,11 +314,11 @@
     },
     {
       "name": "UOL Splash",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:uol.com.br/splash&hl=pt-BR&gl=BR"
+      "url": "https://rss.uol.com.br/feed/entretenimento.xml"
     },
     {
       "name": "Purepeople",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:purepeople.com.br&hl=pt-BR&gl=BR"
+      "url": "https://news.google.com/rss/search?q=when:48h+allinurl:purepeople.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     },
     {
       "name": "O Fuxico",
@@ -348,7 +348,7 @@
     },
     {
       "name": "UOL VivaBem",
-      "url": "https://news.google.com/rss/search?q=when:24h+allinurl:uol.com.br/vivabem&hl=pt-BR&gl=BR"
+      "url": "https://news.google.com/rss/search?q=when:48h+allinurl:uol.com.br/vivabem&hl=pt-BR&gl=BR"
     },
     {
       "name": "Tua Saúde",
@@ -382,6 +382,6 @@
     }
   ],
   "filter": {
-    "keywords": "/ - Exame Notícias| - Folha de S.Paulo| - CNN Brasil| - O Globo| - Globo| - globoesporte.com| - Estadão| - Bloomberg Brasil| - Bloomberg Línea Brasil| - Omelete| - AdoroCinema| - Rolling Stone Brasil| - Tenho Mais Discos Que Amigos|- Jovem Nerd| - VivaBem| - Tilt| - Mega Curioso| - Revista Galileu| - NerdBunker| - purepeople.com.br| - OFuxico/"
+    "keywords": "/ - Exame Notícias| - CNN Brasil| - globoesporte.com| - Bloomberg Línea Brasil| - Bloomberg Brasil| - Omelete| - AdoroCinema| - Rolling Stone Brasil| - Tenho Mais Discos Que Amigos|- Jovem Nerd| - Mega Curioso| - NerdBunker| - purepeople.com.br| - OFuxico/"
   }
 }

@@ -2,7 +2,7 @@
 
 import styles from './CardFeed.module.css'
 import CardFeedFetch from '../CardFeedFetch'
-import { useEffect, useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { normalizeId } from '@/utils/normalizeId'
 
 type Props = {
@@ -16,32 +16,19 @@ interface IFeedFile {
 }
 
 // Cache global para feeds carregados
-const feedCache = new Map<string, IFeedFile[]>()
+const feedCache = new Map<string, Record<string, IFeedFile[]>>()
 
 export default function Card(props: Readonly<Props>) {
-  // Memoizar o carregamento do arquivo para evitar recálculos
-  const feedData = useMemo(() => {
-    const cacheKey = props.country
-    if (!feedCache.has(cacheKey)) {
-      feedCache.set(cacheKey, require('../../locales/feeds/' + props.country + '.json'))
+  const feeds = useMemo<IFeedFile[]>(() => {
+    if (!feedCache.has(props.country)) {
+      feedCache.set(props.country, require('../../locales/feeds/' + props.country + '.json'))
     }
-    return feedCache.get(cacheKey) || {}
-  }, [props.country])
-
-  // random
-  const [feeds, setFeeds] = useState<IFeedFile[]>([])
-
-  //   console.log('LAYOUT CARD MOUNTED', props.category)
-
-  useEffect(() => {
-    // random disabled
-    // .sort(() => Math.random() - 0.5)
-    setFeeds(feedData[props.category] || [])
-  }, [feedData, props.category])
+    return feedCache.get(props.country)![props.category] ?? []
+  }, [props.country, props.category])
 
   return (
     <div className={styles.feed}>
-      {feeds.map((item, index) => (
+      {feeds.map((item) => (
         <div key={props.country + item.name} id={normalizeId(item.name)}>
           <figure
             style={{

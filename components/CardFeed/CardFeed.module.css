@@ -125,8 +125,10 @@
   }
 
   /* First Top */
+  .feed div:first-child {
+    align-items: center;
+  }
   .feed div:first-child figure {
-    margin: 0 auto 2rem;
     background-position: center;
   }
   .feed div:first-child ul {
