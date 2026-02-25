@@ -5,24 +5,33 @@ const parser = new Parser()
 
 const UA_BROWSER = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36'
 
+const FETCH_TIMEOUT_MS = 8000
+
+function fetchWithTimeout(url: string, init?: RequestInit): Promise<Response> {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS)
+  return fetch(url, { ...init, signal: controller.signal }).finally(() => clearTimeout(timer))
+}
+
 /**
- * Faz o fetch do feed. Em caso de 403 (bloqueio por IP de datacenter),
- * faz fallback via allorigins.win que usa IPs residenciais/diferentes.
+ * Faz o fetch do feed com timeout de 8s.
+ * Em caso de 403 (bloqueio por IP de datacenter),
+ * faz fallback via allorigins.win que usa IPs diferentes.
  */
 async function fetchFeed(url: string): Promise<{ buffer: ArrayBuffer; contentType: string }> {
-  let response = await fetch(url, {
-    headers: { 'User-Agent': UA_BROWSER },
-  })
+  const headers = { 'User-Agent': UA_BROWSER }
+
+  let response = await fetchWithTimeout(url, { headers })
 
   if (response.status === 403) {
     const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
-    response = await fetch(proxyUrl, {
-      headers: { 'User-Agent': UA_BROWSER },
-    })
+    response = await fetchWithTimeout(proxyUrl, { headers })
   }
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status} fetching feed: ${url}`)
+    const err = new Error(`HTTP ${response.status} fetching feed: ${url}`) as Error & { status: number }
+    err.status = response.status
+    throw err
   }
 
   const contentType = response.headers.get('content-type') ?? ''
@@ -65,13 +74,14 @@ async function parseURLWithEncoding(url: string): ReturnType<typeof parser.parse
 
 /**
  * Retenta uma função async até `retries` vezes com backoff exponencial.
- * Cada tentativa aguarda o dobro do tempo da anterior (ex: 300ms → 600ms → 1200ms).
+ * Não retenta erros 4xx (são determinísticos).
  */
-async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 300): Promise<T> {
+async function withRetry<T>(fn: () => Promise<T>, retries = 2, delayMs = 300): Promise<T> {
   try {
     return await fn()
   } catch (err) {
-    if (retries <= 0) throw err
+    const status = (err as { status?: number }).status
+    if (retries <= 0 || (status && status >= 400 && status < 500)) throw err
     await new Promise((resolve) => setTimeout(resolve, delayMs))
     return withRetry(fn, retries - 1, delayMs * 2)
   }
