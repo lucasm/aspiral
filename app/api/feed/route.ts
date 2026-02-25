@@ -7,11 +7,14 @@ const parser = new Parser()
  * Retenta uma função async até `retries` vezes com backoff exponencial.
  * Cada tentativa aguarda o dobro do tempo da anterior (ex: 300ms → 600ms → 1200ms).
  */
-async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 300): Promise<T> {
+async function withRetry<T>(fn: () => Promise<T>, retries = 2, delayMs = 300): Promise<T> {
   try {
     return await fn()
   } catch (err) {
-    if (retries <= 0) throw err
+    const status = (err as { status?: number }).status
+    // Não retenta erros 4xx — são determinísticos (bloqueio, não encontrado, etc.)
+    if (retries <= 0 || (status && status >= 400 && status < 500)) throw err
+    console.warn(`[feed] retry em ${retries} tentativa(s) restantes — delay ${delayMs}ms`)
     await new Promise((resolve) => setTimeout(resolve, delayMs))
     return withRetry(fn, retries - 1, delayMs * 2)
   }
@@ -20,12 +23,26 @@ async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 300): P
 /**
  * Faz o fetch e parse do feed respeitando o encoding declarado no XML
  * (ex: ISO-8859-1 da Folha). Evita caracteres garbled como â, ã, etc.
+ * Em caso de 403 (bloqueio por IP de datacenter da Vercel),
+ * faz fallback via allorigins.win antes de desistir.
  */
 async function parseURLWithEncoding(url: string): ReturnType<typeof parser.parseURL> {
-  const response = await fetch(url)
+  let response = await fetch(url)
+
+  // 403 em produção = bloqueio por IP de datacenter. Proxy usa IPs diferentes.
+  if (response.status === 403) {
+    console.warn(`[feed] 403 em ${url} — usando proxy allorigins`)
+    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+    response = await fetch(proxyUrl)
+    if (!response.ok) {
+      console.error(`[feed] proxy também falhou para ${url} — status ${response.status}`)
+    }
+  }
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status} fetching feed: ${url}`)
+    const err = new Error(`HTTP ${response.status} fetching feed: ${url}`) as Error & { status: number }
+    err.status = response.status
+    throw err
   }
 
   const contentType = response.headers.get('content-type') ?? ''
@@ -123,43 +140,27 @@ async function getByCategory(country: string, category: string): Promise<FeedRes
     const filterRegex = filterConfig?.keywords ? parseFilterString(filterConfig.keywords) : null
 
     const feedArray = feedCountry[category] as IFeedFile[]
-    const ids: string[] = []
-    const theFeed: Array<{ title: string | undefined; items: any[] }> = []
 
-    // Parse all RSS feeds in parallel, cada um com retry independente
-    const feeds = await Promise.all(
-      feedArray.map((item: IFeedFile) => {
-        ids.push(item.name)
-        return withRetry(() => parseURLWithEncoding(item.url))
-      })
-    )
+    // Promise.allSettled: feeds individuais que falharem não derrubam os demais
+    const results = await Promise.allSettled(feedArray.map((item) => withRetry(() => parseURLWithEncoding(item.url))))
 
-    feeds.forEach((item) => {
-      theFeed.push({
-        title: item.title,
-        items: item.items.slice(0, 4),
-      })
-    })
-
-    // Build response
     const filteredFeed: FeedResponse[] = []
 
-    for (let i = 0; i < ids.length; i++) {
-      const feedItems: Array<{ title: string; link: string }> = []
-
-      for (const item of theFeed[i].items) {
-        const originalTitle = item.title || item.contentSnippet || item.content
-        const cleanedTitle = applyFilter(originalTitle, filterRegex)
-
-        feedItems.push({
-          title: cleanedTitle,
-          link: item.link,
-        })
+    for (let i = 0; i < feedArray.length; i++) {
+      const result = results[i]
+      if (result.status === 'rejected') {
+        console.error(`ERROR parsing feed "${feedArray[i].name}":`, result.reason)
+        continue
       }
 
+      const feedItems = result.value.items.slice(0, 4).map((item) => ({
+        title: applyFilter(item.title || item.contentSnippet || item.content, filterRegex),
+        link: item.link ?? '',
+      }))
+
       filteredFeed.push({
-        id: ids[i],
-        feed_name: theFeed[i].title,
+        id: feedArray[i].name,
+        feed_name: result.value.title,
         feed_items: feedItems,
       })
     }
@@ -193,14 +194,8 @@ async function getByName(country: string, category: string, name: string): Promi
       ]
     }
 
-    // Find the feed URL by name
-    let feedUrl = ''
     const feedArray = feedCountry[category] as IFeedFile[]
-    feedArray.forEach((item) => {
-      if (item.name === name) {
-        feedUrl = item.url
-      }
-    })
+    const feedUrl = feedArray.find((item) => item.name === name)?.url
 
     if (!feedUrl) {
       return [
