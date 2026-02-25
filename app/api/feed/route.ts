@@ -3,94 +3,53 @@ import Parser from 'rss-parser'
 
 const parser = new Parser()
 
-const UA_BROWSER = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36'
-
-// Cache de 5 minutos: após o primeiro fetch, respostas são servidas instantaneamente.
-const REVALIDATE_SECONDS = 300
-
-/**
- * Faz o fetch do feed com cache Next.js (stale-while-revalidate).
- * Em caso de 403 (bloqueio por IP de datacenter),
- * faz fallback via allorigins.win que usa IPs diferentes.
- */
-async function fetchFeed(url: string): Promise<{ buffer: ArrayBuffer; contentType: string }> {
-  const headers = { 'User-Agent': UA_BROWSER }
-  const cacheOpts = { next: { revalidate: REVALIDATE_SECONDS } }
-
-  let response = await fetch(url, { headers, ...cacheOpts })
-
-  if (response.status === 403) {
-    // Fallback via proxy com timeout de 8s para não estourar o limite de 10s da Vercel Hobby
-    const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 8000)
-
-    try {
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
-      response = await fetch(proxyUrl, { headers, signal: controller.signal })
-    } catch {
-      throw new Error(`Proxy timeout or failed for: ${url}`)
-    } finally {
-      clearTimeout(timeoutId)
-    }
-  }
-
-  if (!response.ok) {
-    const err = new Error(`HTTP ${response.status} fetching feed: ${url}`) as Error & { status: number }
-    err.status = response.status
-    throw err
-  }
-
-  const contentType = response.headers.get('content-type') ?? ''
-
-  // Reject HTML responses (challenge pages, login walls, etc.)
-  if (contentType.includes('text/html')) {
-    throw new Error(`Feed returned HTML instead of XML (${response.status}): ${url}`)
-  }
-
-  return { buffer: await response.arrayBuffer(), contentType }
-}
-
-async function parseURLWithEncoding(url: string): ReturnType<typeof parser.parseURL> {
-  const { buffer, contentType } = await fetchFeed(url)
-
-  const bytes = new Uint8Array(buffer)
-
-  // 1. Sniff the XML declaration for an encoding attribute (most authoritative)
-  const latin1Head = new TextDecoder('latin1').decode(bytes.slice(0, 200))
-  const xmlDeclMatch = latin1Head.match(/encoding=["']([^"']+)["']/i)
-
-  // 2. Fall back to Content-Type charset (e.g. feeds with no XML declaration)
-  const ctCharsetMatch = contentType.match(/charset=([^\s;]+)/i)
-
-  const encoding = xmlDeclMatch?.[1] ?? ctCharsetMatch?.[1] ?? 'utf-8'
-
-  const decoded = new TextDecoder(encoding).decode(bytes)
-
-  // Strip any stray content (server notices, BOM residue, injected bytes) that
-  // appears before the actual XML root. The sax parser throws "Text data outside
-  // of root node" if it encounters any characters (including '!') before '<'.
-  const firstAngle = decoded.indexOf('<')
-  const trimmed = firstAngle > 0 ? decoded.slice(firstAngle) : decoded
-
-  // rss-parser requires a version attribute on <rss>; some old feeds omit it.
-  const normalized = trimmed.replace(/(<rss)(\s*>)/, '$1 version="2.0"$2')
-
-  return parser.parseString(normalized)
-}
-
 /**
  * Retenta uma função async até `retries` vezes com backoff exponencial.
- * Não retenta erros 4xx (são determinísticos).
+ * Cada tentativa aguarda o dobro do tempo da anterior (ex: 300ms → 600ms → 1200ms).
  */
-async function withRetry<T>(fn: () => Promise<T>, retries = 2, delayMs = 300): Promise<T> {
+async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 300): Promise<T> {
   try {
     return await fn()
   } catch (err) {
-    const status = (err as { status?: number }).status
-    if (retries <= 0 || (status && status >= 400 && status < 500)) throw err
+    if (retries <= 0) throw err
     await new Promise((resolve) => setTimeout(resolve, delayMs))
     return withRetry(fn, retries - 1, delayMs * 2)
   }
+}
+
+/**
+ * Faz o fetch e parse do feed respeitando o encoding declarado no XML
+ * (ex: ISO-8859-1 da Folha). Evita caracteres garbled como â, ã, etc.
+ */
+async function parseURLWithEncoding(url: string): ReturnType<typeof parser.parseURL> {
+  const response = await fetch(url)
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status} fetching feed: ${url}`)
+  }
+
+  const contentType = response.headers.get('content-type') ?? ''
+  const buffer = await response.arrayBuffer()
+  const bytes = new Uint8Array(buffer)
+
+  // Detecta encoding pelo XML declaration (mais confiável)
+  const latin1Head = new TextDecoder('latin1').decode(bytes.slice(0, 200))
+  const xmlDeclMatch = latin1Head.match(/encoding=["']([^"']+)["']/i)
+
+  // Fallback para charset do Content-Type
+  const ctCharsetMatch = contentType.match(/charset=([^\s;]+)/i)
+
+  const encoding = xmlDeclMatch?.[1] ?? ctCharsetMatch?.[1] ?? 'utf-8'
+  const decoded = new TextDecoder(encoding).decode(bytes)
+
+  // Remove bytes espúrios antes do primeiro '<'
+  const firstAngle = decoded.indexOf('<')
+  const trimmed = firstAngle > 0 ? decoded.slice(firstAngle) : decoded
+
+  // Alguns feeds RSS antigos omitem version="2.0"
+  const normalized = trimmed.replace(/(<rss)(\s*>)/, '$1 version="2.0"$2')
+
+  return parser.parseString(normalized)
 }
 
 interface IFeedFile {
@@ -256,7 +215,6 @@ async function getByName(country: string, category: string, name: string): Promi
     const filterConfig = feedCountry.filter as FeedFilter | undefined
     const filterRegex = filterConfig?.keywords ? parseFilterString(filterConfig.keywords) : null
 
-    // Parse the feed (com retry automático)
     const feed = await withRetry(() => parseURLWithEncoding(feedUrl))
 
     const result: FeedResponse[] = []
