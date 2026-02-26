@@ -176,6 +176,11 @@
     {
       "name": "MacMagazine",
       "url": "https://macmagazine.com.br/feed/"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://mittechreview.com.br/feed",
+      "legacyFeed": true
     }
   ],
   "biz": [
@@ -384,7 +389,11 @@
       "url": "https://drauziovarella.uol.com.br/feed"
     },
     {
-      "name": "Fapesp",
+      "name": "Jornal da USP",
+      "url": "https://jornal.usp.br/feed/"
+    },
+    {
+      "name": "Pesquisa Fapesp",
       "url": "https://revistapesquisa.fapesp.br/feed/"
     },
     {
