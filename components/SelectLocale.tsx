@@ -47,7 +47,7 @@ export default function SelectLocale() {
         value={currentLocale}
         onChange={changeLanguage}
         allowDeselect={false}
-        size="lg"
+        size="md"
       />
     </div>
   )

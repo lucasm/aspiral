@@ -8,15 +8,17 @@ export default async function AboutPage() {
     <section className="fullscreen">
       <div className="fullscreen-container">
         <div className="container">
-          <h1>Aspiral</h1>
-
           <article>
+            <h1>Aspiral</h1>
             <h2>Mission & Ownership</h2>
             <p>
-              <strong>Aspiral</strong> is a tiny Web Application of news headlines of trusted journalism, without algorithms, independent
-              and ad-free.The project was founded by <strong>Lucas Maués</strong>, a Software Engineer from Brazil, and operated by the{' '}
-              <strong>open source community</strong>. Our mission is to provide a high-signal, low-noise information environment by curating
-              the world’s most reputable sources in Technology, Business, Science, Culture, and Global Affairs.
+              Aspiral is a tiny Web Application of news headlines of trusted journalism, without algorithms, independent and ad-free. The
+              open source project was founded by <strong>Lucas Maués</strong>, a Brazilian Software Engineer, and maintained by the{' '}
+              <strong>open source community</strong> contributors and sponsors.
+            </p>
+            <p>
+              Our mission is to provide a high-signal, low-noise information environment by curating the world’s most reputable sources in
+              Technology, Business, Science, Culture, and Global Affairs.
             </p>
             <p>
               Aspiral is a self-funded project, ensuring complete editorial independence from corporate or political interests. We
@@ -29,13 +31,13 @@ export default async function AboutPage() {
             </p>
             <ul>
               <li>
-                <strong>Source Validation:</strong> Every publication in our App (e.g., Reuters, AP, The Atlantic, Nautilus) is manually
-                verified for journalistic excellence.
+                <strong>Source Validation:</strong> Every publication in our App (e.g., Reuters, AP, The Atlantic, BBC) is manually verified
+                for journalistic excellence.
               </li>
               <li>
                 <strong>Algorithm Transparency:</strong> Our curation logic favors primary sources and deep-dive journals. Finally, more
-                general news outlets. We don't have any other type of filters. We provide sources "as is", to avoid biasing the feed with
-                algorithms that may prioritize engagement over quality.
+                general news outlets. We don't have any other type of filter. We provide sources "as is", to avoid biasing the feed. We
+                don't use algorithms that may prioritize engagement over quality.
               </li>
               <li>
                 <strong>Content Integrity:</strong> We do not modify original headlines or alter the editorial context of the articles we
@@ -43,12 +45,11 @@ export default async function AboutPage() {
               </li>
 
               <li>
-                <strong>Democracy and Pluralism by Design:</strong> Every source is a counterbalance of another, to provide a balanced
-                spectrum of viewpoints and prevent ideological echo chambers. The App was desgined to show feed in grid, like the old RSS
-                readers, to avoid the "top news" bias of traditional aggregators. We don't have any "top news" section, to avoid privileging
-                some sources over others.
+                <strong>Democracy and Pluralism by Design:</strong> The App was designed to show feeds in a grid, to avoid the "top news"
+                bias of traditional aggregators. Every source is a counterbalance of another, to provide a balanced spectrum of viewpoints.
               </li>
             </ul>
+
             <h2>Editorial Guidelines</h2>
             <p>
               Our selection process aims to provide a balanced spectrum of viewpoints to prevent ideological echo chambers. We prioritize:
@@ -58,6 +59,7 @@ export default async function AboutPage() {
               <li>Analytical journals for deep economic, cultural, scientific, and sociological context.</li>
               <li>Niche publications focused on technology ethics, digital innovation and human rights.</li>
             </ul>
+
             <h2>Accountability & Corrections</h2>
             <p>
               We believe in the "Right to Correction." If you identify any source that fails to meet our quality standards or notice
@@ -66,7 +68,7 @@ export default async function AboutPage() {
 
             <p>Send an email to:</p>
 
-            <Button component="a" href="mailto:contact@aspiral.com" color="black" size="md">
+            <Button component="a" href="mailto:contact@aspiral.com" color="black" size="md" variant="outline">
               contact@aspiral.app
             </Button>
 
@@ -77,15 +79,15 @@ export default async function AboutPage() {
               of our feed.
             </p>
 
-            <h2>Technology & Open Source</h2>
+            <h2>Technology</h2>
 
             <ul>
-              <li>RSS Feeds of Sources</li>
-              <li>Next.js React Framework</li>
+              <li>RSS Feeds</li>
+              <li>Next.js Framework & React</li>
               <li>TypeScript Programming Language</li>
               <li>Vercel Host</li>
               <li>Cloudflare CDN</li>
-              <li>GitHub source code repository</li>
+              <li>GitHub Source Code Repository</li>
             </ul>
 
             <h2>Accessibility</h2>
@@ -93,14 +95,24 @@ export default async function AboutPage() {
               Aspiral is committed with Web Accessibility Standards (WCAG) to ensure that our App is usable by everyone, including people
               with disabilities.{' '}
             </p>
+
+            <Space h="lg" />
+
             <Button component="a" href="/" color="black" size="md">
               Go to Aspiral
             </Button>
 
             <Space h="lg" />
 
-            <Button component="a" href="https://github.com/lucasm/aspiral" color="grey" size="md" target="_blank" rel="noopener noreferrer">
-              Go to Aspiral source code
+            <Button
+              component="a"
+              href="https://github.com/lucasm/aspiral"
+              color="grey"
+              size="md"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outline">
+              Source Code
             </Button>
 
             <Space h="lg" />
@@ -112,7 +124,7 @@ export default async function AboutPage() {
               size="md"
               target="_blank"
               rel="noopener noreferrer">
-              Sponsor Aspiral
+              ♥ Sponsor
             </Button>
           </article>
         </div>
