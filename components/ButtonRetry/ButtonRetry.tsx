@@ -19,12 +19,12 @@ export default function ButtonRetry({ onClick, feedName, errorMessage, showFeedb
       <p style={{ color: 'white' }}>{errorMessage || 'Error: UNKNOWN_ERROR'}</p>
 
       <span style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-        <Button variant="light" size="sm" onClick={onClick} color="white">
+        <Button variant="outline" size="md" onClick={onClick} color="white">
           ↻ Reload
         </Button>
 
         {showFeedback && (
-          <Button component="a" href={mailtoLink} variant="light" size="sm" color="black">
+          <Button component="a" href={mailtoLink} variant="transparent" size="md" color="black">
             Feedback
           </Button>
         )}
