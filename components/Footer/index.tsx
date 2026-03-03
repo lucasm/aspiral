@@ -16,7 +16,9 @@ export default function Footer() {
     <footer className={styles.footer} suppressHydrationWarning>
       <div className={styles.footerHeader}>
         <Link href="/" aria-label="Aspiral" className={styles.footerLogo}>
-          <IconAspiral />
+          <figure>
+            <IconAspiral />
+          </figure>
           <h3>{t('title')}</h3>
         </Link>
 
@@ -81,7 +83,7 @@ export default function Footer() {
           <li>
             <a href="https://www.websitecarbon.com/website/aspiral-app/" target="_blank" rel="external noreferrer">
               <BannerCarbon />
-              Carbon Neutral
+              Website Carbon
             </a>
           </li>
           <li>
