@@ -125,9 +125,10 @@
 .footerBanners svg {
   font-size: 0;
   height: auto;
-  width: 1.25rem;
+  width: 1.5rem;
 }
 .footerBanners a {
+  /* font-weight: lighter; */
   display: flex;
   align-items: center;
   opacity: 0.4;

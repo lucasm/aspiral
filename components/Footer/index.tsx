@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { BannerCarbon, BannerOpenSource, IconTheTrustProject, IconAccessibility, IconAspiral } from '@/components/Icons'
+import { BannerCarbon, BannerOpenSource, IconTheTrustProject, IconAccessibility, IconAspiral, IconIFCN } from '@/components/Icons'
 import { useCookiesConsent } from '@/contexts/CookiesConsentContext'
 
 import styles from './Footer.module.css'
@@ -69,15 +69,15 @@ export default function Footer() {
 
         <ul className={styles.footerNavSection + ' ' + styles.footerBanners}>
           <li>
-            <a href="https://github.com/lucasm/aspiral" target="_blank" rel="external noopener noreferrer">
+            <a href="https://opensource.org/" target="_blank" rel="external noopener noreferrer">
               <BannerOpenSource />
-              Open Source
+              Open Source Initiative
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.w3.org/WAI/" target="_blank" rel="external noreferrer">
               <IconAccessibility />
-              Accessibility
+              Web Accessibility Initiative
             </a>
           </li>
           <li>
@@ -90,6 +90,12 @@ export default function Footer() {
             <a href="https://thetrustproject.org/" target="_blank" rel="external noreferrer">
               <IconTheTrustProject />
               The Trust Project
+            </a>
+          </li>
+          <li>
+            <a href="https://ifcncodeofprinciples.poynter.org/signatories" target="_blank" rel="external noreferrer">
+              <IconIFCN />
+              International Fact-Checking Network
             </a>
           </li>
         </ul>
