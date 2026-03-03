@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 import MantineWrapper from '@/components/MantineWrapper'
 import { routing } from '@/i18n/routing'
 
-import '../globals.css'
+import '../global.css'
 
 const font = IBM_Plex_Sans({
   subsets: ['latin'],

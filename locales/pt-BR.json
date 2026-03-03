@@ -204,6 +204,10 @@
       {
         "name": "Manual do Usuario",
         "url": "https://manualdousuario.net/feed/"
+      },
+      {
+        "name": "Xataka",
+        "url": "https://www.xataka.com.br/feedburner.xml"
       }
     ],
     "biz": [
