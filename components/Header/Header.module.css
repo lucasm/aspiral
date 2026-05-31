@@ -1,0 +1,271 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.logo {
+  padding: 0.75rem;
+  line-height: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  background: var(--color-translucent);
+  box-shadow: var(--shadow);
+  border-radius: 10rem;
+}
+
+.logo svg {
+  fill: #fff;
+}
+
+.menu {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  background: var(--color-translucent);
+  box-shadow: var(--shadow);
+  border-radius: 10rem;
+  z-index: 9;
+  padding-left: 0.75rem;
+  margin-left: auto;
+}
+
+.menu:hover,
+.logo:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  transition:
+    transform 250ms ease,
+    background 200ms ease;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  display: block;
+  right: 0;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  z-index: 1;
+  transition:
+    transform 250ms ease,
+    width 200ms ease,
+    top 200ms ease,
+    background 200ms ease;
+}
+
+.hamburger:before {
+  top: -7px;
+  width: 18px;
+}
+
+.hamburger:after {
+  top: 7px;
+  width: 12px;
+}
+
+.menu:hover .hamburger:before,
+.menu:hover .hamburger:after {
+  width: 24px;
+}
+
+.menuOpen .hamburger {
+  transform: rotate(45deg);
+  background: #000;
+}
+
+.menuOpen .hamburger:before,
+.menuOpen .hamburger:after {
+  top: 0;
+  width: 24px;
+  transform: rotate(90deg);
+  background: #000;
+}
+
+.menuOpen {
+  box-shadow: none;
+  background: transparent;
+}
+
+.layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 300ms var(--easingDecelerate),
+    visibility 300ms var(--easingDecelerate);
+}
+
+.layerActive {
+  opacity: 1;
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.mobileNav {
+  position: fixed;
+  height: 100%;
+  width: 80vw;
+  right: 0;
+  top: 0;
+  background: var(--color-white);
+  transition:
+    transform 350ms cubic-bezier(0.32, 0.72, 0, 1),
+    opacity 250ms var(--easingDecelerate),
+    visibility 350ms var(--easingDecelerate);
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+}
+
+.mobileNavOpen {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobileNav ul {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  margin: 5rem 0 0;
+  padding: 2rem;
+}
+
+.mobileNav li {
+  padding: 0;
+}
+
+.mobileNav a {
+  padding: 0;
+  width: 100%;
+  font-size: 2rem;
+  transition: background 150ms ease;
+}
+
+.mobileNav a:hover,
+.mobileNav a:focus {
+  background: #f5f5f5;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.desktopNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.desktopNav li {
+  padding: 0;
+}
+
+.desktopNav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 999px;
+  background: var(--color-translucent);
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+}
+
+.desktopNav a:hover,
+.desktopNav a:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.headerInternal .desktopNav a {
+  color: #fff;
+  background: #000;
+}
+
+.headerInternal .desktopNav a:hover,
+.headerInternal .desktopNav a:focus {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.headerInternal .logo,
+.headerInternal .menu {
+  background: black;
+}
+
+.headerInternal .logo:hover,
+.headerInternal .menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+
+  .mobileNav {
+    width: 500px;
+  }
+
+  .mobileNav a {
+    font-size: 2.5vw;
+  }
+
+  .logo,
+  .menu {
+    width: 4rem;
+    height: 4rem;
+    padding: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu,
+  .layer,
+  .mobileNav {
+    display: none;
+  }
+
+  .desktopNav {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header {
+    justify-content: flex-start;
+  }
+}

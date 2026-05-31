@@ -13,7 +13,7 @@ export default function SectionFeed({ id, children }: SectionFeedProps) {
   return (
     <section id={id}>
       <div className={styles.container}>
-        <h2>{t(id)}</h2>
+        <h1>{t(id)}</h1>
         {children}
       </div>
     </section>

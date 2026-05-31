@@ -2,8 +2,6 @@
 
 :root {
   font-size: 16px;
-  --radius: 8px;
-  --shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 7%), 0 0.3px 0.9px 0 rgb(0 0 0 / 5%);
   --font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', monospace;
   --color-white: #ffffff;
   --color-black: #000000;
@@ -16,8 +14,12 @@
   --color-pink: #f357a8;
   --color-purple: #9f5bf6;
   --color-blue: #5475ff;
+  --color-bluelight: #009edd;
   --color-cyan: #00b7ca;
   --color-green: #00b874;
+  --max-width: 1120px;
+  --border-radius: 8px;
+  --shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 7%), 0 0.3px 0.9px 0 rgb(0 0 0 / 5%);
   --opacity: 0.45;
   --easingDecelerate: cubic-bezier(0, 0, 0.2, 1);
 }
@@ -48,6 +50,9 @@
   background: var(--color-pink);
 }
 #sci {
+  background: var(--color-bluelight);
+}
+#travel {
   background: var(--color-cyan);
 }
 #check {
@@ -75,158 +80,13 @@ main {
   display: flex;
   flex-direction: column;
 }
-header {
-  position: fixed;
-  width: 100%;
-  padding: 1rem;
-  z-index: 999;
-}
 
-#logo {
-  float: left;
-  padding: 0.75rem;
-  line-height: 0;
-}
-#logo svg {
-  fill: #fff;
-}
-#logo,
-#menu {
+.container {
   position: relative;
-  width: 48px;
-  height: 48px;
-  font-size: 0;
-  background: var(--color-translucent);
-  box-shadow: var(--shadow);
-  border-radius: 10rem;
-}
-#menu:hover,
-#logo:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-#menu {
-  float: right;
-  z-index: 9;
-  padding-left: 0.75rem;
-}
-.hamburger {
-  position: relative;
-  width: 24px;
-  height: 3px;
-  background: #fff;
-  transition:
-    transform 250ms ease,
-    background 200ms ease;
-  /* border-radius: 1rem; */
-}
-.hamburger:before,
-.hamburger:after {
-  content: '';
-  position: absolute;
-  display: block;
-  right: 0;
-  width: 24px;
-  height: 3px;
-  background: #fff;
-  z-index: 1;
-  transition:
-    transform 250ms ease,
-    width 200ms ease,
-    top 200ms ease,
-    background 200ms ease;
-  /* border-radius: 1rem; */
-}
-.hamburger:before {
-  top: -7px;
-  width: 18px;
-}
-.hamburger:after {
-  top: 7px;
-  width: 12px;
-}
-#menu:hover .hamburger:before,
-#menu:hover .hamburger:after {
-  width: 24px;
-}
-#menu.open .hamburger {
-  transform: rotate(45deg);
-  background: #000;
-}
-#menu.open .hamburger:before,
-#menu.open .hamburger:after {
-  top: 0;
-  width: 24px;
-  transform: rotate(90deg);
-  background: #000;
-}
-#menu.open {
-  box-shadow: none;
-  background: transparent;
-}
-
-.layer {
-  position: fixed;
-  top: 0;
-  left: 0;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: transparent;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 300ms var(--easingDecelerate),
-    visibility 300ms var(--easingDecelerate);
-}
-.layer-active {
-  opacity: 1;
-  visibility: visible;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
-}
-
-header nav {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  right: 0;
-  top: 0;
-  background: var(--color-white);
-  transition:
-    transform 350ms cubic-bezier(0.32, 0.72, 0, 1),
-    opacity 250ms var(--easingDecelerate),
-    visibility 350ms var(--easingDecelerate);
-  transform: translateX(100%);
-  visibility: hidden;
-  opacity: 0;
-  z-index: 3;
-}
-header nav.open {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(0);
-}
-header nav ul {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  margin: 5rem 0 0;
-  padding: 0;
-}
-header nav ul li {
-  padding: 0;
-}
-header nav a {
+  max-width: var(--max-width);
   display: inline-block;
-  padding: 0.25rem 4rem;
-  width: 100%;
-  font-size: 5vw;
-  transition: background 150ms ease;
-}
-header nav a:hover,
-header nav a:focus {
-  background: #f5f5f5;
 }
 
 section {
@@ -335,17 +195,6 @@ a:focus {
   color: #000;
 }
 
-/* Header Internal Pages */
-
-.header-internal #logo,
-.header-internal #menu {
-  background: black;
-}
-.header-internal #logo:hover,
-.header-internal #menu:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
 /* Articles */
 article {
   position: relative;
@@ -407,21 +256,6 @@ footer {
   li {
     font-size: 1.2rem;
   }
-  header {
-    padding: 1.5rem;
-  }
-  header nav {
-    width: 500px;
-  }
-  header nav a {
-    font-size: 2.5vw;
-  }
-  #logo,
-  #menu {
-    width: 4rem;
-    height: 4rem;
-    padding: 1.25rem;
-  }
   section {
     padding: 5rem 5.5rem;
   }
@@ -434,7 +268,7 @@ footer {
 
 /* Desktop */
 @media only screen and (min-width: 1200px) {
-  header nav a {
-    font-size: 1.5vw;
+  header {
+    justify-content: flex-start;
   }
 }

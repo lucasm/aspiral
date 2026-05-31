@@ -33,7 +33,13 @@ const CookiesPopup = () => {
       role="dialog"
       aria-live="polite"
       aria-label={t('cookies.title')}>
-      <Text>{t('cookies.message')}</Text>
+      <Text size="sm">
+        {t('cookies.message')}{' '}
+        <Anchor href="https://lucasm.dev/legal" component={Link} target="_blank" rel="noopener" mt="sm">
+          {t('privacy')}
+        </Anchor>
+        .
+      </Text>
 
       <Group justify="center" gap="md">
         <Button onClick={() => handleClose(accept)} variant="filled" color="white" radius="xl" size="sm">
@@ -43,10 +49,6 @@ const CookiesPopup = () => {
           {t('cookies.reject')}
         </Button>
       </Group>
-
-      <Anchor href="https://lucasm.dev/legal" component={Link} size="xs" target="_blank" rel="noopener" mt="sm">
-        {t('privacy')}
-      </Anchor>
     </div>
   )
 }

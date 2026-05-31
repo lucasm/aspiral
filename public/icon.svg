@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="Kakaka"><g id="rect2"><path d="M1024,280l0,464c0,154.536 -125.464,280 -280,280l-464,0c-154.536,0 -280,-125.464 -280,-280l0,-464c0,-154.536 125.464,-280 280,-280l464,0c154.536,0 280,125.464 280,280Z" style="fill:#ff7c7e;"/></g><g id="z"><path d="M612.779,494.23l201.557,-35.54l35.54,201.557l-403.115,71.08l-35.54,-201.557l-201.557,35.54l-35.54,-201.557l403.115,-71.08l35.54,201.557Z" style="fill-rule:nonzero;"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Kakaka">
+        <g id="rect2">
+            <path d="M1024,280L1024,744C1024,898.536 898.536,1024 744,1024L280,1024C125.464,1024 0,898.536 0,744L0,280C0,125.464 125.464,0 280,0L744,0C898.536,0 1024,125.464 1024,280Z" style="fill:rgb(255,124,126);"/>
+        </g>
+        <g transform="matrix(0.459728,0,0,-0.459728,-372.97619,2141.561092)">
+            <g transform="matrix(0.818841,0,0,0.818841,-66.73913,-3252.027591)">
+                <path d="M1950,8944C1950,8938 2077,8716 2200,8505C2226,8461 2309,8317 2385,8185C2461,8053 2560,7882 2604,7805L2686,7665L3008,7662C3185,7661 3330,7662 3330,7664C3330,7667 3289,7740 3238,7827C3188,7914 3112,8046 3069,8120C3027,8194 2902,8410 2792,8600L2593,8945L2271,8948C2095,8949 1950,8947 1950,8944Z" style="fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1.417271,0,0,-1.263591,-2659.307844,2694.382374)">
+                <ellipse cx="2938" cy="-502" rx="222" ry="249"/>
+            </g>
+        </g>
+    </g>
+</svg>

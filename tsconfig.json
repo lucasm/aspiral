@@ -16,7 +16,6 @@
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "allowJs": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],

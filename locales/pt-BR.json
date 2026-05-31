@@ -1,70 +1,83 @@
 {
-  "title": "Aspiral — Notícias do jornalismo confiável",
+  "language": "pt-BR",
+  "title": "Aspiral — A sua revista do jornalismo confiável",
   "description": "Notícias de última hora do jornalismo confiável. Sem algoritmos. Seja crítico. Lute contra a desinformação.",
-  "legal": "Todos os direitos reservados às fontes de notícias e marcas registradas.",
-  "about": "Sobre",
-  "privacy": "Política de Privacidade, Termos de Uso e Aviso de Cookies",
+  "legal": "Todos os direitos reservados às fontes de notícias.",
+  "about": "Sobre o Aspiral",
+  "privacy": "Política de Privacidade e Termos de Serviço",
   "feedback": "Reportar Erro",
   "edition": "Edição",
-  "language": "pt-BR",
-  "donate": "Contribua",
-  "credits": "Projeto de código aberto criado por",
+  "donate": "Fazer uma Doação",
+  "credits": "Aspiral é uma revista digital de editorial colaborativo e de código aberto com o melhor do jornalismo confiável do Brasil e do mundo. Projeto idealizado por",
   "cookies": {
     "title": "Consentimento de Cookies",
-    "message": "O aplicativo Aspiral usa cookies para garantir a melhor experiência de navegação.",
+    "message": "Aspiral usa cookies para garantir a melhor experiência de navegação. Leia nossa",
     "accept": "Aceitar",
     "reject": "Rejeitar",
     "privacy": "Política de Privacidade",
-    "reset": "Resetar Preferências"
+    "reset": "Preferências de Cookies"
   },
   "confirm": "Ok",
   "news": "Notícias",
   "check": "Checagem",
   "tech": "Tecnologia",
   "biz": "Economia",
-  "sport": "Esportes",
+  "sport": "Esporte",
   "cult": "Cultura",
   "geek": "Famosos",
   "sci": "Ciência",
+  "travel": "Viagem",
   "dscvr": "Humor",
+  "videosFromThisCategory": "Vídeos",
   "search": "Buscar",
   "feeds": {
     "news": [
       {
         "name": "G1",
-        "url": "https://pox.globo.com/rss/g1/politica/"
+        "url": "https://pox.globo.com/rss/g1/politica/",
+        "videoYoutubeId": "UCaGmdJSSiR7fkh2A-c6emsA"
       },
       {
         "name": "BBC",
         "url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
-        "video": "https://www.youtube.com/feeds/videos.xml?channel_id=UCthbIFAxbXTTQEC7EcQvP1Q"
+        "videoYoutubeId": "UCthbIFAxbXTTQEC7EcQvP1Q"
       },
       {
         "name": "CNN",
-        "url": "https://www.cnnbrasil.com.br/feed"
+        "url": "https://www.cnnbrasil.com.br/feed",
+        "videoYoutubeId": "UCvdwhh_fDyWccR42-rReZLw"
       },
       {
         "name": "Folha",
         "url": "https://feeds.folha.uol.com.br/poder/rss091.xml",
+        "videoYoutubeId": "UCmYuiV9wAR3i8p19Ygc7izg",
         "legacyFeed": true
       },
       {
         "name": "Estadão",
-        "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/politica/?body=%7B%22layout%22:%22google-news%22%7D"
+        "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/politica/?body=%7B%22layout%22:%22google-news%22%7D",
+        "videoYoutubeId": "UCrtOL8bJsh-csozGS2aV77Q"
       },
       {
         "name": "Poder360",
-        "url": "https://www.poder360.com.br/feed/"
+        "url": "https://www.poder360.com.br/feed/",
+        "videoYoutubeId": "UCFCiSRbCVwQ_BQaDQBYxN_A"
       },
       {
         "name": "UOL",
         "url": "https://www.uol.com.br/vueland/api/?loadComponent=XmlFeedRss",
-        "video": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVFbXI6Gu8U2f9Gjtxw4A-Q",
+        "videoYoutubeId": "UCVFbXI6Gu8U2f9Gjtxw4A-Q",
         "legacyFeed": true
       },
       {
         "name": "Nexo Jornal",
-        "url": "https://www.nexojornal.com.br/rss.xml"
+        "url": "https://www.nexojornal.com.br/rss.xml",
+        "videoYoutubeId": "UCJVTsYjG0KLNWL6OyHx7ZGw"
+      },
+      {
+        "name": "Intercept Brasil",
+        "url": "https://www.intercept.com.br/feed/",
+        "videoYoutubeId": "UCNqzAD9EiECreuH6LA8IYeA"
       },
       {
         "name": "Agência Pública",
@@ -72,63 +85,91 @@
       },
       {
         "name": "O Globo",
-        "url": "https://pox.globo.com/rss/oglobo/politica"
+        "url": "https://pox.globo.com/rss/oglobo/politica",
+        "videoYoutubeId": "UC-6xqzMBF2CXTImn_a4aCVg"
       },
       {
         "name": "Veja",
-        "url": "https://veja.abril.com.br/feed/"
+        "url": "https://veja.abril.com.br/feed/",
+        "videoYoutubeId": "UCV6Ue4o5UIeKQ3IEkjnXRlg"
       },
       {
-        "name": "Jacobin",
-        "url": "https://jacobin.com.br/feed/"
+        "name": "TV Cultura",
+        "videoYoutubeId": "UCXdXYG8dUmEv6jhEji_lSHg"
       },
       {
-        "name": "Intercept Brasil",
-        "url": "https://www.intercept.com.br/feed/"
+        "name": "Record News",
+        "videoYoutubeId": "UCuiLR4p6wQ3xLEm15pEn1Xw"
+      },
+      {
+        "name": "Band",
+        "videoYoutubeId": "UCoa-D_VfMkFrCYodrOC9-mA"
+      },
+      {
+        "name": "DW",
+        "videoYoutubeId": "UCkJ8uPxz6UvoI6ihgQJZnww"
       },
       {
         "name": "CartaCapital",
-        "url": "https://www.cartacapital.com.br/feed/"
-      },
-      {
-        "name": "Revista Fórum",
-        "url": "https://revistaforum.com.br/feed"
-      },
-      {
-        "name": "Le Monde Diplomatique",
-        "url": "https://diplomatique.org.br/feed/"
+        "url": "https://www.cartacapital.com.br/feed/",
+        "videoYoutubeId": "UCDGz2exMIsPQ4k9VrsuhKTA"
       },
       {
         "name": "SBT News",
-        "url": "https://sbtnews.sbt.com.br/rss.xml"
+        "url": "https://sbtnews.sbt.com.br/rss.xml",
+        "videoYoutubeId": "UC376n347Ob5Lwzq2WGzF1AA"
       },
       {
         "name": "Metrópoles",
-        "url": "https://www.metropoles.com/feed"
-      },
-      {
-        "name": "Agência Brasil",
-        "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml"
+        "url": "https://www.metropoles.com/feed",
+        "videoYoutubeId": "UC9mdw2mmn49ZuqGOpSri7Fw"
       },
       {
         "name": "piauí",
         "url": "https://piaui.folha.uol.com.br/feed/"
       },
       {
-        "name": "The Conversation",
-        "url": "https://theconversation.com/articles.atom?language=pt"
+        "name": "Jacobin",
+        "url": "https://jacobin.com.br/feed/"
+      },
+      {
+        "name": "Le Monde Diplomatique",
+        "url": "https://diplomatique.org.br/feed/"
+      },
+      {
+        "name": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml"
       },
       {
         "name": "Gazeta do Povo",
         "url": "https://www.gazetadopovo.com.br/feed/rss/ultimas-noticias.xml"
       },
       {
+        "name": "The Conversation",
+        "url": "https://theconversation.com/articles.atom?language=pt"
+      },
+      {
         "name": "O Antagonista",
         "url": "https://oantagonista.com.br/feed"
       },
       {
-        "name": "ICL Notícias",
-        "url": "https://iclnoticias.com.br/feed/"
+        "name": "ICL",
+        "url": "https://iclnoticias.com.br/feed/",
+        "videoYoutubeId": "UCaIqJHHo9TJiLINzOFJRl2Q"
+      },
+      {
+        "name": "Revista Fórum",
+        "url": "https://revistaforum.com.br/feed"
+      },
+      {
+        "name": "Jovem Pan",
+        "url": "https://jovempan.com.br/feed",
+        "videoYoutubeId": "UCP391YRAjSOdM_bwievgaZA"
+      },
+      {
+        "name": "GloboNews",
+        "url": "https://pox.globo.com/rss/g1/globonews/",
+        "videoYoutubeId": "UCp6RRaz93Pt2xYZoEye_rLA"
       }
     ],
     "check": [
@@ -159,12 +200,34 @@
     ],
     "tech": [
       {
+        "videoYoutubeId": "UCr3dtVIm3nL7I-Yjn2PxxIQ",
+        "name": "Leon e Nilce"
+      },
+      {
+        "videoYoutubeId": "UCCbD39MVnMsTLGxsHLnOKlg",
+        "name": "Loop Infinito"
+      },
+      {
+        "videoYoutubeId": "UCjTGBll7Sz8VCYiPPkIZpaw",
+        "name": "Geek Antenado"
+      },
+      {
+        "videoYoutubeId": "UCnnAzRbUm_6mSqyqAJSkc_A",
+        "name": "Be!Tech"
+      },
+      {
+        "videoYoutubeId": "UCFuIUoyHB12qpYa8Jpxoxow",
+        "name": "Código Fonte TV"
+      },
+      {
         "name": "TecMundo",
-        "url": "https://rss.tecmundo.com.br/feed"
+        "url": "https://rss.tecmundo.com.br/feed",
+        "videoYoutubeId": "UCdmGjywrxeOPfC7vDllmSgQ"
       },
       {
         "name": "Tecnoblog",
-        "url": "https://tecnoblog.net/feed/"
+        "url": "https://tecnoblog.net/feed/",
+        "videoYoutubeId": "UCqpNnEzmmlzBfdy3X0eMOMg"
       },
       {
         "name": "IT Forum",
@@ -172,7 +235,8 @@
       },
       {
         "name": "Canaltech",
-        "url": "https://feeds2.feedburner.com/canaltechbr"
+        "url": "https://feeds2.feedburner.com/canaltechbr",
+        "videoYoutubeId": "UC_bXJnsgwOqEPA_-6N6faKw"
       },
       {
         "name": "UOL Tilt",
@@ -181,7 +245,8 @@
       },
       {
         "name": "Olhar Digital",
-        "url": "https://olhardigital.com.br/rss"
+        "url": "https://olhardigital.com.br/rss",
+        "videoYoutubeId": "UCGV72aVJuWP0QPNGH4YgIww"
       },
       {
         "name": "TechTudo",
@@ -202,11 +267,13 @@
       },
       {
         "name": "Diolinux",
-        "url": "https://diolinux.com.br/feed"
+        "url": "https://diolinux.com.br/feed",
+        "videoYoutubeId": "UCEf5U1dB5a2e2S-XUlnhxSA"
       },
       {
         "name": "MacMagazine",
-        "url": "https://macmagazine.com.br/feed/"
+        "url": "https://macmagazine.com.br/feed/",
+        "videoYoutubeId": "UC6ZImLwiIaVRYIGycqh5iLA"
       },
       {
         "name": "Manual do Usuario",
@@ -219,8 +286,81 @@
     ],
     "biz": [
       {
-        "name": "Valor",
-        "url": "https://pox.globo.com/rss/valor"
+        "videoYoutubeId": "UCqfm5IQhpMlfeAWMmVL_uNg",
+        "name": "CNN Money"
+      },
+      {
+        "videoYoutubeId": "UC_Y9Mf8o6gGAAw8eBrn3SOw",
+        "name": "Banco Central"
+      },
+      {
+        "videoYoutubeId": "UCAeQIijec13o8I9xjjdSHWQ",
+        "name": "B3"
+      },
+      {
+        "videoYoutubeId": "UC_TapH8f4HLLAwPBaXy-Gag",
+        "name": "Ministério da Fazenda"
+      },
+      {
+        "videoYoutubeId": "UC8mDF5mWNGE-Kpfcvnn0bUg",
+        "name": "Me Poupe!"
+      },
+      {
+        "videoYoutubeId": "UCT4nDeU5pv1XIGySbSK-GgA",
+        "name": "Primo Rico"
+      },
+      {
+        "videoYoutubeId": "UCOjXqrOxAdXa04obIQREfCA",
+        "name": "Primo Pobre"
+      },
+      {
+        "videoYoutubeId": "UCj3jEZuLmXOndQJFkPTp3Nw",
+        "name": "Ela Investe"
+      },
+      {
+        "videoYoutubeId": "UC-hA65Fjv5X8h-J92zc_L8Q",
+        "name": "Gêmeos Investem"
+      },
+      {
+        "videoYoutubeId": "UC3Z2XdKUu21_KtMsohZedOQ",
+        "name": "A Cara da Riqueza"
+      },
+      {
+        "videoYoutubeId": "UC_mSfchV-fgpPy-vuwML8_A",
+        "name": "Gustavo Cerbasi"
+      },
+      {
+        "videoYoutubeId": "UCmhzmQBdXP9TeRtpQ-iWSPg",
+        "name": "Nath Finanças"
+      },
+      {
+        "videoYoutubeId": "UCM3vJxmuJJkk1r0yzFI9eZg",
+        "name": "Investidor Sardinha"
+      },
+      {
+        "videoYoutubeId": "UCCE-jo1GvBJqyj1b287h7jA",
+        "name": "Bruno Perini"
+      },
+      {
+        "videoYoutubeId": "UCbTAwyq6nWOLnFag-PR0XVw",
+        "name": "Nerds de Negócios"
+      },
+      {
+        "videoYoutubeId": "UCUr0xVzqs1As0C8ydWgjyGg",
+        "name": "CNI"
+      },
+      {
+        "videoYoutubeId": "UCnBNoed6NaPlpL8blj1yy8Q",
+        "name": "Clube do Valor"
+      },
+      {
+        "videoYoutubeId": "UCIjDZzIWu0wlkDbBImhCS7Q",
+        "name": "Finclass"
+      },
+      {
+        "name": "Valor Econômico",
+        "url": "https://pox.globo.com/rss/valor",
+        "videoYoutubeId": "UC48mLXk1ASg1EQbaS3MheWQ"
       },
       {
         "name": "InfoMoney",
@@ -232,7 +372,8 @@
       },
       {
         "name": "InvestNews",
-        "url": "https://investnews.com.br/feed/"
+        "url": "https://investnews.com.br/feed/",
+        "videoYoutubeId": "UCo0jMsIPccAXghE_FCWIdNg"
       },
       {
         "name": "Brazil Journal",
@@ -248,7 +389,8 @@
       },
       {
         "name": "Times Brasil",
-        "url": "https://timesbrasil.com.br/feed/"
+        "url": "https://timesbrasil.com.br/feed/",
+        "videoYoutubeId": "UCY-FPXguTtLHSTK5YpQ-sgQ"
       },
       {
         "name": "Forbes",
@@ -260,13 +402,13 @@
       },
       {
         "name": "Money Times",
-        "url": "https://www.moneytimes.com.br/feed/"
+        "url": "https://www.moneytimes.com.br/feed/",
+        "videoYoutubeId": "UComAl6MjIyRzDhMuXXQExKw"
       },
       {
         "name": "Seu Dinheiro",
         "url": "https://www.seudinheiro.com/feed/"
       },
-
       {
         "name": "Startups",
         "url": "https://startups.com.br/feed/"
@@ -275,7 +417,6 @@
         "name": "Startupi",
         "url": "https://startupi.com.br/feed/"
       },
-
       {
         "name": "Época Negócios",
         "url": "https://epocanegocios.globo.com/rss/epocanegocios"
@@ -295,28 +436,43 @@
     ],
     "sport": [
       {
+        "name": "Desimpedidos",
+        "videoYoutubeId": "UCFjrDmEnxrG5TRGVO0TPHLA"
+      },
+      {
+        "name": "Esporte na Band",
+        "videoYoutubeId": "UC896QaWKoSGdZTmy9rHyU_g"
+      },
+      {
+        "name": "UOL Esporte",
+        "videoYoutubeId": "UC3KHYFWeB0WimMBfm3NEahQ"
+      },
+      {
+        "name": "Jovem Pan Esportes",
+        "videoYoutubeId": "UCv-Nx8pSfG_LxbViMz14RWQ"
+      },
+      {
+        "name": "CNN Esportes",
+        "videoYoutubeId": "UCxERJM046RIRgl5cH-ss3yw"
+      },
+      {
         "name": "Trivela",
         "url": "https://trivela.com.br/feed/"
       },
       {
         "name": "ge",
-        "url": "https://pox.globo.com/rss/ge/"
-      },
-      {
-        "name": "CazéTV",
-        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
-      },
-      {
-        "name": "Lance",
-        "url": "https://news.google.com/rss/search?q=when:48h+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+        "url": "https://pox.globo.com/rss/ge/",
+        "videoYoutubeId": "UCgCKagVhzGnZcuP9bSMgMCg"
       },
       {
         "name": "TNT Sports",
-        "url": "https://tntsports.com.br/rss/feed.xml"
+        "url": "https://tntsports.com.br/rss/feed.xml",
+        "videoYoutubeId": "UCs-6sCz2LJm1PrWQN4ErsPw"
       },
       {
         "name": "ESPN",
-        "url": "https://www.espn.com.br/rss/pauloviniciuscoelho"
+        "url": "https://www.espn.com.br/rss/pauloviniciuscoelho",
+        "videoYoutubeId": "UCw5-xj3AKqEizC7MvHaIPqA"
       },
       {
         "name": "Gazeta Esportiva",
@@ -329,28 +485,137 @@
       {
         "name": "90min",
         "url": "https://www.90min.com/pt-BR/posts.rss"
+      },
+      {
+        "name": "Lance",
+        "url": "https://news.google.com/rss/search?q=when:48h+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+      },
+      {
+        "name": "CazéTV",
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
       }
     ],
     "cult": [
       {
-        "name": "Omelete",
-        "url": "https://news.google.com/rss/search?q=when:48h+allinurl:omelete.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+        "videoYoutubeId": "UCupqHNRTEHjNtq9X8djWyaQ",
+        "name": "Voxel"
+      },
+      {
+        "videoYoutubeId": "UC5XG4yYM-_DQ-3HPRuam76Q",
+        "name": "Ingresso"
+      },
+      {
+        "videoYoutubeId": "UCsTpk_fb5aBd-tsMyeFAnYQ",
+        "name": "Adoro Cinema"
+      },
+      {
+        "videoYoutubeId": "UCaSAM5kna2KyX-uVLSGr8PQ",
+        "name": "Omelete"
+      },
+      {
+        "videoYoutubeId": "UCC1QUJZGfqrSGwwYXvZhqig",
+        "name": "Isabela Boscov"
+      },
+      {
+        "videoYoutubeId": "UCt_4wzTQqmcUvemNkeO0plA",
+        "name": "Ei Nerd"
+      },
+      {
+        "videoYoutubeId": "UCLYimOsgmIVf6KNjzXPkUwQ",
+        "name": "Gaveta"
+      },
+      {
+        "videoYoutubeId": "UCjY_LBR_7-Ile0MAsbeJWBg",
+        "name": "PH Santos"
+      },
+      {
+        "videoYoutubeId": "UCurl4RJpmlVmUJUiTWyGWAA",
+        "name": "Cinema com Rapadura"
+      },
+      {
+        "videoYoutubeId": "UCiSarBtpSphUrxtKDIW9c_A",
+        "name": "Tiago Belotti"
+      },
+      {
+        "videoYoutubeId": "UCo75UnlCEKjxOoNb4jx2LsA",
+        "name": "Telecine"
+      },
+      {
+        "videoYoutubeId": "UCDiJeuOsv766JDMAlpbSMHg",
+        "name": "Globoplay"
+      },
+      {
+        "videoYoutubeId": "UCteW9b13yFu8Kf8hnt12__A",
+        "name": "Canal Brasil"
+      },
+      {
+        "videoYoutubeId": "UCE8deXi-Eea3SuEV1Q1L4ug",
+        "name": "Otavio Ugá"
+      },
+      {
+        "videoYoutubeId": "UCZq_CYXRoRjKqidapMPujaQ",
+        "name": "Entre Planos"
+      },
+      {
+        "videoYoutubeId": "UC2oZNzo6o37qejkFQE2dIAA",
+        "name": "Carol Moreira"
+      },
+      {
+        "videoYoutubeId": "UCtwBWu3V9hTTlUIQ7ot9Xlg",
+        "name": "Spotify"
+      },
+      {
+        "videoYoutubeId": "UCVpQ-xuvW2_wL9_usxWw2UQ",
+        "name": "Ora Thiago"
+      },
+      {
+        "videoYoutubeId": "UCIzAIM-zatIDHErC0Z23hbQ",
+        "name": "Multishow"
+      },
+      {
+        "videoYoutubeId": "UCnC9rXILh2O6KOaCKnCoqEQ",
+        "name": "Pipocando Música"
+      },
+      {
+        "videoYoutubeId": "UCjbwfB_8hlg_GebxV46O_0A",
+        "name": "Alta Fidelidade"
+      },
+      {
+        "name": "Folha Ilustrada",
+        "url": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",
+        "legacyFeed": true
+      },
+      {
+        "name": "TMDQA",
+        "url": "https://feeds.feedburner.com/tmdqafeed",
+        "videoYoutubeId": "UCEgzbINEJfsLivqFdLHKIrg"
+      },
+      {
+        "name": "Rolling Stone",
+        "url": "https://rollingstone.com.br/feed/",
+        "videoYoutubeId": "UCucs1ej22g6huKteRqO8mRA"
+      },
+      {
+        "name": "PAPELPOP",
+        "url": "https://www.papelpop.com/feed/",
+        "videoYoutubeId": "UC4_SpEjNNtz6sfG-6uXO09w"
+      },
+      {
+        "name": "POPline",
+        "url": "https://portalpopline.com.br/feed/"
+      },
+      {
+        "name": "Jovem Nerd",
+        "url": "https://api.jovemnerd.com.br/feed/",
+        "legacyFeed": true
       },
       {
         "name": "AdoroCinema",
         "url": "https://news.google.com/rss/search?q=when:48h+allinurl:adorocinema.com&hl=pt-BR&gl=BR&ceid=BR:pt-419"
       },
       {
-        "name": "PAPELPOP",
-        "url": "https://www.papelpop.com/feed/"
-      },
-      {
-        "name": "Rolling Stone",
-        "url": "https://news.google.com/rss/search?q=when:48h+allinurl:rollingstone.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
-      },
-      {
-        "name": "TMDQA",
-        "url": "https://feeds.feedburner.com/tmdqafeed"
+        "name": "Omelete",
+        "url": "https://news.google.com/rss/search?q=when:48h+allinurl:omelete.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
       },
       {
         "name": "Tracklist",
@@ -361,18 +626,24 @@
         "url": "https://br.ign.com/feed.xml"
       },
       {
-        "name": "Jovem Nerd",
-        "url": "https://api.jovemnerd.com.br/feed/",
-        "legacyFeed": true
-      },
-      {
-        "name": "Folha Ilustrada",
-        "url": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",
-        "legacyFeed": true
-      },
-      {
         "name": "O Vício",
         "url": "https://ovicio.com.br/feed"
+      },
+      {
+        "name": "Plano Crítico",
+        "url": "https://www.planocritico.com/feed/"
+      },
+      {
+        "name": "Meio Amargo",
+        "url": "https://meioamargo.com/feed/"
+      },
+      {
+        "name": "Gama Revista",
+        "url": "https://gamarevista.uol.com.br/feed"
+      },
+      {
+        "name": "Quatro Cento e Um",
+        "url": "https://www.quatrocincoum.com.br/feed"
       }
     ],
     "geek": [
@@ -394,8 +665,32 @@
         "url": "https://news.google.com/rss/search?q=when:24h+allinurl:ofuxico.com.br&hl=pt-BR&gl=BR"
       },
       {
-        "name": "POPline",
-        "url": "https://portalpopline.com.br/feed/"
+        "name": "Revista Quem",
+        "url": "https://revistaquem.globo.com/rss/quem"
+      },
+      {
+        "name": "Contigo",
+        "url": "https://contigo.com.br/feed"
+      },
+      {
+        "name": "CARAS",
+        "url": "https://caras.com.br/feed"
+      },
+      {
+        "name": "Gente",
+        "url": "https://gente.ig.com.br/rss"
+      },
+      {
+        "name": "Portal Leodias",
+        "url": "https://portalleodias.com/feed"
+      },
+      {
+        "name": "Hugo Gloss",
+        "url": "https://hugogloss.uol.com.br/feed/"
+      },
+      {
+        "name": "Notícias da TV",
+        "url": "https://noticiasdatv.uol.com.br/feed"
       },
       {
         "name": "BCharts",
@@ -438,6 +733,54 @@
       {
         "name": "Ciência Todo Dia",
         "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn9Erjy00mpnWeLnRqhsA1g"
+      }
+    ],
+    "travel": [
+      {
+        "videoYoutubeId": "UCbrVBUVa2bwYRofc-lVeAnA",
+        "name": "CNN Viagem e Gastronomia"
+      },
+      {
+        "videoYoutubeId": "UCV6Lb37EQLdaDu0VyI7yDPg",
+        "name": "Rolê Família"
+      },
+      {
+        "videoYoutubeId": "UCOJNw9aHGRkYuIOqwU7yK-Q",
+        "name": "Mundo sem Fim"
+      },
+      {
+        "videoYoutubeId": "UC6xoasG-FY3P1YHo8_gBG9g",
+        "name": "Num Pulo"
+      },
+      {
+        "videoYoutubeId": "UCWfRNn9fRe5gMc3QaE3AXkA",
+        "name": "loucoporviagens"
+      },
+      {
+        "videoYoutubeId": "UCLPXpKv6WDc7mtapsbMyPHg",
+        "name": "Estevam"
+      },
+      {
+        "videoYoutubeId": "UCOHptmhkQl0nPAPpghvJjRA",
+        "name": "Carioca no Mundo"
+      },
+      {
+        "videoYoutubeId": "UC7D8rNR659bfUQ7_vOC4VdQ",
+        "name": "Embratur"
+      },
+      {
+        "videoYoutubeId": "UCk6RUGsfWI-3kPrDlMUfvfQ",
+        "name": "Travelands"
+      },
+      {
+        "videoYoutubeId": "UCwCh6NVP-qQim0KqJMuYWGw",
+        "name": "Sonhoe Destino"
+      },
+
+      {
+        "name": "Melhores Destinos",
+        "url": "https://www.melhoresdestinos.com.br/feed",
+        "videoYoutubeId": "UCWN45XZWIlZoUeohfqiyURA"
       }
     ],
     "dscvr": [

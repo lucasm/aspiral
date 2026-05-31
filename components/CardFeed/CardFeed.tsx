@@ -12,7 +12,7 @@ type Props = {
 
 interface IFeedFile {
   name: string
-  url: string
+  url?: string
 }
 
 // Cache global para feeds carregados
@@ -24,7 +24,8 @@ export default function Card(props: Readonly<Props>) {
       const localeData = require('../../locales/' + props.locale + '.json')
       feedCache.set(props.locale, localeData.feeds)
     }
-    return feedCache.get(props.locale)![props.category] ?? []
+    const categoryFeeds = feedCache.get(props.locale)![props.category] ?? []
+    return categoryFeeds.filter((item) => Boolean(item.url))
   }, [props.locale, props.category])
 
   return (

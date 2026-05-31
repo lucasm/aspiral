@@ -1,7 +1,7 @@
 {
   "name": "Aspiral",
   "short_name": "Aspiral",
-  "description": "Aspiral is a news reader with trusted journalism and without algorithms. Be critical. Fight against misinformation. ",
+  "description": "Aspiral is your magazine of trusted news. Be critical. Fight against misinformation. ",
   "start_url": "/?utm_source=pwa",
   "id": "/?utm_source=pwa",
   "author": "Lucas Maués",
@@ -33,18 +33,6 @@
     {
       "src": "/icon-512x512-maskable.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icon-1024x1024.png",
-      "type": "image/png",
-      "sizes": "1024x1024",
-      "purpose": "any"
-    },
-    {
-      "src": "/icon-1024x1024-maskable.png",
-      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
     }

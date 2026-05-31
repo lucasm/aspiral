@@ -9,7 +9,7 @@ const theme = createTheme({
     brand: ['#f0f0f0', '#d9d9d9', '#bfbfbf', '#a6a6a6', '#8c8c8c', '#737373', '#595959', '#404040', '#262626', '#000000'],
   },
   autoContrast: true,
-  defaultRadius: 'md', // 8px — igual ao --radius do globals.css
+  defaultRadius: 'lg', // 8px — igual ao --border-radius do globals.css
   fontFamily: 'var(--font), sans-serif',
   fontFamilyMonospace: 'var(--font), monospace',
 })

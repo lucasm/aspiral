@@ -28,7 +28,7 @@ async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 300): P
 
 interface IFeedFile {
   name: string
-  url: string
+  url?: string
   legacyFeed?: boolean
 }
 
@@ -212,15 +212,19 @@ async function getByCategory(locale: string, category: string): Promise<FeedResp
     const filterConfig = feedConfig.filter as FeedFilter | undefined
     const filterRegex = filterConfig?.keywords ? parseFilterString(filterConfig.keywords) : null
 
-    const feedArray = feedConfig[category] as IFeedFile[]
+    const feedArray = (feedConfig[category] as IFeedFile[]).filter((item) => item.url && item.url.trim())
     const ids: string[] = []
     const theFeed: Array<{ title: string | undefined; items: any[] }> = []
+
+    if (feedArray.length === 0) {
+      return [] as unknown as FeedResponse[]
+    }
 
     // Parse all RSS feeds in parallel, cada um com retry independente
     const feeds = await Promise.all(
       feedArray.map((item: IFeedFile) => {
         ids.push(item.name)
-        return withRetry(() => fetchAndParseFeed(item.url, item.legacyFeed || false))
+        return withRetry(() => fetchAndParseFeed(item.url!, item.legacyFeed || false))
       })
     )
 
@@ -284,7 +288,7 @@ async function getByName(locale: string, category: string, name: string): Promis
     let isLegacy = false
     const feedArray = feedConfig[category] as IFeedFile[]
     feedArray.forEach((item) => {
-      if (item.name === name) {
+      if (item.name === name && item.url && item.url.trim()) {
         feedUrl = item.url
         isLegacy = item.legacyFeed ?? false
       }

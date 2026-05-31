@@ -2,12 +2,13 @@ export const IconAspiral = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    fillRule="evenodd"
-    clipRule="evenodd"
-    strokeLinejoin="round"
-    strokeMiterlimit={2}
-    viewBox="0 0 36 36">
-    <path d="m22.861 16.674 10.505-1.852 1.852 10.505-21.009 3.704-1.852-10.505-10.505 1.852L0 9.873l21.009-3.704z" fillRule="nonzero" />
+    style={{ fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 2 }}
+    viewBox="0 0 32 32">
+    <path
+      d="M1950 8944c0-6 127-228 250-439 26-44 109-188 185-320s175-303 219-380l82-140 322-3c177-1 322 0 322 2 0 3-41 76-92 163-50 87-126 219-169 293-42 74-167 290-277 480l-199 345-322 3c-176 1-321-1-321-4"
+      transform="matrix(.01783 0 0 -.01783 -27.358 163.955)"
+    />
+    <ellipse cx="2938" cy="-502" rx="222" ry="249" transform="matrix(.03085 0 0 .0275 -83.795 34.508)" />
   </svg>
 )
 
