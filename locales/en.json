@@ -1,6 +1,6 @@
 {
   "language": "en",
-  "title": "Aspiral — Your magazine of trusted news",
+  "title": "Aspiral — The trusted journalism feed",
   "description": "Breaking news headlines from trusted journalism. Without algorithms. Be critical. Fight against misinformation.",
   "legal": "All rights reserved to the news sources.",
   "about": "About Aspiral",
@@ -8,7 +8,7 @@
   "feedback": "Send Feedback",
   "edition": "Edition",
   "donate": "Donate",
-  "credits": "Aspiral is an open source project created by",
+  "credits": "Aspiral is a portal with the best international journalistic sources. It's an open-source project with collaborative editorial, created by",
   "cookies": {
     "title": "Cookie Consent",
     "message": "Aspiral uses cookies to ensure you get the best experience. Read our",
@@ -21,11 +21,12 @@
   "news": "News",
   "check": "Check",
   "tech": "Tech",
-  "biz": "Business",
+  "economy": "Economy",
   "sport": "Sports",
-  "cult": "Culture",
+  "culture": "Culture",
   "geek": "Gaming",
-  "sci": "Science",
+  "science": "Science",
+  "travel": "Travel",
   "dscvr": "Discover",
   "videosFromThisCategory": "Videos from this category",
   "search": "Search",
@@ -102,6 +103,10 @@
       {
         "name": "Mother Jones",
         "url": "https://www.motherjones.com/feed"
+      },
+      {
+        "name": "The Atlantic",
+        "url": "https://www.theatlantic.com/feed/channel/culture/"
       }
     ],
     "check": [
@@ -196,7 +201,7 @@
         "url": "https://mashable.com/feeds/rss/tech"
       }
     ],
-    "biz": [
+    "economy": [
       {
         "name": "The Economist",
         "url": "https://www.economist.com/finance-and-economics/rss.xml"
@@ -269,7 +274,7 @@
         "url": "https://deadspin.com/rss"
       }
     ],
-    "cult": [
+    "culture": [
       {
         "name": "New Yorker",
         "url": "https://www.newyorker.com/feed/rss"
@@ -325,10 +330,6 @@
       {
         "name": "Aeon",
         "url": "https://aeon.co/feed.rss"
-      },
-      {
-        "name": "The Atlantic",
-        "url": "https://www.theatlantic.com/feed/channel/culture/"
       }
     ],
     "geek": [
@@ -357,7 +358,7 @@
         "url": "https://www.rockpapershotgun.com/feed"
       }
     ],
-    "sci": [
+    "science": [
       {
         "name": "LiveScience",
         "url": "https://www.livescience.com/feeds/all"

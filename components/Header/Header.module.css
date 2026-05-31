@@ -21,7 +21,6 @@
   box-shadow: var(--shadow);
   border-radius: 10rem;
 }
-
 .logo svg {
   fill: #fff;
 }
@@ -38,7 +37,6 @@
   padding-left: 0.75rem;
   margin-left: auto;
 }
-
 .menu:hover,
 .logo:hover {
   background: rgba(255, 255, 255, 0.15);
@@ -53,7 +51,6 @@
     transform 250ms ease,
     background 200ms ease;
 }
-
 .hamburger:before,
 .hamburger:after {
   content: '';
@@ -70,12 +67,10 @@
     top 200ms ease,
     background 200ms ease;
 }
-
 .hamburger:before {
   top: -7px;
   width: 18px;
 }
-
 .hamburger:after {
   top: 7px;
   width: 12px;
@@ -159,18 +154,21 @@
 
 .mobileNav li {
   padding: 0;
+  width: 100%;
 }
 
 .mobileNav a {
+  display: flex;
   padding: 0;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.25rem;
+  justify-content: center;
   transition: background 150ms ease;
 }
 
 .mobileNav a:hover,
 .mobileNav a:focus {
-  background: #f5f5f5;
+  text-decoration: underline;
 }
 
 .desktopNav {
@@ -231,16 +229,12 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .header {
-    padding: 1.5rem;
+  .mobileNav a {
+    font-size: 1.75rem;
   }
 
   .mobileNav {
     width: 500px;
-  }
-
-  .mobileNav a {
-    font-size: 2.5vw;
   }
 
   .logo,

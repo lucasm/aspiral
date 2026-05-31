@@ -67,13 +67,20 @@ export default function Header() {
                   </a>
                 </li>
               ))}
+
+              <div>
+                <Space h="xl" />
+                <Button
+                  size="lg"
+                  fullWidth={false}
+                  component="a"
+                  href="https://github.com/sponsors/lucasm"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  ♥&#160;&#160;{t('donate')}
+                </Button>
+              </div>
             </ul>
-
-            <Space h="xl" />
-
-            <Button size="md" component="a" href="https://github.com/sponsors/lucasm" target="_blank" rel="noopener noreferrer">
-              ♥&#160;&#160;{t('donate')}
-            </Button>
           </div>
         </nav>
       </header>

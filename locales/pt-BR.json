@@ -1,14 +1,14 @@
 {
   "language": "pt-BR",
-  "title": "Aspiral — A sua revista do jornalismo confiável",
+  "title": "Aspiral — O melhor do jornalismo confiável",
   "description": "Notícias de última hora do jornalismo confiável. Sem algoritmos. Seja crítico. Lute contra a desinformação.",
   "legal": "Todos os direitos reservados às fontes de notícias.",
   "about": "Sobre o Aspiral",
   "privacy": "Política de Privacidade e Termos de Serviço",
   "feedback": "Reportar Erro",
   "edition": "Edição",
-  "donate": "Fazer uma Doação",
-  "credits": "Aspiral é uma revista digital de editorial colaborativo e de código aberto com o melhor do jornalismo confiável do Brasil e do mundo. Projeto idealizado por",
+  "donate": "Fazer Doação",
+  "credits": "Aspiral é um portal com fontes confiáveis do jornalismo brasileiro e internacional. Projeto de código aberto e curadoria colaborativa idealizado por",
   "cookies": {
     "title": "Consentimento de Cookies",
     "message": "Aspiral usa cookies para garantir a melhor experiência de navegação. Leia nossa",
@@ -21,11 +21,11 @@
   "news": "Notícias",
   "check": "Checagem",
   "tech": "Tecnologia",
-  "biz": "Economia",
+  "economy": "Economia",
   "sport": "Esporte",
-  "cult": "Cultura",
+  "culture": "Cultura",
   "geek": "Famosos",
-  "sci": "Ciência",
+  "science": "Ciência",
   "travel": "Viagem",
   "dscvr": "Humor",
   "videosFromThisCategory": "Vídeos",
@@ -284,7 +284,7 @@
         "url": "https://www.xataka.com.br/feedburner.xml"
       }
     ],
-    "biz": [
+    "economy": [
       {
         "videoYoutubeId": "UCqfm5IQhpMlfeAWMmVL_uNg",
         "name": "CNN Money"
@@ -476,7 +476,8 @@
       },
       {
         "name": "Gazeta Esportiva",
-        "url": "https://www.gazetaesportiva.com/feed/"
+        "url": "https://www.gazetaesportiva.com/feed/",
+        "videoYoutubeId": "UCcndglQZmXnYjgE_Grqt5yg"
       },
       {
         "name": "No Ataque",
@@ -495,7 +496,7 @@
         "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
       }
     ],
-    "cult": [
+    "culture": [
       {
         "videoYoutubeId": "UCupqHNRTEHjNtq9X8djWyaQ",
         "name": "Voxel"
@@ -642,7 +643,7 @@
         "url": "https://gamarevista.uol.com.br/feed"
       },
       {
-        "name": "Quatro Cento e Um",
+        "name": "Quatro Cinco Um",
         "url": "https://www.quatrocincoum.com.br/feed"
       }
     ],
@@ -697,7 +698,7 @@
         "url": "https://bcharts.com.br/latest.rss"
       }
     ],
-    "sci": [
+    "science": [
       {
         "name": "Superinteressante",
         "url": "https://super.abril.com.br/feed/"

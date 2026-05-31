@@ -152,7 +152,7 @@ const WidgetVideoStories = ({ locale, category }: Readonly<Props>) => {
         spaceBetween={12}
         slidesPerView={1.2}
         breakpoints={{
-          280: { slidesPerView: 2.1, spaceBetween: 12 },
+          280: { slidesPerView: 2.5, spaceBetween: 12 },
           768: { slidesPerView: 3.5, spaceBetween: 14 },
           1200: { slidesPerView: 4.5, spaceBetween: 16 },
         }}

@@ -1,4 +1,4 @@
-export const categories = ['news', 'biz', 'tech', 'sport', 'cult', 'geek', 'sci', 'travel', 'check', 'dscvr'] as const
+export const categories = ['news', 'economy', 'tech', 'sport', 'culture', 'geek', 'science', 'travel', 'check', 'dscvr'] as const
 
 export type Category = (typeof categories)[number]
 

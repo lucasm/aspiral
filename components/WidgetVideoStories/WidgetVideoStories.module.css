@@ -40,7 +40,8 @@
    =========================== */
 .playerContainer {
   position: relative;
-  margin-bottom: 1.5rem;
+  padding: 0;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -261,6 +262,15 @@
     margin: 0 0 1.5rem;
   }
 
+  .playerContainer {
+    padding: 0 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .swiperContainer {
+    padding-left: 0.75rem;
+  }
+
   .swiperContainer :global(.swiper-button-next),
   .swiperContainer :global(.swiper-button-prev) {
     width: 30px;
@@ -271,26 +281,22 @@
   .swiperContainer :global(.swiper-button-prev::after) {
     font-size: 12px;
   }
-}
 
-@media (max-width: 480px) {
   .channelName {
     font-size: 0.7rem;
     padding: 0.35rem 0.6rem;
   }
-
   .videoTitle {
     font-size: 0.68rem;
     padding: 0.4rem 0.5rem;
   }
-
   .playIcon {
     width: 36px;
     height: 36px;
     font-size: 0.9rem;
   }
-
   .closeButton {
+    margin-right: 0.75rem;
     width: 2rem;
     height: 2rem;
     font-size: 1.2rem;

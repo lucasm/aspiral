@@ -18,12 +18,10 @@ export default async function CategoryPage({ params }: Readonly<CategoryPageProp
   }
 
   return (
-    <div id="home">
-      <SectionFeed id={category}>
-        <WidgetVideoStories locale={locale} category={category} />
-        <CardFeed locale={locale} category={category} />
-      </SectionFeed>
-    </div>
+    <SectionFeed id={category}>
+      <WidgetVideoStories locale={locale} category={category} />
+      <CardFeed locale={locale} category={category} />
+    </SectionFeed>
   )
 }
 

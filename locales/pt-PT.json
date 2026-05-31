@@ -21,11 +21,11 @@
   "news": "Notícias",
   "check": "Checagem",
   "tech": "Tecnologia",
-  "biz": "Economia",
+  "economy": "Economia",
   "sport": "Desporto",
-  "cult": "Cultura",
+  "culture": "Cultura",
   "geek": "Jogos",
-  "sci": "Ciência",
+  "science": "Ciência",
   "dscvr": "Descubra",
   "videosFromThisCategory": "Vídeos desta categoria",
   "search": "Buscar",
@@ -67,7 +67,7 @@
       { "name": "Bit Magazine", "url": "https://www.bit.pt/feed" },
       { "name": "Leak", "url": "https://www.leak.pt/feed/" }
     ],
-    "biz": [
+    "economy": [
       { "name": "ECO", "url": "https://eco.sapo.pt/feed/" },
       {
         "name": "Jornal de Negocios",
@@ -84,7 +84,7 @@
       { "name": "O Jogo", "url": "http://feeds.ojogo.pt/OJ-ULTIMAS" },
       { "name": "Record", "url": "https://www.record.pt/rss" }
     ],
-    "cult": [
+    "culture": [
       { "name": "Ípsilon", "url": "https://www.publico.pt/rss/ipsilon" },
       { "name": "Time Out Portugal", "url": "https://www.timeout.pt/lisboa/pt/feed" },
       { "name": "A Televisão", "url": "https://www.atelevisao.com/feed/" }
@@ -94,7 +94,7 @@
       { "name": "IGN", "url": "https://pt.ign.com/feed.xml" },
       { "name": "PróximoNível", "url": "https://proximonivel.pt/feed/" }
     ],
-    "sci": [
+    "science": [
       { "name": "National Geographic PT", "url": "https://www.nationalgeographic.pt/feeds/rss" },
       { "name": "Ciência Viva", "url": "https://www.cienciaviva.pt/rss" },
       { "name": "HypeScience", "url": "https://hypescience.com/feed/" }
