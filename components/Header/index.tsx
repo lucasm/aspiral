@@ -6,7 +6,6 @@ import { ISearchCategory } from '@/interfaces/search'
 import { getLocaleData } from '@/utils/getLocaleData'
 
 import Style from './Header.module.css'
-import { Asterisk } from 'lucide-react'
 import Button from '../Button'
 import SvgLogo from '../SvgLogo'
 

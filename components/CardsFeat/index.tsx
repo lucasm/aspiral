@@ -1,22 +1,9 @@
 import { JSX } from 'react'
 
 import Style from './CardsFeat.module.css'
-import {
-  IconAccessibility,
-  IconLanguage,
-  IconCarbon,
-  IconMic,
-  IconOpenSource,
-  IconSearch,
-  IconShield,
-  IconStories,
-  IconText,
-  IconTrending,
-  IconFileSearch,
-} from '../SvgIcons'
+import { IconText } from '../SvgIcons'
 import {
   CircleDashed,
-  CirclePlay,
   Earth,
   GitBranch,
   Languages,

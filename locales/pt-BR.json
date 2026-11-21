@@ -74,6 +74,10 @@
           "action": "https://www.google.com/search?q="
         },
         {
+          "name": "Bing",
+          "action": "https://www.bing.com/search?q="
+        },
+        {
           "name": "ChatGPT",
           "action": "https://chatgpt.com/?q="
         },

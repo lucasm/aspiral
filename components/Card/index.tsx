@@ -6,13 +6,11 @@ interface CardProps {
   imageUrl?: string
   imageAspectRatio?: 'aspectRatioVideo'
   flexDirection?: 'row' | 'column'
-  author?: string
   description?: string
 }
 
 const Card = ({
   imageUrl,
-  author,
   title,
   description,
   onClick,

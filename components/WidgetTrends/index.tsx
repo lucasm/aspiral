@@ -207,7 +207,6 @@ export default function SearchTrends({ title }: Readonly<Props>) {
               ) : (
                 <Card
                   title={item.title}
-                  author={(index + 1).toString()}
                   imageUrl={item.image}
                   onClick={() => handleTrendClick(item)}
                   flexDirection={flexDirection}

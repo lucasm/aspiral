@@ -1,10 +1,8 @@
 // import BlurBackground from '@/components/BlurBackground'
-import SvgLogo from '@/components/SvgLogo'
 import Welcome from '@/components/Welcome'
 import { getCategoryIcon } from '@/utils/handleCategoryIcon'
 
 import Style from './SearchTitle.module.css'
-import { Asterisk } from 'lucide-react'
 
 interface SearchTitleProps {
   category: string
