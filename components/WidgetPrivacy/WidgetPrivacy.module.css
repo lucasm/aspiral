@@ -1,5 +1,5 @@
 .container {
-  min-width: var(--container-sidebar);
+  min-width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;

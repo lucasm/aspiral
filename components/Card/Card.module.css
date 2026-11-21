@@ -3,19 +3,19 @@
   display: flex;
   flex-direction: row;
   align-items: start;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 100%;
   overflow: hidden;
-  padding: 1.25rem;
+  padding: 1rem;
   background: var(--background-surface);
   color: var(--color-text-black);
-  border-radius: var(--radius-liquid-glass);
+  border-radius: 1rem;
   text-align: left;
 }
 .card:hover,
 .card:focus {
-  background: var(--color-blue);
-  color: var(--color-black);
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 .column {
@@ -28,7 +28,7 @@
   overflow: hidden;
   position: relative;
   display: block;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   filter: grayscale(100%);
   background: white;
 }
@@ -45,7 +45,7 @@
 
 .title,
 .author {
-  font-size: var(--font-size);
+  font-size: var(--font-size-small);
   font-weight: 400;
   filter: grayscale(100%);
 }

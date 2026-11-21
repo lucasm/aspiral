@@ -1,8 +1,8 @@
 'use client'
 
 import 'regenerator-runtime/runtime'
-import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
+import { useEffect, useRef, useState } from 'react'
 import SpeechRecognition, {
   useSpeechRecognition,
 } from 'react-speech-recognition'
@@ -11,8 +11,8 @@ import { useSearch } from '@/contexts/SearchContext'
 
 import Style from './SearchVoice.module.css'
 import Modal from '../Modal'
-import { IconMic } from '../SvgIcons'
 import Tooltip from '../Tooltip'
+import { Mic } from 'lucide-react'
 
 interface Props {
   display: boolean
@@ -29,73 +29,101 @@ export default function SearchVoice(
     browserSupportsSpeechRecognition,
     isMicrophoneAvailable,
   } = useSpeechRecognition()
+  const locale = useLocale()
   const t = useTranslations('t')
-  const [hasVoiceSupport, setHasVoiceSupport] = useState<boolean>(false)
-
-  const [permission, setPermission] = useState<'granted' | 'denied' | 'prompt'>(
-    'prompt'
-  )
-
-  // Função para verificar a permissão do microfone
-  async function checkMicrophonePermission() {
-    try {
-      const permissionStatus = await navigator.permissions.query({
-        name: 'microphone' as PermissionName,
-      })
-      setPermission(permissionStatus.state)
-
-      // Atualiza o estado sempre que a permissão mudar
-      permissionStatus.onchange = () => setPermission(permissionStatus.state)
-    } catch (error) {
-      console.error('Erro ao verificar permissão do microfone:', error)
-    }
-  }
+  const [hasVoiceSupport, setHasVoiceSupport] = useState(false)
+  const [isStarting, setIsStarting] = useState(false)
+  const [hasMicrophoneError, setHasMicrophoneError] = useState(false)
+  const wasListening = useRef(false)
+  const discardTranscript = useRef(false)
+  const manuallyStopping = useRef(false)
+  const latestTranscript = useRef(transcript)
+  latestTranscript.current = transcript
 
   useEffect(() => {
-    checkMicrophonePermission()
-  }, [])
+    setHasVoiceSupport(isBrowserClientSide && browserSupportsSpeechRecognition)
+  }, [isBrowserClientSide, browserSupportsSpeechRecognition])
 
   useEffect(() => {
-    if (
-      isBrowserClientSide &&
-      browserSupportsSpeechRecognition &&
-      isMicrophoneAvailable
-    ) {
-      setHasVoiceSupport(true)
+    if (listening) {
+      setHasMicrophoneError(false)
+    } else if (!isStarting && !isMicrophoneAvailable) {
+      setHasMicrophoneError(true)
     }
-  }, [])
+  }, [isMicrophoneAvailable, isStarting, listening])
 
   function handleSpeechRecognition() {
     if (listening) {
-      SpeechRecognition.stopListening()
+      manuallyStopping.current = true
+      void SpeechRecognition.stopListening().then(() => {
+        const stoppedTranscript = latestTranscript.current.trim()
+        if (stoppedTranscript) putValue(stoppedTranscript)
+        resetTranscript()
+      })
     } else {
-      SpeechRecognition.startListening()
+      discardTranscript.current = false
+      setIsStarting(true)
+      void SpeechRecognition.startListening({ language: locale })
+        .catch((error: unknown) => {
+          setHasMicrophoneError(true)
+          console.error('Erro ao iniciar o reconhecimento de voz:', error)
+        })
+        .finally(() => setIsStarting(false))
     }
   }
 
+  function handleCancel() {
+    discardTranscript.current = true
+    void SpeechRecognition.abortListening()
+  }
+
   useEffect(() => {
-    if (!listening) {
-      putValue(transcript)
-      resetTranscript()
+    if (listening) {
+      wasListening.current = true
+      return
     }
-  }, [listening])
+
+    if (!wasListening.current) return
+
+    wasListening.current = false
+    if (manuallyStopping.current) {
+      manuallyStopping.current = false
+      return
+    }
+
+    if (!discardTranscript.current && transcript.trim()) {
+      putValue(transcript.trim())
+    }
+    discardTranscript.current = false
+    resetTranscript()
+  }, [listening, transcript, putValue, resetTranscript])
 
   return (
     <>
       {hasVoiceSupport && (
-        <div>
+        <div className={Style.container}>
           <Modal
             isOpen={listening}
-            onClose={() => resetTranscript()}
-            title={
-              permission === 'granted' ? t('voice.speak') : t('voice.allow')
-            }>
-            {isMicrophoneAvailable && (
-              <>
-                <div className={Style.buttonListening}></div>
-                <h3 className={Style.transcriptContainer}>{transcript}</h3>
-              </>
-            )}
+            onClose={handleCancel}
+            title={t('voice.speak')}
+            className={Style.voiceModal}
+            contentClassName={Style.voiceModalContent}>
+            <div className={Style.buttonListening} aria-hidden="true"></div>
+            <p
+              className={Style.transcriptContainer}
+              role="status"
+              aria-live="polite"
+              aria-atomic="true">
+              {transcript}
+            </p>
+            <footer className={Style.modalFooter}>
+              <button
+                type="button"
+                className={Style.stopButton}
+                onClick={handleSpeechRecognition}>
+                {t('voice.stop')}
+              </button>
+            </footer>
           </Modal>
 
           <Tooltip text={t('voice.voice')} disable={isMobileViewport}>
@@ -106,13 +134,21 @@ export default function SearchVoice(
                   ? `${Style.button} ${Style.buttonActive}`
                   : Style.button
               }
-              aria-pressed={listening ? true : false}
+              aria-label={t('voice.voice')}
+              aria-pressed={listening}
+              aria-busy={isStarting}
+              disabled={isStarting}
               onClick={handleSpeechRecognition}
               style={{ display: display ? 'inline-flex' : 'none' }}>
-              <IconMic />
+              <Mic aria-hidden="true" />
               {t('voice.voice')}
             </button>
           </Tooltip>
+          {hasMicrophoneError && (
+            <p className={Style.errorMessage} role="status" aria-live="polite">
+              {t('voice.allow')}
+            </p>
+          )}
         </div>
       )}
     </>

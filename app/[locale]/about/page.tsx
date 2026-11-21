@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
 import BannerAnimateCircleNav from '@/components/BannerAnimateCircleNav'
@@ -8,11 +7,13 @@ import Button from '@/components/Button'
 import CardsFeat from '@/components/CardsFeat'
 import SvgLogo from '@/components/SvgLogo'
 import WebsiteLayout from '@/layouts/WebsiteLayout'
+import { Link } from '@/i18n/routing'
 import Style from '@/layouts/WebsiteLayout/WebsiteLayout.module.css'
 
 export const metadata = {
   title: 'About',
-  description: 'Findto is an assistant for decentralized search on Web and AI.',
+  description:
+    'Aspiral is a search portal for Web content and AI, based on trusted sources.',
 }
 
 export default function PageAbout() {
@@ -23,7 +24,9 @@ export default function PageAbout() {
       <section>
         <div className={Style.container}>
           <Link href="#more">
-            <figure className={Style.icon}></figure>
+            <figure className={Style.icon}>
+              <SvgLogo />
+            </figure>
           </Link>
           <h1>{t('metadata.title')}</h1>
           <p>{t('metadata.description')}</p>
@@ -38,10 +41,9 @@ export default function PageAbout() {
               <div>
                 <h2>Choose your source</h2>
                 <p>
-                  With Findto, you can search across multiple sources at once.
-                  It’s your assistant for decentralized search. Elevate your
-                  search experience. Take control of Web search algorithms and
-                  AI models.
+                  Aspiral is a search portal for Web content and AI. Compare
+                  multiple trusted sources at once and take control of the
+                  search algorithms and AI models you use.
                 </p>
               </div>
             </article>
@@ -51,7 +53,7 @@ export default function PageAbout() {
               <div>
                 <h2>Transparency of search</h2>
                 <p>
-                  Every search leaves a trace in datacenters. With Findto, you
+                  Every search leaves a trace in datacenters. With Aspiral, you
                   can check the estimated levels of privacy, security, and
                   carbon footprint of each source. Make safer choices for
                   yourself and contribute to protecting Planet Earth.
@@ -64,10 +66,11 @@ export default function PageAbout() {
               <div>
                 <h2>Open source project</h2>
                 <p>
-                  Findto is an open source project. We are building a universal
-                  search experience where diversity is key, and people remain in
-                  control every step of the way. Join us, contribute, and help
-                  create a better search experience for everyone.
+                  Aspiral is an open source project. We are building a universal
+                  search experience based on trusted sources, where diversity is
+                  key and people remain in control every step of the way. Join
+                  us, contribute, and help create a better search experience for
+                  everyone.
                 </p>
               </div>
             </article>
@@ -75,7 +78,7 @@ export default function PageAbout() {
         </div>
       </section>
 
-      <section className={Style.blueBackground}>
+      <section className={Style.colorfulBackground}>
         <div className={Style.container}>
           <CardsFeat />
         </div>
@@ -85,7 +88,7 @@ export default function PageAbout() {
         <div className={Style.container}>
           <div className={Style.actionContainer}>
             <h2>Find something new for you</h2>
-            <p>Search decentralized. Truly open.</p>
+            <p>Search. Discover. For people.</p>
             <Button url="/" color="black">
               <>
                 <SvgLogo />

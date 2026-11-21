@@ -26,15 +26,21 @@ export default function CardsLink() {
 
   const cards: ICardsLink[] = [
     {
-      title: 'Ko-fi ',
-      url: 'https://ko-fi.com/findto',
+      title: 'Ko-fi',
+      url: 'https://ko-fi.com/aspiralapp',
       icon: <IconKofi />,
       active: true,
     },
     {
       title: 'Patreon',
-      url: 'https://patreon.com/findto',
+      url: 'https://patreon.com/aspiral',
       icon: <IconPatreon />,
+      active: true,
+    },
+    {
+      title: 'GitHub',
+      url: 'https://github.com/lucasm/aspiral',
+      icon: <IconGitHub />,
       active: true,
     },
     {
@@ -44,14 +50,8 @@ export default function CardsLink() {
       active: true,
     },
     {
-      title: 'GitHub',
-      url: 'https://github.com/lucasm/findto',
-      icon: <IconGitHub />,
-      active: true,
-    },
-    {
       title: 'X',
-      url: 'https://x.com/findtoapp',
+      url: 'https://x.com/aspiralapp',
       icon: <IconX />,
       active: false,
     },
@@ -63,7 +63,7 @@ export default function CardsLink() {
     },
     {
       title: 'Instagram',
-      url: 'https://instagram.com/findtoapp',
+      url: 'https://instagram.com/aspiralapp',
       icon: <IconInstagram />,
       active: false,
     },
@@ -75,7 +75,7 @@ export default function CardsLink() {
         ?.filter((project) => project.active)
         .map((item) => (
           <Button
-            size="small"
+            size="medium"
             key={item.title}
             url={item.url}
             color="white"

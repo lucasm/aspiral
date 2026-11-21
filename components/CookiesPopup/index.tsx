@@ -1,10 +1,11 @@
 'use client'
 
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 import { useCookiesConsent } from '@/contexts/CookiesConsentContext'
+import { Link } from '@/i18n/routing'
+import Button from '@/components/Button'
 
 import styles from './CookiesPopup.module.css'
 
@@ -34,17 +35,17 @@ const CookiesPopup = () => {
       role="dialog"
       aria-live="polite"
       aria-label={t('warnings.cookies')}>
-      <p>{t('warnings.cookies')}</p>
+      <p>
+        {t('warnings.cookies')} <Link href="/privacy">{t('privacy')}</Link>.
+      </p>
 
       <div className={styles.actions}>
-        <button onClick={() => handleClose(accept)}>{t('accept')}</button>
-        <button onClick={() => handleClose(reject)}>{t('reject')}</button>
-      </div>
-
-      <div className={styles.links}>
-        <p>
-          <Link href="/privacy">{t('privacy')}</Link>
-        </p>
+        <Button color="transparent" onClick={() => handleClose(reject)}>
+          {t('reject')}
+        </Button>
+        <Button color="black" onClick={() => handleClose(accept)}>
+          {t('accept')}
+        </Button>
       </div>
     </div>
   )

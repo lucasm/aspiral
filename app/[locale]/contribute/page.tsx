@@ -5,9 +5,9 @@ import WebsiteLayout from '@/layouts/WebsiteLayout'
 import Style from '@/layouts/WebsiteLayout/WebsiteLayout.module.css'
 
 export const metadata = {
-  title: 'Contribute',
+  title: 'Aspiral Community ',
   description:
-    'Support Findto open source project with a donation or by contributing to the code.',
+    'Support Aspiral open source project with a donation or by contributing to the code.',
 }
 
 export default function PageContribute() {
@@ -27,9 +27,9 @@ export default function PageContribute() {
       <section>
         <div className={Style.container}>
           <article>
-            <h2>Why Support Findto?</h2>
+            <h2>Why Support Aspiral?</h2>
             <p>
-              Findto is free for everyone and built collectively. We&apos;re an
+              Aspiral is free for everyone and built collectively. We&apos;re an
               open-source project driven by people who believe in digital
               freedom, transparency, and technology as a force for good.
             </p>
@@ -63,7 +63,7 @@ export default function PageContribute() {
             <h3>Get Involved</h3>
 
             <p>
-              If you share Findto vision, feel free to contribute to the
+              If you share Aspiral vision, feel free to contribute to the
               project.
             </p>
 

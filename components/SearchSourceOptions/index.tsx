@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import Select from '@/components/Select'
 import { useSearch } from '@/contexts/SearchContext'
 import { normalizeId } from '@/utils/formats'
 
-import { IconChevronDown } from '../SvgIcons'
 import Style from './SearchOptions.module.css'
 
 interface Option {
@@ -20,17 +19,18 @@ interface Props {
 const SearchSourceOptions = ({ options, label }: Readonly<Props>) => {
   const { setSearchUrl, inputValue, inputFocus } = useSearch()
   const [selectedOption, setSelectedOption] = useState<string>(options[0].value)
+  const shouldFocusInput = useRef(false)
 
   const handleChange = (value: string) => {
     setSelectedOption(value)
-    setSearchUrl(value + inputValue)
-    inputFocus()
+    setSearchUrl(value + (inputValue ?? ''))
+    shouldFocusInput.current = true
   }
 
   // if inputValue changes, update the searchUrl
   useEffect(() => {
-    setSearchUrl(selectedOption + inputValue)
-  }, [inputValue])
+    setSearchUrl(selectedOption + (inputValue ?? ''))
+  }, [inputValue, selectedOption, setSearchUrl])
 
   // on teh first render, set the default value as the first option
   useEffect(() => {
@@ -43,9 +43,15 @@ const SearchSourceOptions = ({ options, label }: Readonly<Props>) => {
         options={options}
         id={normalizeId(label)}
         onChange={handleChange}
-        value={options[0].value}
+        value={selectedOption}
         label={label}
-        icon={<IconChevronDown />}
+        onCloseAutoFocus={(event) => {
+          if (!shouldFocusInput.current) return
+
+          event.preventDefault()
+          shouldFocusInput.current = false
+          window.setTimeout(inputFocus, 0)
+        }}
       />
     </div>
   )

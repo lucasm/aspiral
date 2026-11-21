@@ -7,13 +7,15 @@
   --color-gray: hsla(0, 0%, 88%, 0.5);
   --color-dark: #202124;
   --color-dark-2: #303136;
-  --color-yellow: #ffed9b;
-  --color-orange: #ffb68d;
-  --color-green: #b3ffcf;
-  --color-blue: #8eccff;
+  --color-yellow: #ffe571;
+  --color-orange: #ff9d64;
+  --color-green: #7dffad;
+  --color-blue: #64b9ff;
+  --color-blueocean: #15ccff;
+  --color-cyan: #1de8ff;
   --color-purple: #dba2ff;
   --color-pink: #ffaae8;
-  --color-red: #ff8a8a;
+  --color-red: #ff7676;
   --background-body: var(--color-white);
   --background-surface: var(--color-gray);
   --background-surface-secondary: var(--color-gray);
@@ -42,22 +44,22 @@
   --opacity: 0.55;
   --blur: blur(15.75px);
   --svg-filter: invert(1);
+  --feed-logo-filter: invert(1);
   --font-size: 1rem;
-  --font-size-small: 0.8rem;
+  --font-size-small: 0.9rem;
   --font-size-big: 1.2rem;
   --font-size-3: 1.5rem;
   --font-size-2: 2.5rem;
   --font-size-1: 4rem;
-  --radius: 1rem;
   --radius-small: 0.75rem;
+  --radius: 1rem;
   --radius-big: 1.75rem;
   --radius-liquid-glass: 28px;
   --radius-full: 75rem;
   --size-small: 2.5rem;
   --size-large: 3.25rem;
   --size-big: 3rem;
-  --container-sidebar: 15rem;
-  --max-size-container: 1024px;
+  --max-size-container: 1120px;
   --max-size-container-2: 768px;
   --max-size-container-3: 820px;
   --transition-hover:
@@ -72,6 +74,7 @@ html[data-theme='dark'] {
   --color-surface-secondary: var(--color-dark-2);
   --color-text-black: #fff;
   --svg-filter: none;
+  --feed-logo-filter: none;
   --color-bg-white: var(--color-dark-2);
   --shadow-2: 0px 15px 50px 0px rgba(198, 208, 244, 0.1);
 }
@@ -100,7 +103,6 @@ input,
 select,
 option {
   font-family: inherit;
-  letter-spacing: -0.025em;
   outline-color: var(--color-text-black);
 }
 
@@ -112,7 +114,7 @@ h3,
 input,
 select,
 option {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 ol,
@@ -269,16 +271,6 @@ article hr {
 ::-ms-input-placeholder {
   color: var(--color-text-black);
   opacity: var(--opacity);
-}
-
-.sidebar {
-  margin-left: var(--container-sidebar);
-}
-
-@media screen and (max-width: 1024px) {
-  .sidebar {
-    margin-left: 0;
-  }
 }
 
 @media screen and (max-width: 768px) {

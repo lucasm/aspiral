@@ -1,0 +1,320 @@
+.menuNavigation {
+  display: flex;
+  align-items: center;
+}
+
+.desktopNav {
+  display: block;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.trigger,
+.categoryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  border-radius: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0 0.75rem;
+  height: 2rem;
+  font-size: 0.85rem;
+}
+
+.trigger:hover,
+.categoryLink:hover,
+.desktopMenuButton:hover {
+  opacity: 0.7;
+}
+
+.desktopMenuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.desktopMenuButton svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 2.5;
+}
+
+.categoryControls {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.desktopSubmenuTrigger {
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: opacity 120ms ease;
+}
+
+.desktopSubmenuTrigger svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.desktopSubmenuTrigger[data-state='open'] svg {
+  transform: rotate(180deg);
+}
+
+.menuNavigation[data-keyboard-navigation='true'] .desktopSubmenuTrigger {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menuNavigation[data-keyboard-navigation='true']
+  .categoryControls
+  .categoryLink {
+  padding-inline-end: 1.75rem;
+}
+
+.categoryLink:focus-visible,
+.desktopSubmenuTrigger:focus-visible,
+.desktopMenuButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 12rem;
+  padding-top: 0.5rem;
+  z-index: 2;
+}
+
+.contentInner {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--background-body);
+  box-shadow: var(--shadow-2);
+}
+
+.parentLink,
+.subcategoryList a {
+  display: block;
+  padding: 0.5rem;
+  color: var(--color-text-black);
+  text-decoration: none;
+}
+
+.parentLink {
+  font-weight: 600;
+}
+
+.subcategoryList {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+}
+
+.parentLink:hover,
+.subcategoryList a:hover {
+  background: var(--background-surface);
+  border-radius: var(--radius);
+}
+
+.indicator,
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-black);
+    padding: 0.65rem;
+  }
+
+  .menuButton svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+[data-menu-max-panel] .list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+[data-menu-max-panel] .item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+}
+
+[data-menu-max-panel] .trigger,
+[data-menu-max-panel] .categoryLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 3.7rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 1rem;
+  color: inherit;
+  font-size: clamp(1.2rem, 2.7vw, 1.5rem);
+  font-weight: 400;
+  text-align: left;
+  transition: opacity 160ms ease;
+}
+
+[data-menu-max-panel] .trigger {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+[data-menu-max-panel] .trigger:hover,
+[data-menu-max-panel] .categoryLink:hover {
+  opacity: 0.65;
+}
+
+[data-menu-max-panel] .selectedCategory {
+  background: var(--background-surface);
+}
+
+[data-menu-max-panel] .item > .categoryLink {
+  flex: 1;
+  width: auto;
+}
+
+[data-menu-max-panel] .item > .trigger {
+  flex: none;
+  width: 100%;
+}
+
+[data-menu-max-panel] .categoryLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+[data-menu-max-panel] .categoryIcon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  color: inherit;
+}
+
+[data-menu-max-panel] .categoryIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+[data-menu-max-panel] .content {
+  width: 100%;
+}
+
+[data-menu-max-panel] .submenuIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  transition: transform 160ms ease;
+}
+
+[data-menu-max-panel] .trigger[data-state='open'] .submenuIcon {
+  transform: rotate(180deg);
+}
+
+[data-menu-max-panel] .content {
+  position: static;
+  min-width: 0;
+  padding: 0 0.5rem 1rem;
+}
+
+[data-menu-max-panel] .contentInner {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+[data-menu-max-panel] .parentLink,
+[data-menu-max-panel] .subcategoryList a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  padding: 0.55rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: opacity 160ms ease;
+}
+
+[data-menu-max-panel] .subcategoryList {
+  margin: 0;
+}
+
+[data-menu-max-panel] .parentLink:hover,
+[data-menu-max-panel] .subcategoryList a:hover {
+  opacity: 0.65;
+}

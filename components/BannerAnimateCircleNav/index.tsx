@@ -7,12 +7,12 @@ import styles from './BannerAnimateCircleNav.module.css'
 export default function BannerAnimateCircleNav() {
   // Array com os dados de cada bola (ícone e título)
   const navItems = [
-    { iconUrl: '/images/logos/google.svg', title: 'Google' },
-    { iconUrl: '/images/logos/chatgpt.svg', title: 'ChatGPT' },
-    { iconUrl: '/images/logos/copilot.svg', title: 'Copilot' },
-    { iconUrl: '/images/logos/claude.svg', title: 'Claude' },
-    { iconUrl: '/images/logos/deepseek.svg', title: 'DeepSeek' },
-    { iconUrl: '/images/logos/duckduckgo.svg', title: 'duckduckgo' },
+    { iconUrl: '/images/icons/google.svg', title: 'Google' },
+    { iconUrl: '/images/icons/chatgpt.svg', title: 'ChatGPT' },
+    { iconUrl: '/images/icons/copilot.svg', title: 'Copilot' },
+    { iconUrl: '/images/icons/claude.svg', title: 'Claude' },
+    { iconUrl: '/images/icons/deepseek.svg', title: 'DeepSeek' },
+    { iconUrl: '/images/icons/duckduckgo.svg', title: 'duckduckgo' },
   ]
 
   // Estado para controlar qual bola está selecionada

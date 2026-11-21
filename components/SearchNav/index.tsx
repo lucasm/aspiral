@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import { useLocale } from 'next-intl'
-
 import { ISearchCategory } from '@/interfaces/search'
+import { Link } from '@/i18n/routing'
 import { normalizeId } from '@/utils/formats'
 import { getCategoryIcon } from '@/utils/handleCategoryIcon'
 
@@ -9,13 +7,11 @@ import Style from './SearchNav.module.css'
 
 interface Props {
   data: { categories: ISearchCategory[] }
-  variant?: 'vertical' | 'cards' | 'sidebar'
+  variant?: 'vertical' | 'cards'
   selectedCategory?: ISearchCategory
 }
 
 const SearchNav = ({ data, variant, selectedCategory }: Props) => {
-  const locale = useLocale()
-
   const navClass = `${Style.nav} ${variant && Style[variant]}`
 
   const hasActiveClass = (categoryName: string) => {
@@ -31,10 +27,13 @@ const SearchNav = ({ data, variant, selectedCategory }: Props) => {
               <li key={index}>
                 <Link
                   className={hasActiveClass(category?.name) ? Style.active : ''}
-                  href={
-                    '/' + locale + '/search/' + normalizeId(category?.name)
-                  }>
-                  <figure>{getCategoryIcon(category?.name)()}</figure>
+                  href={'/' + normalizeId(category?.name)}>
+                  <figure>
+                    {(() => {
+                      const IconComponent = getCategoryIcon(category?.name)
+                      return <IconComponent />
+                    })()}
+                  </figure>
                   <span>{category?.name_translated || category?.name}</span>
                 </Link>
               </li>

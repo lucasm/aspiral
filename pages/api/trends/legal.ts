@@ -16,43 +16,43 @@ export default async function endpoint(
         title: 'Serviços públicos',
         data: [
           {
-            title: 'Assinatura Eletrônica de documentos do GOV.BR',
+            title: 'Assinatura - gov.br',
             url: 'https://www.gov.br/pt-br/servicos/assinatura-eletronica',
           },
           {
-            title: 'Abrir reclamação contra empresa no Consumidor.gov.br',
+            title: 'Reclamação - Consumidor.gov.br',
             url: 'https://www.consumidor.gov.br/pages/principal/',
           },
           {
-            title: 'Meu Imposto de Renda da Receita Federal',
+            title: 'Meu Imposto de Renda - Receita Federal',
             url: 'https://www.gov.br/pt-br/servicos/consultar-meu-imposto-de-renda',
           },
           {
-            title: 'Restituição da Receita Federal',
+            title: 'Restituição de Imposto - Receita Federal',
             url: 'https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda',
           },
           {
-            title: 'Dívidas e Pendências Fiscais na Receita Federal',
+            title: 'Dívidas e Pendências Fiscais - Receita Federal',
             url: 'https://www.gov.br/pt-br/servicos/consultar-dividas-e-pendencias-fiscais',
           },
           {
-            title: 'Certidão de Regularidade Fiscal da Receita Federal',
+            title: 'Certidão de Regularidade Fiscal - Receita Federal',
             url: 'https://www.gov.br/pt-br/servicos/emitir-certidao-de-regularidade-fiscal',
           },
           {
-            title: 'Valores a Receber do Banco Central',
+            title: 'Valores a Receber - Banco Central',
             url: 'https://www.gov.br/pt-br/servicos/consultar-e-solicitar-a-devolucao-de-valores-a-receber',
           },
           {
-            title: 'Registrato do Banco Central',
+            title: 'Chavex Pix e Contas  - Banco Central',
             url: 'https://www.bcb.gov.br/meubc/registrato',
           },
           {
-            title: 'Relatório de Empréstimos e Financiamentos do Banco Central',
+            title: 'Relatório de Empréstimos e Financiamentos - Banco Central',
             url: 'https://www.bcb.gov.br/meubc/relatorioemprestimofinanciamento',
           },
           {
-            title: 'Extrato do FGTS da Caixa',
+            title: 'Extrato do FGTS - Caixa',
             url: 'https://www.caixa.gov.br/beneficios-trabalhador/fgts/extrato-fgts/Paginas/default.aspx',
           },
           {
@@ -72,29 +72,28 @@ export default async function endpoint(
             url: 'https://www.camara.leg.br/enquetes/',
           },
           {
-            title: 'Portal da Transparência do Senado Federal',
+            title: 'Portal da Transparência - Senado Federal',
             url: 'https://senado.leg.br/transparencia',
           },
           {
-            title: 'Portal da Transparência da Câmara dos Deputados',
+            title: 'Portal da Transparência - Câmara dos Deputados',
             url: 'https://camara.leg.br/transparencia',
           },
           {
-            title: 'Portal da Transparência do Governo Federal',
+            title: 'Portal da Transparência - Governo Federal',
             url: 'https://portaldatransparencia.gov.br/',
           },
           {
-            title:
-              'Acesso à informação, denúncia, crítica ou elogio no Fala.BR',
+            title: 'Acesso à informação, denúncia, crítica ou elogio - Fala.BR',
             url: 'https://falabr.cgu.gov.br/',
           },
           {
             title:
-              'Requerimento à Lei Geral de Proteção de Dados (LGPD) via ANPD',
+              'Requerimento à Lei Geral de Proteção de Dados (LGPD) - ANPD',
             url: 'https://www.gov.br/pt-br/servicos/abrir-requerimento-relacionado-a-lgpd',
           },
           {
-            title: 'Autoatendimento Eleitoral do TSE',
+            title: 'Autoatendimento Eleitoral - TSE',
             url: 'https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/',
           },
           {

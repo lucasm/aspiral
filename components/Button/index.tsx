@@ -1,15 +1,34 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 
 import Styles from './Button.module.css'
 
-type Props = {
+type BaseProps = {
   url?: string
-  color?: 'colors' | 'black' | 'white'
-  size?: 'big' | 'small'
+  color?: 'colors' | 'black' | 'white' | 'gray' | 'transparent'
+  size?: 'small' | 'medium' | 'large' | 'big'
   external?: boolean
-  children: React.ReactNode
-  onClick?: () => void
+  children?: React.ReactNode
+  className?: string
 }
+
+type LinkProps = BaseProps &
+  Omit<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    'children' | 'className' | 'color' | 'href' | 'rel' | 'size' | 'target'
+  > & {
+    url: string
+  }
+
+type NativeButtonProps = BaseProps &
+  Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    'children' | 'className' | 'size' | 'type'
+  > & {
+    url?: undefined
+    type?: 'button' | 'submit' | 'reset'
+  }
+
+type Props = LinkProps | NativeButtonProps
 
 export default function Button({
   url,
@@ -17,34 +36,45 @@ export default function Button({
   color,
   size,
   children,
-  onClick,
+  className,
+  ...rest
 }: Readonly<Props>) {
-  // Concatena classes manualmente
   const colorKey = color ?? 'white'
-  const sizeKey = size ?? 'medium'
-  const className = [Styles.button, Styles[colorKey], Styles[sizeKey]]
+  const sizeKey = size ?? 'small'
+  const normalizedSize = sizeKey === 'big' ? 'large' : sizeKey
+  const resolvedClassName = [
+    Styles.button,
+    Styles[colorKey],
+    Styles[normalizedSize],
+    className,
+  ]
     .join(' ')
     .trim()
 
   if (url) {
+    const linkProps = rest as React.AnchorHTMLAttributes<HTMLAnchorElement>
+
     return (
       <Link
+        {...linkProps}
         href={url}
-        target={external ? '_blank' : ''}
-        rel={external ? 'noopener noreferrer' : ''}
-        className={className}>
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+        className={resolvedClassName}>
         {children}
       </Link>
     )
   }
 
-  if (!url && onClick) {
-    return (
-      <button className={className} onClick={onClick}>
-        {children}
-      </button>
-    )
-  }
+  const buttonProps = rest as React.ButtonHTMLAttributes<HTMLButtonElement>
+  const { type = 'button' } = buttonProps
 
-  return null
+  return (
+    <button
+      {...buttonProps}
+      type={type}
+      className={resolvedClassName}>
+      {children}
+    </button>
+  )
 }

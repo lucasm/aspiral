@@ -5,7 +5,7 @@ import Style from '@/layouts/WebsiteLayout/WebsiteLayout.module.css'
 
 export const metadata = {
   title: 'Privacy Policy',
-  description: 'See how Findto respects your privacy and the users data.',
+  description: 'See how Aspiral respects your privacy and user data.',
 }
 
 export default function PrivacyPage() {
@@ -23,15 +23,15 @@ export default function PrivacyPage() {
       <section>
         <div className={Style.container}>
           <article>
-            <h2>1. Your Privacy on Findto</h2>
+            <h2>1. Your Privacy on Aspiral</h2>
             <p>
               We respect your privacy regarding any information we may collect
-              from you across our services at internet domain https://findto.app
-              and our communications (&quot;Findto&quot;). Findto are designed
-              on top of privacy. Findto endorses user control over their data.
+              from you across our services at internet domain https://aspiral.app
+              and our communications (&quot;Aspiral&quot;). Aspiral is designed
+              on top of privacy. Aspiral endorses user control over their data.
               We do not store user searches. External services and search
               providers may collect and store your personal data. Thinking about
-              it, Findto displays a &quot;Protection widget&quot; on the top
+              it, Aspiral displays a &quot;Protection widget&quot; on top of
               every search provider, explore it!
             </p>
             <p>This privacy policy complies with the following regulations:</p>
@@ -56,12 +56,12 @@ export default function PrivacyPage() {
             </p>
 
             <p>
-              Using Findto you are agreeing to be bound by this privacy
+              Using Aspiral you are agreeing to be bound by this privacy
               policy.{' '}
             </p>
             <h2>2. Automatically Collected Information</h2>
             <p>
-              Findto automatically collect and store minimal public information
+              Aspiral automatically collects and stores minimal public information
               (non personal data) with purpose to provide web search
               functionality. Such as pages that you access, location (country
               and city), device specs (operational system and browser), internet
@@ -70,20 +70,20 @@ export default function PrivacyPage() {
             </p>
             <h2>3. Information that You Provide</h2>
             <p>
-              Findto only receives and stores identifiable information (personal
+              Aspiral only receives and stores identifiable information (personal
               data) for those who chose identify themselves. Data that you enter
               on contact or feedback forms, donations platforms or give in any
               other way, including but not limited to: your name, email address
               and phone number.
             </p>
             <p>
-              Findto only ask for personal information when we truly need it to
+              Aspiral only asks for personal information when we truly need it to
               provide a service to you. We collect it by fair and lawful means,
               with your knowledge and consent. We also let you know why
               we&apos;re collecting it and how it will be used.
             </p>
             <h2>4. Information Using</h2>
-            <p>Findto uses your information only with the purposes of: </p>
+            <p>Aspiral uses your information only with the purposes of: </p>
             <p>
               a) communicate with you to understand your feedback, respond to
               inquiries and provide requested content;
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
             </p>
             <h2>5. Cookies and Tracking Technologies</h2>
             <p>
-              Findto and it&apos;s related email communications, use cookies and
+              Aspiral and its related email communications use cookies and
               similar technologies, such as cache and local storage, only to
               execute app functionalities, like to recognize when you view or
               return to a page.{' '}
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
                 rel="noopener noreferrer">
                 Microsoft Clarity
               </a>{' '}
-              services are used to optimize Findto, and can put their own
+              services are used to optimize Aspiral, and can put their own
               cookies in your browser. This policy not covers use of cookies by
               third parties. Click on the links above to read their privacy
               policies.{' '}
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
             </p>
             <h2>6. Information Sharing</h2>
             <p>
-              Findto do not share any personally identifying information with
+              Aspiral does not share any personally identifying information with
               third-parties. But for technical reasons and unintentionally, it
               may share with the services listed above and when redirecting the
               user to a search provider. These entities may have access to
@@ -146,7 +146,7 @@ export default function PrivacyPage() {
             </p>
             <h2>7. Information Store and Protection</h2>
             <p>
-              Findto only retain collected information for as long as necessary
+              Aspiral only retains collected information for as long as necessary
               to provide to you the requested service. The data we store,
               we&apos;ll protect within commercially acceptable means to prevent
               unauthorized access. You are free to refuse our request for your
@@ -155,35 +155,35 @@ export default function PrivacyPage() {
             </p>
             <h2>8. Opting Out</h2>
             <p>
-              Findto strongly encourages you take a look on third parties
+              Aspiral strongly encourages you to take a look at third parties&apos;
               privacy policies linked above and of every search provider, to
               know how this services are handling your data and how proceed to
               opt out of them individually.
             </p>
             <h2>9. External Services</h2>
             <p>
-              Findto redirects and contain links to external websites and
+              Aspiral redirects and contains links to external websites and
               applications just for your convenience of search functionality.
-              Please be aware, that Findto not endorse, have no control over the
+              Please be aware that Aspiral does not endorse or have control over the
               content and practices of any third party internet resources, and
               cannot accept liability or responsibility for their respective
-              privacy policies, that are not operated by Findto. We advised you
-              to review the privacy policy of every them, as possible.
+              privacy policies, which are not operated by Aspiral. We advise you
+              to review the privacy policy of each one where possible.
             </p>
             <h2>10. Changes to This Policy</h2>
             <p>
               Note that this policy can be revised at any time without notice.
-              However, significant changes will be announced on Findto&apos;s
-              communication channels. Your continued use of Findto, following
+              However, significant changes will be announced on Aspiral&apos;s
+              communication channels. Your continued use of Aspiral, following
               the posting of changes, will be regarded as acceptance of these
               changes.
             </p>
             <h2>11. Contact</h2>
             <p>
               If you have any questions or suggestions, please contact us at
-              email legal@findto.app. Happy searches!
+              email legal@aspiral.app. Happy searches!
             </p>
-            <p>Updated and Effective as of August 8, 2025.</p>
+            <p>Updated and Effective as of November 21, 2026.</p>
           </article>
         </div>
       </section>

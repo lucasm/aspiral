@@ -4,42 +4,44 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }
 
 .title {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: 2vw;
   align-items: center;
-  width: 100%;
-  flex-direction: column;
 }
 
 .container h1 {
-  font-size: 2rem;
+  font-size: 8vw;
   font-weight: 400;
-  letter-spacing: -1px;
+  letter-spacing: -0.35vw;
+  line-height: initial;
+  color: var(--color-text-black);
 }
 
 .icon {
+  display: none;
   position: relative;
-  display: flex;
-  width: 4.5rem;
-  height: 4.5rem;
-  margin: 0 auto;
-  background: var(--background-surface);
-  background: var(--color-blue);
-  color: var(--color-black);
-  border-radius: 33.333%;
+  width: 5vw;
+  height: 5vw;
+  /* margin: 0 auto; */
+  background: var(--background-body);
+  border: 1px solid var(--color-black-translucent);
+  color: var(--color-text-black);
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
 }
 .icon svg {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 3vw;
+  height: 3vw;
   transform-origin: center;
   animation: engineSpin 2.2s forwards;
+  stroke-width: 2.25px;
 }
 
 @keyframes engineSpin {
@@ -83,22 +85,22 @@
   .container {
     gap: 0.25rem;
   }
+  .container h1 {
+    font-size: 8vw;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+  }
+
   .title {
     gap: 0.75rem;
   }
 
-  .container h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-
   .icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
-
   .icon svg {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }

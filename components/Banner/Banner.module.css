@@ -10,6 +10,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
   overflow: hidden;
   border-radius: var(--radius-liquid-glass);
   -webkit-box-shadow: var(--box-shadow-liquid-glass);
@@ -26,6 +27,11 @@
   text-wrap: balance;
 }
 
+.containerBanner > * {
+  position: relative;
+  z-index: 1;
+}
+
 .containerBanner h3 {
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -40,6 +46,7 @@
 
 .buttonsContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   align-items: center;

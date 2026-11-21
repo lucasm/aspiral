@@ -1,8 +1,8 @@
 .cards {
   display: flex;
   gap: 0.75rem;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 4rem auto 0;
-  max-width: 30rem;
 }

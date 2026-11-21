@@ -1,67 +1,97 @@
+import type { ComponentType } from 'react'
 import {
-  IconHome,
-  IconAI,
-  IconWeb,
-  IconImage,
-  IconVideo,
-  IconMusic,
-  IconSocial,
-  IconLocal,
-  IconShopping,
-  IconCode,
-  IconAcademic,
-  IconJob,
-  IconNews,
-  IconLegal,
-  IconFinance,
-  IconApps,
-  IconGames,
-  IconTorrent,
-  IconDarknet,
-  Icon,
-} from '@/components/SvgIcons'
+  AtSign,
+  SquarePlay,
+  Globe,
+  Handbag,
+  Music,
+  Image,
+  type LucideIcon,
+  GraduationCap,
+  ChartNoAxesCombined,
+  Landmark,
+  Package,
+  ArrowDownToLine,
+  Gamepad2,
+  Briefcase,
+  Code,
+  MapPin,
+  Hexagon,
+  Rss,
+  Astroid,
+  SquareDashed,
+  Trophy,
+  Star,
+  Heart,
+  Martini,
+  Cpu,
+  Atom,
+  Asterisk,
+  CircleCheckBig,
+  Rocket,
+} from 'lucide-react'
 
-export const getCategoryIcon = (categoryName: string) => {
+type CategoryIconComponent = ComponentType<any> | LucideIcon
+
+export const getCategoryIcon = (
+  categoryName: string
+): CategoryIconComponent => {
   switch (categoryName) {
     case 'Home':
-      return IconHome
+      return Asterisk
     case 'AI':
-      return IconAI
+      return Astroid
     case 'Web':
-      return IconWeb
+      return Globe
     case 'Image':
-      return IconImage
+      return Image
     case 'Videos':
-      return IconVideo
+      return SquarePlay
     case 'Music':
-      return IconMusic
+      return Music
     case 'Social':
-      return IconSocial
+      return AtSign
     case 'Local':
-      return IconLocal
+      return MapPin
     case 'Academic':
-      return IconAcademic
+      return GraduationCap
     case 'Shopping':
-      return IconShopping
+      return Handbag
     case 'News':
-      return IconNews
+      return Rss
     case 'Job':
-      return IconJob
+      return Briefcase
     case 'Code':
-      return IconCode
+      return Code
     case 'Legal':
-      return IconLegal
+      return Landmark
     case 'Apps':
-      return IconApps
-    case 'Finance':
-      return IconFinance
+      return Package
+    case 'Business':
+      return ChartNoAxesCombined
     case 'Games':
-      return IconGames
+      return Gamepad2
     case 'Torrent':
-      return IconTorrent
+      return ArrowDownToLine
     case 'Darknet':
-      return IconDarknet
+      return Hexagon
+    case 'Sport':
+      return Trophy
+    case 'Science':
+      return Atom
+    case 'Celebrity':
+      return Martini
+    case 'Culture':
+      return Star
+    case 'Health':
+      return Heart
+    case 'Tech':
+      return Cpu
+    case 'Fact-Check':
+      return CircleCheckBig
+    case 'Startups':
+      return Rocket
     default:
-      return Icon
+      return SquareDashed
   }
 }

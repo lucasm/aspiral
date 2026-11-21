@@ -1,0 +1,37 @@
+.loader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+.loader span {
+  display: block;
+  height: 1.2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(138, 138, 138, 0.1) 25%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(142, 142, 142, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+.loader span:nth-child(1) {
+  width: 85%;
+}
+.loader span:nth-child(2) {
+  width: 70%;
+}
+.loader span:nth-child(3) {
+  width: 55%;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

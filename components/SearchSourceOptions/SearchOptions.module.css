@@ -1,3 +1,3 @@
-.container select {
+.container button[role='combobox'] {
   font-size: var(--font-size-small);
 }

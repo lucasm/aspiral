@@ -1,25 +1,33 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { ArrowUpRight, X } from 'lucide-react'
 
 import Alert from '@/components/Alert'
 import SearchSourceOptions from '@/components/SearchSourceOptions'
 import SearchSuggestions from '@/components/SearchSuggestions'
+import SearchSourceSelector from '@/components/SearchSourceSelector'
 import SearchTitle from '@/components/SearchTitle'
 import SearchVoice from '@/components/SearchVoice'
-import { IconClose, IconSend } from '@/components/SvgIcons'
 import Tooltip from '@/components/Tooltip'
 import { useSearch } from '@/contexts/SearchContext'
-import { ISearchCategory, ISearchChild } from '@/interfaces/search'
+import type { ISearchCategory, ISearchChild } from '@/interfaces/search'
 import { normalizeId } from '@/utils/formats'
+import { addSearchHistory } from '@/utils/searchHistory'
+import {
+  getSearchSourcePreference,
+  saveSearchSourcePreference,
+} from '@/utils/searchSourcePreference'
 
-import SearchSourceIcon from '../SearchSourceIcon'
 import Style from './Search.module.css'
+import BlurBackground from '../BlurBackground'
 
 interface Props {
   selectedCategory: ISearchCategory
 }
+
+const EXPANDED_INPUT_LENGTH = 35
 
 export default function Search({ selectedCategory }: Readonly<Props>) {
   const locale = useLocale()
@@ -29,21 +37,34 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
     setCategory,
     searchSource,
     setSearchSource,
+    searchSourceResetKey,
     searchUrl,
     setSearchUrl,
     inputValue,
     setInputValue,
     isMobileViewport,
     refSearchInput,
-    refButtons,
     inputFocus,
   } = useSearch()
 
   const refSearchButton = useRef<HTMLAnchorElement>(null)
 
   const [isValid, setIsValid] = useState(false)
-  const [isFocused, setIsFocused] = useState(false)
   const searchName = selectedCategory?.name_translated || selectedCategory?.name
+  const searchSources = useMemo(
+    () =>
+      selectedCategory.data.filter(
+        (source) =>
+          (typeof source.action === 'string' &&
+            source.action.trim().length > 0) ||
+          (source.child?.length ?? 0) > 0
+      ),
+    [selectedCategory.data]
+  )
+  const isExpanded = Boolean(
+    inputValue &&
+    (inputValue.length >= EXPANDED_INPUT_LENGTH || inputValue.includes('\n'))
+  )
 
   const handleResize = useCallback(() => {
     if (refSearchInput.current) {
@@ -56,7 +77,16 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
     setIsValid(false)
     handleResize()
   }
-  const handleKeyEnter = (event: React.KeyboardEvent) => {
+  const handleSearch = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isValid) {
+      event.preventDefault()
+      inputFocus()
+      return
+    }
+
+    addSearchHistory(inputValue ?? '')
+  }
+  const handleKeyEnter = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Enter' && event.shiftKey) {
       // prevents Enter from skipping a line without Shift
     } else if (event.key === 'Enter') {
@@ -68,17 +98,26 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
       }
     }
   }
-  const handleSelectedSource = (id: string) => {
-    const source = selectedCategory.data?.find(
-      (item) => normalizeId(item.name) === id
-    )
+  const applySelectedSource = useCallback(
+    (id: string) => {
+      const source = searchSources.find((item) => normalizeId(item.name) === id)
 
-    if (source) {
-      setSearchSource({ ...source, id: id })
-      window.localStorage.setItem('search', id)
-      inputFocus()
-    }
-  }
+      if (source) {
+        setSearchSource({ ...source, id: id })
+      }
+
+      return source
+    },
+    [searchSources, setSearchSource]
+  )
+  const handleSelectedSource = useCallback(
+    (id: string) => {
+      if (applySelectedSource(id)) {
+        saveSearchSourcePreference(selectedCategory.name, id)
+      }
+    },
+    [applySelectedSource, selectedCategory.name]
+  )
   const handleValue = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputValue(event.target.value)
     setIsValid(event.target.value !== '')
@@ -86,7 +125,15 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
     event.target.style.height = 'auto'
     event.target.style.height = event.target.scrollHeight + 'px'
   }
+  const handleFocus = (event: React.FocusEvent<HTMLTextAreaElement>) => {
+    event.currentTarget.style.height = 'auto'
+    event.currentTarget.style.height = event.currentTarget.scrollHeight + 'px'
+  }
   const handlePlaceholder = () => {
+    if (isMobileViewport) {
+      return t('search')
+    }
+
     if (searchSource?.name) {
       return t('placeholder') + ' ' + searchSource?.name
     }
@@ -102,6 +149,37 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
       return <Alert>{t('warnings.darknet')}</Alert>
     }
   }
+  const searchSourceSelector = (
+    <SearchSourceSelector
+      sources={searchSources}
+      selectedSourceName={searchSource?.name}
+      ariaLabel={`${t('placeholder')} ${searchSource?.name ?? ''}`}
+      onValueChange={handleSelectedSource}
+      onSelectionComplete={inputFocus}
+    />
+  )
+  const searchSourceOptions = searchSource?.child && (
+    <SearchSourceOptions
+      key={normalizeId(searchSource.name)}
+      options={searchSource.child.map((item: ISearchChild) => ({
+        label: item.name,
+        value: item.action,
+      }))}
+      label={searchSource.name}
+    />
+  )
+  const resetButton = (
+    <Tooltip text={t('clear')} disable={isMobileViewport}>
+      <button
+        type="button"
+        onClick={handleReset}
+        className={Style.resetButton}
+        style={{ display: isValid ? 'flex' : 'none' }}>
+        <X aria-hidden="true" />
+        {t('clear')}
+      </button>
+    </Tooltip>
+  )
 
   // resize
   useEffect(() => {
@@ -121,163 +199,124 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
     }
   }, [inputValue, searchSource, setSearchUrl])
 
+  // Restore action visibility for values loaded from storage or the URL.
+  useEffect(() => {
+    setIsValid(inputValue !== undefined && inputValue !== '')
+  }, [inputValue])
+
   // initial state
   useEffect(() => {
     if (selectedCategory) {
-      setCategory(selectedCategory?.name)
+      setCategory(selectedCategory.name)
+      const storedSource = getSearchSourcePreference(selectedCategory.name)
 
-      const sourceId = normalizeId(selectedCategory?.data[0]?.name)
-      const storedSource = window.localStorage.getItem('search')
-      const storedCategory = window.localStorage.getItem('searchCategory')
-
-      // Se a categoria mudou, sempre selecionar o primeiro item
-      const categoryChanged = storedCategory !== selectedCategory?.name
-
-      if (categoryChanged) {
-        handleSelectedSource(sourceId)
-        refButtons?.current?.['button_' + sourceId]?.click()
-        window.localStorage.setItem('searchCategory', selectedCategory?.name)
-      } else {
-        // Se a categoria não mudou (apenas refresh), manter a seleção anterior
-        const isStoredSourceAvailableOnCurrentCategory =
-          selectedCategory?.data?.some(
-            (item) => normalizeId(item.name) === storedSource
-          )
-
-        if (storedSource && isStoredSourceAvailableOnCurrentCategory) {
-          handleSelectedSource(storedSource)
-        } else {
-          handleSelectedSource(sourceId)
-          refButtons?.current?.['button_' + sourceId]?.click()
-        }
+      if (searchSources.length === 0) {
+        setSearchSource(undefined)
+        setSearchUrl('')
+        return
       }
-    }
-  }, [selectedCategory])
 
-  // focus
-  useEffect(() => {
-    if (!isFocused) {
-      setTimeout(() => {
-        inputFocus()
-        setIsFocused(true)
-      }, 0)
+      const sourceId = normalizeId(searchSources[0].name)
+      const isStoredSourceAvailableOnCurrentCategory = searchSources.some(
+        (item) => normalizeId(item.name) === storedSource
+      )
+
+      applySelectedSource(
+        storedSource && isStoredSourceAvailableOnCurrentCategory
+          ? storedSource
+          : sourceId
+      )
     }
-  }, [isFocused, refSearchInput, inputFocus])
+  }, [
+    applySelectedSource,
+    searchSources,
+    searchSourceResetKey,
+    selectedCategory,
+    setCategory,
+    setSearchSource,
+    setSearchUrl,
+  ])
 
   return (
     <section className={Style.section}>
       <div className={Style.container}>
+        <BlurBackground category={selectedCategory?.name} />
+
         <SearchTitle
           category={selectedCategory?.name}
           categoryTitle={searchName}
         />
 
         {/* Input */}
-        <div className={Style.containerInput}>
-          <div className={Style.input}>
-            <div className={Style.textareaContainer}>
-              <textarea
-                id="search"
-                ref={refSearchInput}
-                value={inputValue}
-                aria-label="Search"
-                className={Style.input}
-                placeholder={handlePlaceholder()}
-                autoComplete="off"
-                maxLength={2500}
-                rows={1}
-                onChange={handleValue}
-                onFocus={handleValue}
-                onKeyDown={handleKeyEnter}
-                required
-              />
+        <div
+          className={`${Style.containerInput} ${isExpanded ? Style.expanded : ''}`}
+          role="search"
+          aria-label={t('search')}>
+          <div className={Style.searchRow}>
+            <div
+              className={`${Style.input} ${isExpanded ? Style.expandedInput : ''}`}>
+              <div className={Style.textareaContainer}>
+                <textarea
+                  id="search"
+                  ref={refSearchInput}
+                  value={inputValue}
+                  aria-label={t('search')}
+                  className={Style.input}
+                  placeholder={handlePlaceholder()}
+                  autoComplete="off"
+                  inputMode="search"
+                  enterKeyHint="search"
+                  maxLength={2500}
+                  rows={1}
+                  onChange={handleValue}
+                  onFocus={handleFocus}
+                  onKeyDown={handleKeyEnter}
+                />
 
-              <div className={Style.searchActions}>
-                {/* Button Reset */}
-                <Tooltip text={t('clear')} disable={isMobileViewport}>
-                  <button
-                    type="reset"
-                    onClick={handleReset}
-                    className={Style.resetButton}
-                    style={{ display: isValid ? 'flex' : 'none' }}>
-                    <IconClose />
-                    {t('clear')}
-                  </button>
+                <div className={Style.searchActions}>
+                  {!isExpanded && resetButton}
+                </div>
+              </div>
+
+              <div
+                className={`${Style.searchControls} ${isExpanded ? Style.expandedControls : ''}`}>
+                {isExpanded && resetButton}
+                <Tooltip text={t('search')} disable={isMobileViewport}>
+                  <a
+                    ref={refSearchButton}
+                    className={Style.searchButton}
+                    href={searchUrl}
+                    target="_blank"
+                    rel="noopener"
+                    onClick={handleSearch}
+                    style={{
+                      opacity:
+                        isValid && searchSources.length > 0 ? '1' : '.45',
+                      display:
+                        isValid && searchSources.length > 0
+                          ? 'inline-flex'
+                          : 'none',
+                    }}>
+                    <ArrowUpRight aria-hidden="true" />
+                    {t('search')}
+                  </a>
                 </Tooltip>
+                <SearchVoice display={!isValid} />
               </div>
             </div>
 
-            {/* Button Voice only if user ha NO typed on input */}
-            {/* Button Search only if user has typed on input */}
-            <div>
-              <a
-                ref={refSearchButton}
-                className={Style.searchButton}
-                href={searchUrl}
-                target="_blank"
-                rel="noopener"
-                onClick={
-                  isValid
-                    ? undefined
-                    : (event) => {
-                        event.preventDefault()
-                        inputFocus()
-                      }
-                }
-                style={{
-                  opacity: isValid ? '1' : '.45',
-                  display: isValid ? 'inline-flex' : 'none',
-                }}>
-                <IconSend />
-                {t('search')}
-              </a>
-            </div>
-
-            <SearchVoice display={!isValid} />
+            {searchSources.length > 0 && (
+              <div className={Style.searchSource}>{searchSourceSelector}</div>
+            )}
           </div>
 
-          <SearchSuggestions locale={locale} term={inputValue ?? ''} />
-        </div>
+          {searchSource?.child && (
+            <div className={Style.childOptions}>{searchSourceOptions}</div>
+          )}
 
-        {/* Child */}
-        {searchSource?.child && (
-          <SearchSourceOptions
-            options={searchSource?.child.map((item: ISearchChild) => ({
-              label: item.name,
-              value: item.action,
-            }))}
-            label={searchSource?.name}
-          />
-        )}
-
-        {/* Search Source Buttons */}
-        <div className={Style.buttons}>
-          <ul>
-            {selectedCategory?.data.map((source, index) => (
-              <li key={source?.name + index}>
-                <button
-                  type="button"
-                  translate="no"
-                  className={
-                    searchSource?.name === source.name
-                      ? Style.buttonActive
-                      : undefined
-                  }
-                  onClick={() => handleSelectedSource(normalizeId(source.name))}
-                  ref={(element) => {
-                    if (refButtons.current) {
-                      refButtons.current['button_' + normalizeId(source.name)] =
-                        element
-                    }
-                  }}>
-                  <figure>
-                    <SearchSourceIcon name={source?.name} />
-                  </figure>
-                  {source.name}
-                </button>
-              </li>
-            ))}
-          </ul>
+          <div className={Style.suggestions}>
+            <SearchSuggestions locale={locale} term={inputValue ?? ''} />
+          </div>
         </div>
 
         {handleShowWarnings()}

@@ -2,4 +2,4 @@
 
 Please do not report security vulnerabilities through public GitHub issues.
 
-Send an email to opensource@findto.app
+Send an email to opensource@aspiral.app

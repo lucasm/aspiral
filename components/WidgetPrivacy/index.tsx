@@ -8,7 +8,7 @@ import { useSearch } from '@/contexts/SearchContext'
 import { fetcher } from '@/utils/http'
 import { extractDomain, isValidUrl } from '@/utils/url'
 
-import Loader from '../Loader'
+import LoaderLegacy from '../LoaderLegacy'
 import Styles from '../WidgetPrivacy/WidgetPrivacy.module.css'
 
 interface IApiPrivacy {
@@ -119,7 +119,7 @@ export default function WidgetPrivacy({ className = '', ...props }: DivProps) {
       <div className={Styles.container} ref={containerRef}>
         {isOpen && (
           <div className={Styles.container}>
-            {!dataPrivacy && !errorPrivacy && <Loader />}
+            {!dataPrivacy && !errorPrivacy && <LoaderLegacy />}
 
             {dataPrivacy && (
               <>

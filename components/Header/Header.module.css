@@ -4,60 +4,16 @@
   align-items: center;
   vertical-align: middle;
   justify-content: space-between;
-  padding: 0 0.75rem;
+  padding: 0.75rem;
   right: 0;
   left: 0;
-  background: transparent;
   z-index: 999;
-}
-.header svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  background: transparent;
 }
 
 .buttonsContainer {
   display: flex;
   gap: 0rem;
-}
-.buttonsContainer button {
-  border: none;
-  height: 4rem;
-  padding: 0;
-  gap: 0;
-  background: transparent;
-  font-size: var(--font-size);
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  color: var(--color-text-black);
-}
-.buttonsContainer button:hover,
-.buttonsContainer button:focus {
-  opacity: 1 !important;
-}
-.buttonsContainer button figure {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0 0.75rem;
-  height: var(--size-small);
-  border-radius: 2rem;
-  line-height: 0;
-}
-.buttonsContainer button:hover figure,
-.buttonsContainer button:focus figure {
-  background: var(--background-surface);
-}
-
-.buttonSidebar {
-  cursor: e-resize;
-}
-.buttonSidebarHover {
-  opacity: var(--opacity);
-  cursor: w-resize;
-}
-.buttonSidebarHover:hover {
-  opacity: 1;
 }
 
 .logo {
@@ -68,66 +24,13 @@
   padding-left: 1rem;
 }
 
-.containerSettings {
-  min-width: 248px;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-}
-.containerSettings h3 {
-  font-size: var(--font-size);
-  margin: 0 0 0.5rem 0;
-}
-.containerSettings div {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-}
-.containerSettings button,
-.containerSettings a {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: var(--size-small);
-  font-size: var(--font-size);
-  font-weight: 400;
-  background: var(--background-surface);
-  color: var(--color-text-black);
-  border-radius: var(--radius);
-  padding: 0 0 0 1rem;
-  gap: 1rem;
-}
-.containerSettings select {
-  width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-  .buttonSidebar {
-    display: none !important;
-    background: red;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header .buttonsContainer:last-of-type button figure span {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 576px) {
   .header {
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
   }
   .logo {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-  }
-
-  .logo,
-  .buttonsContainer a,
-  .buttonsContainer button,
-  .buttonsContainer select {
     font-size: var(--font-size-small);
   }
 }

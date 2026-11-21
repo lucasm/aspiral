@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button {
   font-size: 0;
   display: inline-flex;
@@ -5,7 +11,7 @@
   justify-content: center;
   height: 2.25rem;
   width: 2.25rem;
-  background: var(--color-blue);
+  background: var(--color-text-black);
   border-radius: var(--radius-full);
   border: 0;
 }
@@ -13,10 +19,18 @@
 .button:focus {
   opacity: 1;
 }
+.button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
 .button svg {
-  width: 1.2rem;
-  height: 1.2rem;
-  color: var(--color-black);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--background-body);
 }
 
 .buttonActive,
@@ -24,6 +38,9 @@
 .buttonActive:focus,
 .buttonActive:active {
   background: var(--color-white);
+}
+.buttonActive svg {
+  color: var(--color-black);
 }
 
 .buttonListening {
@@ -39,7 +56,22 @@
   border-radius: 100%;
   animation: pulse 1s infinite ease-in-out;
   z-index: 0;
+  pointer-events: none;
 }
+
+.voiceModal {
+  width: min(32rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.voiceModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(0);
@@ -62,13 +94,62 @@
 }
 
 .transcriptContainer {
-  max-width: 480px;
-  min-width: 280px;
+  position: relative;
+  z-index: 1;
+  height: 8rem;
+  min-height: 8rem;
   width: 100%;
-  padding: 1.5rem 0;
+  margin: 0;
+  padding: 1rem;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-black-translucent);
+}
+
+.stopButton {
+  position: relative;
+  z-index: 1;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--color-text-black);
+  color: var(--background-body);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.stopButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.errorMessage {
+  max-width: 20rem;
+  margin: 0.5rem 0 0;
+  color: var(--color-text-black);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buttonListening {
+    animation: none;
+  }
 }
 
 @media (max-width: 576px) {
+  .voiceModal {
+    padding: 1.5rem;
+  }
+
   .button {
     height: 2rem;
     width: 2rem;

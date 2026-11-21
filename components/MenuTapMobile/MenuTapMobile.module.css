@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container button.opened figure {
+  background: var(--background-surface);
+}
+
+.containerDropdown {
+  position: absolute;
+  top: 4rem;
+  left: -7rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: auto;
+  padding: 2rem;
+  border-radius: var(--radius-liquid-glass);
+  background: var(--background-body);
+  box-shadow: var(--shadow-2);
+}

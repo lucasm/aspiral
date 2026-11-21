@@ -10,10 +10,26 @@ import Card from '@/components/Card'
 import { IconFeedback } from '@/components/SvgIcons'
 import WidgetTemplate from '@/components/WidgetTemplate'
 import { useSearch } from '@/contexts/SearchContext'
-import { ITrends } from '@/interfaces/trends'
+import { ITrends, ITrendsItem } from '@/interfaces/trends'
 import { fetcher } from '@/utils/http'
 
 import Styles from './WidgetTrends.module.css'
+
+const tagCloudCategories = new Set([
+  'Home',
+  'AI',
+  'Web',
+  'Social',
+  'Academic',
+  'Job',
+  'Legal',
+])
+
+const getTagFontSize = (index: number, count: number) => {
+  if (count < 2) return 1.8
+
+  return 2.2 - Math.sqrt(index / (count - 1)) * 1.2
+}
 
 interface Props {
   title: string
@@ -22,6 +38,16 @@ interface Props {
 export default function SearchTrends({ title }: Readonly<Props>) {
   const t = useTranslations('t')
   const { category, putValue, country, locale, userLocation } = useSearch()
+  const isTagCloud = tagCloudCategories.has(category)
+
+  const handleTrendClick = (item: ITrendsItem) => {
+    if (item.url) {
+      window.open(item.url, '_blank')
+      return
+    }
+
+    putValue(item.title)
+  }
 
   // Chave dinâmica para SWR
   const swrKey = useMemo<string | null>(() => {
@@ -110,26 +136,22 @@ export default function SearchTrends({ title }: Readonly<Props>) {
     const base = [Styles.container]
 
     switch (category) {
-      case 'Finance':
-      case 'News':
-      case 'Videos':
-      case 'Music':
-      case 'Image':
-      case 'Shopping':
-      case 'Games':
-      case 'Local':
-        base.push(Styles.grid3)
-        break
-
       case 'Code':
         base.push(Styles.grid2)
         break
 
-      // base.push(Styles.grid4)
-      // break
+      case 'Videos':
+      case 'Music':
+      case 'Shopping':
+        base.push(Styles.grid4)
+        break
 
       case 'Apps':
         base.push(Styles.grid5)
+        break
+
+      default:
+        base.push(Styles.grid3)
         break
     }
 
@@ -166,20 +188,31 @@ export default function SearchTrends({ title }: Readonly<Props>) {
       <WidgetTemplate title={title || t('trends')} credits={credits}>
         {category === 'Local' && <ButtonGeolocation />}
 
-        <ul className={classNameContainer}>
+        <ul
+          className={`${classNameContainer} ${isTagCloud ? Styles.tagCloud : ''}`}>
           {dataTrends?.data?.map((item, index) => (
-            <li key={`${item?.title}-${index}`}>
-              <Card
-                title={item.title}
-                author={(index + 1).toString()}
-                imageUrl={item.image}
-                onClick={() =>
-                  item.url
-                    ? window.open(item.url, '_blank')
-                    : putValue(item.title)
-                }
-                flexDirection={flexDirection}
-              />
+            <li
+              className={isTagCloud ? Styles.tagCloudItem : undefined}
+              key={`${item?.title}-${index}`}>
+              {isTagCloud ? (
+                <button
+                  className={Styles.tag}
+                  onClick={() => handleTrendClick(item)}
+                  style={{
+                    fontSize: `${getTagFontSize(index, dataTrends.data.length)}rem`,
+                  }}
+                  type="button">
+                  {item.title}
+                </button>
+              ) : (
+                <Card
+                  title={item.title}
+                  author={(index + 1).toString()}
+                  imageUrl={item.image}
+                  onClick={() => handleTrendClick(item)}
+                  flexDirection={flexDirection}
+                />
+              )}
             </li>
           ))}
         </ul>
@@ -192,7 +225,7 @@ export default function SearchTrends({ title }: Readonly<Props>) {
       <WidgetTemplate title={title || t('trends')}>
         <Button
           color="black"
-          url={`mailto:feedback@findto.app?subject=Error on API of category ${category}`}>
+          url={`mailto:feedback@aspiral.app?subject=Error on API of category ${category}`}>
           <>
             <IconFeedback />
             {t('feedback.title') + ' API ' + category}

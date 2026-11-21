@@ -1,8 +1,8 @@
-import { useRouter } from 'next/navigation'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from '@/i18n/routing'
+import { useLocale } from 'next-intl'
 
 import Select from '@/components/Select'
-import { IconLang } from '@/components/SvgIcons'
+import { Languages } from 'lucide-react'
 
 interface Option {
   label: string
@@ -12,6 +12,7 @@ interface Option {
 const SelectLanguage = () => {
   const router = useRouter()
   const pathname = usePathname()
+  const locale = useLocale()
 
   const options: Option[] = [
     { label: 'English (United States)', value: 'en-US' },
@@ -26,10 +27,8 @@ const SelectLanguage = () => {
 
   const handleChange = (value: string) => {
     const selectedOption = options.find((option) => option.value === value)
-    if (selectedOption) {
-      if (pathname) {
-        router.push(`/${selectedOption.value}/`)
-      }
+    if (selectedOption && pathname) {
+      router.replace(pathname, { locale: selectedOption.value })
     }
   }
 
@@ -38,9 +37,9 @@ const SelectLanguage = () => {
       options={options}
       id="language"
       onChange={handleChange}
-      value={pathname ? pathname.split('/')[1] : ''}
+      value={locale}
       label="Language"
-      icon={<IconLang />}
+      icon={<Languages />}
     />
   )
 }

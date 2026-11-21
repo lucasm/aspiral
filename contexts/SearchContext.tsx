@@ -24,6 +24,8 @@ interface ISearchContext {
   setInputValue: React.Dispatch<React.SetStateAction<string | undefined>>
   searchSource: ISearch | undefined
   setSearchSource: React.Dispatch<React.SetStateAction<ISearch | undefined>>
+  searchSourceResetKey: number
+  resetSearchSource: () => void
   searchUrl: string
   setSearchUrl: React.Dispatch<React.SetStateAction<string>>
   category: string
@@ -36,14 +38,8 @@ interface ISearchContext {
   setUserLocation: React.Dispatch<React.SetStateAction<IUserLocation>>
   isBrowserClientSide: boolean
   isMobileViewport: boolean
-  isSidebarOpen: boolean
-  setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>
   sizeWindow: { width: number; height: number }
   inputFocus: () => void
-}
-interface ISearchContextProvider {
-  children: React.ReactNode
-  isSidebarOpenDefault: boolean
 }
 
 // create Context for global state
@@ -52,8 +48,7 @@ const SearchContext = createContext<ISearchContext>({} as ISearchContext)
 // export as Provider
 export function SearchContextProvider({
   children,
-  isSidebarOpenDefault,
-}: Readonly<ISearchContextProvider>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const locale = useLocale()
   const c = useTranslations('country')
   const searchParams = useSearchParams()
@@ -62,6 +57,7 @@ export function SearchContextProvider({
   const [country, setCountry] = useState<string | null>(null)
   const [category, setCategory] = useState<string>('')
   const [searchSource, setSearchSource] = useState<ISearch>()
+  const [searchSourceResetKey, setSearchSourceResetKey] = useState(0)
   const [searchUrl, setSearchUrl] = useState<string>('')
 
   const [permissionLocation, setPermissionLocation] = useState<boolean>(false)
@@ -71,15 +67,19 @@ export function SearchContextProvider({
   })
 
   const isBrowserClientSide = typeof window !== 'undefined'
-  const [isSidebarOpen, setIsSidebarOpen] = useState(isSidebarOpenDefault)
   const [isMobileViewport, setIsMobileViewport] = useState<boolean>(false)
 
   const refSearchInput = useRef<HTMLTextAreaElement>(null)
   const refButtons = useRef<{ [key: string]: HTMLButtonElement | null }>({})
   const [inputValue, setInputValue] = useState<string>()
 
+  const resetSearchSource = useCallback(() => {
+    setSearchSource(undefined)
+    setSearchUrl('')
+    setSearchSourceResetKey((key) => key + 1)
+  }, [])
   const inputFocus = useCallback(() => {
-    const inputElement = refSearchInput.current as HTMLInputElement | null
+    const inputElement = refSearchInput.current
     if (inputElement) {
       inputElement.focus()
     }
@@ -95,11 +95,8 @@ export function SearchContextProvider({
       .replace(/\s*-\s*/g, ' ')
       .replace(/[#:‑]/g, '')
 
-    const inputElement = refSearchInput.current as HTMLInputElement | null
-    if (inputElement) {
-      inputElement.value = sanitizedValue
-      inputElement.focus()
-    }
+    setInputValue(sanitizedValue)
+    inputFocus()
     scrollToTop()
   }
   const useWindowSize = () => {
@@ -134,12 +131,6 @@ export function SearchContextProvider({
     if (isBrowserClientSide) {
       const savedInputValue = window.localStorage.getItem('inputValue')
       setInputValue(savedInputValue ? JSON.parse(savedInputValue) : '')
-
-      const savedSidebarOpen = window.localStorage.getItem('isSidebarOpen')
-
-      if (savedSidebarOpen !== null) {
-        setIsSidebarOpen(savedSidebarOpen === 'true')
-      }
     }
   }, [])
 
@@ -183,6 +174,8 @@ export function SearchContextProvider({
       setInputValue,
       searchSource,
       setSearchSource,
+      searchSourceResetKey,
+      resetSearchSource,
       searchUrl,
       setSearchUrl,
       category,
@@ -195,8 +188,6 @@ export function SearchContextProvider({
       setUserLocation,
       isBrowserClientSide,
       isMobileViewport,
-      isSidebarOpen,
-      setIsSidebarOpen,
       sizeWindow,
       inputFocus,
     }),
@@ -208,6 +199,8 @@ export function SearchContextProvider({
       setInputValue,
       searchSource,
       setSearchSource,
+      searchSourceResetKey,
+      resetSearchSource,
       searchUrl,
       setSearchUrl,
       category,
@@ -220,8 +213,6 @@ export function SearchContextProvider({
       setUserLocation,
       isBrowserClientSide,
       isMobileViewport,
-      isSidebarOpen,
-      setIsSidebarOpen,
       sizeWindow,
       inputFocus,
     ]

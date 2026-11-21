@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl'
 
 import Button from '@/components/Button'
-import SvgLogo from '@/components/SvgLogo'
 
 import Styles from './Banner.module.css'
 
@@ -17,16 +16,13 @@ export default function Banner() {
         </div>
 
         <div className={Styles.buttonsContainer}>
-          <Button url="/about" color="black">
-            <>
-              <SvgLogo />
-              {t('learnMore')}
-            </>
+          <Button url="/about" color="black" size="medium">
+            <>{t('about')}</>
           </Button>
 
-          {/* <Button external url="https://patreon.com/findto" color="black">
-            {t('donate')}
-          </Button> */}
+          <Button url="/contribute" color="black" size="medium">
+            <>{t('contribute')}</>
+          </Button>
         </div>
       </div>
     </section>

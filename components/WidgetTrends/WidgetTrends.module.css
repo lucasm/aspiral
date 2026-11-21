@@ -52,6 +52,47 @@
   padding: 0.75rem;
 }
 
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 0.25rem;
+  list-style: none;
+}
+
+.tagCloudItem {
+  display: flex;
+  max-width: 100%;
+}
+
+.tag {
+  max-width: 100%;
+  padding: 0.55em 0.9em;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  background: var(--background-surface);
+  color: var(--color-text-black);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.tag:hover,
+.tag:focus-visible {
+  background: var(--color-text-black);
+  color: var(--background-body);
+}
+
+.tag:focus-visible {
+  outline: 2px solid #00ffd1;
+  outline-offset: 3px;
+}
+
 @media screen and (max-width: 768px) {
   .title h3 {
     font-size: var(--font-size);
@@ -74,5 +115,21 @@
 
   .grid5 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tagCloud {
+    gap: clamp(0.35rem, 2vw, 0.55rem);
+    padding-inline: 0;
+  }
+
+  .tag {
+    padding: 0.45em 0.7em;
+    font-size: clamp(0.85rem, 3.5vw, 1.2rem) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag {
+    transition: none;
   }
 }

@@ -1,0 +1,102 @@
+{
+  "name": "Aspiral",
+  "short_name": "Aspiral",
+  "description": "Your new homepage for the best of the web, AI, and content.",
+  "start_url": "/?utm_source=pwa",
+  "id": "/?utm_source=pwa",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192x192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Web",
+      "url": "/web",
+      "description": "Web search"
+    },
+    {
+      "name": "AI",
+      "url": "/ai",
+      "description": "AI search"
+    },
+    {
+      "name": "Social",
+      "url": "/social",
+      "description": "Social search"
+    },
+    {
+      "name": "News",
+      "url": "/news",
+      "description": "News search"
+    },
+    {
+      "name": "Videos",
+      "url": "/videos",
+      "description": "Videos search"
+    },
+    {
+      "name": "Music",
+      "url": "/music",
+      "description": "Music search"
+    },
+    {
+      "name": "Shopping",
+      "url": "/shopping",
+      "description": "Shopping search"
+    },
+    {
+      "name": "Local",
+      "url": "/local",
+      "description": "Local search"
+    },
+    {
+      "name": "Academic",
+      "url": "/academic",
+      "description": "Academic search"
+    },
+    {
+      "name": "Job",
+      "url": "/job",
+      "description": "Job search"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "share.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -14,6 +14,19 @@ import {
   IconTrending,
   IconFileSearch,
 } from '../SvgIcons'
+import {
+  CircleDashed,
+  CirclePlay,
+  Earth,
+  GitBranch,
+  Languages,
+  Mic,
+  PersonStanding,
+  ScanSearch,
+  Search,
+  Shield,
+  TrendingUp,
+} from 'lucide-react'
 
 // Define the type for a feature item
 interface Feature {
@@ -25,25 +38,26 @@ interface Feature {
 // Create an array of feature items with their types
 const features: Feature[] = [
   {
-    icon: <IconSearch />,
-    title: 'Decentralized Search',
-    description: 'Search the same term on multiple sources.',
-  },
-  {
-    icon: <IconShield />,
-    title: 'Protection',
+    icon: <Search />,
+    title: 'Search decentralized',
     description:
-      'Check privacy, security and carbon footprint level of search source.',
+      'Search the same term on multiple sources. Chose your algorithm.',
   },
   {
-    icon: <IconTrending />,
-    title: 'Trends',
-    description: 'See real-time trends nearby you.',
+    icon: <Shield />,
+    title: 'Safe sources',
+    description:
+      'The most popular sources of the internet. You can check privacy, security and carbon footprint levels.',
   },
   {
-    icon: <IconStories />,
-    title: 'Stories',
-    description: 'Discover newest and breaking stories.',
+    icon: <TrendingUp />,
+    title: 'Trending content',
+    description: 'Real-time trends nearby you.',
+  },
+  {
+    icon: <CircleDashed />,
+    title: 'Newest stories',
+    description: 'Discover new and breaking stories.',
   },
   {
     icon: <IconText />,
@@ -51,36 +65,36 @@ const features: Feature[] = [
     description: 'Get automatic suggestions of terms as you type.',
   },
   {
-    icon: <IconMic />,
-    title: 'Voice Search',
+    icon: <Mic />,
+    title: 'Search by voice',
     description: 'Use your voice to search anywhere.',
   },
   {
-    icon: <IconFileSearch />,
-    title: 'Reverse Search *',
+    icon: <ScanSearch />,
+    title: 'Search by reverse*',
     description:
-      'Upload files and photos to reverse search on supported sources.',
+      'Upload documents and photos to reverse search on supported sources.',
   },
   {
-    icon: <IconLanguage />,
+    icon: <Languages />,
     title: 'Languages',
-    description: 'Access local or international versions.',
+    description: 'Available with 4 international versions.',
   },
   {
-    icon: <IconAccessibility />,
-    title: 'Accessibility',
+    icon: <PersonStanding />,
+    title: 'Accessibility by default',
     description:
-      'Dark theme, balanced contrast, screen reader support, and keyboard navigation.',
+      'Dark and light theme, balanced contrast, screen readers support, and keyboard navigation.',
   },
   {
-    icon: <IconOpenSource />,
-    title: 'Open Source',
+    icon: <GitBranch />,
+    title: 'Open source',
     description: 'Source code is open for contributions.',
   },
   {
-    icon: <IconCarbon />,
-    title: 'Carbon Neutral',
-    description: 'Carbon neutral software.',
+    icon: <Earth />,
+    title: 'Carbon neutral software',
+    description: 'Our software do not use servers with high emissions.',
   },
 ]
 

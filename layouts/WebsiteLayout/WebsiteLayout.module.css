@@ -132,6 +132,8 @@
   font-size: 2.5rem;
 }
 .page {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -141,7 +143,7 @@
 }
 .page main section:first-of-type {
   padding-top: 3rem;
-  background: var(--color-blue);
+  /* background: var(--background-gradient); */
   transition: var(--transition-hover);
 }
 .page section h1 {
@@ -179,20 +181,22 @@
 
 /* App Icon */
 .icon {
-  display: inline-block;
-  width: 7rem;
-  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
   margin: 1.5rem auto;
-  background-size: 3.5rem;
-  background-image: url('/findto-icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--color-white);
+  background: var(--color-white);
   border-radius: 33.333%;
   transition: var(--transition);
 }
 .icon:hover {
   transform: translateY(-0.25rem);
+}
+.icon svg {
+  width: 4rem;
+  height: 4rem;
 }
 
 /* Card Duos */
@@ -237,10 +241,9 @@
   }
 
   .icon {
-    width: 10rem;
-    height: 10rem;
-    margin: 2rem auto 0;
-    background-size: 4.5rem;
+    width: 8rem;
+    height: 8rem;
+    /* margin: 2rem auto 0; */
   }
 
   .container {

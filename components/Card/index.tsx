@@ -23,7 +23,7 @@ const Card = ({
     <button
       className={`${styles.card} ${flexDirection ? styles[flexDirection] : ''}`}
       onClick={onClick}>
-      {author && <span className={styles.author}>{author}</span>}
+      {/* {author && <span className={styles.author}>{author}</span>} */}
       {imageUrl && (
         <figure
           className={`${styles.image} ${imageAspectRatio ? styles[imageAspectRatio] : ''}`}>

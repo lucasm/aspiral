@@ -9,7 +9,7 @@ import { useSearch } from '@/contexts/SearchContext'
 import { fetcher } from '@/utils/http'
 
 import Style from './WidgetCarbon.module.css'
-import Loader from '../Loader'
+import LoaderLegacy from '../LoaderLegacy'
 
 interface IApiCarbon {
   url: string
@@ -75,7 +75,7 @@ export default function WidgetCarbon({ className = '', ...props }: DivProps) {
       className={className}
       {...props}>
       <div className={Style.container}>
-        {!dataCarbon && !errorCarbon && <Loader />}
+        {!dataCarbon && !errorCarbon && <LoaderLegacy />}
 
         {dataCarbon && (
           <>

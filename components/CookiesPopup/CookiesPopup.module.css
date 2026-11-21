@@ -1,57 +1,58 @@
 .cookiesPopup {
   position: fixed;
-  bottom: 0;
+  bottom: 1rem;
   right: 1rem;
   left: unset;
   display: flex;
   width: 100%;
   max-width: 20rem;
-  gap: 1rem;
-  background: var(--color-text-black);
-  border-radius: var(--radius-liquid-glass);
+  gap: 1.5rem;
+  color: var(--color-text-black);
+  background: var(--color-bg-white);
+  border-radius: 1.5rem;
   padding: 2rem;
-  text-align: center;
-  transition: transform 0.5s ease-in-out;
   z-index: 1000;
   align-items: center;
   flex-direction: column;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--shadow-2);
+  animation: slideUpFadeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  backdrop-filter: blur(8px);
 }
-.cookiesPopup div {
+.cookiesPopup a {
+  color: var(--color-text-black);
+}
+.actions {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-.cookiesPopup p {
-  color: var(--color-bg-white);
-  font-size: var(--font-size);
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideDownFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
 }
 
 .slideUp {
-  transform: translateY(-1rem);
+  animation: slideUpFadeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 .slideDown {
-  transform: translateY(100%);
-}
-
-.cookiesPopup button {
-  background: var(--color-bg-white);
-  color: var(--color-text-black);
-  border: none;
-  padding: 10px 20px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  font-size: var(--font-size-small);
-}
-.cookiesPopup button:last-of-type {
-  background: transparent;
-  color: var(--color-bg-white);
-}
-.cookiesPopup button:hover {
-  background: var(--color-blue);
-  color: var(--color-black);
-}
-
-.cookiesPopup a {
-  font-size: var(--font-size-small);
+  animation: slideDownFadeOut 0.35s cubic-bezier(0.3, 0, 0.8, 0.3) forwards;
 }

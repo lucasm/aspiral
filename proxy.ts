@@ -7,7 +7,7 @@ const proxyHandler = createMiddleware({
   locales: locales,
   defaultLocale: defaultLocale,
   localeDetection: true,
-  localeCookie: false,
+  localeCookie: true,
 })
 
 export function proxy(request: NextRequest) {

@@ -18,18 +18,23 @@
       "goodNight": "Добрый вечер"
     },
     "voice": {
-      "voice": "Voice",
-      "speak": "Speak now",
-      "allow": "Waiting..."
+      "voice": "Голосовой поиск",
+      "speak": "Говорите",
+      "stop": "Остановить и использовать текст",
+      "allow": "Не удалось получить доступ к микрофону. Проверьте разрешение в настройках браузера и попробуйте снова."
     },
-    "widgetProtection": {
-      "title": "Защита",
-      "description": "Проверьте репутацию выбранного шрифта.",
-      "source": "Источник",
+    "widgetSearch": {
+      "history": "История поиска",
+      "historyEmpty": "История поиска пока пуста.",
+      "clearHistory": "Очистить историю",
+      "clearSources": "Очистить источники поиска",
+      "description": "Проверьте репутацию выбранного источника поиска.",
+      "source": "Источник поиска",
       "carbon": "Углеродный след",
       "security": "Безопасность",
       "privacy": "Частная жизнь"
     },
+    "close": "Закрыть",
     "copyright": "Программное обеспечение с открытым исходным кодом, созданное",
     "about": "О проекте",
     "privacy": "Политика конфиденциальности",
@@ -37,9 +42,9 @@
     "donate": "Поддержать проект",
     "accept": "Принимать",
     "reject": "Отклонять",
-    "learnMore": "Познакомьтесь с Findto",
+    "learnMore": "Познакомьтесь с Aspiral",
     "viewNearbyPlaces": "View nearby places",
-    "openApp": "Открыть Findto",
+    "openApp": "Открыть Aspiral",
     "placeholder": "Поиск в",
     "search": "Поиск",
     "clear": "Очистить",
@@ -53,7 +58,7 @@
     "categories": "Режимы",
     "category": "Режим",
     "warnings": {
-      "cookies": "Findto использует cookies только для улучшения приложения.Личные данные не собираются."
+      "cookies": "Aspiral использует cookies только для улучшения приложения. Личные данные не собираются."
     }
   },
   "categories": [
@@ -190,7 +195,7 @@
           "action": "https://iask.ai/?mode=question&q="
         },
         {
-          "name": "Adobe Firefly",
+          "name": "Firefly",
           "action": "https://firefly.adobe.com/generate/images?prompt="
         },
         {

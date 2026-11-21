@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import Style from './Footer.module.css'
 import {
@@ -11,9 +10,11 @@ import {
   IconLinkedIn,
 } from '../SvgIcons'
 import SvgLogo from '../SvgLogo'
+import { Link } from '@/i18n/routing'
 
 const Footer = () => {
   const year = new Date().getFullYear()
+  const locale = useLocale()
   const t = useTranslations('t')
 
   return (
@@ -21,13 +22,16 @@ const Footer = () => {
       <div className={Style.container}>
         <ul>
           <li>
-            <Link href="/" title="Findto">
+            <Link href="/" locale={locale} title="Aspiral">
               <SvgLogo />
             </Link>
           </li>
           <li>
             <p>
-              <Link href="/">Findto</Link> © {year}
+              <Link href="/" locale={locale}>
+                Aspiral
+              </Link>{' '}
+              © {year}
             </p>
           </li>
 
@@ -47,7 +51,7 @@ const Footer = () => {
             <p>
               {t('copyright')}
               <a
-                href="https://lucasm.dev/?utm_source=findto&utm_medium=footer"
+                href="https://lucasmaues.com/?utm_source=aspiral&utm_medium=footer"
                 target="_blank"
                 rel="noopener">
                 {' '}
@@ -58,16 +62,7 @@ const Footer = () => {
 
           <li>
             <Link
-              href="https://github.com/lucasm/findto"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub">
-              <IconGitHub />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://x.com/findtoapp"
+              href="https://x.com/aspiralapp"
               target="_blank"
               rel="noreferrer"
               aria-label="X">
@@ -76,7 +71,16 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="https://bsky.app/profile/findto.app"
+              href="https://instagram.com/aspiralapp"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram">
+              <IconInstagram />
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://bsky.app/profile/aspiral.app"
               target="_blank"
               rel="noreferrer"
               aria-label="Bluesky">
@@ -94,20 +98,20 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="https://instagram.com/findtoapp"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram">
-              <IconInstagram />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://linkedin.com/company/findto/"
+              href="https://linkedin.com/company/aspiralapp/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn">
               <IconLinkedIn />
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://github.com/lucasm/aspiral"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub">
+              <IconGitHub />
             </Link>
           </li>
         </ul>

@@ -14,7 +14,7 @@ const SearchSourceIcon = ({ name, size = 24 }: Props) => {
   const [hasError, setHasError] = useState(false)
 
   const normalized = name ? normalizeId(name) : ''
-  const src = `/images/logos/${normalized}.svg`
+  const src = `/images/icons/${normalized}.svg`
 
   // Fallback final: renderizar SVG com primeira letra
   if (hasError) {

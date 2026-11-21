@@ -6,7 +6,7 @@
   "t": {
     "metadata": {
       "title": "您的新一代智能搜索助手",
-      "description": "Findto 帮您同时搜索 Web 与 AI 资源，轻松探索互联网的无限可能。"
+      "description": "Aspiral 是一个基于可信来源的网络内容与 AI 搜索门户。"
     },
     "feedback": {
       "title": "发送反馈",
@@ -18,18 +18,23 @@
       "goodNight": "晚安"
     },
     "voice": {
-      "voice": "Voice",
-      "speak": "Speak now",
-      "allow": "Waiting..."
+      "voice": "语音搜索",
+      "speak": "请开始说话",
+      "stop": "停止并使用文字",
+      "allow": "无法访问麦克风。请在浏览器设置中检查麦克风权限，然后重试。"
     },
-    "widgetProtection": {
-      "title": "防护",
+    "widgetSearch": {
+      "history": "搜索历史",
+      "historyEmpty": "暂无搜索记录。",
+      "clearHistory": "清除搜索历史",
+      "clearSources": "清除搜索来源",
       "description": "您可以检查所选搜索源的信誉。",
-      "source": "已选择",
+      "source": "搜索来源",
       "carbon": "碳足迹",
       "security": "安全",
       "privacy": "隐私"
     },
+    "close": "关闭",
     "copyright": "来自巴西的开源软件，开发者",
     "about": "关于项目",
     "privacy": "隐私政策",
@@ -37,9 +42,9 @@
     "donate": "立即捐赠",
     "accept": "好的",
     "reject": "拒绝",
-    "learnMore": "了解更多关于 Findto",
+    "learnMore": "了解更多关于 Aspiral",
     "viewNearbyPlaces": "View nearby places",
-    "openApp": "打开 Findto",
+    "openApp": "打开 Aspiral",
     "placeholder": "搜索",
     "search": "Search",
     "clear": "Clear",
@@ -53,7 +58,7 @@
     "categories": "模块",
     "category": "选定模式",
     "warnings": {
-      "cookies": "Findto 仅使用 Cookie 来改进应用。不收集个人数据。"
+      "cookies": "Aspiral 仅使用 Cookie 来改进应用。不收集个人数据。"
     }
   },
   "categories": [
@@ -136,7 +141,7 @@
         },
         {
           "name": "GOV.CN",
-          "action": "https://search.english.www.gov.cn/en/search.shtml?code=17dbe3acd9d&dataTypeId=57&searchWord="
+          "action": "https://sousuo.www.gov.cn/sousuo/search.shtml?code=17da70961a7&dataTypeId=107&searchWord="
         }
       ]
     },
@@ -155,7 +160,15 @@
         },
         {
           "name": "Qwen",
-          "action": "https://chat.qwenlm.ai/?q="
+          "action": "https://chat.qwen.ai/?q="
+        },
+        {
+          "name": "Kimi",
+          "action": "https://kimi.ai?q="
+        },
+        {
+          "name": "Wenxin",
+          "action": "https://wenxin.baidu.com/?q="
         },
         {
           "name": "ChatGPT",
@@ -175,7 +188,7 @@
         },
         {
           "name": "HuggingChat",
-          "action": "https://huggingface.co/chat?q="
+          "action": "https://huggingface.co/chat/?q="
         },
         {
           "name": "Claude",
@@ -198,23 +211,11 @@
           "action": "https://you.com/search?fromSearchBar=true&tbm=youchat&q="
         },
         {
-          "name": "Phind",
-          "action": "https://www.phind.com/agent?q="
-        },
-        {
           "name": "iAsk",
           "action": "https://iask.ai/?mode=question&q="
         },
         {
-          "name": "Wenxiaoyan",
-          "action": "https://chat.baidu.com/search?q="
-        },
-        {
-          "name": "Kimi",
-          "action": "https://kimi.ai?q="
-        },
-        {
-          "name": "Adobe Firefly",
+          "name": "Firefly",
           "action": "https://firefly.adobe.com/generate/images?prompt="
         }
       ]

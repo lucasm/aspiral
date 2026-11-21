@@ -1,56 +1,354 @@
-.container {
-  overflow: hidden;
+.widget {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: var(--max-size-container);
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+/* ===========================
+   Errors
+   =========================== */
+.errorsContainer {
+  background: #f0f0f0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+.errorTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+.errorTitle svg {
+  width: 1rem;
+  height: 1rem;
+}
+.errorsList {
+  list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.errorItem {
+  font-size: 0.8rem;
+  color: #333;
+  padding-left: 0.5rem;
+  border-left: 2px solid #000;
+}
+
+/* ===========================
+   Video player (expanded)
+   =========================== */
+.playerContainer {
+  position: relative;
+  padding: 0;
+  margin-bottom: 1rem;
+  width: 100%;
+  filter: grayscale(100%);
 }
 
 .videoPlayer {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-liquid-glass);
-  max-width: 100%;
-  max-height: 100vh;
-  background: black;
+  border-radius: 1.5rem;
   overflow: hidden;
-  filter: grayscale(100%);
-  padding: 0;
-  margin: 0 auto 1.5rem;
+  background: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.videoPlayer iframe {
+  display: block;
+  border: none;
 }
 
 .closeButton {
   position: absolute;
-  top: -3px;
-  right: 0;
-  height: auto;
-  width: auto;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
-  color: var(--color-bg-white);
-  background: var(--color-text-black);
-  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
   border: none;
-  border-radius: var(--radius-full);
-}
-.closeButton button svg {
-  width: 1rem;
-  height: 1rem;
-  fill: var(--color-black);
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0;
+  transition: background 150ms ease;
 }
 
-@media screen and (max-width: 768px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
+.closeButton:hover {
+  background: #333;
+}
+.closeButton svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.closeButton:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ===========================
+   Swiper container
+   =========================== */
+.swiperContainer {
+  width: 100%;
+  padding-bottom: 2.5rem !important; /* space for pagination */
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.navigationButton {
+  position: absolute;
+  color: #fff;
+  background: #000;
+  border: 1.5px solid #000;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  top: calc((100% - 2.5rem) / 2);
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+.navigationButton svg {
+  width: 18px;
+  height: 18px;
+}
+.navigationButton:hover:not(:disabled) {
+  background: #000;
+  color: #fff;
+}
+.navigationButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: #666;
+  border-color: #666;
+  color: #fff;
+}
+.navigationPrevious {
+  left: 0.25rem;
+}
+.navigationNext {
+  right: 0.25rem;
+}
+
+/* Pagination */
+.swiperContainer :global(.swiper-pagination-bullet) {
+  background: var(--background-surface);
+  opacity: 1;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet-active) {
+  background: var(--color-text-black);
+}
+
+/* ===========================
+   Slide / Channel group
+   =========================== */
+.slide {
+  height: auto !important;
+}
+
+.channelGroup {
+  background: #000;
+  border: none;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.channelName {
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0.75rem 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.videosList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.videoItem {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ===========================
+   Video button & thumbnail
+   =========================== */
+.videoButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.videoThumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  /* Grayscale by default */
+  filter: grayscale(100%) contrast(1.05);
+  transition:
+    filter 200ms ease,
+    transform 200ms ease;
+}
+
+.videoButton:hover .videoThumbnail,
+.videoButton:focus .videoThumbnail {
+  transform: scale(1.03);
+}
+
+.videoButton:focus {
+  outline: 2px solid #000;
+  outline-offset: -2px;
+}
+
+/* Play overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform-origin: center;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+.videoButton:hover .overlay,
+.videoButton:focus .overlay {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.playIcon {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transform: translateX(-50%);
+  transition: transform 150ms ease;
+}
+.playIcon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 0.1rem;
+}
+.videoButton:hover .playIcon {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Video title bar */
+.videoTitle {
+  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+  filter: grayscale(100%);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+  .widget {
+    padding: 0 0 1.5rem;
+    margin: 0 0 1.5rem;
   }
-}
 
-@media screen and (max-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
+  .playerContainer {
+    padding: 0 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .swiperContainer {
+    padding-left: 0.75rem;
+  }
+
+  .navigationButton {
+    width: 30px;
+    height: 30px;
+  }
+  .navigationButton svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .channelName {
+    font-size: 0.65rem;
+  }
+  .videoTitle {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .playIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .closeButton {
+    margin-right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  .closeButton svg {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }

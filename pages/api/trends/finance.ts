@@ -68,7 +68,7 @@ export default async function endpoint(
           {
             title: 'Ops! Click to report error',
             image: undefined,
-            url: 'mailto:feedback@findto.app?subject=Findto%20Feedback&body=Error%20in%20News%20API',
+            url: 'mailto:feedback@aspiral.app?subject=Aspiral%20Feedback&body=Error%20in%20News%20API',
           },
         ],
       }

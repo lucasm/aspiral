@@ -5,8 +5,8 @@
   },
   "t": {
     "metadata": {
-      "title": "Decentralized Search on Web and AI",
-      "description": "Quickly search on multiple Web and AI sources. Fast, private, and open."
+      "title": "Aspiral — The trusted journalism feed",
+      "description": "Breaking news headlines from trusted journalism. Without algorithms. Be critical. Fight against misinformation."
     },
     "feedback": {
       "title": "Send Feedback",
@@ -18,28 +18,33 @@
       "goodNight": "Good evening"
     },
     "voice": {
-      "voice": "Voice",
-      "speak": "Speak",
-      "allow": "Waiting..."
+      "voice": "Voice search",
+      "speak": "Speak now",
+      "stop": "Stop",
+      "allow": "Microphone access failed. Check your browser permissions and try again."
     },
-    "widgetProtection": {
-      "title": "Protection",
+    "widgetSearch": {
+      "history": "History",
+      "historyEmpty": "No searches yet.",
+      "clearHistory": "Clear history",
+      "clearSources": "Clear search sources",
       "description": "Verify the reputation of the selected search source.",
       "source": "Source",
       "carbon": "Carbon",
       "security": "Security",
       "privacy": "Privacy"
     },
-    "copyright": "Open Source Software made by",
-    "about": "About",
+    "close": "Close",
+    "copyright": "Aspiral is a portal with the best international journalistic sources. It's an open-source project with collaborative editorial, created by",
+    "about": "About Aspiral",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "donate": "Donate",
     "accept": "Accept",
     "reject": "Decline",
-    "learnMore": "Meet Findto",
+    "learnMore": "Meet Aspiral",
     "viewNearbyPlaces": "View nearby places",
-    "openApp": "Try Findto",
+    "openApp": "Try Aspiral",
     "placeholder": "Search on",
     "search": "Search",
     "clear": "Clear",
@@ -53,14 +58,19 @@
     "categories": "Modes",
     "category": "Mode",
     "warnings": {
-      "cookies": "Findto uses cookies only to improve the app. No personal data collected.",
+      "cookies": "Aspiral uses cookies to ensure you get the best experience. Read our Privacy Policy.",
       "torrent": "Warning: The Torrent is a legal protocol for peer-to-peer file sharing. However, downloading copyrighted content without authorization may violate laws such as the DMCA of the United States of America. Be aware that your ISP can track your activity and IP address. Using a VPN is recommended for privacy. Avoid legal consequences. Follow all applicable laws. Use this tool ethically. Make the world a better place.",
       "darknet": "Warning: The Darknet is a legal network, mostly used by researchers, journalists, and individuals in regions under censorship or mass surveillance. Access it responsibly. Use a specialized browser, such as the Tor Browser, to open .onion protocol sites. Beware of scams and phishing. If you encounter illegal activities, please report them to the appropriate authorities immediately. Follow all applicable laws. Use this tool ethically. Make the world a better place."
-    }
+    },
+    "confirm": "Ok",
+    "edition": "Edition",
+    "videosFromThisCategory": "Videos from this category",
+    "legal": "All rights reserved to the news sources."
   },
   "categories": [
     {
       "name": "Home",
+      "name_translated": "For you",
       "active": true,
       "data": [
         {
@@ -193,7 +203,7 @@
           "action": "https://iask.ai/?mode=question&q="
         },
         {
-          "name": "Adobe Firefly",
+          "name": "Firefly",
           "action": "https://firefly.adobe.com/generate/images?prompt="
         },
         {
@@ -382,7 +392,7 @@
       "active": true,
       "name_trends": "Breaking news",
       "name_stories": "Top stories",
-      "description": "Search news on CNN, NY Times, Reuters, BBC, Guardian, Forbes, Time, CNBC, and more.",
+      "description": "Search and follow trusted news sources, including CNN, NY Times, Reuters, BBC, The Guardian, and more.",
       "data": [
         {
           "name": "Google News",
@@ -398,7 +408,8 @@
         },
         {
           "name": "BBC",
-          "action": "https://www.bbc.co.uk/search?q="
+          "action": "https://www.bbc.co.uk/search?q=",
+          "rssUrl": "https://feeds.bbci.co.uk/news/world/rss.xml"
         },
         {
           "name": "AP",
@@ -458,15 +469,18 @@
         },
         {
           "name": "Aljazeera",
-          "action": "https://www.aljazeera.com/search/?q="
+          "action": "https://www.aljazeera.com/search/?q=",
+          "rssUrl": "http://www.aljazeera.com/xml/rss/all.xml"
         },
         {
           "name": "AFP",
-          "action": "https://factcheck.afp.com/fact-checking-search-results?search_api_fulltext="
+          "action": "https://factcheck.afp.com/fact-checking-search-results?search_api_fulltext=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:factcheck.afp.com&hl=en-US&gl=US&ceid=US:en"
         },
         {
           "name": "DW",
-          "action": "https://www.dw.com/search/?item="
+          "action": "https://www.dw.com/search/?item=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:24h+allinurl:dw.com&hl=en-US&gl=US&ceid=US:en"
         },
         {
           "name": "Feedly",
@@ -475,85 +489,148 @@
         {
           "name": "Flipboard",
           "action": "https://flipboard.com/search/"
-        }
-      ],
-      "youtube_channels": [
-        {
-          "id": "UCupvZG-5ko_eiXAupbDfxWw",
-          "title": "CNN"
         },
         {
-          "id": "UCqnbDFdCpuN8CMEg0VuEBqA",
-          "title": "nytimes"
+          "name": "CNN",
+          "videoYoutubeId": "UCupvZG-5ko_eiXAupbDfxWw",
+          "rssUrl": "https://news.google.com/rss/search?q=when:1d+allinurl:cnn.com&hl=en-US&gl=US&ceid=US:en"
         },
         {
-          "id": "UCQXHTFnQYFTqN0MqmNh9EIA",
-          "title": "BBCWorldService"
+          "name": "nytimes",
+          "videoYoutubeId": "UCqnbDFdCpuN8CMEg0VuEBqA"
         },
         {
-          "id": "UCUMZ7gohGI9HcU9VNsr2FJQ",
-          "title": "business"
+          "name": "BBCWorldService",
+          "videoYoutubeId": "UCQXHTFnQYFTqN0MqmNh9EIA"
         },
         {
-          "id": "UC8Su5vZCXWRag13H53zWVwA",
-          "title": "TIME"
+          "name": "business",
+          "videoYoutubeId": "UCUMZ7gohGI9HcU9VNsr2FJQ"
         },
         {
-          "id": "UChqUTb7kYRX8-EiaN3XFrSQ",
-          "title": "Reuters"
+          "name": "TIME",
+          "videoYoutubeId": "UC8Su5vZCXWRag13H53zWVwA",
+          "rssUrl": "http://time.com/feed/"
         },
         {
-          "id": "UC2a35q7eyzkfoIusBzdH4Hw",
-          "title": "NewsweekMag"
+          "name": "Reuters",
+          "videoYoutubeId": "UChqUTb7kYRX8-EiaN3XFrSQ",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:reuters.com&ceid=US:en&hl=en-US&gl=US"
         },
         {
-          "id": "UCLXo7UDZvByw2ixzpQCufnA",
-          "title": "Vox"
+          "name": "NewsweekMag",
+          "videoYoutubeId": "UC2a35q7eyzkfoIusBzdH4Hw"
         },
         {
-          "id": "UCHpw8xwDNhU9gdohEcJu4aA",
-          "title": "theGuardian"
+          "name": "Vox",
+          "videoYoutubeId": "UCLXo7UDZvByw2ixzpQCufnA",
+          "rssUrl": "https://www.vox.com/rss/index.xml"
         },
         {
-          "id": "UCIALMKvObZNtJ6AmdCLP7Lg",
-          "title": "markets"
+          "name": "theGuardian",
+          "videoYoutubeId": "UCHpw8xwDNhU9gdohEcJu4aA"
         },
         {
-          "id": "UCvJJ_dzjViJCoLf5uKUTwoA",
-          "title": "CNBC"
+          "name": "markets",
+          "videoYoutubeId": "UCIALMKvObZNtJ6AmdCLP7Lg"
         },
         {
-          "id": "UCBi2mrWuNuyYy4gbM6fU18Q",
-          "title": "ABCNews"
+          "name": "CNBC",
+          "videoYoutubeId": "UCvJJ_dzjViJCoLf5uKUTwoA"
         },
         {
-          "id": "UCeY0bbntWzzVIaj2z3QigXg",
-          "title": "NBCNews"
+          "name": "ABCNews",
+          "videoYoutubeId": "UCBi2mrWuNuyYy4gbM6fU18Q"
         },
         {
-          "id": "UC52X5wxOL_s5yw0dQk7NtgA",
-          "title": "AssociatedPress"
+          "name": "NBCNews",
+          "videoYoutubeId": "UCeY0bbntWzzVIaj2z3QigXg"
         },
         {
-          "id": "UCNye-wNBqNL5ZzHSJj3l8Bg",
-          "title": "aljazeeraenglish"
+          "name": "AssociatedPress",
+          "videoYoutubeId": "UC52X5wxOL_s5yw0dQk7NtgA"
         },
         {
-          "id": "UCSrZ3UV4jOidv8ppoVuvW9Q",
-          "title": "euronews"
+          "name": "aljazeeraenglish",
+          "videoYoutubeId": "UCNye-wNBqNL5ZzHSJj3l8Bg"
         },
         {
-          "id": "UC8p1vwvWtl6T73JiExfWs1g",
-          "title": "CBSNews"
+          "name": "euronews",
+          "videoYoutubeId": "UCSrZ3UV4jOidv8ppoVuvW9Q"
         },
         {
-          "id": "UCHd62-u_v4DvJ8TCFtpi4GA",
-          "title": "WashingtonPost"
+          "name": "CBSNews",
+          "videoYoutubeId": "UC8p1vwvWtl6T73JiExfWs1g"
+        },
+        {
+          "name": "WashingtonPost",
+          "videoYoutubeId": "UCHd62-u_v4DvJ8TCFtpi4GA"
+        },
+        {
+          "name": "The New York Times",
+          "rssUrl": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+        },
+        {
+          "name": "The Washington Post",
+          "rssUrl": "https://feeds.washingtonpost.com/rss/world"
+        },
+        {
+          "name": "Associated Press",
+          "rssUrl": "https://news.google.com/rss/search?q=when:24h+allinurl:apnews.com&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "The Guardian",
+          "rssUrl": "https://www.theguardian.com/international/rss"
+        },
+        {
+          "name": "Politico",
+          "rssUrl": "https://www.politico.com/rss/politicopicks.xml"
+        },
+        {
+          "name": "NBC News",
+          "rssUrl": "https://www.nbcnews.com/feed"
+        },
+        {
+          "name": "Slate",
+          "rssUrl": "https://slate.com/feeds/news-and-politics.rss"
+        },
+        {
+          "name": "Jacobin",
+          "rssUrl": "https://jacobin.com/feed/"
+        },
+        {
+          "name": "The Intercept",
+          "rssUrl": "https://theintercept.com/feed/?lang=en"
+        },
+        {
+          "name": "New Republic",
+          "rssUrl": "https://newrepublic.com/rss.xml"
+        },
+        {
+          "name": "Mother Jones",
+          "rssUrl": "https://www.motherjones.com/feed"
+        },
+        {
+          "name": "The Atlantic",
+          "rssUrl": "https://www.theatlantic.com/feed/channel/culture/"
+        },
+        {
+          "name": "BBC Verify",
+          "rssUrl": "https://feeds.bbci.co.uk/news/bbcverify/rss.xml"
+        },
+        {
+          "name": "FactCheck",
+          "rssUrl": "https://www.factcheck.org/feed/"
+        },
+        {
+          "name": "PolitiFact",
+          "rssUrl": "https://www.politifact.com/rss/factchecks/"
         }
       ]
     },
     {
       "name": "Videos",
+      "name_translated": "Movie & TV",
       "active": true,
       "name_trends": "Watch something new",
       "name_stories": "Buzz videos",
@@ -630,53 +707,52 @@
         {
           "name": "TED",
           "action": "https://www.ted.com/search?q="
-        }
-      ],
-      "youtube_channels": [
-        {
-          "id": "UCMawOL0n6QekxpuVanT_KRA",
-          "title": "Fandango"
         },
         {
-          "id": "UC_vz6SvmIkYs1_H3Wv2SKlg",
-          "title": "imdb"
+          "name": "Fandango",
+          "videoYoutubeId": "UCMawOL0n6QekxpuVanT_KRA"
         },
         {
-          "id": "UCi8e0iOVk1fEOogdfu4YgfA",
-          "title": "RottenTomatoesTRAILERS"
+          "name": "imdb",
+          "videoYoutubeId": "UC_vz6SvmIkYs1_H3Wv2SKlg"
         },
         {
-          "id": "UCgRQHK8Ttr1j9xCEpCAlgbQ",
-          "title": "variety"
+          "name": "RottenTomatoesTRAILERS",
+          "videoYoutubeId": "UCi8e0iOVk1fEOogdfu4YgfA"
         },
         {
-          "id": "UCWOA1ZGywLbqmigxE4Qlvuw",
-          "title": "Netflix"
+          "name": "variety",
+          "videoYoutubeId": "UCgRQHK8Ttr1j9xCEpCAlgbQ"
         },
         {
-          "id": "UCQJWtTnAHhEG5w4uN0udnUQ",
-          "title": "PrimeVideo"
+          "name": "Netflix",
+          "videoYoutubeId": "UCWOA1ZGywLbqmigxE4Qlvuw"
         },
         {
-          "id": "UCIrgJInjLS2BhlHOMDW7v0g",
-          "title": "disneyplus"
+          "name": "PrimeVideo",
+          "videoYoutubeId": "UCQJWtTnAHhEG5w4uN0udnUQ"
         },
         {
-          "id": "UC1Myj674wRVXB9I4c6Hm5zA",
-          "title": "AppleTV"
+          "name": "disneyplus",
+          "videoYoutubeId": "UCIrgJInjLS2BhlHOMDW7v0g"
         },
         {
-          "id": "UCx-KWLTKlB83hDI6UKECtJQ",
-          "title": "StreamOnMax"
+          "name": "AppleTV",
+          "videoYoutubeId": "UC1Myj674wRVXB9I4c6Hm5zA"
         },
         {
-          "id": "UCn8zNIfYAQNdrFRrr8oibKw",
-          "title": "VICE"
+          "name": "StreamOnMax",
+          "videoYoutubeId": "UCx-KWLTKlB83hDI6UKECtJQ"
+        },
+        {
+          "name": "VICE",
+          "videoYoutubeId": "UCn8zNIfYAQNdrFRrr8oibKw"
         }
       ]
     },
     {
       "name": "Image",
+      "name_translated": "Design",
       "active": true,
       "description": "Search images on Pinterest, Unsplash, GIPHY, Flickr, Pexels, and more.",
       "data": [
@@ -824,72 +900,70 @@
         {
           "name": "Audius",
           "action": "https://audius.co/search/?q="
-        }
-      ],
-      "youtube_channels": [
-        {
-          "id": "UC7kI8WjpCfFoMSNDuRh_4lA",
-          "title": "pitchfork"
         },
         {
-          "id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-          "title": "nprmusic"
+          "name": "pitchfork",
+          "videoYoutubeId": "UC7kI8WjpCfFoMSNDuRh_4lA"
         },
         {
-          "id": "UCRMqQWxCWE0VMvtUElm-rEA",
-          "title": "Spotify"
+          "name": "nprmusic",
+          "videoYoutubeId": "UC4eYXhJI4-7wSWc8UNRwD4A"
         },
         {
-          "id": "UCBv7HEHuVlNAELGi5XJd85Q",
-          "title": "AppleMusic"
+          "name": "Spotify",
+          "videoYoutubeId": "UCRMqQWxCWE0VMvtUElm-rEA"
         },
         {
-          "id": "UCwaAZDbtjUxxo_38V_dG7Bg",
-          "title": "deezerglobal"
+          "name": "AppleMusic",
+          "videoYoutubeId": "UCBv7HEHuVlNAELGi5XJd85Q"
         },
         {
-          "id": "UCPqftlDSXpl3V4u044KT88w",
-          "title": "amazonmusic"
+          "name": "deezerglobal",
+          "videoYoutubeId": "UCwaAZDbtjUxxo_38V_dG7Bg"
         },
         {
-          "id": "UC-JblcinswY50lrUdSaRNEg",
-          "title": "rollingstone"
+          "name": "amazonmusic",
+          "videoYoutubeId": "UCPqftlDSXpl3V4u044KT88w"
         },
         {
-          "id": "UCZtDUmC3W7j25XHZWFT_XgQ",
-          "title": "BBCMusic"
+          "name": "rollingstone",
+          "videoYoutubeId": "UC-JblcinswY50lrUdSaRNEg"
         },
         {
-          "id": "UCyFZMEnm1il5Wv3a6tPscbA",
-          "title": "genius"
+          "name": "BBCMusic",
+          "videoYoutubeId": "UCZtDUmC3W7j25XHZWFT_XgQ"
         },
         {
-          "id": "UCH_TWswNlSRz9LtnpWOmA2Q",
-          "title": "altpress"
+          "name": "genius",
+          "videoYoutubeId": "UCyFZMEnm1il5Wv3a6tPscbA"
         },
         {
-          "id": "UCsVcseUYbYjldc-XgcsiEbg",
-          "title": "Billboard"
+          "name": "altpress",
+          "videoYoutubeId": "UCH_TWswNlSRz9LtnpWOmA2Q"
         },
         {
-          "id": "UCxAICW_LdkfFYwTqTHHE0vg",
-          "title": "MTV"
+          "name": "Billboard",
+          "videoYoutubeId": "UCsVcseUYbYjldc-XgcsiEbg"
         },
         {
-          "id": "UCYw-R4_yue3aGJu1xDO6cog",
-          "title": "BBC Radio 2"
+          "name": "MTV",
+          "videoYoutubeId": "UCxAICW_LdkfFYwTqTHHE0vg"
         },
         {
-          "id": "UC4-76M8LX89Notl9sRCD6Zg",
-          "title": "1027KIISFM"
+          "name": "BBC Radio 2",
+          "videoYoutubeId": "UCYw-R4_yue3aGJu1xDO6cog"
         },
         {
-          "id": "UC3I2GFN_F8WudD_2jUZbojA",
-          "title": "kexp"
+          "name": "1027KIISFM",
+          "videoYoutubeId": "UC4-76M8LX89Notl9sRCD6Zg"
         },
         {
-          "id": "UC3lJL1pUvQ2Ih2qZ-4ozrLw",
-          "title": "SoundGuys"
+          "name": "kexp",
+          "videoYoutubeId": "UC3I2GFN_F8WudD_2jUZbojA"
+        },
+        {
+          "name": "SoundGuys",
+          "videoYoutubeId": "UC3lJL1pUvQ2Ih2qZ-4ozrLw"
         }
       ]
     },
@@ -1105,48 +1179,6 @@
           "name": "Internet Archive",
           "action": "https://archive.org/search.php?query="
         }
-      ],
-      "youtube_channels": [
-        {
-          "id": "UC7c8mE90qCtu11z47U0KErg",
-          "title": "NatureVideoChannel"
-        },
-        {
-          "id": "UCt5OA3LingpZBeEyPYmputQ",
-          "title": "NewScientist"
-        },
-        {
-          "id": "UC_xYMXx_-mAzheKyEtwtCAQ",
-          "title": "scientificamerican"
-        },
-        {
-          "id": "UCLA_DiR1FfKNvjuUpBHmylQ",
-          "title": "NASA"
-        },
-        {
-          "id": "UCYeF244yNGuFefuFKqxIAXw",
-          "title": "TheRoyalInstitution"
-        },
-        {
-          "id": "UCTpmmkp1E4nmZqWPS-dl5bg",
-          "title": "QuantaScienceChannel"
-        },
-        {
-          "id": "UCvQECJukTDE2i6aCoMnS-Vg",
-          "title": "bigthink"
-        },
-        {
-          "id": "UCsXVk37bltHxD1rDPwtNM8Q",
-          "title": "kurzgesagt"
-        },
-        {
-          "id": "UCHnyfMqiRRG1u-2MsSQLbXA",
-          "title": "veritasium"
-        },
-        {
-          "id": "UCv0aU2eKry3kdSTnFa8QAWA",
-          "title": "ScienceMagazine"
-        }
       ]
     },
     {
@@ -1299,56 +1331,54 @@
         {
           "name": "Tensorflow",
           "action": "https://www.tensorflow.org/s/results?hl=pt-br&q="
-        }
-      ],
-      "youtube_channels": [
-        {
-          "id": "UC8ENHE5xdFSwx71u3fDH5Xw",
-          "title": "ThePrimeagen"
         },
         {
-          "id": "UCsBjURrPoezykLs9EqgamOA",
-          "title": "Fireship"
+          "name": "ThePrimeagen",
+          "videoYoutubeId": "UC8ENHE5xdFSwx71u3fDH5Xw"
         },
         {
-          "id": "UC8butISFwT-Wl7EV0hUK0BQ",
-          "title": "freecodecamp"
+          "name": "Fireship",
+          "videoYoutubeId": "UCsBjURrPoezykLs9EqgamOA"
         },
         {
-          "id": "UCsMica-v34Irf9KVTh6xx-g",
-          "title": "MicrosoftDeveloper"
+          "name": "freecodecamp",
+          "videoYoutubeId": "UC8butISFwT-Wl7EV0hUK0BQ"
         },
         {
-          "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-          "title": "GoogleDevelopers"
+          "name": "MicrosoftDeveloper",
+          "videoYoutubeId": "UCsMica-v34Irf9KVTh6xx-g"
         },
         {
-          "id": "UCwrVwiJllwhJUKXKmjLcckQ",
-          "title": "AppleDeveloper"
+          "name": "GoogleDevelopers",
+          "videoYoutubeId": "UC_x5XG1OV2P6uZZ5FSM9Ttw"
         },
         {
-          "id": "UC29ju8bIPH5as8OGnQzwJyA",
-          "title": "TraversyMedia"
+          "name": "AppleDeveloper",
+          "videoYoutubeId": "UCwrVwiJllwhJUKXKmjLcckQ"
         },
         {
-          "id": "UCW5YeuERMmlnqo4oq8vwUpg",
-          "title": "NetNinja"
+          "name": "TraversyMedia",
+          "videoYoutubeId": "UC29ju8bIPH5as8OGnQzwJyA"
         },
         {
-          "id": "UCZgt6AzoyjslHTC9dz0UoTw",
-          "title": "ByteByteGo"
+          "name": "NetNinja",
+          "videoYoutubeId": "UCW5YeuERMmlnqo4oq8vwUpg"
         },
         {
-          "id": "UCJZv4d5rbIKd4QHMPkcABCw",
-          "title": "KevinPowell"
+          "name": "ByteByteGo",
+          "videoYoutubeId": "UCZgt6AzoyjslHTC9dz0UoTw"
         },
         {
-          "id": "UC3N9i_KvKZYP4F84FPIzgPQ",
-          "title": "akshaymarch7"
+          "name": "KevinPowell",
+          "videoYoutubeId": "UCJZv4d5rbIKd4QHMPkcABCw"
         },
         {
-          "id": "UC4JX40jDee_tINbkjycV4Sg",
-          "title": "TechWithTim"
+          "name": "akshaymarch7",
+          "videoYoutubeId": "UC3N9i_KvKZYP4F84FPIzgPQ"
+        },
+        {
+          "name": "TechWithTim",
+          "videoYoutubeId": "UC4JX40jDee_tINbkjycV4Sg"
         }
       ]
     },
@@ -1431,62 +1461,123 @@
         {
           "name": "Indiegogo",
           "action": "https://www.indiegogo.com/explore/all?q="
-        }
-      ],
-      "youtube_channels": [
-        {
-          "id": "UCddiUEpeqJcYeBxX1IVBKvQ",
-          "title": "TheVerge"
         },
         {
-          "id": "UCBJycsmduvYEL83R_U4JriQ",
-          "title": "mkbhd"
+          "name": "TheVerge",
+          "videoYoutubeId": "UCddiUEpeqJcYeBxX1IVBKvQ"
         },
         {
-          "id": "UCXuqSBlHAE6Xw-yeJA0Tunw",
-          "title": "LinusTechTips"
+          "name": "mkbhd",
+          "videoYoutubeId": "UCBJycsmduvYEL83R_U4JriQ"
         },
         {
-          "id": "UCOmcA3f_RrH6b9NmcNa4tdg",
-          "title": "CNET"
+          "name": "LinusTechTips",
+          "videoYoutubeId": "UCXuqSBlHAE6Xw-yeJA0Tunw"
         },
         {
-          "id": "UCeeFfhMcJa1kjtfZAGskOCA",
-          "title": "techlinked"
+          "name": "CNET",
+          "videoYoutubeId": "UCOmcA3f_RrH6b9NmcNa4tdg",
+          "rssUrl": "https://www.cnet.com/rss/news/"
         },
         {
-          "id": "UCftwRNsjfRo08xYE31tkiyw",
-          "title": "WIRED"
+          "name": "techlinked",
+          "videoYoutubeId": "UCeeFfhMcJa1kjtfZAGskOCA"
         },
         {
-          "id": "UC-6OW5aJYBFM33zXQlBKPNA",
-          "title": "Engadget"
+          "name": "WIRED",
+          "videoYoutubeId": "UCftwRNsjfRo08xYE31tkiyw",
+          "rssUrl": "https://www.wired.com/feed/"
         },
         {
-          "id": "UCMiJRAwDNSNzuYeN2uWa0pA",
-          "title": "Mrwhosetheboss"
+          "name": "Engadget",
+          "videoYoutubeId": "UC-6OW5aJYBFM33zXQlBKPNA",
+          "rssUrl": "https://www.engadget.com/rss.xml"
         },
         {
-          "id": "UCey_c7U86mJGz1VJWH5CYPA",
-          "title": "iJustine"
+          "name": "Mrwhosetheboss",
+          "videoYoutubeId": "UCMiJRAwDNSNzuYeN2uWa0pA"
         },
         {
-          "id": "UCsTcErHg8oDvUnTzoqsYeNw",
-          "title": "unboxtherapy"
+          "name": "iJustine",
+          "videoYoutubeId": "UCey_c7U86mJGz1VJWH5CYPA"
         },
         {
-          "id": "UCVYamHliCI9rw1tHR1xbkfw",
-          "title": "Dave2D"
+          "name": "unboxtherapy",
+          "videoYoutubeId": "UCsTcErHg8oDvUnTzoqsYeNw"
         },
         {
-          "id": "UCbfYPyITQ-7l4upoX8nvctg",
-          "title": "TwoMinutePapers"
+          "name": "Dave2D",
+          "videoYoutubeId": "UCVYamHliCI9rw1tHR1xbkfw"
+        },
+        {
+          "name": "TwoMinutePapers",
+          "videoYoutubeId": "UCbfYPyITQ-7l4upoX8nvctg"
+        },
+        {
+          "name": "The Verge",
+          "rssUrl": "http://www.theverge.com/rss/index.xml"
+        },
+        {
+          "name": "TechCrunch",
+          "rssUrl": "https://techcrunch.com/feed/"
+        },
+        {
+          "name": "MIT Technology Review",
+          "rssUrl": "https://www.technologyreview.com/feed"
+        },
+        {
+          "name": "Arstechnica",
+          "rssUrl": "http://feeds.arstechnica.com/arstechnica/index"
+        },
+        {
+          "name": "404 Media",
+          "rssUrl": "https://www.404media.co/rss/"
+        },
+        {
+          "name": "Computerworld",
+          "rssUrl": "https://www.computerworld.com/feed/"
+        },
+        {
+          "name": "VentureBeat",
+          "rssUrl": "https://venturebeat.com/feed"
+        },
+        {
+          "name": "Platformer",
+          "rssUrl": "https://www.platformer.news/rss/"
+        },
+        {
+          "name": "Stratechery",
+          "rssUrl": "https://stratechery.com/feed"
+        },
+        {
+          "name": "Rest of World",
+          "rssUrl": "https://restofworld.org/feed/latest"
+        },
+        {
+          "name": "ZDNet",
+          "rssUrl": "https://www.zdnet.com/news/rss.xml"
+        },
+        {
+          "name": "Futurism",
+          "rssUrl": "https://futurism.com/feed"
+        },
+        {
+          "name": "The Next Web",
+          "rssUrl": "https://thenextweb.com/feed/"
+        },
+        {
+          "name": "Gizmodo",
+          "rssUrl": "https://gizmodo.com/rss"
+        },
+        {
+          "name": "Mashable",
+          "rssUrl": "https://mashable.com/feeds/rss/tech"
         }
       ]
     },
     {
-      "name": "Finance",
-      "active": false,
+      "name": "Business",
+      "active": true,
       "data": [
         {
           "name": "Google Finance",
@@ -1495,6 +1586,54 @@
         {
           "name": "finviz",
           "action": "https://finviz.com/search.ashx?p="
+        },
+        {
+          "name": "The Economist",
+          "rssUrl": "https://www.economist.com/finance-and-economics/rss.xml"
+        },
+        {
+          "name": "Financial Times",
+          "rssUrl": "https://www.ft.com/world?format=rss"
+        },
+        {
+          "name": "WSJ",
+          "rssUrl": "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+        },
+        {
+          "name": "Bloomberg",
+          "rssUrl": "https://news.google.com/rss/search?q=when:24h+allinurl:bloomberg.com&ceid=US:en&hl=en-US&gl=US"
+        },
+        {
+          "name": "Fortune",
+          "rssUrl": "https://fortune.com/feed/"
+        },
+        {
+          "name": "CNBC",
+          "rssUrl": "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+        },
+        {
+          "name": "Fast Company",
+          "rssUrl": "https://www.fastcompany.com/latest/rss"
+        },
+        {
+          "name": "Business Insider",
+          "rssUrl": "https://www.businessinsider.com/rss"
+        },
+        {
+          "name": "Quartz",
+          "rssUrl": "https://qz.com/feed"
+        },
+        {
+          "name": "Forbes",
+          "rssUrl": "https://news.google.com/rss/search?q=when:72h+allinurl:forbes.com&ceid=US:en&hl=en-US&gl=US"
+        },
+        {
+          "name": "Inc",
+          "rssUrl": "https://www.inc.com/rss/"
+        },
+        {
+          "name": "Entrepreneur",
+          "rssUrl": "https://www.entrepreneur.com/latest.rss"
         }
       ]
     },
@@ -1535,7 +1674,6 @@
           "name": "EZTV",
           "action": "https://eztv.re/search/"
         },
-
         {
           "name": "TorrentDownloads",
           "action": "https://www.torrentdownloads.pro/search/?search="
@@ -1578,6 +1716,417 @@
         {
           "name": "The Hidden Wiki",
           "action": "http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php?title=Special%3ASearch&search="
+        }
+      ]
+    },
+    {
+      "name": "Fact-Check",
+      "active": true,
+      "name_trends": "Breaking checks",
+      "name_stories": "Verified stories",
+      "description": "Fact-checking and verification",
+      "data": [
+        {
+          "name": "BBC Verify",
+          "rssUrl": "https://feeds.bbci.co.uk/news/bbcverify/rss.xml"
+        },
+        {
+          "name": "FactCheck",
+          "rssUrl": "https://www.factcheck.org/feed/"
+        },
+        {
+          "name": "PolitiFact",
+          "rssUrl": "https://www.politifact.com/rss/factchecks/"
+        },
+        {
+          "name": "AFP",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:factcheck.afp.com&hl=en-US&gl=US&ceid=US:en"
+        }
+      ]
+    },
+    {
+      "name": "Sport",
+      "active": true,
+      "name_trends": "Latest sports",
+      "name_stories": "Top stories",
+      "description": "Follow sports coverage from trusted sources.",
+      "data": [
+        {
+          "name": "ESPN",
+          "rssUrl": "https://www.espn.com/espn/rss/news"
+        },
+        {
+          "name": "FOX Sports",
+          "rssUrl": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&aggregateId=7f83e8ca-6701-5ea0-96ee-072636b67336"
+        },
+        {
+          "name": "Yahoo Sports",
+          "rssUrl": "https://sports.yahoo.com/rss/"
+        },
+        {
+          "name": "Bleacher Report",
+          "rssUrl": "https://feeds.bleacherreport.com/articles"
+        },
+        {
+          "name": "90min",
+          "rssUrl": "https://www.90min.com/posts.rss"
+        },
+        {
+          "name": "Deadspin",
+          "rssUrl": "https://deadspin.com/rss"
+        }
+      ]
+    },
+    {
+      "name": "Culture",
+      "active": true,
+      "name_trends": "Culture news",
+      "name_stories": "Top stories",
+      "description": "Follow arts, culture, and entertainment coverage.",
+      "data": [
+        {
+          "name": "New Yorker",
+          "rssUrl": "https://www.newyorker.com/feed/rss"
+        },
+        {
+          "name": "Variety",
+          "rssUrl": "https://variety.com/feed"
+        },
+        {
+          "name": "Hollywood Reporter",
+          "rssUrl": "https://www.hollywoodreporter.com/feed/rss/"
+        },
+        {
+          "name": "Billboard",
+          "rssUrl": "https://www.billboard.com/feed/"
+        },
+        {
+          "name": "EW",
+          "rssUrl": "https://feeds-api.dotdashmeredith.com/v1/rss/google/06e092d0-4dff-468a-93db-8d6a995730b4"
+        },
+        {
+          "name": "IMDb",
+          "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_vz6SvmIkYs1_H3Wv2SKlg"
+        },
+        {
+          "name": "Pitchfork",
+          "rssUrl": "https://pitchfork.com/feed/feed-news/rss"
+        },
+        {
+          "name": "Rolling Stone",
+          "rssUrl": "https://www.rollingstone.com/feed/"
+        },
+        {
+          "name": "AV Club",
+          "rssUrl": "https://www.avclub.com/rss"
+        },
+        {
+          "name": "Vulture",
+          "rssUrl": "https://www.vulture.com/feeds/flipboard.rss"
+        },
+        {
+          "name": "People",
+          "rssUrl": "https://feeds-api.dotdashmeredith.com/v1/rss/google/6bb3396f-8157-4dc5-8fcf-c1bd9d415be8"
+        },
+        {
+          "name": "Vice",
+          "rssUrl": "https://www.vice.com/en/rss"
+        },
+        {
+          "name": "BuzzFeed",
+          "rssUrl": "https://www.buzzfeed.com/feed.xml"
+        },
+        {
+          "name": "Aeon",
+          "rssUrl": "https://aeon.co/feed.rss"
+        }
+      ]
+    },
+    {
+      "name": "Games",
+      "active": true,
+      "name_trends": "Latest gaming news",
+      "name_stories": "Top stories",
+      "description": "Follow gaming and technology coverage.",
+      "data": [
+        {
+          "name": "IGN",
+          "rssUrl": "http://feeds.ign.com/ign/all"
+        },
+        {
+          "name": "Polygon",
+          "rssUrl": "https://www.polygon.com/rss/index.xml"
+        },
+        {
+          "name": "Kotaku",
+          "rssUrl": "https://kotaku.com/rss"
+        },
+        {
+          "name": "GameSpot",
+          "rssUrl": "https://www.gamespot.com/feeds/mashup/"
+        },
+        {
+          "name": "PC Gamer",
+          "rssUrl": "https://www.pcgamer.com/rss"
+        },
+        {
+          "name": "RPS",
+          "rssUrl": "https://www.rockpapershotgun.com/feed"
+        }
+      ]
+    },
+    {
+      "name": "Startups",
+      "active": true,
+      "name_trends": "Trending discoveries",
+      "name_stories": "Popular stories",
+      "description": "Discover independent and community-driven stories.",
+      "data": [
+        {
+          "name": "Hacker News",
+          "rssUrl": "https://news.ycombinator.com/rss"
+        },
+        {
+          "name": "Product Hunt",
+          "rssUrl": "https://www.producthunt.com/feed"
+        }
+      ]
+    },
+    {
+      "name": "Tech",
+      "active": true,
+      "name_trends": "Latest in tech",
+      "name_stories": "Top tech stories",
+      "description": "Follow technology coverage from trusted sources.",
+      "data": [
+        {
+          "name": "The Verge",
+          "rssUrl": "http://www.theverge.com/rss/index.xml"
+        },
+        {
+          "name": "TechCrunch",
+          "rssUrl": "https://techcrunch.com/feed/"
+        },
+        {
+          "name": "MIT Technology Review",
+          "rssUrl": "https://www.technologyreview.com/feed"
+        },
+        {
+          "name": "Arstechnica",
+          "rssUrl": "http://feeds.arstechnica.com/arstechnica/index"
+        },
+        {
+          "name": "404 Media",
+          "rssUrl": "https://www.404media.co/rss/"
+        },
+        {
+          "name": "Computerworld",
+          "rssUrl": "https://www.computerworld.com/feed/"
+        },
+        {
+          "name": "VentureBeat",
+          "rssUrl": "https://venturebeat.com/feed"
+        },
+        {
+          "name": "Platformer",
+          "rssUrl": "https://www.platformer.news/rss/"
+        },
+        {
+          "name": "Stratechery",
+          "rssUrl": "https://stratechery.com/feed"
+        },
+        {
+          "name": "Rest of World",
+          "rssUrl": "https://restofworld.org/feed/latest"
+        },
+        {
+          "name": "Engadget",
+          "rssUrl": "https://www.engadget.com/rss.xml"
+        },
+        {
+          "name": "Wired",
+          "rssUrl": "https://www.wired.com/feed/"
+        },
+        {
+          "name": "ZDNet",
+          "rssUrl": "https://www.zdnet.com/news/rss.xml"
+        },
+        {
+          "name": "CNET",
+          "rssUrl": "https://www.cnet.com/rss/news/"
+        },
+        {
+          "name": "Futurism",
+          "rssUrl": "https://futurism.com/feed"
+        },
+        {
+          "name": "The Next Web",
+          "rssUrl": "https://thenextweb.com/feed/"
+        },
+        {
+          "name": "Gizmodo",
+          "rssUrl": "https://gizmodo.com/rss"
+        },
+        {
+          "name": "Mashable",
+          "rssUrl": "https://mashable.com/feeds/rss/tech"
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "active": true,
+      "name_trends": "Latest in science",
+      "name_stories": "Science stories",
+      "description": "Explore science news and research from NASA, Nature, Science, Scientific American, and more.",
+      "data": [
+        {
+          "name": "Google News",
+          "action": "https://news.google.com/search?q="
+        },
+        {
+          "name": "NASA",
+          "action": "https://www.nasa.gov/search/?q=",
+          "videoYoutubeId": "UCLA_DiR1FfKNvjuUpBHmylQ"
+        },
+        {
+          "name": "ScienceDaily",
+          "action": "https://www.sciencedaily.com/search/?keyword="
+        },
+        {
+          "name": "LiveScience",
+          "action": "https://www.livescience.com/search?searchTerm=",
+          "rssUrl": "https://www.livescience.com/feeds/all"
+        },
+        {
+          "name": "Nature",
+          "action": "https://www.nature.com/search?q=",
+          "rssUrl": "https://www.nature.com/nature.rss"
+        },
+        {
+          "name": "Scientific American",
+          "action": "https://www.scientificamerican.com/search/?q=",
+          "rssUrl": "http://rss.sciam.com/ScientificAmerican-Global"
+        },
+        {
+          "name": "Discover",
+          "rssUrl": "https://feeds.feedburner.com/AllDiscovermagazinecomContent"
+        },
+        {
+          "name": "Futurity",
+          "rssUrl": "https://www.futurity.org/feed/"
+        },
+        {
+          "name": "Popular Science",
+          "rssUrl": "https://www.popsci.com/feed/"
+        },
+        {
+          "name": "New Scientist",
+          "action": "https://www.newscientist.com/search/?q=",
+          "rssUrl": "https://www.newscientist.com/feed/home/"
+        },
+        {
+          "name": "Science Magazine",
+          "action": "https://www.science.org/action/doSearch?AllField=",
+          "rssUrl": "https://www.science.org/rss/news_current.xml"
+        },
+        {
+          "name": "WebMD",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:webmd.com&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "Greatist",
+          "rssUrl": "https://greatist.com/feed"
+        },
+        {
+          "name": "Quanta Magazine",
+          "rssUrl": "https://api.quantamagazine.org/feed/"
+        },
+        {
+          "name": "Nautilus",
+          "rssUrl": "https://nautil.us/feed/"
+        },
+        {
+          "name": "NatureVideoChannel",
+          "videoYoutubeId": "UC7c8mE90qCtu11z47U0KErg"
+        },
+        {
+          "name": "NewScientist",
+          "videoYoutubeId": "UCt5OA3LingpZBeEyPYmputQ"
+        },
+        {
+          "name": "scientificamerican",
+          "videoYoutubeId": "UC_xYMXx_-mAzheKyEtwtCAQ"
+        },
+        {
+          "name": "TheRoyalInstitution",
+          "videoYoutubeId": "UCYeF244yNGuFefuFKqxIAXw"
+        },
+        {
+          "name": "QuantaScienceChannel",
+          "videoYoutubeId": "UCTpmmkp1E4nmZqWPS-dl5bg"
+        },
+        {
+          "name": "bigthink",
+          "videoYoutubeId": "UCvQECJukTDE2i6aCoMnS-Vg"
+        },
+        {
+          "name": "kurzgesagt",
+          "videoYoutubeId": "UCsXVk37bltHxD1rDPwtNM8Q"
+        },
+        {
+          "name": "veritasium",
+          "videoYoutubeId": "UCHnyfMqiRRG1u-2MsSQLbXA"
+        },
+        {
+          "name": "ScienceMagazine",
+          "videoYoutubeId": "UCv0aU2eKry3kdSTnFa8QAWA"
+        }
+      ]
+    },
+    {
+      "name": "Celebrity",
+      "active": true,
+      "name_trends": "Trending celebrities",
+      "name_stories": "Celebrity news",
+      "description": "Search celebrity news from People, Variety, Deadline, TMZ, and more.",
+      "data": [
+        {
+          "name": "Google News",
+          "action": "https://news.google.com/search?q="
+        },
+        {
+          "name": "People",
+          "action": "https://people.com/search/?q=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+site:people.com+celebrity&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "Variety",
+          "action": "https://variety.com/?s=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+site:variety.com+celebrity&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "Deadline",
+          "action": "https://deadline.com/?s=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+site:deadline.com+celebrity&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "The Hollywood Reporter",
+          "action": "https://www.hollywoodreporter.com/?s=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+site:hollywoodreporter.com+celebrity&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "TMZ",
+          "action": "https://www.tmz.com/search/?q=",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+site:tmz.com+celebrity&hl=en-US&gl=US&ceid=US:en"
+        },
+        {
+          "name": "Entertainment Weekly",
+          "action": "https://ew.com/?s="
+        },
+        {
+          "name": "IMDb",
+          "action": "https://www.imdb.com/find/?q="
         }
       ]
     }

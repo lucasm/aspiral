@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: 100%;
+  min-height: 3rem;
+  padding: 0.375rem 0.75rem;
+  border: 0;
+  border-radius: 1rem;
+  background: var(--background-body);
+  color: var(--color-text-black);
+  /* border: 1px solid var(--color-black-translucent); */
+  font-size: var(--font-size);
+  font-weight: 500;
+  cursor: pointer;
+}
+.trigger:hover,
+.trigger:focus {
+  background: var(--color-black-translucent);
+}
+.trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.value,
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-text-black);
+}
+
+.icon img {
+  width: 1.125rem;
+  height: 1.125rem;
+  filter: var(--svg-filter);
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: var(--opacity);
+}
+
+.chevron svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.content {
+  z-index: 50;
+  min-width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height);
+  overflow: hidden;
+  padding: 0.25rem;
+  border: 1px solid var(--color-black-translucent);
+  border-radius: var(--radius);
+  background: var(--background-body);
+  color: var(--color-text-black);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+}
+
+.item {
+  min-height: 2.75rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: var(--font-size);
+  cursor: pointer;
+  outline: none;
+}
+
+.item[data-highlighted] {
+  background: var(--color-black-translucent);
+}
+
+@media screen and (max-width: 576px) {
+  .trigger {
+    gap: 0.75rem;
+  }
+
+  .icon {
+    flex-basis: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .icon img {
+    width: 1rem;
+    height: 1rem;
+  }
+}

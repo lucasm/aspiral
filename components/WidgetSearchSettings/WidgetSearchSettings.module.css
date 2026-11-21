@@ -1,0 +1,118 @@
+.dialog {
+  width: min(32rem, calc(100vw - 2rem));
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--background-surface);
+  border-radius: var(--radius-liquid-glass);
+  background: var(--background-body);
+  color: var(--color-text-black);
+  box-shadow: var(--shadow-2);
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header h2 {
+  margin: 0 0 0.5rem;
+  font-size: var(--font-size-big);
+}
+
+.header p {
+  margin: 0;
+  opacity: var(--opacity);
+}
+
+.dialog .closeButton {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  gap: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--background-surface) !important;
+  cursor: pointer;
+}
+
+.closeButton svg,
+.links svg {
+  flex-shrink: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: var(--size-small);
+  padding: 0 1rem;
+  border-radius: var(--radius);
+  background: var(--background-surface);
+  color: var(--color-text-black);
+  font-size: var(--font-size);
+  font-weight: 400;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.links a:hover,
+.closeButton:hover,
+.dialog .historyList button:hover {
+  opacity: var(--opacity);
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  max-height: min(50vh, 24rem);
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.dialog .historyList button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: var(--size-small);
+  padding: 0 1rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--background-surface);
+  color: var(--color-text-black);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.historyEmpty {
+  margin: 0;
+  opacity: var(--opacity);
+}

@@ -1,0 +1,33 @@
+.error {
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.retry,
+.feedback {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-small);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.retry {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.feedback {
+  border: 1px solid transparent;
+  background: transparent;
+  color: black;
+}

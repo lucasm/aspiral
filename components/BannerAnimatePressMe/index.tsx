@@ -28,14 +28,14 @@ export default function BannerAnimatePressMe() {
       ) : (
         <div className={styles.linksContainer}>
           <a
-            href="https://github.com/lucasm/findto"
+            href="https://github.com/lucasm/aspiral"
             target="_blank"
             rel="noopener noreferrer">
             GitHub
           </a>
           <span> | </span>
           <a
-            href="https://patreon.com/findto"
+            href="https://patreon.com/aspiral"
             target="_blank"
             rel="noopener noreferrer">
             Patreon

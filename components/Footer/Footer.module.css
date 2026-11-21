@@ -1,7 +1,7 @@
 .footer {
   margin: 0 auto;
   width: 100%;
-  max-width: var(--max-size-container-3);
+  max-width: var(--max-size-container);
 }
 
 .container {
@@ -36,7 +36,7 @@
 }
 .container ul li a,
 .container p {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size);
   color: var(--color-text-black);
   font-weight: 400;
   text-align: center;
@@ -47,8 +47,8 @@
 }
 
 .container ul li a svg {
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 1rem;
+  height: 1rem;
   color: var(--color-text-black);
   transition: var(--transition);
 }

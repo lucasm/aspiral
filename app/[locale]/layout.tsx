@@ -1,7 +1,6 @@
 import './global.css'
 import type { Viewport } from 'next'
-import localFont from 'next/font/local'
-// import { Manrope } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
@@ -10,25 +9,11 @@ import { ThemeProvider } from 'next-themes'
 import ScriptsTelemetry from '@/components/ScriptsTelemetry'
 import { routing } from '@/i18n/routing'
 
-const fontFamily = localFont({
-  src: [
-    {
-      path: '../../public/fonts/font-light.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/font-medium.woff2',
-      weight: '700',
-      style: 'bold',
-    },
-  ],
+const fontFamily = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-family',
 })
-// const fontFamily = Manrope({
-//   subsets: ['latin'],
-//   weight: ['500', '700'],
-//   variable: '--font-family',
-// })
 
 export const viewport: Viewport = {
   themeColor: 'white',
@@ -53,29 +38,28 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: 'Findto — ' + t('title'),
-      default: 'Findto',
-      template: 'Findto — %s',
+      absolute: 'Aspiral — ' + t('title'),
+      default: 'Aspiral',
+      template: 'Aspiral — %s',
     },
     description: t('description'),
     authors: [
-      { name: 'Findto', url: 'https://findto.app/' },
+      { name: 'Aspiral', url: 'https://aspiral.app/' },
       { name: 'Lucas Maués', url: 'https://lucasmaues.com/' },
     ],
     icons: {
       icon: [
-        '/favicon.ico?v=2',
-        '/icon-192x192.png?v=2',
-        '/icon-512x512.png?v=2',
-        '/icon-1024x1024.png?v=2',
-        // 'icon.svg?v=2',
+        '/favicon.ico?v=3',
+        '/icon-192x192.png?v=3',
+        '/icon-512x512.png?v=3',
+        'icon.svg?v=3',
       ],
-      apple: '/apple-touch-icon.png?v=2',
+      apple: '/apple-touch-icon.png?v=3',
     },
-    manifest: '/manifest.json?v=2',
-    applicationName: 'Findto',
+    manifest: '/manifest.webmanifest?v=3',
+    applicationName: 'Aspiral',
     //   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-    metadataBase: new URL('https://findto.app'),
+    metadataBase: new URL('https://aspiral.app'),
     alternates: {
       languages: {
         'en-US': '/en-US',
@@ -89,7 +73,7 @@ export async function generateMetadata({
       type: 'website',
     },
     twitter: {
-      site: '@findtoapp',
+      site: '@aspiralapp',
       creator: '@lucasmmau',
       card: 'summary_large_image',
       images: '/share.png',
@@ -129,9 +113,8 @@ export default async function Layout(props: {
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>
+        <ScriptsTelemetry />
       </body>
-
-      <ScriptsTelemetry />
     </html>
   )
 }

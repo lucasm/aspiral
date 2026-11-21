@@ -1,10 +1,10 @@
 <div align="center">
-<a href="https://findto.app/?utm_source=findto_repo">
-<img height="124" src="https://findto.app/icon.svg" alt="Findto Icon">
+<a href="https://aspiral.app/?utm_source=github">
+<img height="124" src="https://aspiral.app/icon.svg" alt="Aspiral Icon">
 </a>
-<h1>Findto</h1>
+<h1>Aspiral</h1>
 
-<a href="https://findto.app/?utm_source=findto_repo" target="_blank">findto.app</a>
+<a href="https://aspiral.app/?utm_source=github" target="_blank">aspiral.app</a>
 
 </div>
 
@@ -16,9 +16,9 @@
 <a href="https://github.com/lucasm/findto/wiki" target="_blank"><img alt="Translations" src="https://img.shields.io/badge/translations-4-8eccff?logo=json&logoColor=white"></a>
 </p>
 
-## Decentralized search on Web and AI
+## Search portal for Web content and AI
 
-Findto is an open source, decentralized search assistant.
+Aspiral is an open source search portal for Web content and AI, based on trusted sources.
 
 Search the same term across multiple sources. Discover trends, stories, and information. Find anything, anywhere. More productive searches than ever.
 
@@ -26,7 +26,7 @@ See also estimated levels of privacy, security and carbon footprint for each sea
 
 We’re building an accessible, universal, and transparent search experience. Where people stay in control of algorithms. For a healthier internet.
 
-[▶️ Try Findto now](https://findto.app/?utm_source=findto_repo)
+[▶️ Try Aspiral now](https://aspiral.app/?utm_source=github)
 
 ## Top Features
 
@@ -44,7 +44,7 @@ We’re building an accessible, universal, and transparent search experience. Wh
 
 ## Criteria
 
-All search sources and external content available on Findto are selected based on the following criteria: 1. Service popularity; 2. Open access; 3. Compliance with copyright, accessibility, and privacy regulations.
+All search sources and external content available on Aspiral are selected based on the following criteria: 1. Service popularity; 2. Open access; 3. Compliance with copyright, accessibility, and privacy regulations.
 
 ## Contributions
 
@@ -55,7 +55,7 @@ Contributions are welcome!
 
 ## Donations
 
-Make a donation to support Findto.
+Make a donation to support Aspiral.
 
 - [Patreon](https://patreon.com/findto)
 - [Ko-fi (one-time donation)](https://ko-fi.com/findto)
@@ -67,11 +67,11 @@ Make a donation to support Findto.
 
 ## Legal
 
-Findto is built with privacy in mind and does not store user searches. It also displays content from external services without prior review, and include trademarks protected by intellectual property. Please respect the terms of use.
+Aspiral is built with privacy in mind and does not store user searches. It also displays content from external services without prior review and includes trademarks protected by intellectual property. Please respect the terms of use.
 
-[Privacy Policy](https://findto.app/privacy) | [Terms of Service](https://findto.app/terms) | Made by [Lucas Maués](https://lucasm.dev/?utm_source=findto) and community | MIT License
+[Privacy Policy](https://aspiral.app/privacy) | [Terms of Service](https://aspiral.app/terms) | Made by [Lucas Maués](https://lucasm.dev/?utm_source=aspiral) and community | MIT License
 
-## Findto is available on
+## Aspiral is also listed on
 
-- [Store.app](https://store.app/findto)
-- [Alternative.to](https://alternativeto.net/software/findto/about/)
+- [Product Hunt](https://www.producthunt.com/) - SOON
+- [AlternativeTo](https://alternativeto.net/software/findto/about/)

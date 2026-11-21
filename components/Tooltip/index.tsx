@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
+import * as TooltipPrimitive from '@radix-ui/react-tooltip'
+import type { ReactElement } from 'react'
 
 import styles from './Tooltip.module.css'
 
 interface TooltipProps {
   text: string
-  children: React.ReactNode
+  children: ReactElement
   disable?: boolean
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ text, children, disable }) => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  const showTooltip = () => {
-    setIsVisible(true)
+const Tooltip = ({ text, children, disable = false }: TooltipProps) => {
+  if (disable) {
+    return children
   }
-
-  const hideTooltip = () => {
-    setIsVisible(false)
-  }
-
   return (
-    <div
-      className={styles.tooltipContainer}
-      onMouseEnter={showTooltip}
-      onMouseLeave={hideTooltip}>
-      {children}
-      {!disable && isVisible && <div className={styles.tooltip}>{text}</div>}
-    </div>
+    <TooltipPrimitive.Provider delayDuration={300}>
+      <TooltipPrimitive.Root>
+        <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
+        <TooltipPrimitive.Portal>
+          <TooltipPrimitive.Content
+            className={styles.tooltip}
+            side="bottom"
+            sideOffset={8}>
+            {text}
+          </TooltipPrimitive.Content>
+        </TooltipPrimitive.Portal>
+      </TooltipPrimitive.Root>
+    </TooltipPrimitive.Provider>
   )
 }
 

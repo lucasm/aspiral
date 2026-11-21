@@ -1,10 +1,11 @@
-import Link from 'next/link'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
+import BlurBackground from '@/components/BlurBackground'
 import AppFooter from '@/components/Footer'
 import { IconMenu } from '@/components/SvgIcons'
 import SvgLogo from '@/components/SvgLogo'
 import WidgetDropdown from '@/components/WidgetDropdown'
+import { Link } from '@/i18n/routing'
 
 import Style from './WebsiteLayout.module.css'
 
@@ -13,7 +14,6 @@ export default function WebsiteLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const locale = useLocale()
   const t = useTranslations('t')
 
   const renderDesktop = (): React.ReactElement => {
@@ -47,10 +47,10 @@ export default function WebsiteLayout({
   return (
     <div className={Style.page}>
       <header className={Style.header}>
-        <Link href={'/' + locale} translate="no">
+        <Link href={'/'} translate="no">
           <div id="logo" className={Style.logo}>
             <SvgLogo />
-            Findto
+            Aspiral
           </div>
         </Link>
 
@@ -66,7 +66,10 @@ export default function WebsiteLayout({
         </nav>
       </header>
 
-      <main>{children}</main>
+      <main>
+        <BlurBackground category="none" />
+        {children}
+      </main>
 
       <AppFooter />
     </div>

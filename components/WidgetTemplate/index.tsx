@@ -43,7 +43,7 @@ export default function WidgetTemplate({
           <p>
             {t('powered')}{' '}
             <a
-              href={credits?.url ? credits?.url + '?utm_source=findto_app' : ''}
+              href={credits?.url ? credits?.url : ''}
               target="_blank"
               rel="noopener">
               {credits?.title ?? ''}

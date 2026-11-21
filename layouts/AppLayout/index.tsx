@@ -4,7 +4,6 @@ import Header from '@/components/Header'
 import { CookiesConsentContextProvider } from '@/contexts/CookiesConsentContext'
 import { SearchContextProvider } from '@/contexts/SearchContext'
 import { ISearchCategory } from '@/interfaces/search'
-import { getBooleanFromCookie } from '@/utils/getBooleanFromCookie'
 
 export default async function AppLayout({
   children,
@@ -15,12 +14,10 @@ export default async function AppLayout({
   locale: string
   category: ISearchCategory
 }>) {
-  const isSidebarOpenDefault = await getBooleanFromCookie('isSidebarOpen')
-
   return (
     <CookiesConsentContextProvider>
-      <SearchContextProvider isSidebarOpenDefault={isSidebarOpenDefault}>
-        <div className={isSidebarOpenDefault ? 'app sidebar' : 'app'}>
+      <SearchContextProvider>
+        <div>
           <Header locale={locale} category={category} />
           <main>{children}</main>
           <Footer />

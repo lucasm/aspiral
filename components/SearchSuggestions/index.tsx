@@ -9,6 +9,8 @@ type Props = {
   locale: string
 }
 
+const SUGGESTION_TERM_LENGTH_LIMIT = 35
+
 export default function SearchSuggestions({ term, locale }: Readonly<Props>) {
   const { putValue } = useSearch()
   const [data, setData] = useState<string[] | null>(null)
@@ -20,10 +22,11 @@ export default function SearchSuggestions({ term, locale }: Readonly<Props>) {
     setData(null)
   }
 
-  const validTermLength = term?.length > 0 && term?.length < 30
+  const isSuggestionTermEligible =
+    term.length > 0 && term.length < SUGGESTION_TERM_LENGTH_LIMIT
 
   const fetchSuggestions = useCallback(async () => {
-    if (locale && validTermLength && term !== prevTerm) {
+    if (locale && isSuggestionTermEligible && term !== prevTerm) {
       try {
         const response = await axios.get(
           `/api/suggestions/?locale=${locale}&term=${term}`
@@ -34,7 +37,7 @@ export default function SearchSuggestions({ term, locale }: Readonly<Props>) {
         console.error(error)
       }
     }
-  }, [locale, term, prevTerm])
+  }, [isSuggestionTermEligible, locale, prevTerm, term])
 
   useEffect(() => {
     const debounceFetch = setTimeout(() => {
@@ -55,7 +58,7 @@ export default function SearchSuggestions({ term, locale }: Readonly<Props>) {
 
   return (
     <div className={Styles.container}>
-      {validTermLength && data && (
+      {isSuggestionTermEligible && data && (
         <ul>
           {data.slice(0, 6).map((item: string) => (
             <li key={item}>

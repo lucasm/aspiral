@@ -3,40 +3,87 @@
   display: inline-block;
   width: 100%;
 }
-.customSelect select {
+
+.customSelect .trigger {
   position: relative;
-  cursor: pointer;
-  font-size: var(--font-size);
-  font-weight: 400;
-  height: var(--size-small);
-  padding: 0 1.5rem 0 3.25rem;
-  line-height: 1.2rem;
-  margin: 0;
-  border-radius: var(--radius);
-  border: none;
-  color: inherit;
-  background-repeat: no-repeat;
-  background-size: 1.45rem;
-  background-position: top 50% right 1rem;
-  background-color: var(--background-surface);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  width: 100%;
+  padding-left: 2.75rem;
+  text-align: left;
 }
-.customSelect select:hover,
-.customSelect select:focus {
+
+.customSelect .trigger:hover,
+.customSelect .trigger:focus-visible {
   opacity: 1;
 }
-.label {
-  font-size: 0;
-  display: none;
+
+.customSelect .trigger:focus-visible {
+  outline: 2px solid #00ffd1;
+  outline-offset: 2px;
 }
-.customSelect svg {
+
+.icon {
   position: absolute;
-  top: 0.65rem;
+  top: 50%;
   left: 1rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-black);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.icon svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.chevron svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.content {
+  z-index: 1100;
+  min-width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height);
+  overflow: hidden;
+  padding: 0.25rem;
+  border-radius: var(--radius);
+  background: var(--background-body);
   color: var(--color-text-black);
-  z-index: 1;
+  box-shadow: var(--shadow-2);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: var(--size-small);
+  padding: 0.375rem 2rem 0.375rem 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: var(--font-size);
+  cursor: pointer;
+  outline: none;
+}
+
+.item[data-highlighted] {
+  background: var(--background-surface);
+}
+
+.itemIndicator {
+  position: absolute;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.itemIndicator svg {
+  width: 1rem;
+  height: 1rem;
 }

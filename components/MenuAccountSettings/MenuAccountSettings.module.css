@@ -1,0 +1,30 @@
+.content {
+  z-index: 1000;
+  width: auto;
+  padding: 2rem;
+  border-radius: var(--radius-liquid-glass);
+  background: var(--background-body);
+  box-shadow: var(--shadow-2);
+  text-align: left;
+}
+
+.containerSettings {
+  min-width: 248px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.containerSettings h3 {
+  font-size: var(--font-size);
+}
+
+.setting {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.trigger[data-state='open'] figure {
+  background: var(--background-surface);
+}
