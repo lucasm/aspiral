@@ -9,9 +9,9 @@ import { ISearchCategory } from '@/interfaces/search'
 import { normalizeId } from '@/utils/formats'
 import { getCategoryIcon } from '@/utils/handleCategoryIcon'
 
-import styles from './MenuNavigation.module.css'
-import MenuTapMobile from '../MenuTapMobile'
 import MenuMaxPanel from '../MenuMaxPanel'
+import MenuTapMobile from '../MenuTapMobile'
+import styles from './MenuNavigation.module.css'
 
 const menuCategories = [
   { name: 'Home' },
@@ -24,9 +24,16 @@ const menuCategories = [
   { name: 'Sport' },
   {
     name: 'Culture',
-    children: ['Videos', 'Music', 'Image', 'Games', 'Books', 'Art'],
+    children: [
+      'Videos',
+      'Music',
+      'Image',
+      'Games',
+      'Books',
+      'Art',
+      'Celebrity',
+    ],
   },
-  { name: 'Celebrity' },
   { name: 'Science', children: ['Health', 'Academic'] },
   { name: 'Shopping' },
   { name: 'Local' },

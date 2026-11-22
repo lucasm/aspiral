@@ -5,8 +5,8 @@
   },
   "t": {
     "metadata": {
-      "title": "O melhor conteúdo da internet",
-      "description": "Descubra e busque conteúdos na Web, IA e fontes confiáveis. Você no controle, não os algoritmos."
+      "title": "Portal agregador de conteúdos",
+      "description": "Aspiral reúne conteúdos da Web, IA e fontes confiáveis para você descobrir e buscar. Você no controle, não os algoritmos."
     },
     "notFound": {
       "title": "Página não encontrada",
@@ -40,7 +40,7 @@
       "privacy": "Nível de privacidade"
     },
     "close": "Fechar",
-    "copyright": "Aspiral é um projeto de código aberto com curadoria colaborativa e redirecionamento para fontes originais. Marcas registradas e conteúdos pertencem aos seus respectivos proprietários. Idealizado por",
+    "copyright": "Aspiral é um portal de código aberto com editorial e curadoria colaborativos, que redireciona para fontes originais. Marcas registradas e conteúdos pertencem aos seus respectivos proprietários. Criado por",
     "about": "Quem Somos",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
@@ -2469,8 +2469,8 @@
     },
     {
       "name": "Code",
-      "name_translated": "Programação",
-      "name_seo": "Buscador de Código",
+      "name_translated": "Códgio",
+      "name_seo": "Código: Notícias de Programação e Busca de Código",
       "name_trends": "Repositórios em alta",
       "name_stories": "Novidades da comunidade",
       "active": true,

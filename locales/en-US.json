@@ -5,8 +5,8 @@
   },
   "t": {
     "metadata": {
-      "title": "The best of internet",
-      "description": "Aspiral gives the internet back to the people. Discover content from the Web, AI, and trusted sources. You’re in control—not algorithms."
+      "title": "Content aggregator portal",
+      "description": "Aspiral brings together content from the web, AI, and trusted sources so you can discover and search. You in control, not algorithms."
     },
     "notFound": {
       "title": "Page not found",
@@ -40,7 +40,7 @@
       "privacy": "Privacy"
     },
     "close": "Close",
-    "copyright": "Aspiral is an open source project with collaboratively curated editoral that redirects to original sources. All rights reserved to trademarks, media outlets, search engines and available artificial intelligence. Created by",
+    "copyright": "Aspiral is an open-source portal with collaborative editorial and curation that redirects to original sources. Trademarks and content belong to their respective owners. Created by",
     "about": "About",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -1247,7 +1247,7 @@
       "active": true,
       "name_trends": "Top repositories",
       "name_stories": "Community updates",
-      "description": "Search code on GitHub, Stack Overflow, Sourcegraph, CodePen, Glitch, and more.",
+      "description": "Search code on GitHub, Stack Overflow, Sourcegraph, CodePen, and more.",
       "data": [
         {
           "name": "GitHub",
@@ -1264,10 +1264,6 @@
         {
           "name": "CodePen",
           "action": "https://codepen.io/search/pens?q="
-        },
-        {
-          "name": "Glitch",
-          "action": "https://glitch.com/search?q="
         },
         {
           "name": "searchcode",

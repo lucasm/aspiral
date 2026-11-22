@@ -1,3 +1,12 @@
 .container button[role='combobox'] {
-  font-size: var(--font-size-small);
+  min-height: 2.75rem;
+  padding-left: 0.75rem;
+  border-radius: var(--radius-small);
+  background: var(--color-black-translucent);
+  font-size: var(--font-size);
+}
+
+.container button[role='combobox']:hover,
+.container button[role='combobox']:focus-visible {
+  background: var(--background-surface);
 }
