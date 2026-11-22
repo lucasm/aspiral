@@ -1,8 +1,8 @@
+import { MapPin } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 import Button from '@/components/Button'
-import { IconLocationGps } from '@/components/SvgIcons'
 import { useSearch } from '@/contexts/SearchContext'
 
 import Style from './ButtonGeolocation.module.css'
@@ -57,11 +57,9 @@ export default function ButtonGeolocation() {
     <>
       {!permissionLocation && (
         <div className={Style.container}>
-          <Button onClick={handleClick} color="black">
-            <>
-              <IconLocationGps />
-              {t('viewNearbyPlaces')}
-            </>
+          <Button onClick={handleClick} color="black" size="big">
+            <MapPin aria-hidden="true" />
+            {t('viewNearbyPlaces')}
           </Button>
 
           {locationError && <p>{locationError}</p>}

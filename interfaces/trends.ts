@@ -10,4 +10,7 @@ export interface ITrendsItem {
   url?: string
   image?: string
   rank?: number
+  photos?: { name: string }[]
+  rating?: number
+  userRatingCount?: number
 }
