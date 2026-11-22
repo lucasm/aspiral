@@ -1,16 +1,16 @@
 import { useLocale, useTranslations } from 'next-intl'
 
-import Style from './Footer.module.css'
+import Link from 'next/link'
 import {
-  IconGitHub,
-  IconX,
-  IconInstagram,
   IconBluesky,
   IconDiscord,
+  IconGitHub,
+  IconInstagram,
   IconLinkedIn,
+  IconX,
 } from '../SvgIcons'
 import SvgLogo from '../SvgLogo'
-import { Link } from '@/i18n/routing'
+import Style from './Footer.module.css'
 
 const Footer = () => {
   const year = new Date().getFullYear()
@@ -22,30 +22,27 @@ const Footer = () => {
       <div className={Style.container}>
         <ul>
           <li>
-            <Link href="/" locale={locale} title="Aspiral">
+            <Link href={`/${locale}`} title="Aspiral">
               <SvgLogo />
             </Link>
           </li>
           <li>
             <p>
-              <Link href="/" locale={locale}>
-                Aspiral
-              </Link>{' '}
-              © {year}
+              <Link href={`/${locale}`}>Aspiral</Link> © {year}
             </p>
           </li>
 
           <li>
-            <Link href="/about">{t('about')}</Link>
+            <Link href={`/${locale}/about`}>{t('about')}</Link>
           </li>
           <li>
-            <Link href="/contribute">{t('contribute')}</Link>
+            <Link href={`/${locale}/contribute`}>{t('contribute')}</Link>
           </li>
           <li>
-            <Link href="/privacy">{t('privacy')}</Link>
+            <Link href={`/${locale}/privacy`}>{t('privacy')}</Link>
           </li>
           <li>
-            <Link href="/terms">{t('terms')}</Link>
+            <Link href={`/${locale}/terms`}>{t('terms')}</Link>
           </li>
           <li>
             <p>
@@ -57,6 +54,7 @@ const Footer = () => {
                 {' '}
                 Lucas Maués
               </a>
+              .
             </p>
           </li>
 

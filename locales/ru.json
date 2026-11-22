@@ -8,14 +8,19 @@
       "title": "ваш умный помощник в мире поиска",
       "description": "Децентрализованный поиск, которому можно доверять. Быстро. Просто. Эффективно."
     },
+    "notFound": {
+      "title": "Страница не найдена",
+      "home": "На главную"
+    },
     "feedback": {
       "title": "Отправить отзыв",
       "url": "https://forms.gle/US69JvUT1qxYkiF58"
     },
     "welcome": {
       "goodMorning": "Доброе утро",
-      "goodEvening": "Добрый день",
-      "goodNight": "Добрый вечер"
+      "goodAfternoon": "Добрый день",
+      "goodEvening": "Добрый вечер",
+      "welcomeBack": "С возвращением"
     },
     "voice": {
       "voice": "Голосовой поиск",

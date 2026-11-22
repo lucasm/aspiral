@@ -1,32 +1,31 @@
-import { useTranslations } from 'next-intl'
+import { getLocale, getTranslations } from 'next-intl/server'
+import Link from 'next/link'
 
 import BlurBackground from '@/components/BlurBackground'
 import AppFooter from '@/components/Footer'
 import { IconMenu } from '@/components/SvgIcons'
 import SvgLogo from '@/components/SvgLogo'
 import WidgetDropdown from '@/components/WidgetDropdown'
-import { Link } from '@/i18n/routing'
-
 import Style from './WebsiteLayout.module.css'
 
-export default function WebsiteLayout({
+export default async function WebsiteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const t = useTranslations('t')
+  const [locale, t] = await Promise.all([getLocale(), getTranslations('t')])
 
   const renderDesktop = (): React.ReactElement => {
     return (
       <ul>
         <li className={Style.hideOnMobile}>
-          <Link href="/about">{t('about')}</Link>
+          <Link href={`/${locale}/about`}>{t('about')}</Link>
         </li>
         <li className={Style.hideOnMobile}>
-          <Link href="/contribute">{t('contribute')}</Link>
+          <Link href={`/${locale}/contribute`}>{t('contribute')}</Link>
         </li>
         <li>
-          <Link href="/">{t('openApp')} </Link>
+          <Link href={`/${locale}`}>{t('openApp')} </Link>
         </li>
       </ul>
     )
@@ -35,19 +34,19 @@ export default function WebsiteLayout({
     return (
       <ul className={Style.menuMobile}>
         <li>
-          <Link href="/about">{t('about')}</Link>
+          <Link href={`/${locale}/about`}>{t('about')}</Link>
         </li>
         <li className={Style.hideOnMobile}>
-          <Link href="/contribute">{t('contribute')}</Link>
+          <Link href={`/${locale}/contribute`}>{t('contribute')}</Link>
         </li>
       </ul>
     )
   }
 
-  return (
+  const page = (
     <div className={Style.page}>
       <header className={Style.header}>
-        <Link href={'/'} translate="no">
+        <Link href={`/${locale}`} translate="no">
           <div id="logo" className={Style.logo}>
             <SvgLogo />
             Aspiral
@@ -74,4 +73,6 @@ export default function WebsiteLayout({
       <AppFooter />
     </div>
   )
+
+  return page
 }

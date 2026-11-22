@@ -165,12 +165,12 @@
   align-items: center;
   justify-content: center;
   height: 2.25rem;
-  background: var(--color-black);
+  background: var(--color-text-black);
   border-radius: var(--radius-full);
   border: 0;
 }
 .searchButton svg {
-  color: var(--color-white);
+  color: var(--color-bg-white);
   width: 1.5rem;
   height: 1.5rem;
 }

@@ -1,10 +1,11 @@
-import './global.css'
 import type { Viewport } from 'next'
-import { Plus_Jakarta_Sans } from 'next/font/google'
-import { notFound } from 'next/navigation'
-import { NextIntlClientProvider, hasLocale } from 'next-intl'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { ThemeProvider } from 'next-themes'
+import { Plus_Jakarta_Sans } from 'next/font/google'
+import { cookies } from 'next/headers'
+import { notFound } from 'next/navigation'
+import './global.css'
 
 import ScriptsTelemetry from '@/components/ScriptsTelemetry'
 import { routing } from '@/i18n/routing'
@@ -94,22 +95,25 @@ export default async function Layout(props: {
     notFound()
   }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages()
+  const [messages, cookieStore] = await Promise.all([getMessages(), cookies()])
+  const savedTheme = cookieStore.get('theme')?.value
+  const initialTheme =
+    savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : undefined
 
   return (
     <html
       lang={locale}
       className={fontFamily.className}
       suppressHydrationWarning
+      data-theme={initialTheme}
       data-scroll-behavior="smooth">
       <body>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="system"
-          enableSystem={true}>
-          <NextIntlClientProvider messages={messages}>
+          enableSystem={true}
+          scriptProps={{ type: 'application/json' }}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>

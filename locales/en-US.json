@@ -5,8 +5,12 @@
   },
   "t": {
     "metadata": {
-      "title": "Aspiral — The trusted journalism feed",
-      "description": "Breaking news headlines from trusted journalism. Without algorithms. Be critical. Fight against misinformation."
+      "title": "The best of internet",
+      "description": "Aspiral gives the internet back to the people. Discover content from the Web, AI, and trusted sources. You’re in control—not algorithms."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "home": "Go to home"
     },
     "feedback": {
       "title": "Send Feedback",
@@ -14,8 +18,9 @@
     },
     "welcome": {
       "goodMorning": "Good morning",
-      "goodEvening": "Good afternoon",
-      "goodNight": "Good evening"
+      "goodAfternoon": "Good afternoon",
+      "goodEvening": "Good evening",
+      "welcomeBack": "Welcome back"
     },
     "voice": {
       "voice": "Voice search",
@@ -35,8 +40,8 @@
       "privacy": "Privacy"
     },
     "close": "Close",
-    "copyright": "Aspiral is a portal with the best international journalistic sources. It's an open-source project with collaborative editorial, created by",
-    "about": "About Aspiral",
+    "copyright": "Aspiral is an open source project with collaboratively curated editoral that redirects to original sources. All rights reserved to trademarks, media outlets, search engines and available artificial intelligence. Created by",
+    "about": "About",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "donate": "Donate",

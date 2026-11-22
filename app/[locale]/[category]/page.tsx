@@ -1,4 +1,5 @@
 import { Metadata } from 'next/types'
+import { notFound } from 'next/navigation'
 
 import Banner from '@/components/Banner'
 import Search from '@/components/Search'
@@ -50,6 +51,10 @@ export default async function Page(props: PageProps) {
     (category: ISearchCategory) =>
       category?.name.toLowerCase() === params.category.toLowerCase()
   )
+
+  if (!selectedCategory) {
+    notFound()
+  }
 
   return (
     <AppLayout locale={params.locale} category={selectedCategory}>

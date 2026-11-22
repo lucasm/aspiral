@@ -69,7 +69,7 @@ Make a donation to support Aspiral.
 
 Aspiral is built with privacy in mind and does not store user searches. It also displays content from external services without prior review and includes trademarks protected by intellectual property. Please respect the terms of use.
 
-[Privacy Policy](https://aspiral.app/privacy) | [Terms of Service](https://aspiral.app/terms) | Made by [Lucas Maués](https://lucasm.dev/?utm_source=aspiral) and community | MIT License
+[Privacy Policy](https://aspiral.app/privacy) | [Terms of Service](https://aspiral.app/terms) | Made by [Lucas Maués](https://lucasm.dev/?utm_source=aspiral) and community | AGPL-3.0-only License
 
 ## Aspiral is also listed on
 

@@ -5,7 +5,7 @@ import { CookiesConsentContextProvider } from '@/contexts/CookiesConsentContext'
 import { SearchContextProvider } from '@/contexts/SearchContext'
 import { ISearchCategory } from '@/interfaces/search'
 
-export default async function AppLayout({
+export default function AppLayout({
   children,
   locale,
   category,

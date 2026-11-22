@@ -8,14 +8,19 @@
       "title": "您的新一代智能搜索助手",
       "description": "Aspiral 是一个基于可信来源的网络内容与 AI 搜索门户。"
     },
+    "notFound": {
+      "title": "页面未找到",
+      "home": "返回首页"
+    },
     "feedback": {
       "title": "发送反馈",
       "url": "https://forms.gle/US69JvUT1qxYkiF58"
     },
     "welcome": {
       "goodMorning": "早上好",
-      "goodEvening": "下午好",
-      "goodNight": "晚安"
+      "goodAfternoon": "下午好",
+      "goodEvening": "晚上好",
+      "welcomeBack": "欢迎回来"
     },
     "voice": {
       "voice": "语音搜索",

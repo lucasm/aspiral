@@ -1,19 +1,23 @@
+import { getLocale, getTranslations } from 'next-intl/server'
+
+import ButtonStyle from '@/components/Button/Button.module.css'
 import WebsiteLayout from '@/layouts/WebsiteLayout'
 import Style from '@/layouts/WebsiteLayout/WebsiteLayout.module.css'
 
-export const metadata = {
-  title: 'Not Found',
-  description: 'Page not found.',
-}
+export default async function NotFound() {
+  const locale = await getLocale()
+  const t = await getTranslations('t.notFound')
 
-export default function NotFound() {
   return (
     <WebsiteLayout>
-      <section className="colors">
+      <section>
         <div className={Style.container}>
-          <div className={Style.pageTitle}>
-            <h1>Not Found</h1>
-          </div>
+          <h1>{t('title')}</h1>
+          <a
+            href={`/${locale}`}
+            className={`${ButtonStyle.button} ${ButtonStyle.black} ${ButtonStyle.medium}`}>
+            {t('home')}
+          </a>
         </div>
       </section>
     </WebsiteLayout>

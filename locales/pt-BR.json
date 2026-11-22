@@ -5,8 +5,12 @@
   },
   "t": {
     "metadata": {
-      "title": "O melhor da internet",
-      "description": "Aspiral devolve a internet para as pessoas. Descubra conteúdos na Web, IA e fontes confiáveis. Você no controle, não algoritmos."
+      "title": "O melhor conteúdo da internet",
+      "description": "Descubra e busque conteúdos na Web, IA e fontes confiáveis. Você no controle, não os algoritmos."
+    },
+    "notFound": {
+      "title": "Página não encontrada",
+      "home": "Voltar para o início"
     },
     "feedback": {
       "title": "Enviar feedback",
@@ -14,8 +18,9 @@
     },
     "welcome": {
       "goodMorning": "Bom dia",
-      "goodEvening": "Boa tarde",
-      "goodNight": "Boa noite"
+      "goodAfternoon": "Boa tarde",
+      "goodEvening": "Boa noite",
+      "welcomeBack": "Posso ajudar?"
     },
     "voice": {
       "voice": "Busca por voz",
@@ -27,7 +32,7 @@
       "history": "Histórico",
       "historyEmpty": "Nenhuma busca registrada ainda.",
       "clearHistory": "Limpar histórico",
-      "clearSources": "Limpar fontes de busca",
+      "clearSources": "Limpar preferências de fontes de busca",
       "source": "Fonte",
       "description": "Verifique detalhes da fonte selecionada.",
       "carbon": "Nível de emissão de carbono",
@@ -35,8 +40,8 @@
       "privacy": "Nível de privacidade"
     },
     "close": "Fechar",
-    "copyright": "Projeto de código aberto criado por",
-    "about": "Sobre o Aspiral",
+    "copyright": "Aspiral é um projeto de código aberto com curadoria colaborativa e redirecionamento para fontes originais. Marcas registradas, conteúdos e motores de busca e inteligência artificial pertencem aos seus respectivos proprietários. Idealizado por",
+    "about": "Quem Somos",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
     "donate": "Doar",
@@ -52,14 +57,14 @@
     "settings": "Conta",
     "theme": "Tema",
     "language": "Idioma",
-    "contribute": "Apoie o Aspiral",
+    "contribute": "Apoie",
     "trends": "Mais buscados",
     "stories": "Novidades",
     "categories": "Explore",
     "category": "Modo",
     "warnings": {
-      "cookies": "O aplicativo Aspiral usa cookies para melhorar a experiência. Leia nossa ",
-      "torrent": "Aviso: O protocolo BitTorrent (popularmente conhecido como Torrent) é legal e usado para compartilhamento de arquivos na internet. Contudo, baixar conteúdo protegido por direitos autorais sem a permissão do autor ou detentor dos direitos é crime no Brasil. Respeite a Lei de Direitos Autorais (Lei 9.610/98). Evite consequências legais. "
+      "cookies": "Aspiral usa cookies para melhorar a experiência de navegação. Leia nossa ",
+      "torrent": "Aviso: O protocolo BitTorrent (.torrent) é usado para compartilhamento de arquivos na internet. Contudo, obter conteúdo protegido por direitos autorais sem a permissão do autor ou detentor legal é crime no Brasil, segundo a Lei de Direitos Autorais (Lei 9.610/98). Evite consequências legais."
     }
   },
   "categories": [
@@ -770,7 +775,7 @@
     {
       "name": "Culture",
       "name_translated": "Cultura",
-      "name_seo": "Notícias sobre cultura e entretenimento",
+      "name_seo": "Cultura — Notícias sobre cultura e entretenimento",
       "active": true,
       "data": [
         {
@@ -1331,77 +1336,64 @@
           "name": "TMDB",
           "action": "https://www.themoviedb.org/search?query="
         },
-
         {
-          "name": "fasdecinemabr",
+          "name": "Ingresso.com",
           "videoYoutubeId": "UC5XG4yYM-_DQ-3HPRuam76Q"
         },
-
         {
-          "name": "AdoroCinemaOficial",
+          "name": "AdoroCinema",
           "videoYoutubeId": "UCsTpk_fb5aBd-tsMyeFAnYQ"
         },
-
         {
           "name": "Omelete",
           "videoYoutubeId": "UCaSAM5kna2KyX-uVLSGr8PQ"
         },
-
         {
           "name": "IsabelaBoscov",
           "videoYoutubeId": "UCC1QUJZGfqrSGwwYXvZhqig"
         },
-
         {
-          "name": "einerdtv",
+          "name": "Ei Nerd",
           "videoYoutubeId": "UCt_4wzTQqmcUvemNkeO0plA"
         },
-
         {
           "name": "Pipocando",
           "videoYoutubeId": "UCBFLqK7PAP9DQ3JpIrWFI7w"
         },
-
         {
-          "name": "gaveta",
+          "name": "Gaveta",
           "videoYoutubeId": "UCLYimOsgmIVf6KNjzXPkUwQ"
         },
-
         {
-          "name": "phsantos",
+          "name": "PH Santos",
           "videoYoutubeId": "UCjY_LBR_7-Ile0MAsbeJWBg"
         },
-
         {
-          "name": "CinemacomRapaduraoficial",
+          "name": "Cinema com Rapadura",
           "videoYoutubeId": "UCurl4RJpmlVmUJUiTWyGWAA"
         },
-
         {
-          "name": "tiagobelotti",
+          "name": "Meus 2 Centavos",
           "videoYoutubeId": "UCiSarBtpSphUrxtKDIW9c_A"
         },
-
         {
-          "name": "telecine",
+          "name": "Telecine",
           "videoYoutubeId": "UCo75UnlCEKjxOoNb4jx2LsA"
         },
-
         {
-          "name": "globoplay",
+          "name": "Globoplay",
           "videoYoutubeId": "UCDiJeuOsv766JDMAlpbSMHg"
         },
         {
-          "videoYoutubeId": "UCE8deXi-Eea3SuEV1Q1L4ug",
-          "name": "Super Oito"
+          "name": "Super Oito",
+          "videoYoutubeId": "UCE8deXi-Eea3SuEV1Q1L4ug"
         },
         {
-          "name": "EntrePlanosCinema",
+          "name": "Entre Planos",
           "videoYoutubeId": "UCZq_CYXRoRjKqidapMPujaQ"
         },
-
         {
-          "name": "carolmoreira",
+          "name": "Carol Moreira",
           "videoYoutubeId": "UC2oZNzo6o37qejkFQE2dIAA"
         }
       ]
@@ -2676,6 +2668,10 @@
           "action": "https://apps.apple.com/iphone/search?term="
         },
         {
+          "name": "AlternativeTo",
+          "action": "https://alternativeto.net/browse/search/?q="
+        },
+        {
           "name": "Microsoft Store",
           "action": "https://apps.microsoft.com/search?query="
         },
@@ -2718,10 +2714,6 @@
         {
           "name": "AppGallery",
           "action": "https://appgallery.huawei.com/#/search/"
-        },
-        {
-          "name": "AlternativeTo",
-          "action": "https://alternativeto.net/browse/search/?q="
         },
         {
           "name": "Product Hunt",

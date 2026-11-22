@@ -5,8 +5,8 @@ import {
   Cookie,
   Heart,
   MessageSquare,
-  Moon,
   Monitor,
+  Moon,
   Sun,
   User,
 } from 'lucide-react'
@@ -15,10 +15,10 @@ import { useTheme } from 'next-themes'
 import { useState } from 'react'
 
 import Button from '@/components/Button'
-import SelectLanguage from '@/components/SelectLanguage'
 import WidgetSearchSettings from '@/components/WidgetSearchSettings'
 import { useCookiesConsent } from '@/contexts/CookiesConsentContext'
 
+import SelectLanguage from '../SelectLanguage'
 import styles from './MenuAccountSettings.module.css'
 
 type Props = {
@@ -32,18 +32,24 @@ const MenuAccountSettings = ({ size = 'small' }: Readonly<Props>) => {
   const [isOpen, setIsOpen] = useState(false)
   const normalizedSize = size === 'big' ? 'large' : size
 
+  const saveTheme = (nextTheme: 'dark' | 'light' | 'system') => {
+    setTheme(nextTheme)
+    const secure = window.location.protocol === 'https:' ? '; Secure' : ''
+    document.cookie = `theme=${nextTheme}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`
+  }
+
   const handleTheme = () => {
     if (theme === 'light') {
-      setTheme('dark')
+      saveTheme('dark')
       return
     }
 
     if (theme === 'dark') {
-      setTheme('system')
+      saveTheme('system')
       return
     }
 
-    setTheme('light')
+    saveTheme('light')
   }
 
   const handleCookiesConsent = () => {
@@ -97,11 +103,6 @@ const MenuAccountSettings = ({ size = 'small' }: Readonly<Props>) => {
             </section>
 
             <section className={styles.setting}>
-              <h3>{t('language')}</h3>
-              <SelectLanguage />
-            </section>
-
-            <section className={styles.setting}>
               <h3>{t('contribute') ?? 'Contribute'}</h3>
 
               <Button
@@ -131,6 +132,11 @@ const MenuAccountSettings = ({ size = 'small' }: Readonly<Props>) => {
                 <Cookie aria-hidden="true" />
                 Cookies
               </Button>
+            </section>
+
+            <section className={styles.setting}>
+              <h3>{t('language')}</h3>
+              <SelectLanguage />
             </section>
           </div>
         </Popover.Content>

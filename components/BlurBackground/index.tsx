@@ -58,7 +58,7 @@ const BlurBackground = ({ category }: Readonly<Props>) => {
   return (
     <div
       className={`
-        fixed -top-4 -z-10
+        fixed -top-4 left-1/2 -translate-x-1/2 -z-10
 
         w-[90%] h-[60%] rounded-full blur-xl md:blur-2xl opacity-90
 
