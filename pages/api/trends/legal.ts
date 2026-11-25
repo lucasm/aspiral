@@ -24,11 +24,11 @@ export default async function endpoint(
             url: 'https://www.consumidor.gov.br/pages/principal/',
           },
           {
-            title: 'Meu Imposto de Renda - Receita Federal',
+            title: 'Imposto de Renda - Receita Federal',
             url: 'https://www.gov.br/pt-br/servicos/consultar-meu-imposto-de-renda',
           },
           {
-            title: 'Restituição de Imposto - Receita Federal',
+            title: 'Restituição - Receita Federal',
             url: 'https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda',
           },
           {
@@ -44,7 +44,7 @@ export default async function endpoint(
             url: 'https://www.gov.br/pt-br/servicos/consultar-e-solicitar-a-devolucao-de-valores-a-receber',
           },
           {
-            title: 'Chavex Pix e Contas  - Banco Central',
+            title: 'Registrato - Banco Central',
             url: 'https://www.bcb.gov.br/meubc/registrato',
           },
           {
@@ -52,7 +52,7 @@ export default async function endpoint(
             url: 'https://www.bcb.gov.br/meubc/relatorioemprestimofinanciamento',
           },
           {
-            title: 'Extrato do FGTS - Caixa',
+            title: 'Extrato FGTS - Caixa',
             url: 'https://www.caixa.gov.br/beneficios-trabalhador/fgts/extrato-fgts/Paginas/default.aspx',
           },
           {
@@ -64,11 +64,11 @@ export default async function endpoint(
             url: 'https://meususdigital.saude.gov.br/',
           },
           {
-            title: 'Apoiar ou Propor Ideais Legislativas no Senado Federal',
+            title: 'Apoiar ou Propor Ideais Legislativas - Senado Federal',
             url: 'https://www12.senado.leg.br/ecidadania/principalideia',
           },
           {
-            title: 'Opinar em Propostas Legislativas na Câmara dos Deputados',
+            title: 'Opinar em Propostas Legislativas - Câmara dos Deputados',
             url: 'https://www.camara.leg.br/enquetes/',
           },
           {

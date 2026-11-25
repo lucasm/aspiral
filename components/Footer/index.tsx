@@ -4,10 +4,12 @@ import Link from 'next/link'
 import {
   IconBluesky,
   IconDiscord,
+  IconFacebook,
   IconGitHub,
   IconInstagram,
   IconLinkedIn,
   IconX,
+  IconYoutube,
 } from '../SvgIcons'
 import SvgLogo from '../SvgLogo'
 import Style from './Footer.module.css'
@@ -77,6 +79,25 @@ const Footer = () => {
             </Link>
           </li>
           <li>
+            <a
+              href="https://facebook.com/aspiralapp"
+              target="_blank"
+              rel="noopener"
+              title="Facebook">
+              Facebook
+              <IconFacebook />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://youtube.com/aspiralapp"
+              target="_blank"
+              rel="noopener"
+              title="YouTube">
+              <IconYoutube />
+            </a>
+          </li>
+          <li>
             <Link
               href="https://bsky.app/profile/aspiral.app"
               target="_blank"
@@ -96,15 +117,6 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="https://linkedin.com/company/aspiralapp/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn">
-              <IconLinkedIn />
-            </Link>
-          </li>
-          <li>
-            <Link
               href="https://github.com/lucasm/aspiral"
               target="_blank"
               rel="noreferrer"
@@ -112,25 +124,16 @@ const Footer = () => {
               <IconGitHub />
             </Link>
           </li>
+          <li>
+            <Link
+              href="https://linkedin.com/company/aspiralapp/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn">
+              <IconLinkedIn />
+            </Link>
+          </li>
         </ul>
-
-        {/* <a
-            href="https://facebook.com/findtoapp"
-            target="_blank"
-            rel="noopener"
-            title="Facebook">
-            Facebook
-            <Facebook />
-          </a> */}
-
-        {/* <a
-          href="https://youtube.com/findtoapp"
-          target="_blank"
-          rel="noopener"
-          title="YouTube">
-          YouTube
-          <Youtube />
-        </a> */}
       </div>
     </footer>
   )

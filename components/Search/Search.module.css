@@ -27,7 +27,7 @@
   /* border: 1px solid var(--color-black-translucent); */
   box-shadow: var(--box-shadow);
   border-radius: 2rem;
-  background: var(--background-body);
+  background: var(--color-bg-white);
 }
 .searchRow {
   position: relative;

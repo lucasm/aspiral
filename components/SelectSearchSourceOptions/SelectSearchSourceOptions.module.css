@@ -1,7 +1,7 @@
 .container button[role='combobox'] {
   min-height: 2.75rem;
   padding-left: 0.75rem;
-  border-radius: var(--radius-small);
+  border-radius: 1rem;
   background: var(--color-black-translucent);
   font-size: var(--font-size);
 }

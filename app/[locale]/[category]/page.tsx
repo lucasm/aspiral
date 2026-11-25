@@ -1,7 +1,8 @@
-import { Metadata } from 'next/types'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next/types'
 
 import Banner from '@/components/Banner'
+import CardFeed from '@/components/CardFeed/CardFeed'
 import Search from '@/components/Search'
 import WidgetCategories from '@/components/WidgetCategories'
 import WidgetTrends from '@/components/WidgetTrends'
@@ -9,7 +10,6 @@ import WidgetVideoStories from '@/components/WidgetVideoStories'
 import { ISearchCategory } from '@/interfaces/search'
 import AppLayout from '@/layouts/AppLayout'
 import { getLocaleData } from '@/utils/getLocaleData'
-import CardFeed from '@/components/CardFeed/CardFeed'
 
 interface PageParams {
   locale: string
@@ -39,7 +39,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     `Search decentralized on ${categoryTitle} with the best sources available.`
 
   return {
-    title: categoryTitle,
+    title: {
+      absolute: `Aspiral ${categoryTitle}`,
+    },
     description: categoryDescription,
   }
 }
@@ -56,9 +58,15 @@ export default async function Page(props: PageProps) {
     notFound()
   }
 
+  const showTrendsFirst = ['home', 'web', 'ai', 'academic', 'social'].includes(
+    selectedCategory.name.toLowerCase()
+  )
+
   return (
     <AppLayout locale={params.locale} category={selectedCategory}>
       <Search selectedCategory={selectedCategory} />
+
+      {showTrendsFirst && <WidgetTrends title={selectedCategory.name_trends} />}
 
       {selectedCategory && (
         <WidgetVideoStories
@@ -69,7 +77,9 @@ export default async function Page(props: PageProps) {
 
       <CardFeed locale={params.locale} category={selectedCategory} />
 
-      <WidgetTrends title={selectedCategory?.name_trends} />
+      {!showTrendsFirst && (
+        <WidgetTrends title={selectedCategory.name_trends} />
+      )}
 
       <WidgetCategories />
 

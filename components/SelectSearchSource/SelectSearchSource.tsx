@@ -18,7 +18,7 @@ interface Props {
   onSelectionComplete: () => void
 }
 
-export default function SearchSourceSelector({
+export default function SelectSearchSource({
   sources,
   selectedSourceName,
   ariaLabel,
@@ -45,7 +45,11 @@ export default function SearchSourceSelector({
                 <SearchSourceIcon name={selectedSource.name} size={20} />
               </span>
             )}
-            <Select.Value>{selectedSource?.name}</Select.Value>
+            <Select.Value>
+              <span translate="no" className="notranslate">
+                {selectedSource?.name}
+              </span>
+            </Select.Value>
           </span>
           <Select.Icon className={styles.chevron}>
             <ChevronDown aria-hidden="true" />
@@ -80,7 +84,11 @@ export default function SearchSourceSelector({
                   <span className={styles.icon} aria-hidden="true">
                     <SearchSourceIcon name={source.name} size={20} />
                   </span>
-                  <Select.ItemText>{source.name}</Select.ItemText>
+                  <Select.ItemText>
+                    <span translate="no" className="notranslate">
+                      {source.name}
+                    </span>
+                  </Select.ItemText>
                 </Select.Item>
               ))}
             </Select.Viewport>

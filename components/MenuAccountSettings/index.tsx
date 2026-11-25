@@ -75,7 +75,7 @@ const MenuAccountSettings = ({ size = 'small' }: Readonly<Props>) => {
           className={styles.content}
           align="end"
           side="bottom"
-          sideOffset={0}>
+          sideOffset={16}>
           <div className={styles.containerSettings}>
             <section className={styles.setting}>
               <h3>{t('theme')}</h3>

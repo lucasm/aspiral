@@ -1,15 +1,15 @@
 'use client'
 
+import { ArrowUpRight, X } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowUpRight, X } from 'lucide-react'
 
 import Alert from '@/components/Alert'
-import SearchSourceOptions from '@/components/SearchSourceOptions'
 import SearchSuggestions from '@/components/SearchSuggestions'
-import SearchSourceSelector from '@/components/SearchSourceSelector'
 import SearchTitle from '@/components/SearchTitle'
 import SearchVoice from '@/components/SearchVoice'
+import SelectSearchSource from '@/components/SelectSearchSource/SelectSearchSource'
+import SelectSearchSourceOptions from '@/components/SelectSearchSourceOptions/SelectSearchSourceOptions'
 import Tooltip from '@/components/Tooltip'
 import { useSearch } from '@/contexts/SearchContext'
 import type { ISearchCategory, ISearchChild } from '@/interfaces/search'
@@ -20,8 +20,8 @@ import {
   saveSearchSourcePreference,
 } from '@/utils/searchSourcePreference'
 
-import Style from './Search.module.css'
 import BlurBackground from '../BlurBackground'
+import Style from './Search.module.css'
 
 interface Props {
   selectedCategory: ISearchCategory
@@ -150,7 +150,7 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
     }
   }
   const searchSourceSelector = (
-    <SearchSourceSelector
+    <SelectSearchSource
       sources={searchSources}
       selectedSourceName={searchSource?.name}
       ariaLabel={`${t('placeholder')} ${searchSource?.name ?? ''}`}
@@ -159,7 +159,7 @@ export default function Search({ selectedCategory }: Readonly<Props>) {
     />
   )
   const searchSourceOptions = searchSource?.child && (
-    <SearchSourceOptions
+    <SelectSearchSourceOptions
       key={normalizeId(searchSource.name)}
       options={searchSource.child.map((item: ISearchChild) => ({
         label: item.name,

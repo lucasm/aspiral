@@ -6,8 +6,8 @@ import BannerAnimateText from '@/components/BannerAnimateText'
 import Button from '@/components/Button'
 import CardsFeat from '@/components/CardsFeat'
 import SvgLogo from '@/components/SvgLogo'
-import WebsiteLayout from '@/layouts/WebsiteLayout'
 import { Link } from '@/i18n/routing'
+import WebsiteLayout from '@/layouts/WebsiteLayout'
 import Style from '@/layouts/WebsiteLayout/WebsiteLayout.module.css'
 
 export const metadata = {
@@ -87,13 +87,10 @@ export default function PageAbout() {
       <section>
         <div className={Style.container}>
           <div className={Style.actionContainer}>
-            <h2>Find something new for you</h2>
+            <h2>Aspiral is free for everyone</h2>
             <p>Search. Discover. For people.</p>
-            <Button url="/" color="black">
-              <>
-                <SvgLogo />
-                {t('openApp')}
-              </>
+            <Button url="/" color="black" size="big">
+              {t('openApp')}
             </Button>
           </div>
         </div>

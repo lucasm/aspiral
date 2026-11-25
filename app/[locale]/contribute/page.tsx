@@ -5,7 +5,7 @@ import WebsiteLayout from '@/layouts/WebsiteLayout'
 import Style from '@/layouts/WebsiteLayout/WebsiteLayout.module.css'
 
 export const metadata = {
-  title: 'Aspiral Community ',
+  title: 'Contribute ',
   description:
     'Support Aspiral open source project with a donation or by contributing to the code.',
 }

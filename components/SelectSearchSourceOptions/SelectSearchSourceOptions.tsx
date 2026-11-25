@@ -4,7 +4,7 @@ import Select from '@/components/Select'
 import { useSearch } from '@/contexts/SearchContext'
 import { normalizeId } from '@/utils/formats'
 
-import Style from './SearchOptions.module.css'
+import Style from './SelectSearchSourceOptions.module.css'
 
 interface Option {
   label: string
@@ -16,7 +16,7 @@ interface Props {
   label: string
 }
 
-const SearchSourceOptions = ({ options, label }: Readonly<Props>) => {
+const SelectSearchSourceOptions = ({ options, label }: Readonly<Props>) => {
   const { setSearchUrl, inputValue, inputFocus } = useSearch()
   const [selectedOption, setSelectedOption] = useState<string>(options[0].value)
   const shouldFocusInput = useRef(false)
@@ -57,4 +57,4 @@ const SearchSourceOptions = ({ options, label }: Readonly<Props>) => {
   )
 }
 
-export default SearchSourceOptions
+export default SelectSearchSourceOptions

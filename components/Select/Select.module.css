@@ -17,7 +17,6 @@
 }
 
 .customSelect .trigger:focus-visible {
-  outline: 2px solid #00ffd1;
   outline-offset: 2px;
 }
 

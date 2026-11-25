@@ -25,6 +25,6 @@
   flex-direction: column;
 }
 
-.trigger[data-state='open'] figure {
+.trigger[data-state='open'] {
   background: var(--background-surface);
 }

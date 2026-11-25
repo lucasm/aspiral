@@ -70,14 +70,14 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      images: '/share.png',
+      images: '/share.jpg',
       type: 'website',
     },
     twitter: {
       site: '@aspiralapp',
       creator: '@lucasmmau',
       card: 'summary_large_image',
-      images: '/share.png',
+      images: '/share.jpg',
     },
   }
 }

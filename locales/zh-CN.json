@@ -5,8 +5,8 @@
   },
   "t": {
     "metadata": {
-      "title": "内容聚合门户",
-      "description": "Aspiral 汇集网络内容、人工智能内容和可信来源，帮助您发现和搜索所需信息。由您掌控，而不是算法。"
+      "title": "网络与人工智能助手",
+      "description": "Aspiral 是一个开源助手，用于搜索和发现来自网络、人工智能及可信来源的内容，让人们掌控算法。"
     },
     "notFound": {
       "title": "页面未找到",
@@ -40,7 +40,7 @@
       "privacy": "隐私"
     },
     "close": "关闭",
-    "copyright": "Aspiral 是一个开源门户，采用协作式编辑与内容策选，并将用户引导至原始来源。商标和内容归各自所有者所有。创建者：",
+    "copyright": "Aspiral 是一个采用协作式策展的开源项目。商标和内容归各自所有者所有。创建者：",
     "about": "关于项目",
     "privacy": "隐私政策",
     "terms": "服务条款",
@@ -49,7 +49,7 @@
     "reject": "拒绝",
     "learnMore": "了解更多关于 Aspiral",
     "viewNearbyPlaces": "View nearby places",
-    "openApp": "打开 Aspiral",
+    "openApp": "打开应用",
     "placeholder": "搜索",
     "search": "Search",
     "clear": "Clear",
@@ -60,7 +60,7 @@
     "contribute": "贡献你的力量",
     "trends": "热门内容",
     "stories": "最新动态",
-    "categories": "模块",
+    "categories": "探索新事物",
     "category": "选定模式",
     "warnings": {
       "cookies": "Aspiral 仅使用 Cookie 来改进应用。不收集个人数据。"

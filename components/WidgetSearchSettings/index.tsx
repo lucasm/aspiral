@@ -9,11 +9,11 @@ import { clearSearchHistory, getSearchHistory } from '@/utils/searchHistory'
 import { clearSearchSourcePreferences } from '@/utils/searchSourcePreference'
 
 import {
-  History,
-  SearchExclamationPoint,
   Earth,
-  ShieldCheck,
+  History,
   LockKeyhole,
+  SearchExclamationPoint,
+  ShieldCheck,
   Trash2,
   X,
 } from 'lucide-react'
@@ -167,14 +167,14 @@ export default function WidgetSearchSettings() {
 
           {dialogView === 'history' && (
             <>
-              <Button size="small" color="gray" onClick={handleClearHistory}>
+              <Button size="small" color="black" onClick={handleClearHistory}>
                 <Trash2 aria-hidden="true" />
                 {t('widgetSearch.clearHistory')}
               </Button>
 
               <Button
                 size="small"
-                color="gray"
+                color="black"
                 onClick={handleClearSearchSources}>
                 <Trash2 aria-hidden="true" />
                 {t('widgetSearch.clearSources')}

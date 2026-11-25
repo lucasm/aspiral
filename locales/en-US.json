@@ -5,8 +5,8 @@
   },
   "t": {
     "metadata": {
-      "title": "Content aggregator portal",
-      "description": "Aspiral brings together content from the web, AI, and trusted sources so you can discover and search. You in control, not algorithms."
+      "title": "Assistant for the Web & AI",
+      "description": "Aspiral is an open source assistant to search and discover content across the Web, AI, and trusted sources. Putting people in control of algorithms."
     },
     "notFound": {
       "title": "Page not found",
@@ -40,7 +40,7 @@
       "privacy": "Privacy"
     },
     "close": "Close",
-    "copyright": "Aspiral is an open-source portal with collaborative editorial and curation that redirects to original sources. Trademarks and content belong to their respective owners. Created by",
+    "copyright": "Aspiral is an open source project with collaborative curation. Trademarks and content belong to their respective owners. Created by",
     "about": "About",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -49,7 +49,7 @@
     "reject": "Decline",
     "learnMore": "Meet Aspiral",
     "viewNearbyPlaces": "View nearby places",
-    "openApp": "Try Aspiral",
+    "openApp": "Open",
     "placeholder": "Search on",
     "search": "Search",
     "clear": "Clear",
@@ -60,12 +60,12 @@
     "contribute": "Contribute",
     "trends": "Trending",
     "stories": "Stories",
-    "categories": "Modes",
+    "categories": "Explore something new",
     "category": "Mode",
     "warnings": {
-      "cookies": "Aspiral uses cookies to ensure you get the best experience. Read our Privacy Policy.",
-      "torrent": "Warning: The Torrent is a legal protocol for peer-to-peer file sharing. However, downloading copyrighted content without authorization may violate laws such as the DMCA of the United States of America. Be aware that your ISP can track your activity and IP address. Using a VPN is recommended for privacy. Avoid legal consequences. Follow all applicable laws. Use this tool ethically. Make the world a better place.",
-      "darknet": "Warning: The Darknet is a legal network, mostly used by researchers, journalists, and individuals in regions under censorship or mass surveillance. Access it responsibly. Use a specialized browser, such as the Tor Browser, to open .onion protocol sites. Beware of scams and phishing. If you encounter illegal activities, please report them to the appropriate authorities immediately. Follow all applicable laws. Use this tool ethically. Make the world a better place."
+      "cookies": "Aspiral uses cookies to ensure you get the best experience. Read our ",
+      "torrent": "Warning: The BitTorrent protocol (.torrent) is a legal peer-to-peer file-sharing technology. However, downloading or distributing copyrighted content without authorization may violate laws such as the DMCA. Keep in mind that your ISP can monitor your activity and IP address. Respect copyright laws and use this tool responsibly and ethically.",
+      "darknet": "Warning: The Darknet is a legal network widely used by researchers, journalists, and people seeking privacy under censorship or surveillance. However, it also hosts unmoderated content, scams, and phishing. Always use a dedicated browser like Tor Browser for .onion links, avoid suspicious sites, and report any illegal activity to the appropriate authorities. Follow local laws and use this tool responsibly and ethically."
     },
     "confirm": "Ok",
     "edition": "Edition",

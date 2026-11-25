@@ -5,8 +5,8 @@
   },
   "t": {
     "metadata": {
-      "title": "Portal agregador de conteúdos",
-      "description": "Aspiral reúne conteúdos da Web, IA e fontes confiáveis para você descobrir e buscar. Você no controle, não os algoritmos."
+      "title": "Assistente para Web e IA",
+      "description": "Aspiral é um assistente para Web e IA, com curadoria humana e fontes confiáveis. Você no controle, sem algoritmos. Vamos descobrir algo novo hoje?"
     },
     "notFound": {
       "title": "Página não encontrada",
@@ -40,7 +40,7 @@
       "privacy": "Nível de privacidade"
     },
     "close": "Fechar",
-    "copyright": "Aspiral é um portal de código aberto com editorial e curadoria colaborativos, que redireciona para fontes originais. Marcas registradas e conteúdos pertencem aos seus respectivos proprietários. Criado por",
+    "copyright": "Aspiral é um projeto de código aberto com curadoria colaborativa. Marcas registradas e conteúdos pertencem aos seus proprietários. Criado por",
     "about": "Quem Somos",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
@@ -49,7 +49,7 @@
     "reject": "Rejeitar",
     "learnMore": "Saiba mais",
     "viewNearbyPlaces": "Ver locais próximos",
-    "openApp": "Abrir app",
+    "openApp": "Abrir App",
     "placeholder": "Buscar em",
     "search": "Busca",
     "clear": "Limpar",
@@ -60,10 +60,10 @@
     "contribute": "Apoie",
     "trends": "Mais buscados",
     "stories": "Novidades",
-    "categories": "Explore",
+    "categories": "Descubra algo novo",
     "category": "Modo",
     "warnings": {
-      "cookies": "Aspiral usa cookies para melhorar a experiência de navegação. Leia nossa ",
+      "cookies": "Aspiral utiliza cookies para melhorar a sua experiência de navegação. Leia nossa ",
       "torrent": "Aviso: O protocolo BitTorrent (.torrent) é usado para compartilhamento de arquivos na internet. Contudo, obter conteúdo protegido por direitos autorais sem a permissão do autor ou detentor legal é crime no Brasil, segundo a Lei de Direitos Autorais (Lei 9.610/98). Evite consequências legais."
     }
   },
@@ -99,20 +99,20 @@
           "action": "https://busca.uol.com.br/result.html?term="
         },
         {
-          "name": "Instagram",
-          "action": "https://www.instagram.com/explore/search/keyword/?q="
-        },
-        {
           "name": "X",
           "action": "https://x.com/search?src=typed_query&q="
         },
         {
-          "name": "Reddit",
-          "action": "https://www.reddit.com/search?q="
+          "name": "Instagram",
+          "action": "https://www.instagram.com/explore/search/keyword/?q="
         },
         {
           "name": "TikTok",
           "action": "https://www.tiktok.com/search?q="
+        },
+        {
+          "name": "Reddit",
+          "action": "https://www.reddit.com/search?q="
         },
         {
           "name": "Amazon",
@@ -144,7 +144,7 @@
     {
       "name": "News",
       "name_translated": "Notícias",
-      "name_seo": "Notícias de fontes confiáveis",
+      "name_seo": "Notícias — As últimas notícias do Brasil e mundo",
       "name_trends": "Fique por dentro",
       "name_stories": "Acontecendo agora",
       "active": true,
@@ -273,7 +273,7 @@
           "videoYoutubeId": "UCuiLR4p6wQ3xLEm15pEn1Xw"
         },
         {
-          "name": "Band",
+          "name": "Band Jornalismo",
           "videoYoutubeId": "UCoa-D_VfMkFrCYodrOC9-mA"
         },
         {
@@ -286,7 +286,7 @@
           "videoYoutubeId": "UC376n347Ob5Lwzq2WGzF1AA"
         },
         {
-          "name": "piauí",
+          "name": "Piauí",
           "rssUrl": "https://piaui.folha.uol.com.br/feed/"
         },
         {
@@ -326,13 +326,17 @@
         {
           "name": "Sensacionalista",
           "rssUrl": "https://pox.globo.com/rss/oglobo/blogs/humor/sensacionalista/"
+        },
+        {
+          "name": "GloboNews",
+          "videoYoutubeId": "UCp6RRaz93Pt2xYZoEye_rLA"
         }
       ]
     },
     {
       "name": "Business",
       "name_translated": "Economia",
-      "name_seo": "Notícias sobre economia e mercado",
+      "name_seo": "Economia — Notícias econômicas, do mercado e negócios",
       "name_trends": "Agora no mercado",
       "name_stories": "Finanças e economia",
       "active": true,
@@ -619,22 +623,22 @@
         },
         {
           "name": "TecMundo",
+          "action": "https://www.estadao.com.br/tecmundo/busca/?token={\"titulo\":\"",
+          "additional": "\",\"page\":\"1\",\"tagsFilter\":[],\"dateFilter\":[]}",
           "siteUrl": "https://www.tecmundo.com.br/",
           "rssUrl": "https://rss.tecmundo.com.br/feed",
           "videoYoutubeId": "UCdmGjywrxeOPfC7vDllmSgQ"
         },
         {
           "name": "IT Forum",
+          "action": "https://itforum.com.br/?s=",
           "rssUrl": "https://itforum.com.br/feed"
         },
         {
           "name": "Canaltech",
+          "action": "https://canaltech.com.br/busca/?q=",
           "rssUrl": "https://feeds2.feedburner.com/canaltechbr",
           "videoYoutubeId": "UC_bXJnsgwOqEPA_-6N6faKw"
-        },
-        {
-          "name": "Coisa de Nerd",
-          "videoYoutubeId": "UCuxfOdbKQy0tgGXcm9sjHiw"
         },
         {
           "name": "Loop Infinito",
@@ -1635,11 +1639,11 @@
     {
       "name": "Local",
       "name_translated": "Local",
-      "name_seo": "Buscar Locais e Viagens",
+      "name_seo": "Local — Buscador de Locais, Viagens e Eventos",
       "name_trends": "Locais por perto",
       "name_stories": "Explore novos locais",
       "active": true,
-      "description": "Encontre locais e serviços próximos: Google Maps, Apple Maps, Airbnb, Expedia, Tripadvisor e mais.",
+      "description": "Encontre locais, eventos e serviços próximos: Google Maps, Apple Maps, Bing Maps, Tripadvisor, Airbnb, Booking e mais.",
       "data": [
         {
           "name": "Google Maps",
@@ -1648,6 +1652,10 @@
         {
           "name": "Apple Maps",
           "action": "https://beta.maps.apple.com/?q="
+        },
+        {
+          "name": "Bing Maps",
+          "action": "https://www.bing.com/maps?q="
         },
         {
           "name": "Tripadvisor",
@@ -1698,10 +1706,6 @@
           "action": "https://www.yelp.com.br/search?find_desc="
         },
         {
-          "name": "Bing Maps",
-          "action": "https://www.bing.com/maps?q="
-        },
-        {
           "name": "Waze",
           "action": "https://www.waze.com/pt-BR/live-map/directions/"
         },
@@ -1738,7 +1742,7 @@
           "videoYoutubeId": "UC6xoasG-FY3P1YHo8_gBG9g"
         },
         {
-          "name": "loucoporviagens",
+          "name": "Louco por Viagens",
           "videoYoutubeId": "UCWfRNn9fRe5gMc3QaE3AXkA"
         },
         {
@@ -1754,7 +1758,7 @@
           "videoYoutubeId": "UC7D8rNR659bfUQ7_vOC4VdQ"
         },
         {
-          "name": "Travelands",
+          "name": "Travel and Share",
           "videoYoutubeId": "UCk6RUGsfWI-3kPrDlMUfvfQ"
         },
         {
@@ -1767,18 +1771,18 @@
           "videoYoutubeId": "UCWN45XZWIlZoUeohfqiyURA"
         },
         {
-          "name": "MasterCard Brasil",
-          "videoYoutubeId": "UCdnGnck8goh_AvWmOlZ6zDw"
+          "name": "Vaz Aonde",
+          "videoYoutubeId": "UCULwpDVKV_vOZQ4zRyoYgUA"
         }
       ]
     },
     {
       "name": "Job",
       "name_translated": "Emprego",
-      "name_seo": "Buscador de Vagas de Emprego",
+      "name_seo": "Emprego — Buscador de Vagas de Trabalho",
       "name_trends": "Vagas populares",
       "name_stories": "Mercado de trabalho",
-      "description": "Busque e encontre empregos no LinkedIn, Gupy, Infojobs, Catho e mais sites ao mesmo tempo.",
+      "description": "Busque e encontre vagas de emprego no LinkedIn, Gupy, Infojobs, Catho e mais sites ao mesmo tempo.",
       "active": true,
       "data": [
         {
@@ -1902,11 +1906,11 @@
     {
       "name": "Academic",
       "name_translated": "Acadêmico",
-      "name_seo": "Buscador Acadêmico",
+      "name_seo": "Acadêmico — Buscador de Artigos Científicos e Pesquisas",
       "name_trends": "Tópicos mais citados",
       "name_stories": "Novidades científicas",
       "active": true,
-      "description": "Pesquise artigos, livros e publicações acadêmicas em diversas fontes: Google Scholar, ResearchGate, SciELO, arXiv e mais.",
+      "description": "Busque artigos científicos, publicações acadêmicas e tendências em pesquisa em: Google Scholar, ResearchGate, SciELO, Periódicos CAPES e mais.",
       "data": [
         {
           "name": "Google Scholar",
@@ -2052,11 +2056,10 @@
         }
       ]
     },
-
     {
       "name": "Legal",
       "name_translated": "Jurídico",
-      "name_seo": "Buscador Jurídico",
+      "name_seo": "Jurídico — Buscador de Processos e Transparência",
       "name_trends": "Serviços públicos",
       "active": true,
       "description": "Pesquise informações jurídicas e legais: Jusbrasil, Escavador, Reclame Aqui, GOV.BR, Congresso Nacional e mais.",
@@ -2277,7 +2280,8 @@
           "child": [
             {
               "name": "TCU - Tribunal de Contas da União",
-              "action": "https://pesquisa.apps.tcu.gov.br/resultado/todas-bases/"
+              "action": "https://pesquisa.apps.tcu.gov.br/resultado/todas-bases/",
+              "videoYoutubeId": "UCC6ZtRDGzrqZFElbm_7T4TA"
             },
             {
               "name": "SP - TCE",
@@ -2302,7 +2306,8 @@
           "child": [
             {
               "name": "MPF - Ministério Público Federal",
-              "action": "https://www.mpf.mp.br/@@search?SearchableText="
+              "action": "https://www.mpf.mp.br/@@search?SearchableText=",
+              "videoYoutubeId": "UCeqgPoSSsEirBxgbYmZK-4g"
             },
             {
               "name": "MPU - Ministério Público da União",
@@ -2413,19 +2418,20 @@
             },
             {
               "name": "TST - Tribunal Superior do Trabalho",
-              "action": ""
+              "action": "https://www.tst.jus.br/resultado-de-busca?q=",
+              "videoYoutubeId": "UC6PpjezXs_gRswQtqlo0bHA"
             },
             {
               "name": "TSE - Tribunal Superior Eleitoral",
-              "action": ""
+              "action": "https://www.tse.jus.br/@@search-es?searchable_text="
             },
             {
               "name": "STM - Superior Tribunal Militar",
-              "action": "https://www.stm.jus.br/resultados-da-busca?q="
+              "action": "https://www.stm.jus.br/busca-geral?q="
             },
             {
               "name": "CNJ - Conselho Nacional de Justiça",
-              "action": ""
+              "action": "https://www.cnj.jus.br/?s="
             }
           ]
         },
@@ -2442,7 +2448,7 @@
           "videoYoutubeId": "UC8Mn10hXJRo6Azj1mi-Y5Wg"
         },
         {
-          "name": "Radio e TV Justiça",
+          "name": "Rádio e TV Justiça",
           "videoYoutubeId": "UC0qlZ5jxxueKNzUERcrllNw"
         },
         {
@@ -2454,23 +2460,19 @@
           "videoYoutubeId": "UCfO_b7sApXI23VnsljvSAJg"
         },
         {
-          "name": "TCU",
-          "videoYoutubeId": "UCC6ZtRDGzrqZFElbm_7T4TA"
+          "name": "Seus Direitos",
+          "videoYoutubeId": "UCTVvUamICqO7GaHEPDQ7DgQ"
         },
         {
-          "name": "MPF",
-          "videoYoutubeId": "UCeqgPoSSsEirBxgbYmZK-4g"
-        },
-        {
-          "name": "TST",
-          "videoYoutubeId": "UC6PpjezXs_gRswQtqlo0bHA"
+          "name": "Me Julga",
+          "videoYoutubeId": "UC40OzicC7y57ZtXtZHYylZQ"
         }
       ]
     },
     {
       "name": "Code",
-      "name_translated": "Códgio",
-      "name_seo": "Código: Notícias de Programação e Busca de Código",
+      "name_translated": "Código",
+      "name_seo": "Código — Buscador de Código e Notícias de Programação",
       "name_trends": "Repositórios em alta",
       "name_stories": "Novidades da comunidade",
       "active": true,
@@ -2653,7 +2655,7 @@
     {
       "name": "Apps",
       "name_translated": "Aplicativos",
-      "name_seo": "Buscador de Apps",
+      "name_seo": "Aplicativos — Buscador de Apps e Tendências",
       "name_trends": "Aplicativos populares",
       "name_stories": "Novidades em tecnologia",
       "active": true,
@@ -2748,6 +2750,14 @@
           "action": "https://www.nintendo.com/pt-br/search/#q="
         },
         {
+          "name": "Twitch",
+          "action": "https://www.twitch.tv/search?term="
+        },
+        {
+          "name": "Kick",
+          "action": "https://kick.com/search?query="
+        },
+        {
           "name": "Nuuvem",
           "action": "https://www.nuuvem.com/br-pt/catalog/page/1/search/",
           "videoYoutubeId": "UCxC9DfYjRlUr5BksdR-sK-g"
@@ -2827,27 +2837,23 @@
     {
       "name": "Social",
       "name_translated": "Social",
-      "name_seo": "Buscador Social",
+      "name_seo": "Social — Buscador e Tendências em Redes Sociais",
       "name_trends": "Últimas tendências",
       "name_stories": "Tá todo mundo falando",
       "active": true,
-      "description": "Busque em todas as redes sociais: X, TikTok, Instagram, Facebook, Reddit e mais.",
+      "description": "Busque em todas as redes sociais: X, TikTok, Instagram, YouTube, Facebook, Reddit, Threads e mais. Encontre tendências hoje.",
       "data": [
         {
           "name": "X",
           "action": "https://x.com/search?src=typed_query&q="
         },
         {
-          "name": "Reddit",
-          "action": "https://www.reddit.com/search?q="
+          "name": "Instagram",
+          "action": "https://www.instagram.com/explore/search/keyword/?q="
         },
         {
           "name": "YouTube",
           "action": "https://www.youtube.com/results?search_query="
-        },
-        {
-          "name": "Instagram",
-          "action": "https://www.instagram.com/explore/search/keyword/?q="
         },
         {
           "name": "TikTok",
@@ -2856,6 +2862,10 @@
         {
           "name": "Facebook",
           "action": "https://www.facebook.com/public?query="
+        },
+        {
+          "name": "Reddit",
+          "action": "https://www.reddit.com/search?q="
         },
         {
           "name": "LinkedIn",
@@ -2876,10 +2886,6 @@
         {
           "name": "Medium",
           "action": "https://medium.com/search?q="
-        },
-        {
-          "name": "Twitch",
-          "action": "https://www.twitch.tv/search?term="
         },
         {
           "name": "Discord",
@@ -2978,16 +2984,12 @@
     },
     {
       "name": "Torrent",
-      "name_seo": "Buscador de Torrent",
+      "name_seo": "Torrent — Buscador de Torrents",
       "active": true,
       "data": [
         {
           "name": "The Pirate Bay",
           "action": "https://thepiratebay.org/search.php?q="
-        },
-        {
-          "name": "Torrends",
-          "action": "https://search.torrends.to/"
         },
         {
           "name": "1337x",
@@ -2996,11 +2998,23 @@
         },
         {
           "name": "YTS",
-          "action": "https://yts.mx/browse-movies/"
+          "action": "https://en.yts.lu/search?q="
         },
         {
           "name": "RARBG",
           "action": "https://rargb.to/search/?search="
+        },
+        {
+          "name": "UIndex",
+          "action": "https://uindex.org/search.php?search="
+        },
+        {
+          "name": "EXT",
+          "action": "https://ext.to/browse/?q="
+        },
+        {
+          "name": "Torrends",
+          "action": "https://search.torrends.to/"
         },
         {
           "name": "Project Gutenberg",
@@ -3008,14 +3022,14 @@
         },
         {
           "name": "TorrentGalaxy",
-          "action": "https://torrentgalaxy.to/torrents.php?search="
+          "action": "https://en.torrentgalaxy-official.is/search?q="
         },
         {
           "name": "EZTV",
           "action": "https://eztv.re/search/"
         },
         {
-          "name": "TorrentDownloads",
+          "name": "Torrent Downloads",
           "action": "https://www.torrentdownloads.pro/search/?search="
         },
         {
@@ -3026,9 +3040,9 @@
     },
     {
       "name": "Web",
-      "name_seo": "Buscador Web",
+      "name_seo": "Web — Buscador e Tendências em Alta",
       "active": true,
-      "description": "Busque em vários mecanismos de busca: Google, Bing, DuckDuckGo, Brave, Yahoo e mais.",
+      "description": "Busque em vários motores de busca: Google, Bing, DuckDuckGo, Brave, Startpage, Yahoo e mais. Veja tendências de buscas em alta.",
       "data": [
         {
           "name": "Google",
@@ -3087,9 +3101,9 @@
     {
       "name": "AI",
       "name_translated": "IA",
-      "name_seo": "Buscador de IA",
+      "name_seo": "IA — Buscador em Inteligência Artificial",
       "active": true,
-      "description": "Busque em várias IAs ao mesmo tempo: ChatGPT, Gemini, Copilot,Claude, Grok, DeepSeek e mais.",
+      "description": "Busque em várias IAs ao mesmo tempo: ChatGPT, Gemini, Copilot,Claude, Grok, DeepSeek e mais. Veja tendências de buscas em alta.",
       "data": [
         {
           "name": "ChatGPT",
