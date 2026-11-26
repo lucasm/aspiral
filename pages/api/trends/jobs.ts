@@ -37,7 +37,7 @@ export default async function endpoint(
     return res.status(400).json({ message: 'Invalid "country" (country code' })
   }
 
-  const url = `https://api.adzuna.com/v1/api/jobs/${countryLowerCase}/categories?app_id=${process.env.NEXT_PUBLIC_API_ADZUNA_ID}&app_key=${process.env.NEXT_PUBLIC_API_ADZUNA}`
+  const url = `https://api.adzuna.com/v1/api/jobs/${countryLowerCase}/categories?app_id=${process.env.ADZUNA_APP_ID}&app_key=${process.env.ADZUNA_API_KEY}`
 
   try {
     const { data } = await axios.get(url)

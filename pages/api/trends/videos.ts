@@ -17,7 +17,7 @@ export default async function endpoint(
       .json({ message: 'Missing parameter: COUNTRY_CODE is required.' })
   }
 
-  const url = `https://api.themoviedb.org/3/trending/all/day?language=${country}&api_key=${process.env.NEXT_PUBLIC_API_TMDB}`
+  const url = `https://api.themoviedb.org/3/trending/all/day?language=${country}&api_key=${process.env.TMDB_API_KEY}`
 
   try {
     const { data } = await axios.get(url)

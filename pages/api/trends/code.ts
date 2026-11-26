@@ -8,9 +8,7 @@ export default async function endpoint(
   res: NextApiResponse
 ): Promise<void> {
   const url =
-    'https://api.github.com/search/repositories?q=stars:%3E10000&sort=stars&order=desc'
-
-  // https://api.gitterapp.com
+    'https://api.github.com/search/repositories?q=pushed:%3E2026-11-19+stars:%3E500&sort=stars&order=desc'
 
   try {
     const { data } = await axios.get(url)

@@ -59,7 +59,7 @@ export default function SearchTrends({ title }: Readonly<Props>) {
     }
 
     if (category === 'Social') {
-      return country ? `/api/trends/social/?country=${country}` : null
+      return country ? `/api/trends/social?country=${country}` : null
     }
 
     if (category === 'Videos') {
@@ -212,6 +212,27 @@ export default function SearchTrends({ title }: Readonly<Props>) {
                   flexDirection={flexDirection}
                 />
               )}
+              {category === 'Image' &&
+                item.author &&
+                item.authorUrl &&
+                item.photoUrl && (
+                  <p className={Styles.photoAttribution}>
+                    Photo by{' '}
+                    <a
+                      href={item.authorUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {item.author}
+                    </a>{' '}
+                    on{' '}
+                    <a
+                      href={item.photoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+                  </p>
+                )}
             </li>
           ))}
         </ul>

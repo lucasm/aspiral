@@ -6,6 +6,8 @@ export interface ITrends {
 }
 export interface ITrendsItem {
   author?: string
+  authorUrl?: string
+  photoUrl?: string
   title: string
   url?: string
   image?: string

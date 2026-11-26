@@ -1,4 +1,5 @@
 .feed {
+  font-family: var(--font-ibm-plex-sans), sans-serif;
   width: 100%;
   display: grid;
   align-items: start;

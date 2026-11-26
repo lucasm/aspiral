@@ -32,7 +32,7 @@
       "history": "Histórico",
       "historyEmpty": "Nenhuma busca registrada ainda.",
       "clearHistory": "Limpar histórico",
-      "clearSources": "Limpar preferências de fontes de busca",
+      "clearSources": "Limpar fontes preferidas",
       "source": "Fonte",
       "description": "Verifique detalhes da fonte selecionada.",
       "carbon": "Nível de emissão de carbono",
@@ -40,7 +40,7 @@
       "privacy": "Nível de privacidade"
     },
     "close": "Fechar",
-    "copyright": "Aspiral é um projeto de código aberto com curadoria colaborativa. Marcas registradas e conteúdos pertencem aos seus proprietários. Criado por",
+    "copyright": "Aspiral é um projeto de código aberto com curadoria colaborativa. Marcas registradas e conteúdos possuem direitos autorais. Criado por",
     "about": "Quem Somos",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
@@ -144,7 +144,7 @@
     {
       "name": "News",
       "name_translated": "Notícias",
-      "name_seo": "Notícias — As últimas notícias do Brasil e mundo",
+      "name_seo": "Notícias — As últimas notícias do Brasil e do mundo",
       "name_trends": "Fique por dentro",
       "name_stories": "Acontecendo agora",
       "active": true,
@@ -330,13 +330,21 @@
         {
           "name": "GloboNews",
           "videoYoutubeId": "UCp6RRaz93Pt2xYZoEye_rLA"
+        },
+        {
+          "name": "Brasil 247",
+          "rssUrl": "https://www.brasil247.com/feed/"
+        },
+        {
+          "name": "Istoé",
+          "rssUrl": "https://istoe.com.br/feed/"
         }
       ]
     },
     {
       "name": "Business",
       "name_translated": "Economia",
-      "name_seo": "Economia — Notícias econômicas, do mercado e negócios",
+      "name_seo": "Economia — Notícias do Mercado e Negócios",
       "name_trends": "Agora no mercado",
       "name_stories": "Finanças e economia",
       "active": true,
@@ -611,7 +619,7 @@
     {
       "name": "Tech",
       "name_translated": "Tecnologia",
-      "name_seo": "Notícias sobre tecnologia e inovação",
+      "name_seo": "Tecnologia — Notícias de Tecnologia e Inovação",
       "active": true,
       "data": [
         {
@@ -667,21 +675,17 @@
           "videoYoutubeId": "UCGV72aVJuWP0QPNGH4YgIww"
         },
         {
-          "name": "TechTudo",
-          "rssUrl": "https://pox.globo.com/rss/techtudo"
-        },
-        {
           "name": "MIT Technology Review",
           "rssUrl": "https://mittechreview.com.br/feed",
           "legacyFeed": true
         },
         {
-          "name": "Gizmodo",
-          "rssUrl": "https://www.gizmodo.com.br/feed"
+          "name": "Manual do Usuario",
+          "rssUrl": "https://manualdousuario.net/feed/"
         },
         {
-          "name": "TudoCelular",
-          "rssUrl": "https://www.tudocelular.com/feed/"
+          "name": "VC I.A.",
+          "rssUrl": "https://vcia.abril.com.br/ultimas-noticias/rss"
         },
         {
           "name": "Diolinux",
@@ -694,12 +698,16 @@
           "videoYoutubeId": "UC6ZImLwiIaVRYIGycqh5iLA"
         },
         {
-          "name": "VC I.A.",
-          "rssUrl": "https://vcia.abril.com.br/ultimas-noticias/rss"
+          "name": "TudoCelular",
+          "rssUrl": "https://www.tudocelular.com/feed/"
         },
         {
-          "name": "Manual do Usuario",
-          "rssUrl": "https://manualdousuario.net/feed/"
+          "name": "TechTudo",
+          "rssUrl": "https://www.techtudo.com.br/rss/techtudo"
+        },
+        {
+          "name": "Gizmodo",
+          "rssUrl": "https://www.gizmodo.com.br/feed"
         },
         {
           "name": "Xataka",
@@ -710,7 +718,7 @@
     {
       "name": "Sport",
       "name_translated": "Esporte",
-      "name_seo": "Notícias sobre esportes e campeonatos",
+      "name_seo": "Esporte — Notícias de Esportes e Campeonatos",
       "active": true,
       "data": [
         {
@@ -768,31 +776,100 @@
         },
         {
           "name": "Lance",
-          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+          "rssUrl": "https://news.google.com/rss/search?q=lance.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
         },
         {
           "name": "CazéTV",
           "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "name": "F1Mania",
+          "rssUrl": "https://www.f1mania.net/feed/"
+        },
+        {
+          "name": "Olympics",
+          "rssUrl": "https://news.google.com/rss/search?q=olympics.com/pt&hl=pt-BR&gl=BR&ceid=BR:pt-419"
         }
       ]
     },
     {
       "name": "Culture",
       "name_translated": "Cultura",
-      "name_seo": "Cultura — Notícias sobre cultura e entretenimento",
+      "name_seo": "Cultura — Notícias de Cultura e Entretenimento",
       "active": true,
       "data": [
         {
+          "name": "Ingresso",
           "videoYoutubeId": "UC5XG4yYM-_DQ-3HPRuam76Q",
-          "name": "Ingresso"
+          "action": "https://www.ingresso.com/busca/resultado?q="
         },
         {
-          "videoYoutubeId": "UCsTpk_fb5aBd-tsMyeFAnYQ",
-          "name": "Adoro Cinema"
+          "name": "Folha Ilustrada",
+          "rssUrl": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",
+          "legacyFeed": true
         },
         {
-          "videoYoutubeId": "UCaSAM5kna2KyX-uVLSGr8PQ",
-          "name": "Omelete"
+          "name": "TMDQA",
+          "rssUrl": "https://feeds.feedburner.com/tmdqafeed",
+          "videoYoutubeId": "UCEgzbINEJfsLivqFdLHKIrg"
+        },
+        {
+          "name": "Rolling Stone",
+          "rssUrl": "https://rollingstone.com.br/feed/",
+          "videoYoutubeId": "UCucs1ej22g6huKteRqO8mRA"
+        },
+        {
+          "name": "Omelete",
+          "action": "https://www.omelete.com.br/busca?q=",
+          "rssUrl": "https://news.google.com/rss/search?q=omelete.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+          "videoYoutubeId": "UCaSAM5kna2KyX-uVLSGr8PQ"
+        },
+        {
+          "name": "PAPELPOP",
+          "rssUrl": "https://www.papelpop.com/feed/",
+          "videoYoutubeId": "UC4_SpEjNNtz6sfG-6uXO09w"
+        },
+        {
+          "name": "POPline",
+          "rssUrl": "https://portalpopline.com.br/feed/"
+        },
+        {
+          "name": "Jovem Nerd",
+          "rssUrl": "https://api.jovemnerd.com.br/feed/",
+          "legacyFeed": true
+        },
+        {
+          "name": "AdoroCinema",
+          "rssUrl": "https://news.google.com/rss/search?q=adorocinema.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+          "videoYoutubeId": "UCsTpk_fb5aBd-tsMyeFAnYQ"
+        },
+        {
+          "name": "Tracklist",
+          "rssUrl": "https://tracklist.com.br/feed"
+        },
+        {
+          "name": "IGN",
+          "rssUrl": "https://br.ign.com/feed.xml"
+        },
+        {
+          "name": "O Vício",
+          "rssUrl": "https://ovicio.com.br/feed"
+        },
+        {
+          "name": "Plano Crítico",
+          "rssUrl": "https://www.planocritico.com/feed/"
+        },
+        {
+          "name": "Meio Amargo",
+          "rssUrl": "https://meioamargo.com/feed/"
+        },
+        {
+          "name": "Gama Revista",
+          "rssUrl": "https://gamarevista.uol.com.br/feed"
+        },
+        {
+          "name": "Quatro Cinco Um",
+          "rssUrl": "https://www.quatrocincoum.com.br/feed"
         },
         {
           "videoYoutubeId": "UCC1QUJZGfqrSGwwYXvZhqig",
@@ -857,78 +934,13 @@
         {
           "videoYoutubeId": "UCjbwfB_8hlg_GebxV46O_0A",
           "name": "Alta Fidelidade"
-        },
-        {
-          "name": "Folha Ilustrada",
-          "rssUrl": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",
-          "legacyFeed": true
-        },
-        {
-          "name": "TMDQA",
-          "rssUrl": "https://feeds.feedburner.com/tmdqafeed",
-          "videoYoutubeId": "UCEgzbINEJfsLivqFdLHKIrg"
-        },
-        {
-          "name": "Rolling Stone",
-          "rssUrl": "https://rollingstone.com.br/feed/",
-          "videoYoutubeId": "UCucs1ej22g6huKteRqO8mRA"
-        },
-        {
-          "name": "PAPELPOP",
-          "rssUrl": "https://www.papelpop.com/feed/",
-          "videoYoutubeId": "UC4_SpEjNNtz6sfG-6uXO09w"
-        },
-        {
-          "name": "POPline",
-          "rssUrl": "https://portalpopline.com.br/feed/"
-        },
-        {
-          "name": "Jovem Nerd",
-          "rssUrl": "https://api.jovemnerd.com.br/feed/",
-          "legacyFeed": true
-        },
-        {
-          "name": "AdoroCinema",
-          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:adorocinema.com&hl=pt-BR&gl=BR&ceid=BR:pt-419"
-        },
-        {
-          "name": "Omelete",
-          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:omelete.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
-        },
-        {
-          "name": "Tracklist",
-          "rssUrl": "https://tracklist.com.br/feed"
-        },
-        {
-          "name": "IGN",
-          "rssUrl": "https://br.ign.com/feed.xml"
-        },
-        {
-          "name": "O Vício",
-          "rssUrl": "https://ovicio.com.br/feed"
-        },
-        {
-          "name": "Plano Crítico",
-          "rssUrl": "https://www.planocritico.com/feed/"
-        },
-        {
-          "name": "Meio Amargo",
-          "rssUrl": "https://meioamargo.com/feed/"
-        },
-        {
-          "name": "Gama Revista",
-          "rssUrl": "https://gamarevista.uol.com.br/feed"
-        },
-        {
-          "name": "Quatro Cinco Um",
-          "rssUrl": "https://www.quatrocincoum.com.br/feed"
         }
       ]
     },
     {
       "name": "Celebrity",
       "name_translated": "Famosos",
-      "name_seo": "Notícias sobre famosos e celebridades",
+      "name_seo": "Famosos — Notícias de Famosos e Celebridades",
       "active": true,
       "data": [
         {
@@ -994,7 +1006,7 @@
     {
       "name": "Science",
       "name_translated": "Ciência",
-      "name_seo": "Notícias sobre ciência e pesquisa",
+      "name_seo": "Ciência — Notícias de Ciência e Pesquisa",
       "active": true,
       "data": [
         {
@@ -1123,8 +1135,8 @@
     {
       "name": "Health",
       "name_translated": "Saúde",
-      "name_seo": "Notícias sobre saúde e bem-estar",
-      "active": true,
+      "name_seo": "Saúde — Notícias de Saúde e Bem-Estar",
+      "active": false,
       "data": [
         {
           "name": "The Pirate Bay",
@@ -1238,7 +1250,7 @@
     {
       "name": "Videos",
       "name_translated": "Filmes e TV",
-      "name_seo": "Buscador de Vídeos",
+      "name_seo": "Filmes e TV — Buscador de Vídeos e Streming",
       "name_trends": "Assista algo popular",
       "name_stories": "Novidades na indústria",
       "active": true,
@@ -1405,7 +1417,7 @@
     {
       "name": "Music",
       "name_translated": "Música",
-      "name_seo": "Buscador de Música",
+      "name_seo": "Música — Buscador de Músicas, Podcasts e Rádio",
       "name_trends": "Ouça algo popular",
       "name_stories": "Na cena musical",
       "active": true,
@@ -1550,7 +1562,7 @@
     {
       "name": "Image",
       "name_translated": "Design",
-      "name_seo": "Buscador de Imagem",
+      "name_seo": "Design — Buscador de Imagens e Estoques",
       "active": true,
       "description": "Encontre imagens em diversas fontes: Pinterest, Unsplash, Canva, GIPHY, Pexels e mais.",
       "data": [
@@ -1563,20 +1575,24 @@
           "action": "https://unsplash.com/s/photos/"
         },
         {
-          "name": "Canva",
-          "action": "https://www.canva.com/s/designs?query="
+          "name": "Cosmos",
+          "action": "https://www.cosmos.so/search/elements/"
         },
         {
-          "name": "GIPHY",
-          "action": "https://giphy.com/search/"
+          "name": "Magnific",
+          "action": "https://www.magnific.com/search?query="
         },
         {
           "name": "Pexels",
           "action": "https://www.pexels.com/search/"
         },
         {
-          "name": "Magnific",
-          "action": "https://www.magnific.com/search?query="
+          "name": "Canva",
+          "action": "https://www.canva.com/s/designs?query="
+        },
+        {
+          "name": "GIPHY",
+          "action": "https://giphy.com/search/"
         },
         {
           "name": "Flickr",
@@ -1621,10 +1637,6 @@
         {
           "name": "DeviantArt",
           "action": "https://www.deviantart.com/?q="
-        },
-        {
-          "name": "Cosmos",
-          "action": "https://www.cosmos.so/search/elements/"
         },
         {
           "name": "Dribbble",
@@ -1680,10 +1692,6 @@
         {
           "name": "Skyscanner",
           "action": "https://www.skyscanner.com.br/transporte/passagens-aereas-de/"
-        },
-        {
-          "name": "Ingresso",
-          "action": "https://www.ingresso.com/busca/resultado?q="
         },
         {
           "name": "Sympla",
@@ -2726,7 +2734,7 @@
     {
       "name": "Games",
       "name_translated": "Jogos",
-      "name_seo": "Buscador de Games",
+      "name_seo": "Jogos - Buscador de Games e Tendências",
       "name_trends": "Tá todo mundo jogando",
       "active": true,
       "description": "Pesquise jogos nas plataformas: Steam, PlayStation, Xbox, Nintendo, Nuuvem, Epic e mais.",
@@ -2920,25 +2928,12 @@
           "action": "https://www.wattpad.com/search/"
         },
         {
-          "name": "Reddit",
-          "rssUrl": "https://www.reddit.com/r/MemesBR.rss",
-          "legacyFeed": true
-        },
-        {
-          "name": "Não Intendo",
-          "rssUrl": "https://feeds.feedburner.com/naointendo"
-        },
-        {
-          "name": "Ah Negão",
-          "rssUrl": "https://www.ahnegao.com.br/feed"
-        },
-        {
           "videoYoutubeId": "UChmOR1T5ZNnbRUba3lHRTOg",
-          "name": "republicacoisadenerd"
+          "name": "Republica Coisa de Nerd"
         },
         {
           "videoYoutubeId": "UCr3dtVIm3nL7I-Yjn2PxxIQ",
-          "name": "cortes-leonenilceoficial4101"
+          "name": "Leon e Nilce"
         },
         {
           "videoYoutubeId": "UCGNdGepMFVqPNgaCkNBdiLw",
@@ -2950,7 +2945,7 @@
         },
         {
           "videoYoutubeId": "UCEPRQVF6hxGGM9gi1ELaWHg",
-          "name": "tvglobo"
+          "name": "tv globo"
         },
         {
           "videoYoutubeId": "UCR3TOnFWDeAlT-Ho6LueDmg",
@@ -2958,7 +2953,7 @@
         },
         {
           "videoYoutubeId": "UCu_a6PAzp30Bn2mM-Ll09LA",
-          "name": "SigaRecord"
+          "name": "Record"
         },
         {
           "videoYoutubeId": "UCH2VZQBLFTOp6I_qgnBJCuQ",
@@ -2966,15 +2961,15 @@
         },
         {
           "videoYoutubeId": "UCV306eHqgo0LvBf3Mh36AHg",
-          "name": "felipeneto"
+          "name": "felipe neto"
         },
         {
           "videoYoutubeId": "UCj0O6W8yDuLg3iraAXKgCrQ",
-          "name": "vocesabia"
+          "name": "voce sabia"
         },
         {
           "videoYoutubeId": "UCIJwKI84CglciGM9aC0xcPQ",
-          "name": "meioemensagem"
+          "name": "meio e mensagem"
         },
         {
           "name": "Atila Iamarino",
@@ -3040,7 +3035,7 @@
     },
     {
       "name": "Web",
-      "name_seo": "Web — Buscador e Tendências em Alta",
+      "name_seo": "Web — Buscador e Tendências",
       "active": true,
       "description": "Busque em vários motores de busca: Google, Bing, DuckDuckGo, Brave, Startpage, Yahoo e mais. Veja tendências de buscas em alta.",
       "data": [
@@ -3174,7 +3169,7 @@
     {
       "name": "Fact-Check",
       "name_translated": "Checagem",
-      "name_seo": "Checagem de fatos",
+      "name_seo": "Checagem — Verificação de fatos e fake news",
       "active": true,
       "description": "Checagem de fatos das agências de notícias do Brasil. Combata as fake news, espalhe a verdade.",
       "data": [

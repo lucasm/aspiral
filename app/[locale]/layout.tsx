@@ -2,7 +2,7 @@ import type { Viewport } from 'next'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { ThemeProvider } from 'next-themes'
-import { Plus_Jakarta_Sans } from 'next/font/google'
+import { IBM_Plex_Sans, Plus_Jakarta_Sans } from 'next/font/google'
 import { cookies } from 'next/headers'
 import { notFound } from 'next/navigation'
 import './global.css'
@@ -14,6 +14,12 @@ const fontFamily = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-family',
+})
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['500'],
+  variable: '--font-ibm-plex-sans',
 })
 
 export const viewport: Viewport = {
@@ -103,7 +109,7 @@ export default async function Layout(props: {
   return (
     <html
       lang={locale}
-      className={fontFamily.className}
+      className={`${fontFamily.className} ${ibmPlexSans.variable}`}
       suppressHydrationWarning
       data-theme={initialTheme}
       data-scroll-behavior="smooth">

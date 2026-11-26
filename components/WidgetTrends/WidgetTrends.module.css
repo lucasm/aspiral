@@ -92,6 +92,16 @@
   outline-offset: 2px;
 }
 
+.photoAttribution {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.photoAttribution a {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
   .title h3 {
     font-size: var(--font-size);
