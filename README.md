@@ -4,21 +4,21 @@
 </a>
 <h1>Aspiral</h1>
 
-<a href="https://aspiral.app/?utm_source=github" target="_blank">aspiral.app</a>
+(Previously: Findto)
 
 </div>
 
 <p align="center">
-<a href="https://github.com/lucasm/findto/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/lucasm/findto?color=8eccff&logo=github&logoColor=white"></a>
-<a href="https://patreon.com/findto" target="_blank"><img alt="Support" src="https://img.shields.io/badge/patreon-donate-8eccff?logo=patreon&logoColor=white"></a>
-<a href="https://github.com/lucasm/findto/releases" target="_blank"><img alt="GitHub release" src="https://img.shields.io/github/v/release/lucasm/findto?label=version&color=8eccff&logo=github&logoColor=white"></a>
-<a href="https://github.com/lucasm/findto" target="_blank"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/lucasm/findto?label=size&color=8eccff&logo=github&logoColor=white"></a>
-<a href="https://github.com/lucasm/findto/wiki" target="_blank"><img alt="Translations" src="https://img.shields.io/badge/translations-4-8eccff?logo=json&logoColor=white"></a>
+<a href="https://github.com/lucasm/aspiral/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/lucasm/aspiral?color=ff7676&logo=github&logoColor=white"></a>
+<a href="https://patreon.com/aspiral" target="_blank"><img alt="Support" src="https://img.shields.io/badge/patreon-donate-ffe571?logo=patreon&logoColor=white"></a>
+<a href="https://github.com/lucasm/aspiral/releases" target="_blank"><img alt="GitHub release" src="https://img.shields.io/github/v/release/lucasm/aspiral?label=version&color=7dffad&logo=github&logoColor=white"></a>
+<a href="https://github.com/lucasm/aspiral" target="_blank"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/lucasm/aspiral?label=size&color=64b9ff&logo=github&logoColor=white"></a>
+<a href="https://github.com/lucasm/aspiral/wiki" target="_blank"><img alt="Translations" src="https://img.shields.io/badge/translations-4-dba2ff?logo=json&logoColor=white"></a>
 </p>
 
-## Search portal for Web content and AI
+## Open Source Assistant for the Web and AI
 
-Aspiral is an open source search portal for Web content and AI, based on trusted sources.
+Aspiral is an open source assistant to search and discover content across the Web, AI, and trusted sources.
 
 Search the same term across multiple sources. Discover trends, stories, and information. Find anything, anywhere. More productive searches than ever.
 
@@ -26,52 +26,60 @@ See also estimated levels of privacy, security and carbon footprint for each sea
 
 We’re building an accessible, universal, and transparent search experience. Where people stay in control of algorithms. For a healthier internet.
 
-[▶️ Try Aspiral now](https://aspiral.app/?utm_source=github)
+## Features
 
-## Top Features
+| Feature                   | Description                                                                              | Status |
+| ------------------------- | ---------------------------------------------------------------------------------------- | ------ |
+| **Decentralized Search**  | Search the same term on multiple sources                                                 | ✅     |
+| **News Feed**             | News feed from trusted sources by community                                              | ✅     |
+| **Videos Feed**           | Explore newest stories                                                                   | ✅     |
+| **Trends**                | Discover real-time trends nearby you                                                     | ✅     |
+| **Search Source Details** | View estimated level of Security, Privacy and Carbon Footprint of selected search source | ✅     |
+| **Search History**        | Last 10 searches                                                                         | ✅     |
+| **Autocomplete**          | Automatic suggestions of terms as you type                                               | ✅     |
+| **Voice Search**          | Search using voice anywhere                                                              | ✅     |
+| **Reverse Search**        | Search with an image or files on supported sources                                       | 🔜     |
+| **Internationalization**  | Local or international sources                                                           | ✅     |
+| **Accessibility**         | Dark theme, Balanced contrast, Keyboard navigation and Screen reader support             | ✅     |
 
-| Feature                  | Description                                                                              | Status |
-| ------------------------ | ---------------------------------------------------------------------------------------- | ------ |
-| **Decentralized Search** | Search the same term on multiple sources                                                 | ✅     |
-| **Protection**           | View estimated level of Security, Carbon footprint and Privacy of selected search source | ✅     |
-| **Trends**               | Discover real-time trends nearby you                                                     | ✅     |
-| **Stories**              | Explore newest stories                                                                   | ✅     |
-| **Autocomplete**         | Automatic suggestions of terms as you type                                               | ✅     |
-| **Voice Search**         | Search using voice anywhere                                                              | ✅     |
-| **Reverse Search**       | Search with an image or files on supported sources                                       | 🔜     |
-| **Internationalization** | Local sources / International sources                                                    | ✅     |
-| **Accessibility**        | Dark theme / Balanced contrast / Keyboard navigation / Screen reader support             | ✅     |
+## Sources criteria
 
-## Criteria
+All external content and search sources available on Aspiral are selected based on the following criteria:
 
-All search sources and external content available on Aspiral are selected based on the following criteria: 1. Service popularity; 2. Open access; 3. Compliance with copyright, accessibility, and privacy regulations.
+- 1. Service popularity;
+- 2. Open access;
+- 3. Compliance with copyright, accessibility, privacy and legal regulations.
 
-## Contributions
-
-Contributions are welcome!
-
-[Issues](https://github.com/lucasm/findto/issues) | [Discussions](https://github.com/lucasm/findto/discussions) |
-[Wiki](https://github.com/lucasm/findto/wiki) | [Backlog](https://github.com/lucasm/findto/projects)
-
-## Donations
+## 🤍 Donate
 
 Make a donation to support Aspiral.
 
-- [Patreon](https://patreon.com/findto)
-- [Ko-fi (one-time donation)](https://ko-fi.com/findto)
+- [Patreon](https://patreon.com/aspiral)
+- [Ko-fi (one-time donation)](https://ko-fi.com/aspiral)
 - [GitHub Sponsors](https://github.com/sponsors/lucasm)
 
 #### Supporters
 
-[Donate and get your name or banner here]
+/// Donate and get your name or banner here ///
 
-## Legal
+## Contributions
 
-Aspiral is built with privacy in mind and does not store user searches. It also displays content from external services without prior review and includes trademarks protected by intellectual property. Please respect the terms of use.
+All contributions are welcome! Please, check opened [Issues](https://github.com/lucasm/aspiral/issues) before send PRs.
 
-[Privacy Policy](https://aspiral.app/privacy) | [Terms of Service](https://aspiral.app/terms) | Made by [Lucas Maués](https://lucasm.dev/?utm_source=aspiral) and community | AGPL-3.0-only License
+## Licence, Privacy & Terms
 
-## Aspiral is also listed on
+Aspiral is designed on top of privacy and does not store user searches. It also displays content from external services without prior review and includes trademarks protected by intellectual property.
 
-- [Product Hunt](https://www.producthunt.com/) - SOON
-- [AlternativeTo](https://alternativeto.net/software/findto/about/)
+- [Privacy Policy](https://aspiral.app/privacy)
+- [Terms of Service](https://aspiral.app/terms)
+- [AGPL-3.0-only License]()
+- Created by [Lucas Maués](https://lucasmaues.com/?utm_source=aspiral)
+
+## Available on
+
+- [Aspiral.app](https://aspiral.app)
+- [AlternativeTo](https://alternativeto.net/software/aspiral/about/)
+- Product Hunt - SOON
+- App Store - SOON
+- Google Play Store - SOON
+- Windows Store - SOON
