@@ -28,27 +28,27 @@ We’re building an accessible, universal, and transparent search experience. Wh
 
 ## Features
 
-| Feature                   | Description                                                                              | Status |
-| ------------------------- | ---------------------------------------------------------------------------------------- | ------ |
-| **Decentralized Search**  | Search the same term on multiple sources                                                 | ✅     |
-| **News Feed**             | News feed from trusted sources by community                                              | ✅     |
-| **Videos Feed**           | Explore newest stories                                                                   | ✅     |
-| **Trends**                | Discover real-time trends nearby you                                                     | ✅     |
-| **Search Source Details** | View estimated level of Security, Privacy and Carbon Footprint of selected search source | ✅     |
-| **Search History**        | Last 10 searches                                                                         | ✅     |
-| **Autocomplete**          | Automatic suggestions of terms as you type                                               | ✅     |
-| **Voice Search**          | Search using voice anywhere                                                              | ✅     |
-| **Reverse Search**        | Search with an image or files on supported sources                                       | 🔜     |
-| **Internationalization**  | Local or international sources                                                           | ✅     |
-| **Accessibility**         | Dark theme, Balanced contrast, Keyboard navigation and Screen reader support             | ✅     |
+| Feature                   | Description                                                                               | Status |
+| ------------------------- | ----------------------------------------------------------------------------------------- | ------ |
+| **Decentralized Search**  | Search the same term on multiple sources.                                                 | ✅     |
+| **News Feed**             | News feed from trusted sources, by community.                                             | ✅     |
+| **Videos Feed**           | Explore newest stories.                                                                   | ✅     |
+| **Trends**                | Discover real-time trends nearby you.                                                     | ✅     |
+| **Search Source Details** | View estimated level of security, privacy and carbon footprint of selected search source. | ✅     |
+| **Search History**        | Last 10 searches locally stored.                                                          | ✅     |
+| **Autocomplete**          | Automatic suggestions of terms as you type.                                               | ✅     |
+| **Voice Search**          | Search using voice anywhere.                                                              | ✅     |
+| **Reverse Search**        | Search with an image or files on supported sources.                                       | 🔜     |
+| **Internationalization**  | Local or international sources.                                                           | ✅     |
+| **Accessibility**         | Dark theme, balanced contrast, keyboard navigation and screen reader support.             | ✅     |
 
-## Sources criteria
+## Sources by community
 
-All external content and search sources available on Aspiral are selected based on the following criteria:
+All content and search sources (locales) available on Aspiral are selected based on the following criteria:
 
 - 1. Service popularity;
 - 2. Open access;
-- 3. Compliance with copyright, accessibility, privacy and legal regulations.
+- 3. Compliance with democracy, freedom of expression, copyright, accessibility, privacy and legal regulations.
 
 ## 🤍 Donate
 
@@ -60,11 +60,26 @@ Make a donation to support Aspiral.
 
 #### Supporters
 
-/// Donate and get your name or banner here ///
+🪧 Donate and get your name or banner here
 
 ## Contributions
 
 All contributions are welcome! Please, check opened [Issues](https://github.com/lucasm/aspiral/issues) before send PRs.
+
+## Special Thanks
+
+- Vercel, for host
+- Cloudflare, for domain and protection
+- Google Cloud, for videos and maps
+- Microsoft Azure and Bing Search, for autocomplete
+- Adzuna, for jobs
+- BestBuy, for trending products
+- Unsplash, for imagens
+- TMDB, for movies and tv shows
+- Apple, for music and apps
+- GitHub, for repositories
+- Steam, for
+- X, for trends
 
 ## Licence, Privacy & Terms
 
