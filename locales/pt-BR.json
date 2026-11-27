@@ -508,10 +508,6 @@
           "rssUrl": "https://pox.globo.com/rss/pipelinevalor/"
         },
         {
-          "name": "B9",
-          "rssUrl": "https://www.b9.com.br/feed/"
-        },
-        {
           "name": "Banco Central",
           "videoYoutubeId": "UC_Y9Mf8o6gGAAw8eBrn3SOw",
           "child": [
@@ -814,6 +810,11 @@
           "videoYoutubeId": "UCEgzbINEJfsLivqFdLHKIrg"
         },
         {
+          "name": "B9",
+          "rssUrl": "https://www.b9.com.br/feed/",
+          "videoYoutubeId": "UCGNdGepMFVqPNgaCkNBdiLw"
+        },
+        {
           "name": "Rolling Stone",
           "rssUrl": "https://rollingstone.com.br/feed/",
           "videoYoutubeId": "UCucs1ej22g6huKteRqO8mRA"
@@ -834,18 +835,19 @@
           "rssUrl": "https://portalpopline.com.br/feed/"
         },
         {
-          "name": "Jovem Nerd",
-          "rssUrl": "https://api.jovemnerd.com.br/feed/",
-          "legacyFeed": true
+          "name": "Tracklist",
+          "rssUrl": "https://tracklist.com.br/feed"
         },
+
         {
           "name": "AdoroCinema",
           "rssUrl": "https://news.google.com/rss/search?q=adorocinema.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
           "videoYoutubeId": "UCsTpk_fb5aBd-tsMyeFAnYQ"
         },
         {
-          "name": "Tracklist",
-          "rssUrl": "https://tracklist.com.br/feed"
+          "name": "Jovem Nerd",
+          "rssUrl": "https://api.jovemnerd.com.br/feed/",
+          "legacyFeed": true
         },
         {
           "name": "IGN",
@@ -916,90 +918,12 @@
           "name": "Carol Moreira"
         },
         {
-          "videoYoutubeId": "UCtwBWu3V9hTTlUIQ7ot9Xlg",
-          "name": "Spotify"
-        },
-        {
           "videoYoutubeId": "UCVpQ-xuvW2_wL9_usxWw2UQ",
           "name": "Ora Thiago"
         },
         {
           "videoYoutubeId": "UCIzAIM-zatIDHErC0Z23hbQ",
           "name": "Multishow"
-        },
-        {
-          "videoYoutubeId": "UCnC9rXILh2O6KOaCKnCoqEQ",
-          "name": "Pipocando Música"
-        },
-        {
-          "videoYoutubeId": "UCjbwfB_8hlg_GebxV46O_0A",
-          "name": "Alta Fidelidade"
-        }
-      ]
-    },
-    {
-      "name": "Celebrity",
-      "name_translated": "Famosos",
-      "name_seo": "Famosos — Notícias de Famosos e Celebridades",
-      "active": true,
-      "data": [
-        {
-          "name": "Gshow",
-          "rssUrl": "https://pox.globo.com/rss/gshow/"
-        },
-        {
-          "name": "UOL Splash",
-          "rssUrl": "https://rss.uol.com.br/feed/entretenimento.xml",
-          "legacyFeed": true
-        },
-        {
-          "name": "iG",
-          "rssUrl": "https://gente.ig.com.br/rss"
-        },
-        {
-          "name": "Purepeople",
-          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:purepeople.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
-        },
-        {
-          "name": "O Fuxico",
-          "rssUrl": "https://news.google.com/rss/search?q=when:24h+allinurl:ofuxico.com.br&hl=pt-BR&gl=BR"
-        },
-        {
-          "name": "Revista Quem",
-          "rssUrl": "https://revistaquem.globo.com/rss/quem"
-        },
-        {
-          "name": "Contigo",
-          "rssUrl": "https://contigo.com.br/feed"
-        },
-        {
-          "name": "CARAS",
-          "rssUrl": "https://caras.com.br/feed"
-        },
-
-        {
-          "name": "Portal Leodias",
-          "rssUrl": "https://portalleodias.com/feed"
-        },
-        {
-          "name": "Hugo Gloss",
-          "rssUrl": "https://hugogloss.uol.com.br/feed/"
-        },
-        {
-          "name": "Notícias da TV",
-          "rssUrl": "https://noticiasdatv.uol.com.br/feed"
-        },
-        {
-          "name": "BCharts",
-          "rssUrl": "https://bcharts.com.br/latest.rss"
-        },
-        {
-          "name": "GNT",
-          "videoYoutubeId": "UC0f866RMRdL5mSVnipiOHxg"
-        },
-        {
-          "name": "PAPELPOP",
-          "videoYoutubeId": "UC4_SpEjNNtz6sfG-6uXO09w"
         }
       ]
     },
@@ -1042,21 +966,22 @@
           "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn9Erjy00mpnWeLnRqhsA1g"
         },
         {
+          "name": "UOL VivaBem",
+          "rssUrl": "https://news.google.com/rss/search?q=uol.com.br/vivabem&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+        },
+        {
+          "name": "Ciência Hoje",
+          "rssUrl": "https://news.google.com/rss/search?q=cienciahoje.org.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+        },
+        {
           "name": "MCTI",
           "rssUrl": "https://www.gov.br/mcti/rss.xml",
           "videoYoutubeId": "UCjuL_xtE7NpxtkWbYc89DFA"
         },
         {
-          "name": "Ciência Hoje",
-          "rssUrl": "https://cienciahoje.org.br/feed/"
-        },
-        {
-          "name": "UOL VivaBem",
-          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:uol.com.br/vivabem&hl=pt-BR&gl=BR"
-        },
-        {
           "name": "CNPq",
-          "videoYoutubeId": "UCXs3LHxIwbfr5_HrySsGXTA"
+          "videoYoutubeId": "UCXs3LHxIwbfr5_HrySsGXTA",
+          "rssUrl": "https://news.google.com/rss/search?q=gov.br/cnpq&hl=pt-BR&gl=BR&ceid=BR:pt-419"
         },
         {
           "name": "CAPES",
@@ -1129,6 +1054,72 @@
         {
           "name": "Antofágica",
           "videoYoutubeId": "UCV_Oh99yIfe7GqGN_HZ0OVQ"
+        }
+      ]
+    },
+    {
+      "name": "Celebrity",
+      "name_translated": "Famosos",
+      "name_seo": "Famosos — Notícias de Famosos e Celebridades",
+      "active": true,
+      "data": [
+        {
+          "name": "Gshow",
+          "rssUrl": "https://pox.globo.com/rss/gshow/"
+        },
+        {
+          "name": "UOL Splash",
+          "rssUrl": "https://rss.uol.com.br/feed/entretenimento.xml",
+          "legacyFeed": true
+        },
+        {
+          "name": "iG",
+          "rssUrl": "https://gente.ig.com.br/rss"
+        },
+        {
+          "name": "Purepeople",
+          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:purepeople.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+        },
+        {
+          "name": "O Fuxico",
+          "rssUrl": "https://news.google.com/rss/search?q=when:24h+allinurl:ofuxico.com.br&hl=pt-BR&gl=BR"
+        },
+        {
+          "name": "Revista Quem",
+          "rssUrl": "https://revistaquem.globo.com/rss/quem"
+        },
+        {
+          "name": "Contigo",
+          "rssUrl": "https://contigo.com.br/feed"
+        },
+        {
+          "name": "CARAS",
+          "rssUrl": "https://caras.com.br/feed"
+        },
+
+        {
+          "name": "Portal Leodias",
+          "rssUrl": "https://portalleodias.com/feed"
+        },
+        {
+          "name": "Hugo Gloss",
+          "rssUrl": "https://hugogloss.uol.com.br/feed/"
+        },
+        {
+          "name": "Notícias da TV",
+          "rssUrl": "https://noticiasdatv.uol.com.br/feed"
+        },
+        {
+          "name": "BCharts",
+          "rssUrl": "https://bcharts.com.br/latest.rss"
+        },
+        {
+          "name": "GNT",
+          "videoYoutubeId": "UC0f866RMRdL5mSVnipiOHxg"
+        },
+        {
+          "name": "PAPELPOP",
+          "videoYoutubeId": "UC4_SpEjNNtz6sfG-6uXO09w"
         }
       ]
     },
@@ -1781,6 +1772,117 @@
         {
           "name": "Vaz Aonde",
           "videoYoutubeId": "UCULwpDVKV_vOZQ4zRyoYgUA"
+        }
+      ]
+    },
+    {
+      "name": "Games",
+      "name_translated": "Jogos",
+      "name_seo": "Jogos - Buscador de Games e Tendências",
+      "name_trends": "Tá todo mundo jogando",
+      "active": true,
+      "description": "Pesquise jogos nas plataformas: Steam, PlayStation, Xbox, Nintendo, Nuuvem, Epic e mais.",
+      "data": [
+        {
+          "name": "Steam",
+          "action": "https://store.steampowered.com/search/?term="
+        },
+        {
+          "name": "PlayStation",
+          "action": "https://store.playstation.com/pt-br/search/",
+          "videoYoutubeId": "UC6i4mzH3OPrZV0p64zoz-Ww"
+        },
+        {
+          "name": "Xbox",
+          "action": "https://www.xbox.com/pt-br/Search/Results?q=",
+          "videoYoutubeId": "UCi9Uzh14BHqkN7UO_2lbrMw"
+        },
+        {
+          "name": "Nintendo",
+          "action": "https://www.nintendo.com/pt-br/search/#q="
+        },
+        {
+          "name": "Twitch",
+          "action": "https://www.twitch.tv/search?term="
+        },
+        {
+          "name": "Kick",
+          "action": "https://kick.com/search?query="
+        },
+        {
+          "name": "Nuuvem",
+          "action": "https://www.nuuvem.com/br-pt/catalog/page/1/search/",
+          "videoYoutubeId": "UCxC9DfYjRlUr5BksdR-sK-g"
+        },
+        {
+          "name": "Microsoft Store",
+          "action": "https://apps.microsoft.com/search?hl=pt-br&gl=BR&department=Games&query="
+        },
+        {
+          "name": "GOG",
+          "action": "https://www.gog.com/games?search="
+        },
+        {
+          "name": "IGN",
+          "action": "https://br.ign.com/se/?q=",
+          "rssUrl": "https://br.ign.com/feed.xml"
+        },
+        {
+          "name": "RAWG",
+          "action": "https://rawg.io/search?query="
+        },
+        {
+          "name": "IGDB",
+          "action": "https://www.igdb.com/search?utf8=%E2%9C%93&q="
+        },
+        {
+          "name": "Itch",
+          "action": "https://itch.io/search?q="
+        },
+        {
+          "name": "Game Jolt",
+          "action": "https://gamejolt.com/search?q="
+        },
+        {
+          "name": "EA",
+          "action": "https://www.origin.com/bra/pt-br/store/search?q="
+        },
+        {
+          "name": "Ubisoft",
+          "action": "https://www.ubisoft.com/pt-br/search?gss-q="
+        },
+        {
+          "name": "Epic Games",
+          "action": "https://store.epicgames.com/pt-BR/browse?q="
+        },
+        {
+          "name": "Humble Bundle",
+          "action": "https://www.humblebundle.com/store/search?search="
+        },
+        {
+          "name": "Voxl",
+          "rssUrl": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/voxel/",
+          "videoYoutubeId": "UCupqHNRTEHjNtq9X8djWyaQ"
+        },
+        {
+          "name": "Adrenaline",
+          "rssUrl": "https://www.adrenaline.com.br/feed/"
+        },
+        {
+          "name": "Colonia Contra Ataca",
+          "videoYoutubeId": "UCYvdGhl2G-M5ojWW1UzODJg"
+        },
+        {
+          "name": "Cogumelando",
+          "videoYoutubeId": "UCXso4Ho8UARhzS3I_LOVTKA"
+        },
+        {
+          "name": "Nerd Cronico",
+          "videoYoutubeId": "UCZSQe30xJdDSjsHmZt3ZNNA"
+        },
+        {
+          "name": "CTUP",
+          "videoYoutubeId": "UCzw9z_A3q-71oXbSp5CQeHQ"
         }
       ]
     },
@@ -2478,6 +2580,170 @@
       ]
     },
     {
+      "name": "Fact-Check",
+      "name_translated": "Checagem",
+      "name_seo": "Checagem — Verificação de fatos e fake news",
+      "active": true,
+      "description": "Checagem de fatos das agências de notícias do Brasil. Combata as fake news, espalhe a verdade.",
+      "data": [
+        {
+          "name": "Agência Lupa",
+          "rssUrl": "https://www.agencialupa.org/feed/"
+        },
+        {
+          "name": "Aos Fatos",
+          "rssUrl": "https://aosfatos.org/noticias/feed/"
+        },
+        {
+          "name": "Fato ou Fake",
+          "rssUrl": "https://pox.globo.com/rss/g1/fato-ou-fake/"
+        },
+        {
+          "name": "Estadão Verifica",
+          "rssUrl": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/estadao-verifica/?body=%7B%22layout%22:%22google-news%22%7D"
+        },
+        {
+          "name": "Boatos.org",
+          "rssUrl": "https://www.boatos.org/feed/"
+        },
+        {
+          "name": "E-farsas",
+          "rssUrl": "https://www.e-farsas.com/feed/"
+        }
+      ]
+    },
+    {
+      "name": "Social",
+      "name_translated": "Social",
+      "name_seo": "Social — Buscador e Tendências em Redes Sociais",
+      "name_trends": "Últimas tendências",
+      "name_stories": "Tá todo mundo falando",
+      "active": true,
+      "description": "Busque em todas as redes sociais: X, TikTok, Instagram, YouTube, Facebook, Reddit, Threads e mais. Encontre tendências hoje.",
+      "data": [
+        {
+          "name": "X",
+          "action": "https://x.com/search?src=typed_query&q="
+        },
+        {
+          "name": "Instagram",
+          "action": "https://www.instagram.com/explore/search/keyword/?q="
+        },
+        {
+          "name": "YouTube",
+          "action": "https://www.youtube.com/results?search_query="
+        },
+        {
+          "name": "TikTok",
+          "action": "https://www.tiktok.com/search?q="
+        },
+        {
+          "name": "Facebook",
+          "action": "https://www.facebook.com/public?query="
+        },
+        {
+          "name": "Reddit",
+          "action": "https://www.reddit.com/search?q="
+        },
+        {
+          "name": "LinkedIn",
+          "action": "https://www.linkedin.com/search/results/index/?keywords="
+        },
+        {
+          "name": "Kwai",
+          "action": "https://www.kwai.com/discover/"
+        },
+        {
+          "name": "Threads",
+          "action": "https://www.threads.net/search/?q="
+        },
+        {
+          "name": "Bluesky",
+          "action": "https://bsky.app/search?q="
+        },
+        {
+          "name": "Medium",
+          "action": "https://medium.com/search?q="
+        },
+        {
+          "name": "Discord",
+          "action": "https://discord.com/guild-discovery?query="
+        },
+        {
+          "name": "Snapchat",
+          "action": "https://www.snapchat.com/explore/"
+        },
+        {
+          "name": "Tumblr",
+          "action": "https://www.tumblr.com/search/"
+        },
+        {
+          "name": "Quora",
+          "action": "https://quora.com/search?q="
+        },
+        {
+          "name": "Mastodon",
+          "action": "https://mastodon.social/search?q="
+        },
+        {
+          "name": "Meetup",
+          "action": "https://www.meetup.com/find/?keywords="
+        },
+        {
+          "name": "Substack",
+          "action": "https://substack.com/search/"
+        },
+        {
+          "name": "Wattpad",
+          "action": "https://www.wattpad.com/search/"
+        },
+        {
+          "videoYoutubeId": "UChmOR1T5ZNnbRUba3lHRTOg",
+          "name": "Republica Coisa de Nerd"
+        },
+        {
+          "videoYoutubeId": "UCr3dtVIm3nL7I-Yjn2PxxIQ",
+          "name": "Leon e Nilce"
+        },
+        {
+          "videoYoutubeId": "UCXWilBOsa-Dm9BJYAJ3TzoQ",
+          "name": "arvro"
+        },
+        {
+          "videoYoutubeId": "UCEPRQVF6hxGGM9gi1ELaWHg",
+          "name": "tv globo"
+        },
+        {
+          "videoYoutubeId": "UCR3TOnFWDeAlT-Ho6LueDmg",
+          "name": "sbt"
+        },
+        {
+          "videoYoutubeId": "UCu_a6PAzp30Bn2mM-Ll09LA",
+          "name": "Record"
+        },
+        {
+          "videoYoutubeId": "UCH2VZQBLFTOp6I_qgnBJCuQ",
+          "name": "nostalgia"
+        },
+        {
+          "videoYoutubeId": "UCV306eHqgo0LvBf3Mh36AHg",
+          "name": "felipe neto"
+        },
+        {
+          "videoYoutubeId": "UCj0O6W8yDuLg3iraAXKgCrQ",
+          "name": "voce sabia"
+        },
+        {
+          "videoYoutubeId": "UCIJwKI84CglciGM9aC0xcPQ",
+          "name": "meio e mensagem"
+        },
+        {
+          "name": "Atila Iamarino",
+          "videoYoutubeId": "UCSTlOTcyUmzvhQi6F8lFi5w"
+        }
+      ]
+    },
+    {
       "name": "Code",
       "name_translated": "Código",
       "name_seo": "Código — Buscador de Código e Notícias de Programação",
@@ -2732,308 +2998,6 @@
       ]
     },
     {
-      "name": "Games",
-      "name_translated": "Jogos",
-      "name_seo": "Jogos - Buscador de Games e Tendências",
-      "name_trends": "Tá todo mundo jogando",
-      "active": true,
-      "description": "Pesquise jogos nas plataformas: Steam, PlayStation, Xbox, Nintendo, Nuuvem, Epic e mais.",
-      "data": [
-        {
-          "name": "Steam",
-          "action": "https://store.steampowered.com/search/?term="
-        },
-        {
-          "name": "PlayStation",
-          "action": "https://store.playstation.com/pt-br/search/",
-          "videoYoutubeId": "UC6i4mzH3OPrZV0p64zoz-Ww"
-        },
-        {
-          "name": "Xbox",
-          "action": "https://www.xbox.com/pt-br/Search/Results?q=",
-          "videoYoutubeId": "UCi9Uzh14BHqkN7UO_2lbrMw"
-        },
-        {
-          "name": "Nintendo",
-          "action": "https://www.nintendo.com/pt-br/search/#q="
-        },
-        {
-          "name": "Twitch",
-          "action": "https://www.twitch.tv/search?term="
-        },
-        {
-          "name": "Kick",
-          "action": "https://kick.com/search?query="
-        },
-        {
-          "name": "Nuuvem",
-          "action": "https://www.nuuvem.com/br-pt/catalog/page/1/search/",
-          "videoYoutubeId": "UCxC9DfYjRlUr5BksdR-sK-g"
-        },
-        {
-          "name": "Microsoft Store",
-          "action": "https://apps.microsoft.com/search?hl=pt-br&gl=BR&department=Games&query="
-        },
-        {
-          "name": "GOG",
-          "action": "https://www.gog.com/games?search="
-        },
-        {
-          "name": "IGN",
-          "action": "https://br.ign.com/se/?q=",
-          "rssUrl": "https://br.ign.com/feed.xml"
-        },
-        {
-          "name": "RAWG",
-          "action": "https://rawg.io/search?query="
-        },
-        {
-          "name": "IGDB",
-          "action": "https://www.igdb.com/search?utf8=%E2%9C%93&q="
-        },
-        {
-          "name": "Itch",
-          "action": "https://itch.io/search?q="
-        },
-        {
-          "name": "Game Jolt",
-          "action": "https://gamejolt.com/search?q="
-        },
-        {
-          "name": "EA",
-          "action": "https://www.origin.com/bra/pt-br/store/search?q="
-        },
-        {
-          "name": "Ubisoft",
-          "action": "https://www.ubisoft.com/pt-br/search?gss-q="
-        },
-        {
-          "name": "Epic Games",
-          "action": "https://store.epicgames.com/pt-BR/browse?q="
-        },
-        {
-          "name": "Humble Bundle",
-          "action": "https://www.humblebundle.com/store/search?search="
-        },
-        {
-          "name": "Voxl",
-          "rssUrl": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/voxel/",
-          "videoYoutubeId": "UCupqHNRTEHjNtq9X8djWyaQ"
-        },
-        {
-          "name": "Adrenaline",
-          "rssUrl": "https://www.adrenaline.com.br/feed/"
-        },
-        {
-          "name": "Colonia Contra Ataca",
-          "videoYoutubeId": "UCYvdGhl2G-M5ojWW1UzODJg"
-        },
-        {
-          "name": "Cogumelando",
-          "videoYoutubeId": "UCXso4Ho8UARhzS3I_LOVTKA"
-        },
-        {
-          "name": "Nerd Cronico",
-          "videoYoutubeId": "UCZSQe30xJdDSjsHmZt3ZNNA"
-        },
-        {
-          "name": "CTUP",
-          "videoYoutubeId": "UCzw9z_A3q-71oXbSp5CQeHQ"
-        }
-      ]
-    },
-    {
-      "name": "Social",
-      "name_translated": "Social",
-      "name_seo": "Social — Buscador e Tendências em Redes Sociais",
-      "name_trends": "Últimas tendências",
-      "name_stories": "Tá todo mundo falando",
-      "active": true,
-      "description": "Busque em todas as redes sociais: X, TikTok, Instagram, YouTube, Facebook, Reddit, Threads e mais. Encontre tendências hoje.",
-      "data": [
-        {
-          "name": "X",
-          "action": "https://x.com/search?src=typed_query&q="
-        },
-        {
-          "name": "Instagram",
-          "action": "https://www.instagram.com/explore/search/keyword/?q="
-        },
-        {
-          "name": "YouTube",
-          "action": "https://www.youtube.com/results?search_query="
-        },
-        {
-          "name": "TikTok",
-          "action": "https://www.tiktok.com/search?q="
-        },
-        {
-          "name": "Facebook",
-          "action": "https://www.facebook.com/public?query="
-        },
-        {
-          "name": "Reddit",
-          "action": "https://www.reddit.com/search?q="
-        },
-        {
-          "name": "LinkedIn",
-          "action": "https://www.linkedin.com/search/results/index/?keywords="
-        },
-        {
-          "name": "Kwai",
-          "action": "https://www.kwai.com/discover/"
-        },
-        {
-          "name": "Threads",
-          "action": "https://www.threads.net/search/?q="
-        },
-        {
-          "name": "Bluesky",
-          "action": "https://bsky.app/search?q="
-        },
-        {
-          "name": "Medium",
-          "action": "https://medium.com/search?q="
-        },
-        {
-          "name": "Discord",
-          "action": "https://discord.com/guild-discovery?query="
-        },
-        {
-          "name": "Snapchat",
-          "action": "https://www.snapchat.com/explore/"
-        },
-        {
-          "name": "Tumblr",
-          "action": "https://www.tumblr.com/search/"
-        },
-        {
-          "name": "Quora",
-          "action": "https://quora.com/search?q="
-        },
-        {
-          "name": "Mastodon",
-          "action": "https://mastodon.social/search?q="
-        },
-        {
-          "name": "Meetup",
-          "action": "https://www.meetup.com/find/?keywords="
-        },
-        {
-          "name": "Substack",
-          "action": "https://substack.com/search/"
-        },
-        {
-          "name": "Wattpad",
-          "action": "https://www.wattpad.com/search/"
-        },
-        {
-          "videoYoutubeId": "UChmOR1T5ZNnbRUba3lHRTOg",
-          "name": "Republica Coisa de Nerd"
-        },
-        {
-          "videoYoutubeId": "UCr3dtVIm3nL7I-Yjn2PxxIQ",
-          "name": "Leon e Nilce"
-        },
-        {
-          "videoYoutubeId": "UCGNdGepMFVqPNgaCkNBdiLw",
-          "name": "B9"
-        },
-        {
-          "videoYoutubeId": "UCXWilBOsa-Dm9BJYAJ3TzoQ",
-          "name": "arvro"
-        },
-        {
-          "videoYoutubeId": "UCEPRQVF6hxGGM9gi1ELaWHg",
-          "name": "tv globo"
-        },
-        {
-          "videoYoutubeId": "UCR3TOnFWDeAlT-Ho6LueDmg",
-          "name": "sbt"
-        },
-        {
-          "videoYoutubeId": "UCu_a6PAzp30Bn2mM-Ll09LA",
-          "name": "Record"
-        },
-        {
-          "videoYoutubeId": "UCH2VZQBLFTOp6I_qgnBJCuQ",
-          "name": "nostalgia"
-        },
-        {
-          "videoYoutubeId": "UCV306eHqgo0LvBf3Mh36AHg",
-          "name": "felipe neto"
-        },
-        {
-          "videoYoutubeId": "UCj0O6W8yDuLg3iraAXKgCrQ",
-          "name": "voce sabia"
-        },
-        {
-          "videoYoutubeId": "UCIJwKI84CglciGM9aC0xcPQ",
-          "name": "meio e mensagem"
-        },
-        {
-          "name": "Atila Iamarino",
-          "videoYoutubeId": "UCSTlOTcyUmzvhQi6F8lFi5w"
-        }
-      ]
-    },
-    {
-      "name": "Torrent",
-      "name_seo": "Torrent — Buscador de Torrents",
-      "active": true,
-      "data": [
-        {
-          "name": "The Pirate Bay",
-          "action": "https://thepiratebay.org/search.php?q="
-        },
-        {
-          "name": "1337x",
-          "action": "https://1337x.to/search/",
-          "additional": "/1/"
-        },
-        {
-          "name": "YTS",
-          "action": "https://en.yts.lu/search?q="
-        },
-        {
-          "name": "RARBG",
-          "action": "https://rargb.to/search/?search="
-        },
-        {
-          "name": "UIndex",
-          "action": "https://uindex.org/search.php?search="
-        },
-        {
-          "name": "EXT",
-          "action": "https://ext.to/browse/?q="
-        },
-        {
-          "name": "Torrends",
-          "action": "https://search.torrends.to/"
-        },
-        {
-          "name": "Project Gutenberg",
-          "action": "https://www.gutenberg.org/ebooks/search/?query="
-        },
-        {
-          "name": "TorrentGalaxy",
-          "action": "https://en.torrentgalaxy-official.is/search?q="
-        },
-        {
-          "name": "EZTV",
-          "action": "https://eztv.re/search/"
-        },
-        {
-          "name": "Torrent Downloads",
-          "action": "https://www.torrentdownloads.pro/search/?search="
-        },
-        {
-          "name": "Torlock",
-          "action": "https://www.torlock.com/all/torrents/"
-        }
-      ]
-    },
-    {
       "name": "Web",
       "name_seo": "Web — Buscador e Tendências",
       "active": true,
@@ -3167,35 +3131,58 @@
       ]
     },
     {
-      "name": "Fact-Check",
-      "name_translated": "Checagem",
-      "name_seo": "Checagem — Verificação de fatos e fake news",
+      "name": "Torrent",
+      "name_seo": "Torrent — Buscador de Torrents",
       "active": true,
-      "description": "Checagem de fatos das agências de notícias do Brasil. Combata as fake news, espalhe a verdade.",
       "data": [
         {
-          "name": "Agência Lupa",
-          "rssUrl": "https://www.agencialupa.org/feed/"
+          "name": "The Pirate Bay",
+          "action": "https://thepiratebay.org/search.php?q="
         },
         {
-          "name": "Aos Fatos",
-          "rssUrl": "https://aosfatos.org/noticias/feed/"
+          "name": "1337x",
+          "action": "https://1337x.to/search/",
+          "additional": "/1/"
         },
         {
-          "name": "Fato ou Fake",
-          "rssUrl": "https://pox.globo.com/rss/g1/fato-ou-fake/"
+          "name": "YTS",
+          "action": "https://en.yts.lu/search?q="
         },
         {
-          "name": "Estadão Verifica",
-          "rssUrl": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/estadao-verifica/?body=%7B%22layout%22:%22google-news%22%7D"
+          "name": "RARBG",
+          "action": "https://rargb.to/search/?search="
         },
         {
-          "name": "Boatos.org",
-          "rssUrl": "https://www.boatos.org/feed/"
+          "name": "UIndex",
+          "action": "https://uindex.org/search.php?search="
         },
         {
-          "name": "E-farsas",
-          "rssUrl": "https://www.e-farsas.com/feed/"
+          "name": "EXT",
+          "action": "https://ext.to/browse/?q="
+        },
+        {
+          "name": "Torrends",
+          "action": "https://search.torrends.to/"
+        },
+        {
+          "name": "Project Gutenberg",
+          "action": "https://www.gutenberg.org/ebooks/search/?query="
+        },
+        {
+          "name": "TorrentGalaxy",
+          "action": "https://en.torrentgalaxy-official.is/search?q="
+        },
+        {
+          "name": "EZTV",
+          "action": "https://eztv.re/search/"
+        },
+        {
+          "name": "Torrent Downloads",
+          "action": "https://www.torrentdownloads.pro/search/?search="
+        },
+        {
+          "name": "Torlock",
+          "action": "https://www.torlock.com/all/torrents/"
         }
       ]
     }
