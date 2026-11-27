@@ -22,7 +22,7 @@ export default async function endpoint(
     return res.status(400).json({ message: 'Invalid COUNTRY_CODE' })
   }
 
-  const url = `https://rss.applemarketingtools.com/api/v2/${normCountry}/music/most-played/30/albums.json`
+  const url = `https://rss.applemarketingtools.com/api/v2/${normCountry}/music/most-played/32/albums.json`
 
   try {
     const { data } = await axios.get(url)

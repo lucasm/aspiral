@@ -6,7 +6,7 @@
   "t": {
     "metadata": {
       "title": "Assistente para Web e IA",
-      "description": "Aspiral é um assistente para Web e IA, com curadoria humana e fontes confiáveis. Você no controle, sem algoritmos. Vamos descobrir algo novo hoje?"
+      "description": "Aspiral é um assistente para Web e IA, com curadoria humana e fontes confiáveis. Você no controle. Vamos descobrir?"
     },
     "notFound": {
       "title": "Página não encontrada",
@@ -200,10 +200,9 @@
           "videoYoutubeId": "UCFCiSRbCVwQ_BQaDQBYxN_A"
         },
         {
-          "name": "Nexo",
-          "action": "https://www.nexojornal.com.br/search?term=",
-          "rssUrl": "https://www.nexojornal.com.br/rss.xml",
-          "videoYoutubeId": "UCJVTsYjG0KLNWL6OyHx7ZGw"
+          "name": "O Globo",
+          "rssUrl": "https://pox.globo.com/rss/oglobo/politica",
+          "videoYoutubeId": "UC-6xqzMBF2CXTImn_a4aCVg"
         },
         {
           "name": "CartaCapital",
@@ -212,18 +211,8 @@
           "videoYoutubeId": "UCDGz2exMIsPQ4k9VrsuhKTA"
         },
         {
-          "name": "Metropoles",
-          "action": "https://www.metropoles.com/search?q=",
-          "rssUrl": "https://www.metropoles.com/feed",
-          "videoYoutubeId": "UC9mdw2mmn49ZuqGOpSri7Fw"
-        },
-        {
           "name": "Terra",
           "action": "https://www.terra.com.br/busca/?q="
-        },
-        {
-          "name": "SBT",
-          "action": "https://www.sbt.com.br/search?q="
         },
         {
           "name": "EBC",
@@ -241,7 +230,32 @@
           "videoYoutubeId": "UCVFbXI6Gu8U2f9Gjtxw4A-Q",
           "legacyFeed": true
         },
-
+        {
+          "name": "Metropoles",
+          "action": "https://www.metropoles.com/search?q=",
+          "rssUrl": "https://www.metropoles.com/feed",
+          "videoYoutubeId": "UC9mdw2mmn49ZuqGOpSri7Fw"
+        },
+        {
+          "name": "SBT News",
+          "action": "https://www.sbt.com.br/search?q=",
+          "rssUrl": "https://sbtnews.sbt.com.br/rss.xml",
+          "videoYoutubeId": "UC376n347Ob5Lwzq2WGzF1AA"
+        },
+        {
+          "name": "Nexo",
+          "action": "https://www.nexojornal.com.br/search?term=",
+          "rssUrl": "https://www.nexojornal.com.br/rss.xml",
+          "videoYoutubeId": "UCJVTsYjG0KLNWL6OyHx7ZGw"
+        },
+        {
+          "name": "Piauí",
+          "rssUrl": "https://piaui.folha.uol.com.br/feed/"
+        },
+        {
+          "name": "Agência Pública",
+          "rssUrl": "https://apublica.org/category/portugues/feed/"
+        },
         {
           "name": "Feedly",
           "action": "https://feedly.com/i/discover/sources/search/feed/"
@@ -254,15 +268,6 @@
           "name": "Intercept Brasil",
           "rssUrl": "https://www.intercept.com.br/feed/",
           "videoYoutubeId": "UCNqzAD9EiECreuH6LA8IYeA"
-        },
-        {
-          "name": "Agência Pública",
-          "rssUrl": "https://apublica.org/category/portugues/feed/"
-        },
-        {
-          "name": "O Globo",
-          "rssUrl": "https://pox.globo.com/rss/oglobo/politica",
-          "videoYoutubeId": "UC-6xqzMBF2CXTImn_a4aCVg"
         },
         {
           "name": "TV Cultura",
@@ -280,15 +285,7 @@
           "name": "DW",
           "videoYoutubeId": "UCkJ8uPxz6UvoI6ihgQJZnww"
         },
-        {
-          "name": "SBT News",
-          "rssUrl": "https://sbtnews.sbt.com.br/rss.xml",
-          "videoYoutubeId": "UC376n347Ob5Lwzq2WGzF1AA"
-        },
-        {
-          "name": "Piauí",
-          "rssUrl": "https://piaui.folha.uol.com.br/feed/"
-        },
+
         {
           "name": "Jacobin",
           "rssUrl": "https://jacobin.com.br/feed/"
@@ -298,8 +295,9 @@
           "rssUrl": "https://diplomatique.org.br/feed/"
         },
         {
-          "name": "Agência Brasil",
-          "rssUrl": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml"
+          "name": "Jovem Pan",
+          "rssUrl": "https://jovempan.com.br/feed",
+          "videoYoutubeId": "UCP391YRAjSOdM_bwievgaZA"
         },
         {
           "name": "Gazeta do Povo",
@@ -308,6 +306,10 @@
         {
           "name": "O Antagonista",
           "rssUrl": "https://oantagonista.com.br/feed"
+        },
+        {
+          "name": "Brasil 247",
+          "rssUrl": "https://www.brasil247.com/feed/"
         },
         {
           "name": "ICL",
@@ -319,21 +321,16 @@
           "rssUrl": "https://revistaforum.com.br/feed"
         },
         {
-          "name": "Jovem Pan",
-          "rssUrl": "https://jovempan.com.br/feed",
-          "videoYoutubeId": "UCP391YRAjSOdM_bwievgaZA"
+          "name": "Agência Brasil",
+          "rssUrl": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml"
         },
         {
-          "name": "Sensacionalista",
-          "rssUrl": "https://pox.globo.com/rss/oglobo/blogs/humor/sensacionalista/"
+          "name": "Congresso em Foco",
+          "rssUrl": "https://www.congressoemfoco.com.br/feed"
         },
         {
           "name": "GloboNews",
           "videoYoutubeId": "UCp6RRaz93Pt2xYZoEye_rLA"
-        },
-        {
-          "name": "Brasil 247",
-          "rssUrl": "https://www.brasil247.com/feed/"
         },
         {
           "name": "Istoé",
@@ -838,7 +835,6 @@
           "name": "Tracklist",
           "rssUrl": "https://tracklist.com.br/feed"
         },
-
         {
           "name": "AdoroCinema",
           "rssUrl": "https://news.google.com/rss/search?q=adorocinema.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
@@ -1069,7 +1065,7 @@
         },
         {
           "name": "UOL Splash",
-          "rssUrl": "https://rss.uol.com.br/feed/entretenimento.xml",
+          "rssUrl": "https://news.google.com/rss/search?q=uol.com.br/splash&hl=pt-BR&gl=BR&ceid=BR:pt-419",
           "legacyFeed": true
         },
         {
@@ -1078,11 +1074,11 @@
         },
         {
           "name": "Purepeople",
-          "rssUrl": "https://news.google.com/rss/search?q=when:48h+allinurl:purepeople.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+          "rssUrl": "https://news.google.com/rss/search?q=purepeople.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
         },
         {
           "name": "O Fuxico",
-          "rssUrl": "https://news.google.com/rss/search?q=when:24h+allinurl:ofuxico.com.br&hl=pt-BR&gl=BR"
+          "rssUrl": "https://news.google.com/rss/search?q=ofuxico.com.br&hl=pt-BR&gl=BR&ceid=BR:pt-419"
         },
         {
           "name": "Revista Quem",
@@ -1116,10 +1112,6 @@
         {
           "name": "GNT",
           "videoYoutubeId": "UC0f866RMRdL5mSVnipiOHxg"
-        },
-        {
-          "name": "PAPELPOP",
-          "videoYoutubeId": "UC4_SpEjNNtz6sfG-6uXO09w"
         }
       ]
     },
@@ -1268,6 +1260,10 @@
           "action": "https://www.imdb.com/find/?q="
         },
         {
+          "name": "TMDB",
+          "action": "https://www.themoviedb.org/search?query="
+        },
+        {
           "name": "Netflix",
           "action": "https://www.netflix.com/search?q="
         },
@@ -1338,10 +1334,6 @@
         {
           "name": "Vimeo",
           "action": "https://vimeo.com/search?q="
-        },
-        {
-          "name": "TMDB",
-          "action": "https://www.themoviedb.org/search?query="
         },
         {
           "name": "Ingresso.com",
@@ -1475,6 +1467,10 @@
         {
           "name": "Palco MP3",
           "action": "https://www.google.com/search?as_sitesearch=palcomp3.com.br&q="
+        },
+        {
+          "name": "MuseScore",
+          "action": "https://musescore.com/sheetmusic?text="
         },
         {
           "name": "Bandcamp",
@@ -1689,16 +1685,16 @@
           "action": "https://www.sympla.com.br/eventos?s="
         },
         {
-          "name": "Eventbrite",
-          "action": "https://www.eventbrite.com.br/d/brazil/"
-        },
-        {
           "name": "Eventim",
-          "action": "https://www.eventim.com.br/search?searchterm="
+          "action": "https://www.eventim.com.br/search/?searchterm="
         },
         {
           "name": "Ticket360",
-          "action": "https://www.ticket360.com.br/eventos/pesquisar?s="
+          "action": "https://www.ticket360.com.br/busca?q="
+        },
+        {
+          "name": "Eventbrite",
+          "action": "https://www.eventbrite.com.br/d/brazil/"
         },
         {
           "name": "Yelp",
@@ -1768,6 +1764,14 @@
           "name": "Melhores Destinos",
           "rssUrl": "https://www.melhoresdestinos.com.br/feed",
           "videoYoutubeId": "UCWN45XZWIlZoUeohfqiyURA"
+        },
+        {
+          "name": "Terramundi",
+          "rssUrl": "https://www.terramundi.com.br/blog/feed/"
+        },
+        {
+          "name": "Viaje na Viagem",
+          "rssUrl": "https://www.viajenaviagem.com/feed/"
         },
         {
           "name": "Vaz Aonde",
@@ -2027,6 +2031,14 @@
           "action": "https://scholar.google.com/scholar?q="
         },
         {
+          "name": "OpenAlex",
+          "action": "https://openalex.org/works?search.title_abstract_keywords="
+        },
+        {
+          "name": "ResearchGate",
+          "action": "https://www.researchgate.net/search?q="
+        },
+        {
           "name": "Wikipédia",
           "action": "https://pt.wikipedia.org/w/index.php?search="
         },
@@ -2045,10 +2057,6 @@
         {
           "name": "SciELO",
           "action": "https://search.scielo.org/?q="
-        },
-        {
-          "name": "ResearchGate",
-          "action": "https://www.researchgate.net/search?q="
         },
         {
           "name": "arXiv",
@@ -2588,16 +2596,18 @@
       "data": [
         {
           "name": "Agência Lupa",
-          "rssUrl": "https://www.agencialupa.org/feed/"
-        },
-        {
-          "name": "Aos Fatos",
-          "rssUrl": "https://aosfatos.org/noticias/feed/"
+          "rssUrl": "https://www.agencialupa.org/feed/",
+          "action": "https://www.agencialupa.org/?s="
         },
         {
           "name": "Fato ou Fake",
           "rssUrl": "https://pox.globo.com/rss/g1/fato-ou-fake/"
         },
+        {
+          "name": "Aos Fatos",
+          "rssUrl": "https://aosfatos.org/noticias/feed/"
+        },
+
         {
           "name": "Estadão Verifica",
           "rssUrl": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/estadao-verifica/?body=%7B%22layout%22:%22google-news%22%7D"

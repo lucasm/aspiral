@@ -148,7 +148,7 @@ export default async function endpoint(
     return
   }
 
-  const url = `https://api.bestbuy.com/beta/products/trendingViewed?apiKey=${process.env.NEXT_PUBLIC_API_BESTBUY}`
+  const url = `https://api.bestbuy.com/v1/products/mostViewed?apiKey=${process.env.BESTBUY_API_KEY}`
 
   try {
     const { data } = await axios.get(url)
