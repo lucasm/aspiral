@@ -69,16 +69,16 @@ All contributions are welcome! Please, check opened [Issues](https://github.com/
 ## Special Thanks
 
 - Vercel, for host
-- Cloudflare, for domain and protection
-- Google Cloud, for videos and maps
-- Microsoft Azure and Bing Search, for autocomplete
+- Cloudflare, for web domain and protection
+- Google Cloud, for videos, maps and trends
+- Microsoft Azure, for autocomplete
 - Adzuna, for jobs
 - BestBuy, for trending products
 - Unsplash, for imagens
 - TMDB, for movies and tv shows
 - Apple, for music and apps
 - GitHub, for repositories
-- Steam, for
+- Steam, for games
 - X, for trends
 
 ## Licence, Privacy & Terms
