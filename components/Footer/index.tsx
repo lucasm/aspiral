@@ -117,7 +117,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="https://github.com/lucasm/aspiral"
+              href="https://github.com/lucasm/aspiral?tab=readme-ov-file"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub">

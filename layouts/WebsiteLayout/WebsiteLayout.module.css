@@ -104,7 +104,7 @@
   padding: 6rem 2rem;
   width: 100%;
   max-width: var(--max-size-container);
-  color: var(--color-black);
+  color: var(--color-text-black);
 }
 .actionContainer {
   max-width: var(--max-size-container-2);
@@ -172,6 +172,7 @@
 .icon svg {
   width: 4rem;
   height: 4rem;
+  color: var(--color-black);
 }
 
 /* Card Duos */
