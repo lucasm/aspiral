@@ -1,8 +1,5 @@
 import { useTranslations } from 'next-intl'
 
-import BannerAnimateCircleNav from '@/components/BannerAnimateCircleNav'
-import BannerAnimatePressMe from '@/components/BannerAnimatePressMe'
-import BannerAnimateText from '@/components/BannerAnimateText'
 import Button from '@/components/Button'
 import CardsFeat from '@/components/CardsFeat'
 import SvgLogo from '@/components/SvgLogo'
@@ -23,7 +20,7 @@ export default function PageAbout() {
     <WebsiteLayout>
       <section>
         <div className={Style.container}>
-          <Link href="#more">
+          <Link href="#features">
             <figure className={Style.icon}>
               <SvgLogo />
             </figure>
@@ -33,52 +30,7 @@ export default function PageAbout() {
         </div>
       </section>
 
-      <section id="more">
-        <div className={Style.container}>
-          <div className={Style.cardDuos}>
-            <article>
-              <BannerAnimateCircleNav />
-              <div>
-                <h2>Choose your source</h2>
-                <p>
-                  Aspiral is a search portal for Web content and AI. Compare
-                  multiple trusted sources at once and take control of the
-                  search algorithms and AI models you use.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <BannerAnimateText />
-              <div>
-                <h2>Transparency of search</h2>
-                <p>
-                  Every search leaves a trace in datacenters. With Aspiral, you
-                  can check the estimated levels of privacy, security, and
-                  carbon footprint of each source. Make safer choices for
-                  yourself and contribute to protecting Planet Earth.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <BannerAnimatePressMe />
-              <div>
-                <h2>Open source project</h2>
-                <p>
-                  Aspiral is an open source project. We are building a universal
-                  search experience based on trusted sources, where diversity is
-                  key and people remain in control every step of the way. Join
-                  us, contribute, and help create a better search experience for
-                  everyone.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className={Style.colorfulBackground}>
+      <section id="features" className={Style.colorfulBackground}>
         <div className={Style.container}>
           <CardsFeat />
         </div>

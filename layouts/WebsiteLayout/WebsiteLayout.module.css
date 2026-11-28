@@ -202,9 +202,12 @@
   }
 
   .icon {
-    width: 8rem;
-    height: 8rem;
-    /* margin: 2rem auto 0; */
+    width: 10rem;
+    height: 10rem;
+  }
+  .icon svg {
+    width: 5rem;
+    height: 5rem;
   }
 
   .container {

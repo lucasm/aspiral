@@ -6,7 +6,7 @@
   "t": {
     "metadata": {
       "title": "Assistente para Web e IA",
-      "description": "Aspiral é um assistente para Web e IA, com curadoria humana e fontes confiáveis. Você no controle. Vamos descobrir?"
+      "description": "Aspiral é um assistente para Web e IA, com curadoria humana e fontes confiáveis. Você no controle, não algoritmos. Vamos descobrir algo hoje?"
     },
     "notFound": {
       "title": "Página não encontrada",
@@ -1020,6 +1020,10 @@
           "videoYoutubeId": "UC4O2eKb8vI4VlMeNp90asfg"
         },
         {
+          "name": "Atila Iamarino",
+          "videoYoutubeId": "UCSTlOTcyUmzvhQi6F8lFi5w"
+        },
+        {
           "name": "Tempero Drag",
           "videoYoutubeId": "UCZdJE8KpuFm6NRafHTEIC-g"
         },
@@ -1537,8 +1541,8 @@
           "videoYoutubeId": "UC4eYXhJI4-7wSWc8UNRwD4A"
         },
         {
-          "name": "BBC Music",
-          "videoYoutubeId": "UCZtDUmC3W7j25XHZWFT_XgQ"
+          "name": "Decifra HITS",
+          "videoYoutubeId": "UCRmiR7KCqnnMSazCQhff91w"
         },
         {
           "name": "Apple Music",
@@ -2746,10 +2750,6 @@
         {
           "videoYoutubeId": "UCIJwKI84CglciGM9aC0xcPQ",
           "name": "meio e mensagem"
-        },
-        {
-          "name": "Atila Iamarino",
-          "videoYoutubeId": "UCSTlOTcyUmzvhQi6F8lFi5w"
         }
       ]
     },

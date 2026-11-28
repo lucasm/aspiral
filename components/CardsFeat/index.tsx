@@ -1,106 +1,113 @@
-import { JSX } from 'react'
-
-import Style from './CardsFeat.module.css'
-import { IconText } from '../SvgIcons'
 import {
-  CircleDashed,
-  Earth,
-  GitBranch,
+  CircleFadingPlay,
+  History,
   Languages,
+  LucideIcon,
   Mic,
   PersonStanding,
+  Rss,
   ScanSearch,
   Search,
-  Shield,
+  ShieldCheck,
+  TextWrap,
   TrendingUp,
 } from 'lucide-react'
+import Style from './CardsFeat.module.css'
 
-// Define the type for a feature item
 interface Feature {
-  icon: JSX.Element
+  icon: LucideIcon
   title: string
   description: string
+  status?: string
 }
 
-// Create an array of feature items with their types
 const features: Feature[] = [
   {
-    icon: <Search />,
-    title: 'Search decentralized',
+    icon: Search,
+    title: 'Decentralized Search',
     description:
-      'Search the same term on multiple sources. Chose your algorithm.',
+      'Search across multiple sources at once and choose the algorithms you rely on.',
   },
   {
-    icon: <Shield />,
-    title: 'Safe sources',
+    icon: Rss,
+    title: 'News Feed',
+    description: 'Follow trusted news sources chosen by the community.',
+  },
+  {
+    icon: CircleFadingPlay,
+    title: 'Videos Feed',
+    description: 'Discover the latest videos and reactions.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Trends',
+    description: 'See what is trending near you in real time.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Search Source Info',
     description:
-      'The most popular sources of the internet. You can check privacy, security and carbon footprint levels.',
+      'Compare estimated privacy, security, and carbon-footprint levels for each search source.',
   },
   {
-    icon: <TrendingUp />,
-    title: 'Trending content',
-    description: 'Real-time trends nearby you.',
+    icon: History,
+    title: 'Search History',
+    description:
+      'Your 10 most recent searches stay stored locally on your device.',
   },
   {
-    icon: <CircleDashed />,
-    title: 'Newest stories',
-    description: 'Discover new and breaking stories.',
-  },
-  {
-    icon: <IconText />,
+    icon: TextWrap,
     title: 'Autocomplete',
-    description: 'Get automatic suggestions of terms as you type.',
+    description: 'Get helpful search suggestions as you type.',
   },
   {
-    icon: <Mic />,
-    title: 'Search by voice',
-    description: 'Use your voice to search anywhere.',
+    icon: Mic,
+    title: 'Voice Search',
+    description: 'Search hands-free using your voice.',
   },
   {
-    icon: <ScanSearch />,
-    title: 'Search by reverse*',
+    icon: ScanSearch,
+    title: 'Reverse Search',
+    description: 'Search supported sources using an image or file.',
+    status: 'COMING SOON',
+  },
+  {
+    icon: Languages,
+    title: 'Internationalization',
     description:
-      'Upload documents and photos to reverse search on supported sources.',
+      'Choose local sources or explore search sources from around the world.',
   },
   {
-    icon: <Languages />,
-    title: 'Languages',
-    description: 'Available with 4 international versions.',
-  },
-  {
-    icon: <PersonStanding />,
-    title: 'Accessibility by default',
+    icon: PersonStanding,
+    title: 'Accessibility',
     description:
-      'Dark and light theme, balanced contrast, screen readers support, and keyboard navigation.',
-  },
-  {
-    icon: <GitBranch />,
-    title: 'Open source',
-    description: 'Source code is open for contributions.',
-  },
-  {
-    icon: <Earth />,
-    title: 'Carbon neutral software',
-    description: 'Our software do not use servers with high emissions.',
+      'Use dark or light themes, clear contrast, keyboard navigation, and screen-reader support.',
   },
 ]
 
 export default function CardsFeat() {
   return (
     <div className={Style.container}>
-      <h2>Top features</h2>
+      <h2>Search on your terms</h2>
+      <p>
+        Explore trusted sources, stay in control of how you search, and make
+        informed choices.
+      </p>
 
       <ul className={Style.card}>
-        {features.map((feature, index) => (
-          <li key={index}>
-            <figure>{feature.icon}</figure>
+        {features.map((feature) => (
+          <li key={feature.title}>
+            <figure aria-hidden="true">
+              <feature.icon />
+            </figure>
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>
+            {feature.status && (
+              <span className={Style.status}>{feature.status}</span>
+            )}
           </li>
         ))}
       </ul>
-
-      <p>* Some features in development.</p>
     </div>
   )
 }
